@@ -240,9 +240,16 @@ export default function Products() {
   const groupProducts = (products) => {
     const grouped = [];
     const map = new Map();
+    
     products.forEach(p => {
-      const words = p.name.split(' ');
-      const baseKey = `${p.brand}-${p.category}-${words.slice(0, 3).join(' ')}`.toLowerCase();
+      // Use database group_id if it exists, otherwise fallback to legacy grouping
+      let baseKey;
+      if (p.group_id) {
+        baseKey = p.group_id;
+      } else {
+        const words = p.name.split(' ');
+        baseKey = `${p.brand}-${p.category}-${words.slice(0, 3).join(' ')}`.toLowerCase();
+      }
       
       if (map.has(baseKey)) {
         map.get(baseKey).variants.push(p);

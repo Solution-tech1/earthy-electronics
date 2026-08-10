@@ -35,12 +35,14 @@
 
 /* ── 2. Main Header ── */
 .site-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.5);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.08);
+  box-shadow: 0 4px 20px rgba(6, 95, 70, 0.08);
 }
 .header-main-row {
   display: flex;
@@ -64,9 +66,9 @@
   width: 46px !important;
   height: 46px !important;
   border-radius: 14px !important;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
-  border: 2px solid #a7f3d0 !important;
-  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3) !important;
+  background: linear-gradient(135deg, var(--mint-primary) 0%, var(--mint-primary-hover) 100%) !important;
+  border: 2px solid var(--mint-border) !important;
+  box-shadow: 0 6px 16px rgba(6, 95, 70, 0.3) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -100,7 +102,7 @@
   width: 100%;
 }
 .hdr-search button {
-  background: #10b981;
+  background: var(--mint-primary);
   color: #ffffff;
   border: none;
   padding: 0 16px;
@@ -112,7 +114,7 @@
   transition: background 0.2s ease;
 }
 .hdr-search button:hover {
-  background: #059669;
+  background: var(--mint-primary-hover);
 }
 .hdr-search:focus-within {
   border-color: #10b981;
@@ -192,7 +194,7 @@
   min-width: 0;
 }
 .hdr-search button {
-  background-color: #10b981;
+  background-color: var(--mint-primary);
   color: #ffffff;
   border: none;
   padding: 0 22px;
@@ -204,7 +206,7 @@
   align-items: center;
   justify-content: center;
 }
-.hdr-search button:hover { background-color: #ea580c; }
+.hdr-search button:hover { background-color: var(--mint-accent); }
 
 /* ── Header Actions ── */
 .hdr-actions {
