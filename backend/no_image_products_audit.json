@@ -1,0 +1,344 @@
+[
+  {
+    "id": 37,
+    "listModel": "Gree AC 18zith1w-t3 Ultra 1.5 Ton Zeno T3 Inverter Split AC",
+    "websiteTitle": "GREE Gree AC 18zith1w-t3 Ultra 1.5 Ton Zeno T3 Inverter Split AC",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/gree-gree-ac-18zith1w-t3-ultra-1-5-ton-zeno-t3-inverter-split-ac.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"gree-gree-ac-18zith1w-t3-ultra-1-5-ton-zeno-t3-inverter-split-ac.jpg\" available for model \"Gree AC 18zith1w-t3 Ultra 1.5 Ton Zeno T3 Inverter Split AC\""
+  },
+  {
+    "id": 142,
+    "listModel": "Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6",
+    "websiteTitle": "Haier Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/haier-haier-washing-machine-automatic-single-tub-top-load-12kg-hwm-120-316s6.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"haier-haier-washing-machine-automatic-single-tub-top-load-12kg-hwm-120-316s6.jpg\" available for model \"Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6\""
+  },
+  {
+    "id": 153,
+    "listModel": "Haier Top Load Fully Automatic Washing Machine 15 Kg (hwm130-688s8)",
+    "websiteTitle": "Haier Haier Top Load Fully Automatic Washing Machine 15 Kg (hwm130-688s8)",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/haier-haier-top-load-fully-automatic-washing-machine-15-kg-hwm130-688s8.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"haier-haier-top-load-fully-automatic-washing-machine-15-kg-hwm130-688s8.jpg\" available for model \"Haier Top Load Fully Automatic Washing Machine 15 Kg (hwm130-688s8)\""
+  },
+  {
+    "id": 166,
+    "listModel": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 15 Kg Dark Gray (wa15ck5745bdrt)",
+    "websiteTitle": "Samsung Samsung Ecobubble Top Load Fully Automatic Washing Machine 15 Kg Dark Gray (wa15ck5745bdrt)",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/samsung-ecobubble-top-load-fully-automatic-washing-machine-15-kg-dark-gray-wa15ck5745bdrt.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"samsung-ecobubble-top-load-fully-automatic-washing-machine-15-kg-dark-gray-wa15ck5745bdrt.jpg\" available for model \"Samsung Ecobubble Top Load Fully Automatic Washing Machine 15 Kg Dark Gray (wa15ck5745bdrt)\""
+  },
+  {
+    "id": 167,
+    "listModel": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 17 Kg Dark Gray (wa17ck6745bdrt)",
+    "websiteTitle": "Samsung Samsung Ecobubble Top Load Fully Automatic Washing Machine 17 Kg Dark Gray (wa17ck6745bdrt)",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"samsung-ecobubble-top-load-fully-automatic-washing-machine-17-kg-dark-gray-wa17ck6745bdrt.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 171,
+    "listModel": "Haier Hrf-316 Ipra/ipga/ippa",
+    "websiteTitle": "Haier Haier Hrf-316 Ipra/ipga/ippa",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/haier-haier-hrf-316-ipra-ipga-ippa.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"haier-haier-hrf-316-ipra-ipga-ippa.jpg\" available for model \"Haier Hrf-316 Ipra/ipga/ippa\""
+  },
+  {
+    "id": 172,
+    "listModel": "Haier Hrf-346 Ipra/ipga/ippa",
+    "websiteTitle": "Haier Haier Hrf-346 Ipra/ipga/ippa",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-346-ipra-ipga-ippa.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 173,
+    "listModel": "Haier Hrf-316 Idga/idrga",
+    "websiteTitle": "Haier Haier Hrf-316 Idga/idrga",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-316-idga-idrga.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 174,
+    "listModel": "Haier Hrf-346 Idga/idrga",
+    "websiteTitle": "Haier Haier Hrf-346 Idga/idrga",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-346-idga-idrga.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 175,
+    "listModel": "Haier Hrf-316 Iapa+/iara",
+    "websiteTitle": "Haier Haier Hrf-316 Iapa+/iara",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-316-iapa-iara.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 176,
+    "listModel": "Haier Hrf-346 Iapa+/iara",
+    "websiteTitle": "Haier Haier Hrf-346 Iapa+/iara",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-346-iapa-iara.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 177,
+    "listModel": "Haier Hrf-316 Ifga/ifra",
+    "websiteTitle": "Haier Haier Hrf-316 Ifga/ifra",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-316-ifga-ifra.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 178,
+    "listModel": "Haier Hrf-346 Ifga/ifra",
+    "websiteTitle": "Haier Haier Hrf-346 Ifga/ifra",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-346-ifga-ifra.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 181,
+    "listModel": "Haier Hrf-246 Ebs/ebd",
+    "websiteTitle": "Haier Haier Hrf-246 Ebs/ebd",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/haier-haier-hrf-246-ebs-ebd.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"haier-haier-hrf-246-ebs-ebd.jpg\" available for model \"Haier Hrf-246 Ebs/ebd\""
+  },
+  {
+    "id": 182,
+    "listModel": "Haier Hrf 246 Epr/epb",
+    "websiteTitle": "Haier Haier Hrf 246 Epr/epb",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-246-epr-epb.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 183,
+    "listModel": "Haier Hrf-276 Ebs/ebd",
+    "websiteTitle": "Haier Haier Hrf-276 Ebs/ebd",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-276-ebs-ebd.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 184,
+    "listModel": "Haier Hrf 276 Epr/epb",
+    "websiteTitle": "Haier Haier Hrf 276 Epr/epb",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-276-epr-epb.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 185,
+    "listModel": "Haier Hrf-368 Epr/epb",
+    "websiteTitle": "Haier Haier Hrf-368 Epr/epb",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-368-epr-epb.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 186,
+    "listModel": "Haier Hrf-398 Epr/epb",
+    "websiteTitle": "Haier Haier Hrf-398 Epr/epb",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-398-epr-epb.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 188,
+    "listModel": "Haier Hrf-538 Epr/epg",
+    "websiteTitle": "Haier Haier Hrf-538 Epr/epg",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-538-epr-epg.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 189,
+    "listModel": "Haier Hrf-246 Ipra/ipga/ippa",
+    "websiteTitle": "Haier Haier Hrf-246 Ipra/ipga/ippa",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-246-ipra-ipga-ippa.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 190,
+    "listModel": "Haier Hrf-276 Ipra/ipga/ippa",
+    "websiteTitle": "Haier Haier Hrf-276 Ipra/ipga/ippa",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-276-ipra-ipga-ippa.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 191,
+    "listModel": "Haier Hrf-538 Ipra/ipga/ippa",
+    "websiteTitle": "Haier Haier Hrf-538 Ipra/ipga/ippa",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-538-ipra-ipga-ippa.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 192,
+    "listModel": "Haier Hrf-538 Idga/idrga",
+    "websiteTitle": "Haier Haier Hrf-538 Idga/idrga",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-538-idga-idrga.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 193,
+    "listModel": "Haier Hrf-368 Iapa+/iara",
+    "websiteTitle": "Haier Haier Hrf-368 Iapa+/iara",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-368-iapa-iara.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 194,
+    "listModel": "Haier Hrf-398 Iapa+/iara",
+    "websiteTitle": "Haier Haier Hrf-398 Iapa+/iara",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-398-iapa-iara.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 196,
+    "listModel": "Haier Hrf-538 Iapa+/iara",
+    "websiteTitle": "Haier Haier Hrf-538 Iapa+/iara",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-538-iapa-iara.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 197,
+    "listModel": "Haier Hrf-368 Ifga/ifra",
+    "websiteTitle": "Haier Haier Hrf-368 Ifga/ifra",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-368-ifga-ifra.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 198,
+    "listModel": "Haier Hrf-398 Ifga/ifra",
+    "websiteTitle": "Haier Haier Hrf-398 Ifga/ifra",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-398-ifga-ifra.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 199,
+    "listModel": "Haier Hrf-438 Ifga/ifra/ifpa",
+    "websiteTitle": "Haier Haier Hrf-438 Ifga/ifra/ifpa",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "imageUnique": "Yes",
+    "candidateImage": "/images/products/haier-haier-hrf-438-ifga-ifra-ifpa.jpg",
+    "reasoning": "Direct 1-to-1 verified unique cutout \"haier-haier-hrf-438-ifga-ifra-ifpa.jpg\" available for model \"Haier Hrf-438 Ifga/ifra/ifpa\""
+  },
+  {
+    "id": 200,
+    "listModel": "Haier Hrf-538 Ifga/ifra/ifpa",
+    "websiteTitle": "Haier Haier Hrf-538 Ifga/ifra/ifpa",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-538-ifga-ifra-ifpa.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 201,
+    "listModel": "Haier Hrf-538 Tifg1u1/tifb1u1 (iot)",
+    "websiteTitle": "Haier Haier Hrf-538 Tifg1u1/tifb1u1 (iot)",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-haier-hrf-538-tifg1u1-tifb1u1-iot.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 203,
+    "listModel": "Dawlance DW-7200 WFL",
+    "websiteTitle": "Dawlance Dawlance DW-7200 WFL",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"dawlance-dw-7200-wfl.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 219,
+    "listModel": "Haier PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "websiteTitle": "Haier Haier PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-pel-pmo-23-slm-23-ltr-desire-microwave-oven-on-installments.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 222,
+    "listModel": "Haier PEL PMO-26 Desire Microwave Oven/On Installments",
+    "websiteTitle": "Haier Haier PEL PMO-26 Desire Microwave Oven/On Installments",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-pel-pmo-26-desire-microwave-oven-on-installments.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 223,
+    "listModel": "Haier Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "websiteTitle": "Haier Haier Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-pel-pmo-30-desire-microwave-oven-30-litres-on-installments.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 229,
+    "listModel": "Haier HWM 120-1678 ES9",
+    "websiteTitle": "Haier Haier HWM 120-1678 ES9",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-hwm-120-1678-es9.jpg\" byte hash is already assigned to another live product on site."
+  },
+  {
+    "id": 233,
+    "listModel": "Haier HWM-130-1217 GB",
+    "websiteTitle": "Haier Haier HWM-130-1217 GB",
+    "confidenceLevel": "DUPLICATE_IMAGE_CONFLICT",
+    "imageUnique": "No (Conflict)",
+    "candidateImage": null,
+    "reasoning": "Image file \"haier-hwm-130-1217-gb.jpg\" byte hash is already assigned to another live product on site."
+  }
+]

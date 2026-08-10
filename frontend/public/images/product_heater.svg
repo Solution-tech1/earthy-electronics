@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <linearGradient id="hGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="50%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="#f8fafc" rx="20"/>
+  <!-- Heater Outer Frame -->
+  <rect x="100" y="100" width="300" height="280" rx="16" fill="#1e293b" stroke="#334155" stroke-width="4"/>
+  <!-- Heating Rod Grille -->
+  <rect x="130" y="130" width="240" height="180" rx="10" fill="#0f172a"/>
+  <!-- Glowing Heat Rods -->
+  <rect x="150" y="160" width="200" height="16" rx="8" fill="url(#hGlow)"/>
+  <rect x="150" y="210" width="200" height="16" rx="8" fill="url(#hGlow)"/>
+  <rect x="150" y="260" width="200" height="16" rx="8" fill="url(#hGlow)"/>
+  <!-- Control Knobs -->
+  <circle cx="170" cy="345" r="14" fill="#475569"/>
+  <circle cx="330" cy="345" r="14" fill="#475569"/>
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#10b981" text-anchor="middle">ROOM HEATER</text>
+  <!-- Feet -->
+  <rect x="120" y="380" width="40" height="25" rx="6" fill="#0f172a"/>
+  <rect x="340" y="380" width="40" height="25" rx="6" fill="#0f172a"/>
+</svg>

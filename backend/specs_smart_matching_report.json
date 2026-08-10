@@ -1,0 +1,302 @@
+[
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-316 IDB/IDR",
+    "matchedModel": "HRF-316 IDGA/IDRGA",
+    "confidence": "High",
+    "reasoning": "Core Model '316' + Specs Type (Digital Inverter Direct Cool) matched!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-316 IFGA/IFRA",
+    "matchedModel": "HRF-316 IDGA/IDRGA",
+    "confidence": "High",
+    "reasoning": "Core Model '316' + Specs Type (Digital Inverter Direct Cool) matched!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-346 IDB/IDR",
+    "matchedModel": "HRF-346 IDGA/IDRGA",
+    "confidence": "High",
+    "reasoning": "Core Model '346' + Specs Type (Digital Inverter Direct Cool) matched!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-346 IFGA/IFRA",
+    "matchedModel": "HRF-346 IDGA/IDRGA",
+    "confidence": "High",
+    "reasoning": "Core Model '346' + Specs Type (Digital Inverter Direct Cool) matched!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-368 IDB/IDR",
+    "matchedModel": "HRF-368 EBS/EBD",
+    "confidence": "Medium",
+    "reasoning": "Core Model '368' matches list model 'HRF-368 EBS/EBD'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-368 IFGA/IFRA",
+    "matchedModel": "HRF-368 IFGA/IFRA",
+    "confidence": "High",
+    "reasoning": "Core Model '368' + Exact Suffix 'HRF-368 IFGA/IFRA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-398 IDB/IDR",
+    "matchedModel": "HRF-398 EBS/EBD",
+    "confidence": "Medium",
+    "reasoning": "Core Model '398' matches list model 'HRF-398 EBS/EBD'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-398 IFGA/IFRA",
+    "matchedModel": "HRF-398 IFGA/IFRA",
+    "confidence": "High",
+    "reasoning": "Core Model '398' + Exact Suffix 'HRF-398 IFGA/IFRA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-438 IFGA/IFRA",
+    "matchedModel": "HRF-438 IFGA/IFRA/IFPA",
+    "confidence": "High",
+    "reasoning": "Core Model '438' + Exact Suffix 'HRF-438 IFGA/IFRA/IFPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-438IDB/IDR",
+    "matchedModel": "HRF-438 EBS/EBD",
+    "confidence": "Medium",
+    "reasoning": "Core Model '438' matches list model 'HRF-438 EBS/EBD'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-538 IDB/IDR",
+    "matchedModel": "HRF-538 IDGA/IDRGA",
+    "confidence": "High",
+    "reasoning": "Core Model '538' + Specs Type (Digital Inverter Direct Cool) matched!"
+  },
+  {
+    "webTitle": "Haier Digital Inverter Refrigerator HRF-538 IFGA/IFRA",
+    "matchedModel": "HRF-538 IFGA/IFRA/IFPA",
+    "confidence": "High",
+    "reasoning": "Core Model '538' + Exact Suffix 'HRF-538 IFGA/IFRA/IFPA' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-216 /EPB/EPR",
+    "matchedModel": "HRF-216 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '216' + Exact Suffix 'HRF-216 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-246 /EPB/EPR",
+    "matchedModel": "HRF-246 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '246' + Exact Suffix 'HRF-246 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-276 EPB/EPR",
+    "matchedModel": "HRF-276 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '276' + Exact Suffix 'HRF-276 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-316 EPB/EPR",
+    "matchedModel": "HRF-316 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '316' + Exact Suffix 'HRF-316 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-346 EPB/EPR",
+    "matchedModel": "HRF-346 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '346' + Exact Suffix 'HRF-346 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-368 EPB/EPR",
+    "matchedModel": "HRF-368 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '368' + Exact Suffix 'HRF-368 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-398 EPB/EPR",
+    "matchedModel": "HRF-398 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '398' + Exact Suffix 'HRF-398 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-438 EPB/EPR",
+    "matchedModel": "HRF-438 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '438' + Exact Suffix 'HRF-438 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "HAIER Glass Door Refrigerator 8 Cft HRF-538 EPG/EPR",
+    "matchedModel": "HRF-538 EPR/EPG",
+    "confidence": "High",
+    "reasoning": "Core Model '538' + Exact Suffix 'HRF-538 EPR/EPG' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Inverter Refrigerator HRF-578TGGU1",
+    "matchedModel": "HRF-578 TSG",
+    "confidence": "Medium",
+    "reasoning": "Core Model '578' matches list model 'HRF-578 TSG'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "HAIER Refrigerator (Inverter + Glass Door) HRF-678 TGG",
+    "matchedModel": "HRF-678 TGG",
+    "confidence": "High",
+    "reasoning": "Core Model '678' + Exact Suffix 'HRF-678 TGG' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-246 EPG/EPR",
+    "matchedModel": "HRF-246 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '246' + Exact Suffix 'HRF-246 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-276 EPG/EPR",
+    "matchedModel": "HRF-276 EPR/EPB",
+    "confidence": "High",
+    "reasoning": "Core Model '276' + Exact Suffix 'HRF-276 EPR/EPB' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-316 IAPA+/IARA+",
+    "matchedModel": "HRF-316 EBS/EBD",
+    "confidence": "Medium",
+    "reasoning": "Core Model '316' matches list model 'HRF-316 EBS/EBD'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-346 IAPA+/IARA+",
+    "matchedModel": "HRF-346 EBS/EBD",
+    "confidence": "Medium",
+    "reasoning": "Core Model '346' matches list model 'HRF-346 EBS/EBD'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-368 IAPA/IARA",
+    "matchedModel": "HRF-368 IAPA+/IARA",
+    "confidence": "High",
+    "reasoning": "Core Model '368' + Exact Suffix 'HRF-368 IAPA+/IARA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-398 IAPA/IARA",
+    "matchedModel": "HRF-398 IAPA+/IARA",
+    "confidence": "High",
+    "reasoning": "Core Model '398' + Exact Suffix 'HRF-398 IAPA+/IARA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-438 IAPA/IARA",
+    "matchedModel": "HRF-438 IAPA+/IARA",
+    "confidence": "High",
+    "reasoning": "Core Model '438' + Exact Suffix 'HRF-438 IAPA+/IARA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-538 IAPA/IARA",
+    "matchedModel": "HRF-538 IAPA+/IARA",
+    "confidence": "High",
+    "reasoning": "Core Model '538' + Exact Suffix 'HRF-538 IAPA+/IARA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Side By Side Refrigerator HRF-578 TBG",
+    "matchedModel": "HRF-578 TBG",
+    "confidence": "High",
+    "reasoning": "Core Model '578' + Exact Suffix 'HRF-578 TBG' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Side By Side Refrigerator HRF-578 TBP",
+    "matchedModel": "HRF-578 TSG",
+    "confidence": "High",
+    "reasoning": "Core Model '578' + Specs Type (Side-by-Side Inverter) matched!"
+  },
+  {
+    "webTitle": "Haier Side-By-Side Inverter Refrigerator HRF-622 IBG",
+    "matchedModel": "HRF-622 IBG",
+    "confidence": "High",
+    "reasoning": "Core Model '622' + Exact Suffix 'HRF-622 IBG' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Side-By-Side Inverter Refrigerator HRF-622 IBS 550 Ltr",
+    "matchedModel": "HRF-622 IBS",
+    "confidence": "High",
+    "reasoning": "Core Model '622' + Exact Suffix 'HRF-622 IBS' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Side-By-Side Inverter Refrigerator HRF-622 ICG",
+    "matchedModel": "HRF-622 ICG",
+    "confidence": "High",
+    "reasoning": "Core Model '622' + Exact Suffix 'HRF-622 ICG' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-246 IPRA/IPGA",
+    "matchedModel": "HRF-246 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '246' + Exact Suffix 'HRF-246 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-276 IPRA/IPGA",
+    "matchedModel": "HRF-276 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '276' + Exact Suffix 'HRF-276 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-316 IPRA/IPGA",
+    "matchedModel": "HRF-316 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '316' + Exact Suffix 'HRF-316 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-346 IPRA/IPGA",
+    "matchedModel": "HRF-346 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '346' + Exact Suffix 'HRF-346 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-418 IFGA/IFRA/IFPA",
+    "matchedModel": "HRF-418 IFGA/IFRA/IFPA",
+    "confidence": "High",
+    "reasoning": "Core Model '418' + Exact Suffix 'HRF-418 IFGA/IFRA/IFPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-418 IPRA/IPGA",
+    "matchedModel": "HRF-418 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '418' + Exact Suffix 'HRF-418 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-458 IFGA/IFRA/IFPA",
+    "matchedModel": "HRF-458 IFGA/IFRA/IFPA",
+    "confidence": "High",
+    "reasoning": "Core Model '458' + Exact Suffix 'HRF-458 IFGA/IFRA/IFPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-458 IPRA/IPGA",
+    "matchedModel": "HRF-458 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '458' + Exact Suffix 'HRF-458 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Smart Inverter Refrigerator HRF-538 IPRA/IPGA",
+    "matchedModel": "HRF-538 IPRA/IPGA/IPPA",
+    "confidence": "High",
+    "reasoning": "Core Model '538' + Exact Suffix 'HRF-538 IPRA/IPGA/IPPA' matched perfectly!"
+  },
+  {
+    "webTitle": "Haier Twin Inverter Refrigerator HRF-418TIFBU IOT",
+    "matchedModel": "HRF-418 IPRA/IPGA/IPPA",
+    "confidence": "Medium",
+    "reasoning": "Core Model '418' matches list model 'HRF-418 IPRA/IPGA/IPPA'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Twin Inverter Refrigerator HRF-458TIFGU IOT",
+    "matchedModel": "HRF-458 IPRA/IPGA/IPPA",
+    "confidence": "Medium",
+    "reasoning": "Core Model '458' matches list model 'HRF-458 IPRA/IPGA/IPPA'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Twin Inverter Refrigerator HRF-538 IOT",
+    "matchedModel": "HRF-538 EPR/EPG",
+    "confidence": "Medium",
+    "reasoning": "Core Model '538' matches list model 'HRF-538 EPR/EPG'. Minor variant suffix difference."
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-66 B Single Door",
+    "matchedModel": "UNMATCHED",
+    "confidence": "Low",
+    "reasoning": "No matching core model number found in PDF list."
+  },
+  {
+    "webTitle": "Haier Refrigerator HRF-136 B Single Door",
+    "matchedModel": "HR-136 B",
+    "confidence": "Medium",
+    "reasoning": "Core Model '136' matches list model 'HR-136 B'. Minor variant suffix difference."
+  }
+]

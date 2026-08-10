@@ -1,0 +1,402 @@
+[
+  {
+    "sno": 1,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-7200 CFL",
+    "rate": "20,500",
+    "imageFileFound": "dw7200 cfl.jpg",
+    "targetPath": "/images/products/dawlance-dw-7200-cfl.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 2,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-7200 WFL",
+    "rate": "20,500",
+    "imageFileFound": "dw7200 cfl.jpg",
+    "targetPath": "/images/products/dawlance-dw-7200-wfl.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 3,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DWT-270 C LVS+",
+    "rate": "77,000",
+    "imageFileFound": "dwt270c_lvs+.jpg",
+    "targetPath": "/images/products/dawlance-dwt-270-c-lvs.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 4,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-14470 ES",
+    "rate": "",
+    "imageFileFound": "dw14470es.jpg",
+    "targetPath": "/images/products/dawlance-dw-14470-es.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 5,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-6550 G",
+    "rate": "39,000",
+    "imageFileFound": "dw6550g.jpg",
+    "targetPath": "/images/products/dawlance-dw-6550-g.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 6,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-7200",
+    "rate": "21,000",
+    "imageFileFound": "dw7200 cfl.jpg",
+    "targetPath": "/images/products/dawlance-dw-7200.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 7,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-6000",
+    "rate": "16,500",
+    "imageFileFound": "dw6000.jpg",
+    "targetPath": "/images/products/dawlance-dw-6000.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 8,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-7200 CFL",
+    "rate": "20,500",
+    "imageFileFound": "dw7200 cfl.jpg",
+    "targetPath": "/images/products/dawlance-dw-7200-cfl.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 9,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-7200 WFL",
+    "rate": "20,500",
+    "imageFileFound": "dw7200 cfl.jpg",
+    "targetPath": "/images/products/dawlance-dw-7200-wfl.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 10,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DW-9000",
+    "rate": "23,500",
+    "imageFileFound": "dw9000.jpg",
+    "targetPath": "/images/products/dawlance-dw-9000.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 11,
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "model": "DWT-270 C LVS+",
+    "rate": "77,000",
+    "imageFileFound": "dwt270c_lvs+.jpg",
+    "targetPath": "/images/products/dawlance-dwt-270-c-lvs.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 12,
+    "brand": "Dawlance",
+    "category": "Microwave",
+    "model": "DW-210 Solo",
+    "rate": "15,700",
+    "imageFileFound": "dw210solo.jpg",
+    "targetPath": "/images/products/dawlance-dw-210-solo.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 13,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 120-1678",
+    "rate": "102,000",
+    "imageFileFound": "hwm120_1678.jpg",
+    "targetPath": "/images/products/haier-hwm-120-1678.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 14,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 85-826",
+    "rate": "53,000",
+    "imageFileFound": "hwm85_826.jpg",
+    "targetPath": "/images/products/haier-hwm-85-826.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 15,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-130-1217",
+    "rate": "24,000",
+    "imageFileFound": "hwm130_1217.jpg",
+    "targetPath": "/images/products/haier-hwm-130-1217.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 16,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-150-1789",
+    "rate": "93,000",
+    "imageFileFound": "hwm150_1789.jpg",
+    "targetPath": "/images/products/haier-hwm-150-1789.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 17,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL Microwave Oven PMO-20 BH Classic Plus/On Installment",
+    "rate": "23,500",
+    "imageFileFound": "pel-pmo-20bh-classic-plus-microwave.jpg",
+    "targetPath": "/images/products/haier-pel-microwave-oven-pmo-20-bh-classic-plus-on-installment.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 18,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments",
+    "rate": "38,500",
+    "imageFileFound": "PMO-30BG-Glamour-Microwa.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-30bg-glamour-microwave-oven-30-ltr-on-istallments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 19,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments",
+    "rate": "44,000",
+    "imageFileFound": "PMO-38BG-Glamour-Microwave.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-38bg-glamour-microwave-oven-38-ltr-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 20,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO-23 Desire Microwave Oven/On Installments",
+    "rate": "32,500",
+    "imageFileFound": "PMO-23-Desire-Microwave.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-23-desire-microwave-oven-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 21,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "rate": "28,500",
+    "imageFileFound": "PMO-23-SLM-Desire-Microwav.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-23-slm-23-ltr-desire-microwave-oven-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 22,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO-25 Convection Microwave Oven/On Installments",
+    "rate": "43,000",
+    "imageFileFound": "PMO-25-Convection-Microwave.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-25-convection-microwave-oven-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 23,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO-26 Chef Digital Microwave Oven/On Installments",
+    "rate": "37,000",
+    "imageFileFound": "PMO-26-Chef-Digital-Microwave.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-26-chef-digital-microwave-oven-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 24,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "PEL PMO-26 Desire Microwave Oven/On Installments",
+    "rate": "35,500",
+    "imageFileFound": "PMO-26-Desire-Microwave.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-26-desire-microwave-oven-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 25,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "rate": "40,500",
+    "imageFileFound": "PMO-30-Desire-Microwave.jpg",
+    "targetPath": "/images/products/haier-pel-pmo-30-desire-microwave-oven-30-litres-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 26,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "Philips Espresso EP2220 Fully automatic espresso machines/On Installments",
+    "rate": "160,000",
+    "imageFileFound": "Philips-Espresso-EP2220.jpg",
+    "targetPath": "/images/products/haier-philips-espresso-ep2220-fully-automatic-espresso-machines-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 27,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "TCL Elite TAC-24HEA 2 Ton-BE-On Installments",
+    "rate": "198,400",
+    "imageFileFound": "Elite-TAC-24HEA.jpg",
+    "targetPath": "/images/products/haier-tcl-elite-tac-24hea-2-ton-be-on-installments.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 28,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 100 AS",
+    "rate": "",
+    "imageFileFound": "hwm100-as.jpg",
+    "targetPath": "/images/products/haier-hwm-100-as.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 29,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 100 BS",
+    "rate": "",
+    "imageFileFound": "hwm100bs.jpg",
+    "targetPath": "/images/products/haier-hwm-100-bs.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 30,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 100-1678 E",
+    "rate": "",
+    "imageFileFound": "hwm100-1678e.jpg",
+    "targetPath": "/images/products/haier-hwm-100-1678-e.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 31,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 120-1678 ES9",
+    "rate": "74,000",
+    "imageFileFound": "hwm120_1678.jpg",
+    "targetPath": "/images/products/haier-hwm-120-1678-es9.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 32,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 80 AS",
+    "rate": "",
+    "imageFileFound": "hwm80as.jpg",
+    "targetPath": "/images/products/haier-hwm-80-as.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 33,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-120 1978",
+    "rate": "123,500",
+    "imageFileFound": "hwm120-1978.jpg",
+    "targetPath": "/images/products/haier-hwm-120-1978.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 34,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-120-35",
+    "rate": "24,500",
+    "imageFileFound": "hwm120-35.jpg",
+    "targetPath": "/images/products/haier-hwm-120-35.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 35,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-130-1217 GB",
+    "rate": "25,000",
+    "imageFileFound": "hwm130_1217.jpg",
+    "targetPath": "/images/products/haier-hwm-130-1217-gb.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 36,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-49101Spinner",
+    "rate": "17,500",
+    "imageFileFound": "hwm-49101-spinner.jpg",
+    "targetPath": "/images/products/haier-hwm-49101spinner.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 37,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-4991",
+    "rate": "17,700",
+    "imageFileFound": "hwm-4991.jpg",
+    "targetPath": "/images/products/haier-hwm-4991.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 38,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM-80-1269 X",
+    "rate": "",
+    "imageFileFound": "hwm-80-1269-x.jpg",
+    "targetPath": "/images/products/haier-hwm-80-1269-x.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 39,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HW-105-B 14959 S8",
+    "rate": "",
+    "imageFileFound": "hwm-105-b-14959-s8.jpg",
+    "targetPath": "/images/products/haier-hw-105-b-14959-s8.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  },
+  {
+    "sno": 40,
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "model": "HWM 120AS M/W",
+    "rate": "43,000",
+    "imageFileFound": "hwm-120as.jpg",
+    "targetPath": "/images/products/haier-hwm-120as-m-w.jpg",
+    "status": "MATCHED_AND_VERIFIED"
+  }
+]

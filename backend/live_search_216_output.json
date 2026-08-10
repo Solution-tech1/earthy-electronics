@@ -1,0 +1,1298 @@
+[
+  {
+    "brand": "Dawlance",
+    "model": "DW-7200 CFL",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-7200 WFL",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DWT-270 C LVS+",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-14470 ES",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-6550 G",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-7200",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-6000",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-7200 CFL",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-7200 WFL",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-9000",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DWT-270 C LVS+",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Dawlance",
+    "model": "DW-210 Solo",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 120-1678",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 85-826",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-130-1217",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-150-1789",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL Microwave Oven PMO-20 BH Classic Plus/On Installment",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-23 Desire Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-25 Convection Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-26 Chef Digital Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-26 Desire Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "Philips Espresso EP2220 Fully automatic espresso machines/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "TCL Elite TAC-24HEA 2 Ton-BE-On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100 AS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100 BS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100-1678 E",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 120-1678 ES9",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 80 AS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-120 1978",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-120-35",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-130-1217 GB",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-49101Spinner",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-4991",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-80-1269 X",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HW-105-B 14959 S8",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 120AS M/W",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL Microwave Oven PMO-20 BH Classic Plus/On Installment",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-23 Desire Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-25 Convection Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-26 Chef Digital Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "PEL PMO-26 Desire Microwave Oven/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "Philips Espresso EP2220 Fully automatic espresso machines/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "TCL Elite TAC-24HEA 2 Ton-BE-On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HW-90 BP 14959 S6",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100 AS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100 BS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100 CS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 100-1678 E",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 120-1678 ES8",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 120-1678 ES9",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 60-50",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 80 AS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 80-1217",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 85-826 E",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM 95-1678 ES8/JT",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-120 AS MG",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-120-35",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-49101Spinner",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-49102 GD",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-49102 P",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-49112 GD",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-49112 P",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-4991",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-75 AS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HWM-80-1269 X",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20MX12 SOLO",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-23200 GRILL",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HGL 20 MXP7",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HGL 20 MXP8",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMN 20 MXP5",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMN 20 MXP6",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMO-45200",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 DGS GRILL",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 DSS Digital",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 MBS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 MHES",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 MWS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 MX11",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-20 MX12",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-30 AFR",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Haier",
+    "model": "HMW-30 AFS",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1186",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1203",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1253",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1353",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1833",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1844",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1846",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1853",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1860",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2025",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2063",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2064",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2065",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2386",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2405",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2409",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2432",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2451",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2803",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2805",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 3117",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 3118",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 3119",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 312",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 313",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 314",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1186",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1253",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1353",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1833",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1844",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1846",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 1860",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2025",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2386",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2405",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2409",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2432",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2451",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 2803",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 312",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 313",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 314",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 332",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 333",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 342",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 343",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 364",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 366",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 367",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 3804",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 408",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 410",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 411",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 4201",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 4805",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 4806",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 5160",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 5161",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 578",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 5805",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 5806",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 6217",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 6259",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 6260",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 6275",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 672",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 6810",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 6811",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "WestPoint",
+    "model": "WestPoint 718",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEA-1861",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEA-2462",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEI-2443 FLOOR",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEL-1867",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEL-2470",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KES 1271",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KES 1871",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEI-2443 FLOOR",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEN 1274",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEN 1275",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEN 1873",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEN 1874",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEN 2473",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEN 2474",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KEO 2475",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KES 1270",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KES 1271",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KES 1870",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KES 1871",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Kenwood",
+    "model": "KWM-211059",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "PAWM 900i",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "SA 233",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "SA 570",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "SA 572",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "PAWM 1100",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "PAWM 900",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "SA 233",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "SA 570",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "SA 572",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "PEL",
+    "model": "PEL 525 Curved Glassdoor Dispenser/On Installments",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Kabab 20D Solo Black",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Macaroni 20M Solo Black",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Muffin 30D",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Panini 20M Solo Black",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Pasta 23D Solo Black",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Pizza 34D",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Popcorn 20M Solo Black",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Orient",
+    "model": "Roast 23D Solo Black",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 233",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 570",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 572",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 242",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 245",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 270",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 280",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 290",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 550",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 555",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 233",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 570",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 572",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 242",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 270",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 280",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 290",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 550",
+    "image_url": null,
+    "status": "FAILED"
+  },
+  {
+    "brand": "Super Asia",
+    "model": "SA 555",
+    "image_url": null,
+    "status": "FAILED"
+  }
+]

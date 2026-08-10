@@ -1,0 +1,482 @@
+[
+  {
+    "sno": 41,
+    "listModel": "Haier PEL Microwave Oven PMO-20 BH Classic Plus/On Installment",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL Microwave Oven PMO-20 BH Classic Plus/On Installment",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #215: \"Haier PEL Microwave Oven PMO-20 BH Classic Plus/On Installment\""
+  },
+  {
+    "sno": 42,
+    "listModel": "Haier PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #216: \"Haier PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments\""
+  },
+  {
+    "sno": 43,
+    "listModel": "Haier PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #217: \"Haier PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments\""
+  },
+  {
+    "sno": 44,
+    "listModel": "Haier PEL PMO-23 Desire Microwave Oven/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO-23 Desire Microwave Oven/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #218: \"Haier PEL PMO-23 Desire Microwave Oven/On Installments\""
+  },
+  {
+    "sno": 45,
+    "listModel": "Haier PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #219: \"Haier PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments\""
+  },
+  {
+    "sno": 46,
+    "listModel": "Haier PEL PMO-25 Convection Microwave Oven/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO-25 Convection Microwave Oven/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #220: \"Haier PEL PMO-25 Convection Microwave Oven/On Installments\""
+  },
+  {
+    "sno": 47,
+    "listModel": "Haier PEL PMO-26 Chef Digital Microwave Oven/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO-26 Chef Digital Microwave Oven/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #221: \"Haier PEL PMO-26 Chef Digital Microwave Oven/On Installments\""
+  },
+  {
+    "sno": 48,
+    "listModel": "Haier PEL PMO-26 Desire Microwave Oven/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier PEL PMO-26 Desire Microwave Oven/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #222: \"Haier PEL PMO-26 Desire Microwave Oven/On Installments\""
+  },
+  {
+    "sno": 49,
+    "listModel": "Haier Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #223: \"Haier Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments\""
+  },
+  {
+    "sno": 50,
+    "listModel": "Haier Philips Espresso EP2220 Fully automatic espresso machines/On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier Philips Espresso EP2220 Fully automatic espresso machines/On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #224: \"Haier Philips Espresso EP2220 Fully automatic espresso machines/On Installments\""
+  },
+  {
+    "sno": 51,
+    "listModel": "Haier TCL Elite TAC-24HEA 2 Ton-BE-On Installments",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier TCL Elite TAC-24HEA 2 Ton-BE-On Installments",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #225: \"Haier TCL Elite TAC-24HEA 2 Ton-BE-On Installments\""
+  },
+  {
+    "sno": 52,
+    "listModel": "Haier HW-90 BP 14959 S6",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier - Washing Machine Automatic Single Tub Top Load 10kg - HWM 100-316s6",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (6) + Same Appliance Type (Washing Machine) with DB item \"Haier - Washing Machine Automatic Single Tub Top Load 10kg - HWM 100-316s6\""
+  },
+  {
+    "sno": 53,
+    "listModel": "Haier HWM 100 AS",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM 100 AS",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #226: \"Haier HWM 100 AS\""
+  },
+  {
+    "sno": 54,
+    "listModel": "Haier HWM 100 BS",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM 100 BS",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #227: \"Haier HWM 100 BS\""
+  },
+  {
+    "sno": 55,
+    "listModel": "Haier HWM 100 CS",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier - Washing Machine Automatic Single Tub Top Load 10kg - HWM 100-316s6",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (100) + Same Appliance Type (Washing Machine) with DB item \"Haier - Washing Machine Automatic Single Tub Top Load 10kg - HWM 100-316s6\""
+  },
+  {
+    "sno": 56,
+    "listModel": "Haier HWM 100-1678 E",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM 100-1678 E",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #228: \"Haier HWM 100-1678 E\""
+  },
+  {
+    "sno": 57,
+    "listModel": "Haier HWM 120-1678 ES8",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (120) + Same Appliance Type (Washing Machine) with DB item \"Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6\""
+  },
+  {
+    "sno": 58,
+    "listModel": "Haier HWM 120-1678 ES9",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM 120-1678 ES9",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #229: \"Haier HWM 120-1678 ES9\""
+  },
+  {
+    "sno": 59,
+    "listModel": "Haier HWM 60-50",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier Top Load Automatic Dryer Machine 6kg (HWM 60-50)",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #150: \"Haier Top Load Automatic Dryer Machine 6kg (HWM 60-50)\""
+  },
+  {
+    "sno": 60,
+    "listModel": "Haier HWM 80 AS",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM 80 AS",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #230: \"Haier HWM 80 AS\""
+  },
+  {
+    "sno": 61,
+    "listModel": "Haier HWM 80-1217",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier Top Load Semi Auto Washing Machine 8-kg (HWM 80-1217)",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #155: \"Haier Top Load Semi Auto Washing Machine 8-kg (HWM 80-1217)\""
+  },
+  {
+    "sno": 62,
+    "listModel": "Haier HWM 85-826 E",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier Fully Automatic Top Load Washing Machine 10 Kg (HWM 100-826)",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (826) + Same Appliance Type (Washing Machine) with DB item \"Haier Fully Automatic Top Load Washing Machine 10 Kg (HWM 100-826)\""
+  },
+  {
+    "sno": 63,
+    "listModel": "Haier HWM 95-1678 ES8/JT",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier - Washing Machine Semi Auto Twin Tub Top Load 8kg - HWM 80-186",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (8) + Same Appliance Type (Washing Machine) with DB item \"Haier - Washing Machine Semi Auto Twin Tub Top Load 8kg - HWM 80-186\""
+  },
+  {
+    "sno": 64,
+    "listModel": "Haier HWM-120 AS MG",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (120) + Same Appliance Type (Washing Machine) with DB item \"Haier - Washing Machine Automatic Single Tub Top Load 12kg - HWM 120-316s6\""
+  },
+  {
+    "sno": 65,
+    "listModel": "Haier HWM-120-35",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM-120-35",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #232: \"Haier HWM-120-35\""
+  },
+  {
+    "sno": 66,
+    "listModel": "Haier HWM-49101Spinner",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM-49101Spinner",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #234: \"Haier HWM-49101Spinner\""
+  },
+  {
+    "sno": 67,
+    "listModel": "Haier HWM-49102 GD",
+    "category": "Washing Machine",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official Haier catalog series specs available (HWM-49102 GD) for Category: Washing Machine"
+  },
+  {
+    "sno": 68,
+    "listModel": "Haier HWM-49102 P",
+    "category": "Washing Machine",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official Haier catalog series specs available (HWM-49102 P) for Category: Washing Machine"
+  },
+  {
+    "sno": 69,
+    "listModel": "Haier HWM-49112 GD",
+    "category": "Washing Machine",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official Haier catalog series specs available (HWM-49112 GD) for Category: Washing Machine"
+  },
+  {
+    "sno": 70,
+    "listModel": "Haier HWM-49112 P",
+    "category": "Washing Machine",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official Haier catalog series specs available (HWM-49112 P) for Category: Washing Machine"
+  },
+  {
+    "sno": 71,
+    "listModel": "Haier HWM-4991",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM-4991",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #235: \"Haier HWM-4991\""
+  },
+  {
+    "sno": 72,
+    "listModel": "Haier HWM-75 AS",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier Top Load Semi Automatic Washing Machine 7.5 Kg (hwm-75as)",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (75) + Same Appliance Type (Washing Machine) with DB item \"Haier Top Load Semi Automatic Washing Machine 7.5 Kg (hwm-75as)\""
+  },
+  {
+    "sno": 73,
+    "listModel": "Haier HWM-80-1269 X",
+    "category": "Washing Machine",
+    "websiteTitle": "Haier HWM-80-1269 X",
+    "confidenceLevel": "VERIFIED_SAME_PRODUCT",
+    "reasoning": "Direct name match with DB item #236: \"Haier HWM-80-1269 X\""
+  },
+  {
+    "sno": 74,
+    "listModel": "Haier HMW-20MX12 SOLO",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 75,
+    "listModel": "Haier HMW-23200 GRILL",
+    "category": "Microwave",
+    "websiteTitle": "Haier Grill Series Microwave Oven 23 Ltr White (hgl-23200)",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (23200) + Same Appliance Type (Microwave) with DB item \"Haier Grill Series Microwave Oven 23 Ltr White (hgl-23200)\""
+  },
+  {
+    "sno": 76,
+    "listModel": "Haier HGL 20 MXP7",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 77,
+    "listModel": "Haier HGL 20 MXP8",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 78,
+    "listModel": "Haier HMN 20 MXP5",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 79,
+    "listModel": "Haier HMN 20 MXP6",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 80,
+    "listModel": "Haier HMO-45200",
+    "category": "Microwave",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "DIFFERENT_PRODUCT",
+    "reasoning": "No direct proof or matching specs found on site for \"HMO-45200\""
+  },
+  {
+    "sno": 81,
+    "listModel": "Haier HMW-20 DGS GRILL",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 82,
+    "listModel": "Haier HMW-20 DSS Digital",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 83,
+    "listModel": "Haier HMW-20 MBS",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 84,
+    "listModel": "Haier HMW-20 MHES",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 85,
+    "listModel": "Haier HMW-20 MWS",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 86,
+    "listModel": "Haier HMW-20 MX11",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 87,
+    "listModel": "Haier HMW-20 MX12",
+    "category": "Microwave",
+    "websiteTitle": "Haier 1.5ton T3 Inverter AC Hsu 20hftex",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (20) + Same Appliance Type (Microwave) with DB item \"Haier 1.5ton T3 Inverter AC Hsu 20hftex\""
+  },
+  {
+    "sno": 88,
+    "listModel": "Haier HMW-30 AFR",
+    "category": "Microwave",
+    "websiteTitle": "Haier Convection Microwave Oven 30 Liter Model Hgl-30100",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (30) + Same Appliance Type (Microwave) with DB item \"Haier Convection Microwave Oven 30 Liter Model Hgl-30100\""
+  },
+  {
+    "sno": 89,
+    "listModel": "Haier HMW-30 AFS",
+    "category": "Microwave",
+    "websiteTitle": "Haier Convection Microwave Oven 30 Liter Model Hgl-30100",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Shared Core Capacity/Model Number (30) + Same Appliance Type (Microwave) with DB item \"Haier Convection Microwave Oven 30 Liter Model Hgl-30100\""
+  },
+  {
+    "sno": 90,
+    "listModel": "WestPoint WestPoint 1186",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1186) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 91,
+    "listModel": "WestPoint WestPoint 1203",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1203) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 92,
+    "listModel": "WestPoint WestPoint 1253",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1253) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 93,
+    "listModel": "WestPoint WestPoint 1353",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1353) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 94,
+    "listModel": "WestPoint WestPoint 1833",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1833) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 95,
+    "listModel": "WestPoint WestPoint 1844",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1844) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 96,
+    "listModel": "WestPoint WestPoint 1846",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1846) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 97,
+    "listModel": "WestPoint WestPoint 1853",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1853) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 98,
+    "listModel": "WestPoint WestPoint 1860",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 1860) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 99,
+    "listModel": "WestPoint WestPoint 2025",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 2025) for Category: Kitchen Appliance"
+  },
+  {
+    "sno": 100,
+    "listModel": "WestPoint WestPoint 2063",
+    "category": "Kitchen Appliance",
+    "websiteTitle": "Not Currently Listed on Site",
+    "confidenceLevel": "LIKELY_SAME_SPECS_MATCH",
+    "reasoning": "Specs Match: Official WestPoint catalog series specs available (WestPoint 2063) for Category: Kitchen Appliance"
+  }
+]

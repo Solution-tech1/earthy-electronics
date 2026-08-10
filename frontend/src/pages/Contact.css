@@ -12,7 +12,7 @@
 .contact-page-container .page-header h1 {
   font-size: 32px;
   font-weight: 800;
-  color: #0f2557;
+  color: #065f46;
   margin-bottom: 12px;
 }
 
@@ -46,8 +46,8 @@
 .contact-info-panel h3 {
   font-size: 16px;
   font-weight: 700;
-  color: #0f2557;
-  border-bottom: 2px solid #f97316;
+  color: #065f46;
+  border-bottom: 2px solid #10b981;
   padding-bottom: 8px;
   display: inline-block;
   align-self: flex-start;
@@ -78,7 +78,7 @@
   height: 40px;
   border-radius: 6px;
   background-color: rgba(15, 37, 87, 0.06);
-  color: #0f2557;
+  color: #065f46;
   flex-shrink: 0;
 }
 
@@ -96,13 +96,13 @@
 
 .channel-details a {
   font-weight: 700;
-  color: #0f2557;
+  color: #065f46;
   font-size: 13px;
   text-decoration: none;
 }
 
 .channel-details a:hover {
-  color: #f97316;
+  color: #10b981;
 }
 
 .channel-details a.whatsapp-link-text {
@@ -136,7 +136,7 @@
 .contact-form h3 {
   font-size: 18px;
   font-weight: 700;
-  color: #0f2557;
+  color: #065f46;
 }
 
 .contact-form p {
@@ -184,7 +184,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #0f2557;
+  border-color: #065f46;
   background-color: #ffffff;
 }
 
@@ -216,7 +216,7 @@
 .submission-success h3 {
   font-size: 20px;
   font-weight: 800;
-  color: #0f2557;
+  color: #065f46;
 }
 
 .submission-success p {

@@ -29,7 +29,7 @@ function Contact() {
 
       <div className="contact-layout">
         {/* Contact info column */}
-        <aside className="contact-info-panel glass-panel">
+        <aside className="contact-info-panel glass-panel" data-aos="fade-right">
           <h3>Customer Support Channels</h3>
           <p>Choose the method that works best for you. Our Karachi offices respond within minutes.</p>
 
@@ -47,7 +47,7 @@ function Contact() {
               <div className="channel-icon"><Mail size={20} /></div>
               <div className="channel-details">
                 <h4>Email Support</h4>
-                <a href="mailto:support@biselec.com">support@biselec.com</a>
+                <a href="mailto:support@earthyelectronics.pk">support@earthyelectronics.pk</a>
                 <span>We answer within 24 hours</span>
               </div>
             </div>
@@ -57,7 +57,7 @@ function Contact() {
               <div className="channel-details">
                 <h4>WhatsApp Sales Desk</h4>
                 <a 
-                  href="https://wa.me/923002347457?text=Hi%20Bis%20Elec,%20I%20have%20a%20sales%20query."
+                  href="https://wa.me/923002347457?text=Hi%20EarthyElectronics,%20I%20have%20a%20sales%20query."
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="whatsapp-link-text"
@@ -80,7 +80,7 @@ function Contact() {
         </aside>
 
         {/* Contact form column */}
-        <main className="contact-form-panel glass-panel">
+        <main className="contact-form-panel glass-panel" data-aos="fade-left">
           {submitted ? (
             <motion.div 
               className="submission-success"
@@ -90,7 +90,7 @@ function Contact() {
             >
               <CheckCircle size={56} className="success-icon" />
               <h3>Message Sent Successfully!</h3>
-              <p>Thank you for contacting Bis Elec. A support agent will review your details and reach out shortly.</p>
+              <p>Thank you for contacting EarthyElectronics. A support agent will review your details and reach out shortly.</p>
               <button className="btn btn-primary" onClick={() => setSubmitted(false)}>Send Another Message</button>
             </motion.div>
           ) : (

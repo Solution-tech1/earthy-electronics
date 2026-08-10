@@ -1,0 +1,348 @@
+{
+  "ref_chunk2": [
+    {
+      "sr": "51",
+      "model": "HRF-622 ICG",
+      "mrp": 262000,
+      "category": "Refrigerators"
+    },
+    {
+      "sr": "52",
+      "model": "HRF-622 IBG",
+      "mrp": 265000,
+      "category": "Refrigerators"
+    },
+    {
+      "sr": "53",
+      "model": "HRF-578 TSG",
+      "mrp": 216000,
+      "category": "Refrigerators"
+    },
+    {
+      "sr": "54",
+      "model": "HRF-578 TBG",
+      "mrp": 216000,
+      "category": "Refrigerators"
+    },
+    {
+      "sr": "55",
+      "model": "HRF-578 TBGU1 (IOT)",
+      "mrp": 232000,
+      "category": "Refrigerators"
+    },
+    {
+      "sr": "56",
+      "model": "HRF-578 TGGU1 (IOT)",
+      "mrp": 232000,
+      "category": "Refrigerators"
+    },
+    {
+      "sr": "57",
+      "model": "HRF-678 TGG",
+      "mrp": 359000,
+      "category": "Refrigerators"
+    }
+  ],
+  "ac_chunk1": [
+    {
+      "sr": "1",
+      "model": "Solar Hybrid-III(OW)-T3 Plus",
+      "mrp": 190000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "2",
+      "model": "Solar Hybrid-IV(OW)-T3 Plus 24000 BTU",
+      "mrp": 220000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "3",
+      "model": "Solar Hybrid-1:HPK/AC/Solar Panel",
+      "mrp": 20000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "4",
+      "model": "HSU-10LFCM/013USDC(W)",
+      "mrp": 96000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "5",
+      "model": "HSU-14HFTEX/013/023WUSDC(OW)-T3 Plus",
+      "mrp": 135500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "6",
+      "model": "HSU-14HFTEX/013/023WUSDC(DG)-T3 Plus",
+      "mrp": 139500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "7",
+      "model": "HSU-13HFAB/013/23WUSDC(W)-T3 Pro",
+      "mrp": 124500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "8",
+      "model": "HSU-13HFAB/013/23WUSDC(Grey)-T3 Pro",
+      "mrp": 128500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "9",
+      "model": "HSU-13HFS/013/23WDC(G)/(S)-Super T3",
+      "mrp": 126500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "10",
+      "model": "HSU-13HFS/013/23WDC(W)-Super T3",
+      "mrp": 122500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "11",
+      "model": "HSU-13HFN/013WDC(W)-T3",
+      "mrp": 118500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "12",
+      "model": "HSU-13HFPA/013WUSDC(G-S-B,SG)",
+      "mrp": 118000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "13",
+      "model": "HSU-13HFCS/CA/CP013/33/23USDC(W)-SG",
+      "mrp": 112500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "14",
+      "model": "HSU-13RFP/023DC(W)",
+      "mrp": 110500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "15",
+      "model": "HSU-13LFCM/013/23DC(W)",
+      "mrp": 99500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "16",
+      "model": "HSU-13LF-SUPREME/023DC(W)",
+      "mrp": 99500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "17",
+      "model": "HSU-13LF-PRIME/023DC(W)",
+      "mrp": 99500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "18",
+      "model": "HSU-12CFCP/023L(W)",
+      "mrp": 90500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "19",
+      "model": "HSU-20HJ/013/23WUSDC(G)-T3 Plus",
+      "mrp": 240000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "20",
+      "model": "HSU-20HJUV/013/23WUSDC(G)-T3 Plus",
+      "mrp": 218000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "21",
+      "model": "HSU-20HFTEX/013/23/33WUSDC(OW)-T3 Plus",
+      "mrp": 180000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "22",
+      "model": "HSU-20HFTEX/013/23/33WUSDC(DG)-T3 Plus",
+      "mrp": 184000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "23",
+      "model": "HSU-19HFAB/013WUSDC(W)-T3 Pro",
+      "mrp": 161500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "24",
+      "model": "HSU-19HFAB/013/23WUSDC(Grey)-T3 Pro",
+      "mrp": 166500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "25",
+      "model": "HSU-19HFS/023WDC(S-G)-Super T3",
+      "mrp": 163500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "26",
+      "model": "HSU-19HFS/023WDC(W)-Super T3",
+      "mrp": 158500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "27",
+      "model": "HSU-19HFN/013WDC(W)-T3",
+      "mrp": 149500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "28",
+      "model": "HSU-19HFPAA/013/23/43WUSDC(G,S,B)-SG",
+      "mrp": 145000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "29",
+      "model": "HSU-19HFCS/CA/CP/013/23WDC(W)-SG",
+      "mrp": 133500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "30",
+      "model": "HSU-19RFP/013/23DC(W)",
+      "mrp": 131500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "31",
+      "model": "HSU-19LFCM/013/23USDC(W)",
+      "mrp": 127500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "32",
+      "model": "HSU-19LF-SUPREME/023DC(W)",
+      "mrp": 127500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "33",
+      "model": "HSU-19LF-PRIME/023DC(W)",
+      "mrp": 127500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "34",
+      "model": "HSU-18CFCP/023L(W)",
+      "mrp": 116500,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "35",
+      "model": "HPU-24HJ/013WDC(G)-T3 Plus",
+      "mrp": 331000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "36",
+      "model": "HPU-24HDZUV/013WDC(W) T3 Plus",
+      "mrp": 301000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "37",
+      "model": "HPU-24HDZCA/013WDC(W) T3 Plus",
+      "mrp": 291000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "38",
+      "model": "HSU-24HFAB/013WUSDC(W)-T3 Pro",
+      "mrp": 207000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "39",
+      "model": "HSU-24HFAB/013WUSDC(Grey)-T3 Pro",
+      "mrp": 213000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "40",
+      "model": "HSU-24HFCD/013/23WDC(W)",
+      "mrp": 194000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "41",
+      "model": "HSU-24CFCM/023L(W)",
+      "mrp": 165000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "42",
+      "model": "Date:",
+      "mrp": 2026,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "43",
+      "model": "Effective from June",
+      "mrp": 2026,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "44",
+      "model": "HPU-24HE/012WSDC(X-IK)-T3 Plus (Wi-Fi & Self Cleaning)(with Kit and Installation) 2",
+      "mrp": 271000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "45",
+      "model": "HPU-24HE/013WSDC(X-IK)-T3 (Wi-Fi & Self Cleaning)(with Kit and Installation) 2",
+      "mrp": 271000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "46",
+      "model": "HPU-24HE/WSDC(X-IK) (Wi-Fi & Self Cleaning)(with Kit and Installation) 2",
+      "mrp": 271000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "47",
+      "model": "Cool Only HPU-48CE/DC 4",
+      "mrp": 510000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "48",
+      "model": "HPU-48E/DC 4",
+      "mrp": 561000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "49",
+      "model": "HPU-48HE/012DC(GE)-T3 4",
+      "mrp": 571000,
+      "category": "Air Conditioners"
+    },
+    {
+      "sr": "50",
+      "model": "Cool Only HPU-96CE/DC 8",
+      "mrp": 1214000,
+      "category": "Air Conditioners"
+    }
+  ]
+}

@@ -24,3 +24,8 @@ Thumbs.db
 .vite/
 
 .vercel
+
+backend/mariadb_ext/
+backend/mariadb_restored/
+node_modules/
+dist/

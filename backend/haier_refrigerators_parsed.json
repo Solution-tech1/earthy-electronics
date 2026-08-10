@@ -1,0 +1,344 @@
+[
+  {
+    "sr": "1",
+    "model": "HR-66 B",
+    "mrp": 33500,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "2",
+    "model": "HR-136 B",
+    "mrp": 48900,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "3",
+    "model": "HRF-186 EBS/EBD",
+    "mrp": 54000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "4",
+    "model": "HRF-216 EBS/EBD",
+    "mrp": 65000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "5",
+    "model": "HRF 216 EPR/EPB",
+    "mrp": 69000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "6",
+    "model": "HRF-246 EBS/EBD",
+    "mrp": 70000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "7",
+    "model": "HRF 246 EPR/EPB",
+    "mrp": 75000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "8",
+    "model": "HRF-276 EBS/EBD",
+    "mrp": 75000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "9",
+    "model": "HRF 276 EPR/EPB",
+    "mrp": 80000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "10",
+    "model": "HRF-316 EPR/EPB",
+    "mrp": 89000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "11",
+    "model": "HRF-346 EPR/EPB",
+    "mrp": 93000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "12",
+    "model": "HRF-368 EPR/EPB",
+    "mrp": 100000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "13",
+    "model": "HRF-398 EPR/EPB",
+    "mrp": 105000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "14",
+    "model": "HRF-438 EPR/EPB",
+    "mrp": 110400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "15",
+    "model": "HRF-538 EPR/EPG",
+    "mrp": 116400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "16",
+    "model": "HRF-246 IPRA/IPGA/IPPA",
+    "mrp": 79000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "17",
+    "model": "HRF-276 IPRA/IPGA/IPPA",
+    "mrp": 84000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "18",
+    "model": "HRF-316 IPRA/IPGA/IPPA",
+    "mrp": 93000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "19",
+    "model": "HRF-346 IPRA/IPGA/IPPA",
+    "mrp": 97000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "20",
+    "model": "HRF-418 IPRA/IPGA/IPPA",
+    "mrp": 108000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "21",
+    "model": "HRF-458 IPRA/IPGA/IPPA",
+    "mrp": 113400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "22",
+    "model": "HRF-538 IPRA/IPGA/IPPA",
+    "mrp": 123400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "23",
+    "model": "HRF-316 IDGA/IDRGA",
+    "mrp": 97000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "24",
+    "model": "HRF-346 IDGA/IDRGA",
+    "mrp": 101000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "25",
+    "model": "HRF-418 IDGA/IDRGA",
+    "mrp": 113000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "26",
+    "model": "HRF-458 IDGA/IDRGA",
+    "mrp": 118400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "27",
+    "model": "HRF-538 IDGA/IDRGA",
+    "mrp": 127400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "28",
+    "model": "HRF-316 IAPA+/IARA",
+    "mrp": 97000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "29",
+    "model": "HRF-346 IAPA+/IARA",
+    "mrp": 101000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "30",
+    "model": "HRF-368 IAPA+/IARA",
+    "mrp": 110000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "31",
+    "model": "HRF-398 IAPA+/IARA",
+    "mrp": 112000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "32",
+    "model": "HRF-418 IAPA+/IARA",
+    "mrp": 113000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "33",
+    "model": "HRF-438 IAPA+/IARA",
+    "mrp": 117400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "34",
+    "model": "HRF-458 IAPA+/IARA",
+    "mrp": 118400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "35",
+    "model": "HRF-538 IAPA+/IARA",
+    "mrp": 127400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "36",
+    "model": "HRF-316 IFGA/IFRA",
+    "mrp": 100000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "37",
+    "model": "HRF-346 IFGA/IFRA",
+    "mrp": 104000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "38",
+    "model": "HRF-368 IFGA/IFRA",
+    "mrp": 115000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "39",
+    "model": "HRF-398 IFGA/IFRA",
+    "mrp": 116000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "40",
+    "model": "HRF-418 IFGA/IFRA/IFPA",
+    "mrp": 117000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "41",
+    "model": "HRF-438 IFGA/IFRA/IFPA",
+    "mrp": 121400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "42",
+    "model": "HRF-458 IFGA/IFRA/IFPA",
+    "mrp": 122400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "43",
+    "model": "HRF-538 IFGA/IFRA/IFPA",
+    "mrp": 131500,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "44",
+    "model": "HRF-418 TIFG1U1/TIFB1U1 (IOT)",
+    "mrp": 122000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "45",
+    "model": "HRF-458 TIFG1U1/TIFB1U1 (IOT)",
+    "mrp": 127400,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "46",
+    "model": "HRF-538 TIFG1U1/TIFB1U1 (IOT)",
+    "mrp": 134500,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "47",
+    "model": "HRF-488 IFFB",
+    "mrp": 230000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "48",
+    "model": "HRF-518 IFFB",
+    "mrp": 238000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "49",
+    "model": "HRF-518 WIFFBGU1",
+    "mrp": 244000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "50",
+    "model": "HRF-622 IBS",
+    "mrp": 250000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "51",
+    "model": "HRF-622 ICG",
+    "mrp": 262000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "52",
+    "model": "HRF-622 IBG",
+    "mrp": 265000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "53",
+    "model": "HRF-578 TSG",
+    "mrp": 216000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "54",
+    "model": "HRF-578 TBG",
+    "mrp": 216000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "55",
+    "model": "HRF-578 TBGU1 (IOT)",
+    "mrp": 232000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "56",
+    "model": "HRF-578 TGGU1 (IOT)",
+    "mrp": 232000,
+    "category": "Refrigerators"
+  },
+  {
+    "sr": "57",
+    "model": "HRF-678 TGG",
+    "mrp": 359000,
+    "category": "Refrigerators"
+  }
+]

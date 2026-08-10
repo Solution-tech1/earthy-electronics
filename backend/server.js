@@ -1,503 +1,711 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const mysql = require('mysql2/promise');
+const path = require('path');
+const fs = require('fs');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+const validator = require('validator');
+const emailValidator = require('deep-email-validator');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const JWT_SECRET = process.env.JWT_SECRET || 'EarthyElectronics@2026#JWT$Secret!XkP9mN';
 
-// Middleware
-app.use(cors());
-app.use(express.json());
+// ─── Security Middleware ───────────────────────────────────────
+// HTTP security headers
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: 'cross-origin' },
+  contentSecurityPolicy: false, // relax for API use
+}));
 
-// Basic Route for health check
-app.get('/api/health', (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    message: 'Backend server is running successfully',
-    timestamp: new Date()
-  });
+// Permissive CORS for seamless local and network development
+app.use(cors({
+  origin: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  credentials: true,
+}));
+
+// Body size limit (prevent large payload attacks)
+app.use(express.json({ limit: '10kb' }));
+
+// Global rate limiter: 5000 requests per 15 minutes
+const globalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 5000,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { status: 'error', message: 'Too many requests, please try again later.' },
+});
+app.use(globalLimiter);
+
+// Strict limiter for auth endpoints (prevent brute-force)
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 10,
+  message: { status: 'error', message: 'Too many login attempts. Please wait 15 minutes.' },
 });
 
-// Expanded mock catalog with 40 products (5 categories of 8 items, or 8 categories of 4-8 items)
-const mockItems = [
-  // ─── AIR CONDITIONERS (8 Items) ───
-  { 
-    id: 1, 
-    name: 'Haier 1.5 Ton HSU-18HNS DC Inverter AC', 
-    brand: 'Haier',
-    category: 'Air Conditioner',
-    price: 145000, 
-    discountPrice: 135000,
-    image: '/images/product_ac.png',
-    description: '1.5 Ton DC Inverter Air Conditioner with Wi-Fi control, self-cleaning, and turbo cool technology.',
-    specifications: { tonnage: '1.5 Ton', technology: 'DC Inverter', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 2, 
-    name: 'Haier 1 Ton HSU-12HNS DC Inverter AC', 
-    brand: 'Haier',
-    category: 'Air Conditioner',
-    price: 115000, 
-    discountPrice: 108000,
-    image: '/images/product_ac_2.png',
-    description: '1 Ton smart inverter AC perfect for bedrooms, equipped with low voltage startup and triple inverter technology.',
-    specifications: { tonnage: '1 Ton', technology: 'DC Inverter', energyRating: '4 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 3, 
-    name: 'Gree 1.5 Ton Fairy Series Inverter AC', 
-    brand: 'Gree',
-    category: 'Air Conditioner',
-    price: 165000, 
-    discountPrice: 155000,
-    image: '/images/product_ac.png',
-    description: 'Premium Fairy Series Split AC with elegant design, high ambient cooling, and double-layered condenser.',
-    specifications: { tonnage: '1.5 Ton', technology: 'DC Inverter', energyRating: '4 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 4, 
-    name: 'Gree 1.5 Ton Pular Series Inverter AC', 
-    brand: 'Gree',
-    category: 'Air Conditioner',
-    price: 158000, 
-    discountPrice: null,
-    image: '/images/product_ac_2.png',
-    description: 'Elegant Pular series with 3D air flow, dual-rotor inverter compressor, and low noise design.',
-    specifications: { tonnage: '1.5 Ton', technology: 'DC Inverter', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 5, 
-    name: 'Dawlance 1.5 Ton Chrome Inverter AC', 
-    brand: 'Dawlance',
-    category: 'Air Conditioner',
-    price: 138000, 
-    discountPrice: 129000,
-    image: '/images/product_ac.png',
-    description: 'Dawlance Chrome Inverter AC with heavy duty gold fin condenser and quick cooling operation.',
-    specifications: { tonnage: '1.5 Ton', technology: 'DC Inverter', energyRating: '4 Star', warranty: '12 Years Compressor' }
-  },
-  { 
-    id: 6, 
-    name: 'Dawlance 1.5 Ton Mega T+ Inverter AC', 
-    brand: 'Dawlance',
-    category: 'Air Conditioner',
-    price: 148000, 
-    discountPrice: 139000,
-    image: '/images/product_ac_2.png',
-    description: 'High efficiency Mega T+ inverter AC with double golden fin protection and smart control.',
-    specifications: { tonnage: '1.5 Ton', technology: 'DC Inverter', energyRating: '5 Star', warranty: '12 Years Compressor' }
-  },
-  { 
-    id: 7, 
-    name: 'Kenwood 1.5 Ton eInverter Eco AC', 
-    brand: 'Kenwood',
-    category: 'Air Conditioner',
-    price: 142000, 
-    discountPrice: 132000,
-    image: '/images/product_ac.png',
-    description: 'Kenwood Eco series inverter AC with high energy efficiency ratio and eco-friendly gas.',
-    specifications: { tonnage: '1.5 Ton', technology: 'eInverter', energyRating: '4 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 8, 
-    name: 'Kenwood 1 Ton eSmart Inverter AC', 
-    brand: 'Kenwood',
-    category: 'Air Conditioner',
-    price: 112000, 
-    discountPrice: null,
-    image: '/images/product_ac_2.png',
-    description: 'Smart series 1 Ton inverter AC with mobile app control and fast cooling functionality.',
-    specifications: { tonnage: '1 Ton', technology: 'eInverter', energyRating: '3 Star', warranty: '10 Years Compressor' }
-  },
 
-  // ─── REFRIGERATORS (8 Items) ───
-  { 
-    id: 9, 
-    name: 'Dawlance Chrome 350 Inverter Refrigerator', 
-    brand: 'Dawlance',
-    category: 'Refrigerator',
-    price: 95000, 
-    discountPrice: 88000,
-    image: '/images/product_fridge.png',
-    description: 'Chrome series 350L inverter refrigerator with twin fan technology, digital display, and VCM finish.',
-    specifications: { capacity: '350 Liters', technology: 'Inverter Compressor', energyRating: '4 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 10, 
-    name: 'Dawlance Avante 9193 Inverter Refrigerator', 
-    brand: 'Dawlance',
-    category: 'Refrigerator',
-    price: 110000, 
-    discountPrice: 102000,
-    image: '/images/product_fridge_2.png',
-    description: 'Premium Avante designer glass door refrigerator with insect repellent technology and hybrid cooling.',
-    specifications: { capacity: '400 Liters', technology: 'Inverter Compressor', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 11, 
-    name: 'Haier HRF-438 No-Frost Refrigerator', 
-    brand: 'Haier',
-    category: 'Refrigerator',
-    price: 125000, 
-    discountPrice: 118000,
-    image: '/images/product_fridge.png',
-    description: 'Digital display 438L refrigerator with multi air flow, turbo cooling, and multi-zone freshness.',
-    specifications: { capacity: '438 Liters', technology: 'Inverter Compressor', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 12, 
-    name: 'Haier HRF-306 Glass Door Refrigerator', 
-    brand: 'Haier',
-    category: 'Refrigerator',
-    price: 88000, 
-    discountPrice: null,
-    image: '/images/product_fridge_2.png',
-    description: 'Aesthetic red glass door finish refrigerator with instant icing and low voltage run operations.',
-    specifications: { capacity: '306 Liters', technology: 'Regular Compressor', energyRating: '3 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 13, 
-    name: 'Pel Glass Door 380 Inverter Refrigerator', 
-    brand: 'Pel',
-    category: 'Refrigerator',
-    price: 86000, 
-    discountPrice: 79000,
-    image: '/images/product_fridge.png',
-    description: 'Elegant glass door finish Pel refrigerator with super fast freeze capability and eco-friendly cooling.',
-    specifications: { capacity: '380 Liters', technology: 'Inverter Compressor', energyRating: '3 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 14, 
-    name: 'Pel Desire 650 Luxury Refrigerator', 
-    brand: 'Pel',
-    category: 'Refrigerator',
-    price: 115000, 
-    discountPrice: null,
-    image: '/images/product_fridge_2.png',
-    description: 'Desire series double door premium refrigerator with extra wide body and copper condenser.',
-    specifications: { capacity: '480 Liters', technology: 'Inverter Compressor', energyRating: '4 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 15, 
-    name: 'Samsung Double Door 500L Refrigerator', 
-    brand: 'Samsung',
-    category: 'Refrigerator',
-    price: 220000, 
-    discountPrice: 205000,
-    image: '/images/product_fridge.png',
-    description: 'Premium smart double door refrigerator with digital inverter, Twin Cooling Plus, and convertible freezer.',
-    specifications: { capacity: '500 Liters', technology: 'Digital Inverter', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 16, 
-    name: 'Samsung RT38 Digital Inverter Refrigerator', 
-    brand: 'Samsung',
-    category: 'Refrigerator',
-    price: 185000, 
-    discountPrice: 176000,
-    image: '/images/product_fridge_2.png',
-    description: 'High efficiency RT38 model with multi flow cooling, deodorizing filter, and smart connect feature.',
-    specifications: { capacity: '380 Liters', technology: 'Digital Inverter', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  },
+// ─── MySQL Database Setup ─────────────────────────────────────
+let db;
+let isConnected = false;
 
-  // ─── LED TVs (8 Items) ───
-  { 
-    id: 17, 
-    name: 'TCL 55" C645 QLED Smart TV', 
-    brand: 'TCL',
-    category: 'LED TV',
-    price: 125000, 
-    discountPrice: 118000,
-    image: '/images/product_tv.png',
-    description: '55 inch QLED television with Dolby Vision, HDR10+, Google OS, and Dolby Atmos audio.',
-    specifications: { screen: '55 inch', resolution: '4K QLED', technology: 'Google TV Smart', warranty: '3 Years' }
-  },
-  { 
-    id: 18, 
-    name: 'TCL 43" S5400 Full HD TV', 
-    brand: 'TCL',
-    category: 'LED TV',
-    price: 68000, 
-    discountPrice: 62000,
-    image: '/images/product_tv_2.png',
-    description: '43 inch bezel-less Full HD TV with HDR10, Android OS, and built-in Bluetooth.',
-    specifications: { screen: '43 inch', resolution: 'Full HD', technology: 'Android 11 OS', warranty: '3 Years' }
-  },
-  { 
-    id: 19, 
-    name: 'Sony 43" Bravia X75K 4K Google TV', 
-    brand: 'Sony',
-    category: 'LED TV',
-    price: 135000, 
-    discountPrice: null,
-    image: '/images/product_tv.png',
-    description: 'Bravia 43 inch 4K Google TV with X-Reality PRO processing, TRILUMINOS Display, and Google Play Store.',
-    specifications: { screen: '43 inch', resolution: '4K UHD', technology: 'Google TV', warranty: '2 Years' }
-  },
-  { 
-    id: 20, 
-    name: 'Sony 55" Bravia X80L 4K Smart TV', 
-    brand: 'Sony',
-    category: 'LED TV',
-    price: 215000, 
-    discountPrice: 198000,
-    image: '/images/product_tv_2.png',
-    description: 'Premium X80L series Bravia TV with X1 processor, 4K HDR, Dolby Atmos, and smart Apple AirPlay.',
-    specifications: { screen: '55 inch', resolution: '4K UHD', technology: 'Google TV Smart OS', warranty: '2 Years' }
-  },
-  { 
-    id: 21, 
-    name: 'Samsung 65" Crystal UHD Smart TV', 
-    brand: 'Samsung',
-    category: 'LED TV',
-    price: 195000, 
-    discountPrice: 185000,
-    image: '/images/product_tv.png',
-    description: '65 inch premium slim bezel crystal UHD smart TV featuring HDR 10+, Dynamic Crystal Color, and Smart Hub.',
-    specifications: { screen: '65 inch', resolution: '4K UHD', technology: 'Tizen Smart OS', warranty: '1 Year' }
-  },
-  { 
-    id: 22, 
-    name: 'Samsung 55" AU7000 Smart LED TV', 
-    brand: 'Samsung',
-    category: 'LED TV',
-    price: 145000, 
-    discountPrice: null,
-    image: '/images/product_tv_2.png',
-    description: '55 inch Crystal UHD TV featuring Q-Symphony sound sync, PurColor technology, and PC mode.',
-    specifications: { screen: '55 inch', resolution: '4K UHD', technology: 'Tizen Smart OS', warranty: '1 Year' }
-  },
-  { 
-    id: 23, 
-    name: 'Changhong Ruba 32" Smart LED TV', 
-    brand: 'Changhong Ruba',
-    category: 'LED TV',
-    price: 38000, 
-    discountPrice: 34000,
-    image: '/images/product_tv.png',
-    description: 'Budget-friendly 32 inch Smart LED TV with android OS, screen mirroring, and HDMI ports.',
-    specifications: { screen: '32 inch', resolution: 'HD Ready', technology: 'Android Smart TV', warranty: '2 Years' }
-  },
-  { 
-    id: 24, 
-    name: 'Changhong Ruba 40" Full HD Smart TV', 
-    brand: 'Changhong Ruba',
-    category: 'LED TV',
-    price: 58000, 
-    discountPrice: 53000,
-    image: '/images/product_tv_2.png',
-    description: '40 inch Full HD smart television featuring direct led backlight, smart voice search, and dual HDMI.',
-    specifications: { screen: '40 inch', resolution: 'Full HD', technology: 'Android Smart TV', warranty: '2 Years' }
-  },
-
-  // ─── WASHING MACHINES (8 Items) ───
-  { 
-    id: 25, 
-    name: 'Haier HWM 120-1678 Front Load Washer', 
-    brand: 'Haier',
-    category: 'Washing Machine',
-    price: 115000, 
-    discountPrice: 108000,
-    image: '/images/product_washer.png',
-    description: '12kg front load inverter washing machine with steam wash, Direct Motion Motor, and 1400 RPM spin.',
-    specifications: { capacity: '12 kg', technology: 'Inverter Direct Drive', energyRating: '5 Star', warranty: '10 Years Motor' }
-  },
-  { 
-    id: 26, 
-    name: 'Haier HWM 85-826 Top Load Fully Auto', 
-    brand: 'Haier',
-    category: 'Washing Machine',
-    price: 62000, 
-    discountPrice: 57000,
-    image: '/images/product_washer_2.png',
-    description: '8.5kg fully automatic top loader with fuzzy logic control, pillow drum, and rust-free body cabinet.',
-    specifications: { capacity: '8.5 kg', technology: 'Fully Automatic Top Load', energyRating: '4 Star', warranty: '10 Years Motor' }
-  },
-  { 
-    id: 27, 
-    name: 'Dawlance Top Load 9kg Semi-Auto Washer', 
-    brand: 'Dawlance',
-    category: 'Washing Machine',
-    price: 48000, 
-    discountPrice: 44000,
-    image: '/images/product_washer.png',
-    description: 'Heavy duty top load semi-automatic washing machine with double storm pulsator and quick spin dry.',
-    specifications: { capacity: '9 kg', technology: 'Semi-Automatic Twin Tub', energyRating: '3 Star', warranty: '2 Years Parts & Motor' }
-  },
-  { 
-    id: 28, 
-    name: 'Dawlance DWT 260 Fully Automatic Washer', 
-    brand: 'Dawlance',
-    category: 'Washing Machine',
-    price: 74000, 
-    discountPrice: null,
-    image: '/images/product_washer_2.png',
-    description: '9kg fully automatic top load washing machine with triple waterfall technology and pro-fabric drum design.',
-    specifications: { capacity: '9 kg', technology: 'Fully Automatic Top Load', energyRating: '4 Star', warranty: '10 Years Motor' }
-  },
-  { 
-    id: 29, 
-    name: 'Kenwood 12kg Fully Automatic Washer', 
-    brand: 'Kenwood',
-    category: 'Washing Machine',
-    price: 88000, 
-    discountPrice: 82000,
-    image: '/images/product_washer.png',
-    description: '12kg luxury top-loading fully automatic washing machine with smart clean wash technology and digital control.',
-    specifications: { capacity: '12 kg', technology: 'Fully Automatic Top Load', energyRating: '4 Star', warranty: '3 Years Motor' }
-  },
-  { 
-    id: 30, 
-    name: 'Kenwood KWM-7002 Semi-Automatic Washer', 
-    brand: 'Kenwood',
-    category: 'Washing Machine',
-    price: 36000, 
-    discountPrice: null,
-    image: '/images/product_washer_2.png',
-    description: '7kg twin tub washing machine with active lint filter, powerful pulsator, and heavy-duty plastic body.',
-    specifications: { capacity: '7 kg', technology: 'Twin Tub Semi-Auto', energyRating: '3 Star', warranty: '1 Year Parts & Motor' }
-  },
-  { 
-    id: 31, 
-    name: 'Super Asia SA-240 Twin Tub Washer', 
-    brand: 'Super Asia',
-    category: 'Washing Machine',
-    price: 34000, 
-    discountPrice: 29500,
-    image: '/images/product_washer.png',
-    description: '8kg twin tub washing machine from Super Asia with double storm wash action and heavy duty gear transmission.',
-    specifications: { capacity: '8 kg', technology: 'Twin Tub Semi-Auto', energyRating: '3 Star', warranty: '2 Years Motor' }
-  },
-  { 
-    id: 32, 
-    name: 'Super Asia SA-270 Single Tub Washer', 
-    brand: 'Super Asia',
-    category: 'Washing Machine',
-    price: 22000, 
-    discountPrice: 19900,
-    image: '/images/product_washer_2.png',
-    description: '10kg single tub washing machine, powerful motor, large capacity tub, shock-free plastic body.',
-    specifications: { capacity: '10 kg', technology: 'Single Tub Washer', energyRating: '3 Star', warranty: '2 Years Motor' }
-  },
-
-  // ─── KITCHEN APPLIANCES (2 Items) ───
-  { 
-    id: 33, 
-    name: 'Dawlance Air Fryer DWAF-3013', 
-    brand: 'Dawlance',
-    category: 'Kitchen Appliances',
-    price: 28000, 
-    discountPrice: 25000,
-    image: '/images/product_kitchen.png',
-    description: 'Smart air fryer with digital touchscreen, 8 preset cooking menus, and 3.5L cooking capacity.',
-    specifications: { capacity: '3.5 Liters', power: '1500 Watts', controls: 'Digital Touch', warranty: '1 Year Parts' }
-  },
-  { 
-    id: 34, 
-    name: 'Kenwood Food Processor FDP-301', 
-    brand: 'Kenwood',
-    category: 'Kitchen Appliances',
-    price: 34000, 
-    discountPrice: null,
-    image: '/images/product_kitchen.png',
-    description: 'Multi-functional food processor with blender attachment, chopping blade, and stainless steel disks.',
-    specifications: { speedSettings: '2 Speed + Pulse', bowlCapacity: '2.1 Liters', power: '800 Watts', warranty: '1 Year' }
-  },
-
-  // ─── MICROWAVE OVENS (2 Items) ───
-  { 
-    id: 35, 
-    name: 'Haier HWD-20MX Microwave Oven', 
-    brand: 'Haier',
-    category: 'Microwave Oven',
-    price: 24000, 
-    discountPrice: 22000,
-    image: '/images/product_microwave.png',
-    description: 'Solo microwave oven with 5 power levels, defrost function, and easy mechanical control dial.',
-    specifications: { capacity: '20 Liters', controlType: 'Mechanical Dial', powerLevels: '5 levels', warranty: '1 Year' }
-  },
-  { 
-    id: 36, 
-    name: 'Dawlance DW-297 Microwave Oven', 
-    brand: 'Dawlance',
-    category: 'Microwave Oven',
-    price: 29000, 
-    discountPrice: null,
-    image: '/images/product_microwave.png',
-    description: 'Premium grill microwave oven with digital panel, child lock safety, and express cooking function.',
-    specifications: { capacity: '23 Liters', controlType: 'Digital Touch', feature: 'Grill + Microwave', warranty: '2 Years' }
-  },
-
-  // ─── WATER DISPENSERS (2 Items) ───
-  { 
-    id: 37, 
-    name: 'Gree Water Dispenser GW-101', 
-    brand: 'Gree',
-    category: 'Water Dispenser',
-    price: 38000, 
-    discountPrice: 35000,
-    image: '/images/product_dispenser.png',
-    description: 'Double nozzle water dispenser with rapid cooling, bottom storage cabinet, and child lock hot tap.',
-    specifications: { nozzles: '2 (Hot & Cold)', compressor: 'High efficiency', cabinet: 'Bottom fridge', warranty: '1 Year' }
-  },
-  { 
-    id: 38, 
-    name: 'Homage Water Dispenser HWD-28', 
-    brand: 'Homage',
-    category: 'Water Dispenser',
-    price: 31000, 
-    discountPrice: null,
-    image: '/images/product_dispenser.png',
-    description: 'Glass-front design water dispenser with low noise operations and energy-efficient compressor cooling.',
-    specifications: { nozzles: '2 (Hot & Cold)', cabinet: 'Storage drawer', powerConsumption: 'Low', warranty: '1 Year' }
-  },
-
-  // ─── DEEP FREEZERS (2 Items) ───
-  { 
-    id: 39, 
-    name: 'Dawlance Deep Freezer DF-200', 
-    brand: 'Dawlance',
-    category: 'Deep Freezer',
-    price: 75000, 
-    discountPrice: 69000,
-    image: '/images/product_freezer.png',
-    description: 'Single cabinet deep freezer with fast freeze technology, rust-free sheet, and copper evaporator coils.',
-    specifications: { capacity: '200 Liters', type: 'Single Chest', energyRating: '4 Star', warranty: '10 Years Compressor' }
-  },
-  { 
-    id: 40, 
-    name: 'Haier Deep Freezer HDF-325', 
-    brand: 'Haier',
-    category: 'Deep Freezer',
-    price: 85000, 
-    discountPrice: 78000,
-    image: '/images/product_freezer.png',
-    description: 'Double door chest deep freezer with super fast freeze capability, dual thermostat, and LED lighting.',
-    specifications: { capacity: '325 Liters', type: 'Double Chest Door', energyRating: '5 Star', warranty: '10 Years Compressor' }
-  }
-];
-
-app.get('/api/items', (req, res) => {
-  res.status(200).json({ status: 'success', data: mockItems });
-});
-
-// Start Express Server
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
-});
-
-// Background DB Connection check
-if (process.env.MONGODB_URI) {
-  mongoose
-    .connect(process.env.MONGODB_URI)
-    .then(() => {
-      console.log('Connected to MongoDB successfully');
-    })
-    .catch((err) => {
-      console.error('MongoDB connection error:', err.message);
-      console.log('Continuing server operations in offline database mode...');
+async function initDBConnection() {
+  try {
+    db = await mysql.createPool({
+      host: process.env.DB_HOST || 'localhost',
+      user: process.env.DB_USER || 'root',
+      password: process.env.DB_PASSWORD || '',
+      database: process.env.DB_NAME || 'earthy_elec',
+      port: process.env.DB_PORT || 3306,
+      waitForConnections: true,
+      connectionLimit: 10,
+      queueLimit: 0
     });
-} else {
-  console.log('No MONGODB_URI found. Server is running in offline database mode.');
+    isConnected = true;
+    console.log('[DB] Connected to MySQL database');
+    await initDB();
+  } catch (err) {
+    if (err.code === 'ER_BAD_DB_ERROR') {
+      console.log('[DB] Database does not exist, creating it...');
+      const tempDb = await mysql.createConnection({
+        host: process.env.DB_HOST || 'localhost',
+        user: process.env.DB_USER || 'root',
+        password: process.env.DB_PASSWORD || '',
+        port: process.env.DB_PORT || 3306,
+      });
+      await tempDb.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME || 'earthyelectronics'}`);
+      await tempDb.end();
+      return initDBConnection(); // Retry connection with DB
+    }
+    console.error('[DB] Failed to connect to MySQL:', err.message);
+  }
 }
+initDBConnection();
+
+// Wrapper helpers to maintain compatibility with SQLite syntax used throughout app
+const dbRun = async (sql, params = []) => {
+  if (!isConnected) throw new Error('DB not connected');
+  const [result] = await db.execute(sql, params);
+  return { lastID: result.insertId, changes: result.affectedRows };
+};
+const dbGet = async (sql, params = []) => {
+  if (!isConnected) throw new Error('DB not connected');
+  const [rows] = await db.execute(sql, params);
+  return rows[0];
+};
+const dbAll = async (sql, params = []) => {
+  if (!isConnected) throw new Error('DB not connected');
+  const [rows] = await db.execute(sql, params);
+  return rows;
+};
+
+async function initDB() {
+  try {
+    // Users table
+    await db.query(`CREATE TABLE IF NOT EXISTS users (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
+      email VARCHAR(255) UNIQUE NOT NULL,
+      password VARCHAR(255) NOT NULL,
+      role VARCHAR(50) DEFAULT 'customer',
+      is_active TINYINT DEFAULT 1,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )`);
+
+    // Chat History table
+    await db.query(`CREATE TABLE IF NOT EXISTS chat_history (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT NOT NULL,
+      role VARCHAR(10) NOT NULL,
+      content TEXT NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )`);
+
+    // Products table
+    await db.query(`CREATE TABLE IF NOT EXISTS products (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
+      brand VARCHAR(100),
+      category VARCHAR(100),
+      price DOUBLE NOT NULL,
+      discountPrice DOUBLE,
+      image VARCHAR(255),
+      description TEXT,
+      specifications TEXT,
+      stock INT DEFAULT 0,
+      stock_threshold INT DEFAULT 5,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )`);
+
+    // Orders table
+    await db.query(`CREATE TABLE IF NOT EXISTS orders (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT,
+      customer_name VARCHAR(255),
+      total DOUBLE NOT NULL,
+      status VARCHAR(50) DEFAULT 'pending',
+      shipping_address TEXT,
+      phone VARCHAR(50),
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+    )`);
+
+    // Order items
+    await db.query(`CREATE TABLE IF NOT EXISTS order_items (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      order_id INT NOT NULL,
+      product_id INT,
+      quantity INT NOT NULL,
+      price DOUBLE NOT NULL,
+      FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
+    )`);
+
+    // Wishlist
+    await db.query(`CREATE TABLE IF NOT EXISTS wishlist (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT NOT NULL,
+      product_id INT NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      UNIQUE(user_id, product_id),
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+      FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+    )`);
+
+    // Reviews
+    await db.query(`CREATE TABLE IF NOT EXISTS reviews (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      product_id INT NOT NULL,
+      user_id INT,
+      reviewer_name VARCHAR(255),
+      rating INT DEFAULT 5,
+      comment TEXT,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+    )`);
+
+    // User locations
+    await db.query(`CREATE TABLE IF NOT EXISTS user_locations (
+      user_id INT PRIMARY KEY,
+      latitude DOUBLE NOT NULL,
+      longitude DOUBLE NOT NULL,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )`);
+
+    // Seed default admin
+    const [adminRows] = await db.query('SELECT id FROM users WHERE email = ?', ['admin@earthyelectronics.pk']);
+    if (adminRows.length === 0) {
+      const hash = await bcrypt.hash('admin123', 12);
+      await db.execute('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)',
+        ['Admin', 'admin@earthyelectronics.pk', hash, 'admin']);
+      console.log('[DB] Default admin created: admin@earthyelectronics.pk / admin123');
+    }
+
+    // Seed sample products
+    const [prodRows] = await db.query('SELECT COUNT(*) as cnt FROM products');
+    if (prodRows[0].cnt === 0) {
+      const products = [
+        ['Haier HSU-12HFPAA 1 Ton DC Inverter AC', 'Haier', 'Air Conditioner', 89000, 79000, '/images/product_ac.png', 'Haier 1 Ton DC Inverter with WiFi', '{}', 8],
+        ['Gree GS-12CITH11G 1.5 Ton Inverter AC', 'Gree', 'Air Conditioner', 110000, 98000, '/images/product_ac_2.png', 'Gree 1.5 Ton Inverter AC with Golden Fin', '{}', 5],
+        ['Haier 55" 4K Smart Android LED TV', 'Haier', 'LED TV', 95000, 84000, '/images/product_led_tv.png', '4K UHD Smart TV with Android OS', '{}', 12],
+        ['Samsung 43" Crystal 4K UHD TV', 'Samsung', 'LED TV', 75000, 68000, '/images/product_tv_2.png', 'Crystal Display with Motion Xcelerator', '{}', 9],
+        ['Dawlance DW-9191 FP INOX Refrigerator', 'Dawlance', 'Refrigerator', 65000, 58000, '/images/product_fridge.png', 'No-Frost 20 CFT Refrigerator', '{}', 7],
+        ['Haier HRF-538TGG 21 CFT Side by Side', 'Haier', 'Refrigerator', 145000, 128000, '/images/product_fridge_2.png', 'Side by Side No-Frost Refrigerator', '{}', 4],
+        ['Haier HWM-85-1708 Semi Automatic Washer', 'Haier', 'Washing Machine', 28000, 24500, '/images/product_washer.png', '8.5 KG Twin Tub Washing Machine', '{}', 15],
+        ['Dawlance DWF-7120 Fully Automatic', 'Dawlance', 'Washing Machine', 42000, 38000, '/images/product_washer_2.png', '7 KG Fully Automatic Front Load', '{}', 6],
+        ['Kenwood MWM-30 30L Microwave Oven', 'Kenwood', 'Microwave Oven', 12000, 9800, '/images/product_microwave.png', '30L with Grill Function', '{}', 20],
+        ['Dawlance Kitchen Appliances Bundle', 'Dawlance', 'Kitchen Appliances', 18000, 15500, '/images/product_kitchen.png', 'Air Fryer + Blender Combo', '{}', 11],
+        ['Haier HWD-311 Water Dispenser', 'Haier', 'Water Dispenser', 14500, 12000, '/images/product_dispenser.png', 'Hot & Cold Compressor Water Dispenser', '{}', 18],
+        ['Dawlance 10 CFT Deep Freezer', 'Dawlance', 'Deep Freezer', 35000, 32000, '/images/product_freezer.png', 'Chest Freezer with Fast Freeze Technology', '{}', 3],
+      ];
+      for (const p of products) {
+        await db.execute('INSERT INTO products (name, brand, category, price, discountPrice, image, description, specifications, stock) VALUES (?,?,?,?,?,?,?,?,?)', p);
+      }
+      console.log('[DB] Sample products seeded.');
+    }
+  } catch (err) {
+    console.error('[DB] Error initializing tables:', err);
+  }
+}
+
+// ─── Auth Middleware ───────────────────────────────────────────
+async function authMiddleware(req, res, next) {
+  const token = req.headers.authorization?.split(' ')[1];
+  if (!token) return res.status(401).json({ status: 'error', message: 'No token provided' });
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    const user = await dbGet('SELECT is_active FROM users WHERE id = ?', [decoded.id]);
+    if (!user || user.is_active === 0) {
+      return res.status(403).json({ status: 'error', message: 'Account suspended or deleted.' });
+    }
+    req.user = decoded;
+    next();
+  } catch {
+    return res.status(401).json({ status: 'error', message: 'Invalid token' });
+  }
+}
+
+function adminMiddleware(req, res, next) {
+  if (req.user?.role !== 'admin')
+    return res.status(403).json({ status: 'error', message: 'Admin access required' });
+  next();
+}
+
+// ─── Products API ──────────────────────────────────────────────
+const getProductsHandler = async (req, res) => {
+  try {
+    const rows = await dbAll("SELECT * FROM products WHERE image IS NOT NULL AND image != 'NO_IMAGE_FOUND' AND image NOT LIKE '/images/cat_%' ORDER BY category, name");
+    const data = rows.map(p => ({ ...p, specifications: safeJSON(p.specifications) }));
+    res.json({ status: 'success', data });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+};
+
+const getProductByIdHandler = async (req, res) => {
+  try {
+    const product = await dbGet('SELECT * FROM products WHERE id = ?', [req.params.id]);
+    if (!product) return res.status(404).json({ status: 'error', message: 'Product not found' });
+    product.specifications = safeJSON(product.specifications);
+    res.json({ status: 'success', data: product });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+};
+
+app.get('/api/items', getProductsHandler);
+app.get('/api/products', getProductsHandler);
+app.get('/api/items/:id', getProductByIdHandler);
+app.get('/api/products/:id', getProductByIdHandler);
+
+// ─── Auth Routes ───────────────────────────────────────────────
+app.post('/api/auth/register', async (req, res) => {
+  const { name, email, password } = req.body;
+  if (!name || !email || !password)
+    return res.status(400).json({ status: 'error', message: 'Name, email and password are required' });
+  
+  try {
+    const existing = await dbGet('SELECT id FROM users WHERE email = ?', [email]);
+    if (existing) return res.status(409).json({ status: 'error', message: 'Email already registered' });
+    const hash = await bcrypt.hash(password, 12);
+    const result = await dbRun('INSERT INTO users (name, email, password, role) VALUES (?, ?, ?, ?)',
+      [name, email, hash, 'customer']);
+    const token = jwt.sign({ id: result.lastID, email, role: 'customer' }, JWT_SECRET, { expiresIn: '7d' });
+    res.status(201).json({ status: 'success', message: 'Account created successfully', token,
+      user: { id: result.lastID, name, email, role: 'customer' } });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.post('/api/auth/login', async (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password)
+    return res.status(400).json({ status: 'error', message: 'Email and password are required' });
+  try {
+    const user = await dbGet('SELECT * FROM users WHERE email = ?', [email]);
+    if (!user) return res.status(401).json({ status: 'error', message: 'Invalid email or password' });
+    if (user.is_active === 0) return res.status(403).json({ status: 'error', message: 'Account is blocked by administrator.' });
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) return res.status(401).json({ status: 'error', message: 'Invalid email or password' });
+    const token = jwt.sign({ id: user.id, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '7d' });
+    res.json({ status: 'success', token, user: { id: user.id, name: user.name, email: user.email, role: user.role } });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Admin: Products CRUD ──────────────────────────────────────
+app.post('/api/admin/products', authMiddleware, adminMiddleware, async (req, res) => {
+  const { name, brand, category, price, discountPrice, image, description, specifications, stock, stock_threshold } = req.body;
+  try {
+    const result = await dbRun(
+      'INSERT INTO products (name, brand, category, price, discountPrice, image, description, specifications, stock, stock_threshold) VALUES (?,?,?,?,?,?,?,?,?,?)',
+      [name, brand, category, price, discountPrice || null, image, description, JSON.stringify(specifications || {}), stock || 0, stock_threshold || 5]);
+    res.status(201).json({ status: 'success', message: 'Product added', id: result.lastID });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.put('/api/admin/products/:id', authMiddleware, adminMiddleware, async (req, res) => {
+  const { name, brand, category, price, discountPrice, image, description, specifications, stock, stock_threshold } = req.body;
+  try {
+    await dbRun(
+      'UPDATE products SET name=?, brand=?, category=?, price=?, discountPrice=?, image=?, description=?, specifications=?, stock=?, stock_threshold=? WHERE id=?',
+      [name, brand, category, price, discountPrice || null, image, description, JSON.stringify(specifications || {}), stock, stock_threshold || 5, req.params.id]);
+    res.json({ status: 'success', message: 'Product updated' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.delete('/api/admin/products/:id', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    await dbRun('DELETE FROM products WHERE id = ?', [req.params.id]);
+    res.json({ status: 'success', message: 'Product deleted' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Admin: Users ─────────────────────────────────────────────
+app.get('/api/admin/users', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const rows = await dbAll('SELECT id, name, email, role, is_active, created_at FROM users ORDER BY created_at DESC');
+    res.json({ status: 'success', data: rows });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// Admin: Toggle user active/blocked status (force logout by disabling account)
+app.patch('/api/admin/users/:id/toggle', authMiddleware, adminMiddleware, async (req, res) => {
+  const userId = req.params.id;
+  try {
+    const u = await dbGet('SELECT id, is_active, role FROM users WHERE id = ?', [userId]);
+    if (!u) return res.status(404).json({ status: 'error', message: 'User not found' });
+    if (u.role === 'admin') return res.status(403).json({ status: 'error', message: 'Cannot modify admin account' });
+    const newStatus = u.is_active === 0 ? 1 : 0;
+    await dbRun('UPDATE users SET is_active = ? WHERE id = ?', [newStatus, userId]);
+    res.json({ status: 'success', message: newStatus === 0 ? 'User blocked & force-logged out' : 'User re-activated', is_active: newStatus });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// Admin: Delete user account
+app.delete('/api/admin/users/:id', authMiddleware, adminMiddleware, async (req, res) => {
+  const userId = req.params.id;
+  try {
+    const u = await dbGet('SELECT role FROM users WHERE id = ?', [userId]);
+    if (!u) return res.status(404).json({ status: 'error', message: 'User not found' });
+    if (u.role === 'admin') return res.status(403).json({ status: 'error', message: 'Cannot delete admin account' });
+    await dbRun('DELETE FROM users WHERE id = ?', [userId]);
+    res.json({ status: 'success', message: 'User account deleted' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+
+// ─── Admin: Analytics ─────────────────────────────────────────
+app.get('/api/admin/analytics', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const totalRevenue = await dbGet('SELECT COALESCE(SUM(total), 5688000) as val FROM orders');
+    const totalOrders  = await dbGet('SELECT COUNT(*) as val FROM orders');
+    const totalProducts = await dbGet('SELECT COUNT(*) as val FROM products');
+    const totalCustomers = await dbGet('SELECT COUNT(*) as val FROM users WHERE role = "customer"');
+
+    const brandRevenue = await dbAll(`
+      SELECT p.brand, COALESCE(SUM(o.total), 0) as revenue, COUNT(o.id) as orders
+      FROM products p LEFT JOIN order_items oi ON p.id = oi.product_id
+      LEFT JOIN orders o ON oi.order_id = o.id
+      GROUP BY p.brand ORDER BY revenue DESC LIMIT 6
+    `);
+    const categoryPerformance = await dbAll(`
+      SELECT p.category, COALESCE(SUM(oi.quantity), 0) as sales, COALESCE(SUM(oi.price * oi.quantity), 0) as revenue
+      FROM products p LEFT JOIN order_items oi ON p.id = oi.product_id
+      GROUP BY p.category ORDER BY sales DESC
+    `);
+
+    // Fallback with mock data if no orders yet
+    const mockBrand = [
+      { brand: 'Haier', revenue: 1250000, orders: 9 },
+      { brand: 'Dawlance', revenue: 980000, orders: 8 },
+      { brand: 'Gree', revenue: 780000, orders: 5 },
+      { brand: 'Kenwood', revenue: 620000, orders: 6 },
+      { brand: 'Samsung', revenue: 550000, orders: 3 },
+      { brand: 'TCL', revenue: 420000, orders: 5 },
+    ];
+    const mockCat = [
+      { category: 'Air Conditioner', sales: 18, revenue: 2430000 },
+      { category: 'Refrigerator', sales: 12, revenue: 1320000 },
+      { category: 'LED TV', sales: 10, revenue: 980000 },
+      { category: 'Washing Machine', sales: 8, revenue: 560000 },
+      { category: 'Deep Freezer', sales: 4, revenue: 320000 },
+      { category: 'Microwave Oven', sales: 3, revenue: 78000 },
+    ];
+
+    res.json({
+      status: 'success',
+      summary: {
+        totalRevenue: totalRevenue.val || 5688000,
+        totalOrders: totalOrders.val || 55,
+        totalProducts: totalProducts.val,
+        totalCustomers: totalCustomers.val,
+      },
+      brandRevenue: brandRevenue.some(b => b.revenue > 0) ? brandRevenue : mockBrand,
+      categoryPerformance: categoryPerformance.some(c => c.sales > 0) ? categoryPerformance : mockCat,
+    });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Admin: Installments ──────────────────────────────────────
+app.get('/api/admin/installments', authMiddleware, adminMiddleware, async (req, res) => {
+  res.json({ status: 'success', data: [] });
+});
+
+// ─── Admin: Locations ────────────────────────────────────────
+app.get('/api/admin/locations', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const rows = await dbAll(`
+      SELECT l.*, u.name as customer_name, u.email
+      FROM user_locations l JOIN users u ON l.user_id = u.id
+    `);
+    res.json({ status: 'success', data: rows });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Customer APIs ────────────────────────────────────────────
+app.get('/api/user/orders', authMiddleware, async (req, res) => {
+  try {
+    const rows = await dbAll('SELECT * FROM orders WHERE user_id = ? ORDER BY created_at DESC', [req.user.id]);
+    res.json({ status: 'success', data: rows });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.get('/api/user/wishlist', authMiddleware, async (req, res) => {
+  try {
+    const rows = await dbAll(
+      'SELECT p.* FROM wishlist w JOIN products p ON w.product_id = p.id WHERE w.user_id = ? ORDER BY w.created_at DESC',
+      [req.user.id]);
+    res.json({ status: 'success', data: rows });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.post('/api/user/wishlist', authMiddleware, async (req, res) => {
+  const { productId } = req.body;
+  try {
+    await dbRun('INSERT OR IGNORE INTO wishlist (user_id, product_id) VALUES (?, ?)', [req.user.id, productId]);
+    res.json({ status: 'success', message: 'Added to wishlist' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.delete('/api/user/wishlist/:productId', authMiddleware, async (req, res) => {
+  try {
+    await dbRun('DELETE FROM wishlist WHERE user_id = ? AND product_id = ?', [req.user.id, req.params.productId]);
+    res.json({ status: 'success', message: 'Removed from wishlist' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.post('/api/user/location', authMiddleware, async (req, res) => {
+  const { lat, lng } = req.body;
+  try {
+    await dbRun(`INSERT INTO user_locations (user_id, latitude, longitude) VALUES (?, ?, ?)
+      ON CONFLICT(user_id) DO UPDATE SET latitude=excluded.latitude, longitude=excluded.longitude, updated_at=CURRENT_TIMESTAMP`,
+      [req.user.id, lat, lng]);
+    res.json({ status: 'success' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Orders API ─────────────────────────────────────────────────
+app.post('/api/orders', async (req, res) => {
+  const { userId, customerName, phone, address, total, items } = req.body;
+  if (!customerName || !phone || !address || !items || items.length === 0) {
+    return res.status(400).json({ status: 'error', message: 'Missing required fields' });
+  }
+
+  try {
+    const result = await dbRun(
+      'INSERT INTO orders (user_id, customer_name, total, shipping_address, phone) VALUES (?, ?, ?, ?, ?)',
+      [userId || 0, customerName, total, address, phone]
+    );
+    const orderId = result.lastID;
+
+    // Insert order items
+    for (const item of items) {
+      await dbRun(
+        'INSERT INTO order_items (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)',
+        [orderId, item.id, item.quantity, item.discountPrice || item.price]
+      );
+    }
+
+    res.status(201).json({ status: 'success', message: 'Order placed successfully', orderId });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Reviews API ──────────────────────────────────────────────
+app.get('/api/products/:id/reviews', async (req, res) => {
+  try {
+    const rows = await dbAll(
+      'SELECT r.*, u.name as reviewer_name FROM reviews r LEFT JOIN users u ON r.user_id = u.id WHERE r.product_id = ? ORDER BY r.created_at DESC',
+      [req.params.id]);
+    res.json({ status: 'success', data: rows });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.post('/api/products/:id/reviews', async (req, res) => {
+  const { name, comment, rating, userId } = req.body;
+  try {
+    await dbRun('INSERT INTO reviews (product_id, user_id, reviewer_name, rating, comment) VALUES (?,?,?,?,?)',
+      [req.params.id, userId || null, name, rating || 5, comment]);
+    res.status(201).json({ status: 'success', message: 'Review added' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+// ─── AI Chatbot Route ─────────────────────────────────────────
+const geminiKeyManager = require('./geminiKeyManager');
+const AI_SYSTEM_PROMPT = `You are an expert sales assistant for EarthyElectronics in Karachi, Pakistan.
+
+LANGUAGE MATCHING RULE (CRITICAL):
+- Strictly match the language used by the user in their message.
+- If the user writes in English, reply strictly in clear, professional English.
+- If the user writes in Roman Urdu (e.g. "bhai konsa ac acha hai", "fridge ki details batao"), reply strictly in friendly, natural Roman Urdu (e.g. "Bhai EarthyElectronics par aapko Haier, Gree aur Dawlance ke sab se behtareen energy-efficient Inverter ACs milenge...").
+- If the user writes in Urdu script, reply in Urdu script.
+
+Sales & Customer Support Guidelines:
+- Help customers choose the best energy-efficient home appliances (ACs, TVs, Refrigerators, Washing Machines, Microwaves, Water Dispensers, Deep Freezers).
+- Provide accurate comparisons between top brands (Haier, Dawlance, Gree, TCL, Samsung, PEL, Kenwood).
+- Assist users in calculating AC tonnage based on room size and usage.
+- Be polite, helpful, and use bold text & bullet points for readability.
+- If asked about exact prices, politely direct them to check our live product catalog on EarthyElectronics.`;
+
+app.get('/api/chat/history/:userId', async (req, res) => {
+  try {
+    const history = await dbAll(
+      'SELECT role, content FROM chat_history WHERE user_id = ? ORDER BY created_at ASC',
+      [req.params.userId]
+    );
+    res.json({ status: 'success', data: history });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.delete('/api/chat/history/:userId', async (req, res) => {
+  try {
+    await dbRun('DELETE FROM chat_history WHERE user_id = ?', [req.params.userId]);
+    res.json({ status: 'success', message: 'Chat history cleared' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.post('/api/chat', async (req, res) => {
+  const { message, userId, history } = req.body;
+  
+  try {
+    // If user is logged in, try saving to history safely without crashing if user ID mismatch
+    if (userId) {
+      try {
+        const userExists = await dbGet('SELECT id FROM users WHERE id = ?', [userId]);
+        if (userExists) {
+          await dbRun('INSERT INTO chat_history (user_id, role, content) VALUES (?, ?, ?)', [userId, 'user', message]);
+        }
+      } catch (histErr) {
+        console.warn("Could not save user chat history:", histErr.message);
+      }
+    }
+
+    const formattedHistory = (history || []).map(msg => ({
+      role: msg.role === 'user' ? 'user' : 'model',
+      parts: [{ text: msg.content }]
+    }));
+    
+    let success = false;
+    let responseText = '';
+    
+    while (!success) {
+      let keyData;
+      try {
+        keyData = geminiKeyManager.getAvailableKey();
+      } catch (err) {
+        if (err.message === "No_Keys_Configured") {
+          return res.status(503).json({ status: 'error', message: 'AI Agent is currently offline. Please configure GEMINI_API_KEY_1.' });
+        }
+        if (err.message === "All_Keys_Exhausted") {
+          return res.json({ status: 'success', response: 'Maazrat! Humara AI assistant is waqt dusray customers ke sath masroof hai. Baraye meharbani chand minute baad dobara koshish karein.' });
+        }
+        return res.status(500).json({ status: 'error', message: err.message });
+      }
+
+      try {
+        const genAI = new GoogleGenerativeAI(keyData.key);
+        let model;
+        try {
+          model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+        } catch (e) {
+          model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        }
+        
+        const chat = model.startChat({
+          history: [
+            { role: 'user', parts: [{ text: "System Prompt: " + AI_SYSTEM_PROMPT }] },
+            { role: 'model', parts: [{ text: "Understood. I am ready to help EarthyElectronics customers with product inquiries, prices, installment plans, and store details." }] },
+            ...formattedHistory
+          ]
+        });
+
+        const result = await chat.sendMessage(message);
+        responseText = result.response.text();
+        success = true;
+      } catch (err) {
+        const errMsg = err.message || "";
+        const errMsgLower = errMsg.toLowerCase();
+        if (errMsgLower.includes('429') || errMsgLower.includes('quota') || errMsgLower.includes('too many requests') || errMsgLower.includes('exhausted') || errMsgLower.includes('401') || errMsgLower.includes('invalid') || errMsgLower.includes('api key not valid')) {
+          geminiKeyManager.markKeyAsExhausted(keyData.index, errMsg);
+          // loop will retry automatically with the next available key
+        } else {
+          console.error("Gemini API Error:", err);
+          return res.status(500).json({ status: 'error', message: errMsg || 'Error processing request.' });
+        }
+      }
+    }
+
+    // Try saving AI response to history if valid user
+    if (success && userId) {
+      try {
+        const userExists = await dbGet('SELECT id FROM users WHERE id = ?', [userId]);
+        if (userExists) {
+          await dbRun('INSERT INTO chat_history (user_id, role, content) VALUES (?, ?, ?)', [userId, 'model', responseText]);
+        }
+      } catch (histErr) {
+        console.warn("Could not save AI chat history:", histErr.message);
+      }
+    }
+
+    res.json({ status: 'success', response: responseText });
+  } catch (err) {
+    console.error("Server Error in Chat Route:", err);
+    res.status(500).json({ status: 'error', message: err.message || 'Error processing request.' });
+  }
+});
+
+// ─── Helper ───────────────────────────────────────────────────
+function safeJSON(str) {
+  try { return JSON.parse(str); } catch { return {}; }
+}
+
+// ─── Start Server ─────────────────────────────────────────────
+app.listen(PORT, () => {
+  console.log(`[Server] EarthyElectronics API running on port ${PORT}`);
+  console.log(`[Server] DB Mode: MySQL | Host: ${process.env.DB_HOST || 'localhost'} | DB: ${process.env.DB_NAME || 'earthyelectronics'}`);
+});

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Animation & UI Demo</title>
+  
+  <!-- AOS CSS for Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 20px;
+    }
+    
+    .scroll-indicator {
+      margin-top: 50px;
+      animation: bounce 2s infinite;
+      color: #10b981;
+      font-size: 24px;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+      60% { transform: translateY(-10px); }
+    }
+
+    /* Button Styles */
+    .button-container {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Option A: Soft Glow */
+    .btn-glow {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-glow:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+    }
+
+    /* Option B: Glassmorphism */
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Option C: 3D Neumorphic */
+    .btn-3d {
+      background-color: #1e293b;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 
+        5px 5px 10px #0f172a, 
+        -5px -5px 10px #334155;
+      transition: all 0.2s ease;
+    }
+    .btn-3d:hover {
+      color: #10b981;
+    }
+    .btn-3d:active {
+      box-shadow: 
+        inset 4px 4px 8px #0f172a, 
+        inset -4px -4px 8px #334155;
+      transform: translateY(2px);
+    }
+
+    /* Scroll Animation Section */
+    .section-title {
+      text-align: center;
+      margin: 80px 0 40px;
+      font-size: 2rem;
+      color: #0f172a;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px 50px 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .mock-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .mock-img {
+      width: 100%;
+      height: 200px;
+      background: #f1f5f9;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 40px;
+    }
+
+    .mock-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .mock-desc {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+    
+    .anim-label {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #4f46e5;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 data-aos="fade-down" data-aos-duration="1000">Interactive UI & Scroll Demo</h1>
+    <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" style="color: #cbd5e1; max-width: 600px;">
+      Welcome to the EarthyElectronics sandbox. Test the new button styles below, then scroll down to experience different types of reveal animations that we can apply to the product grid!
+    </p>
+
+    <!-- Buttons Demo -->
+    <div class="button-container" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+      <div>
+        <p style="font-size: 12px; color: #94a3b8; margin-bottom: 8px;">Option A: Soft Glow</p>
+        <button class="btn-glow">Add to Cart</button>
+      </div>
+      <div>
+        <p style="font-size: 12px; color: #94a3b8; margin-bottom: 8px;">Option B: Glassmorphism</p>
+        <button class="btn-glass">Add to Cart</button>
+      </div>
+      <div>
+        <p style="font-size: 12px; color: #94a3b8; margin-bottom: 8px;">Option C: 3D Neumorphic</p>
+        <button class="btn-3d">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="1000">
+      ↓ Scroll Down for Animations ↓
+    </div>
+  </div>
+
+  <!-- Scroll Animations Demo -->
+  <h2 class="section-title">Scroll Animation Styles</h2>
+  
+  <div class="grid-container">
+    
+    <!-- Fade Up -->
+    <div class="mock-card" data-aos="fade-up" data-aos-duration="800">
+      <div class="anim-label">fade-up</div>
+      <div class="mock-img">📱</div>
+      <div class="mock-title">Smooth & Professional</div>
+      <div class="mock-desc">Best for product grids. Cards gently slide up into view.</div>
+      <button class="btn-glow" style="width: 100%;">View Details</button>
+    </div>
+
+    <!-- Zoom In -->
+    <div class="mock-card" data-aos="zoom-in" data-aos-duration="800">
+      <div class="anim-label">zoom-in</div>
+      <div class="mock-img">📺</div>
+      <div class="mock-title">Bold & Punchy</div>
+      <div class="mock-desc">Pops the element forward. Great for highlighted or featured items.</div>
+      <button class="btn-glow" style="width: 100%;">View Details</button>
+    </div>
+
+    <!-- Flip Left -->
+    <div class="mock-card" data-aos="flip-left" data-aos-duration="800">
+      <div class="anim-label">flip-left</div>
+      <div class="mock-img">💻</div>
+      <div class="mock-title">Creative & Dynamic</div>
+      <div class="mock-desc">Flips like a card. Eye-catching but use sparingly.</div>
+      <button class="btn-glow" style="width: 100%;">View Details</button>
+    </div>
+
+    <!-- Fade Right -->
+    <div class="mock-card" data-aos="fade-right" data-aos-duration="800">
+      <div class="anim-label">fade-right</div>
+      <div class="mock-img">❄️</div>
+      <div class="mock-title">Directional Flow</div>
+      <div class="mock-desc">Slides in from the side. Good for alternating layouts.</div>
+      <button class="btn-glow" style="width: 100%;">View Details</button>
+    </div>
+
+    <!-- Zoom Out Down -->
+    <div class="mock-card" data-aos="zoom-out-up" data-aos-duration="800">
+      <div class="anim-label">zoom-out-up</div>
+      <div class="mock-img">🔥</div>
+      <div class="mock-title">Dramatic Entry</div>
+      <div class="mock-desc">A more dramatic entrance, gives a sense of weight.</div>
+      <button class="btn-glow" style="width: 100%;">View Details</button>
+    </div>
+
+    <!-- Fade Up with Delay (Stagger) -->
+    <div class="mock-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+      <div class="anim-label">fade-up (delayed)</div>
+      <div class="mock-img">🎧</div>
+      <div class="mock-title">Staggered Effect</div>
+      <div class="mock-desc">Loads slightly after the card next to it, creating a wave effect.</div>
+      <button class="btn-glow" style="width: 100%;">View Details</button>
+    </div>
+
+  </div>
+
+  <!-- AOS JS script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize animations
+    AOS.init({
+      once: false, // set to true if you want animation to happen only once on scroll
+      offset: 100, // offset (in px) from the original trigger point
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+[
+  {
+    "s_no": 1,
+    "product_id": 288,
+    "product_model": "Gree AC 18AITH21W Black 1.5 Ton Airy Plus T3 Inverter",
+    "brand": "GREE",
+    "category": "Air Conditioner",
+    "current_image_url": "/images/cat_ac.png",
+    "reason_flagged": "Duplicate image shared across 2 different models"
+  },
+  {
+    "s_no": 2,
+    "product_id": 294,
+    "product_model": "Gree Inverter AC| 1.5 Ton | 18PITH 11S/11W/14S",
+    "brand": "GREE",
+    "category": "Air Conditioner",
+    "current_image_url": "/images/cat_ac.png",
+    "reason_flagged": "Duplicate image shared across 2 different models"
+  },
+  {
+    "s_no": 3,
+    "product_id": 386,
+    "product_model": "Dawlance - Spinner Washing Machine Top Load 10KG - DW 6000",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-spinner-washing-machine-top-load-10kg-dw-6000.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 4,
+    "product_id": 388,
+    "product_model": "Dawlance - Washing Machine Semi Auto Single Tub Top Load 6KG - DS 6080",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-washing-machine-semi-auto-single-tub-top-load-6kg-ds-6080.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 5,
+    "product_id": 391,
+    "product_model": "Dawlance Twin Tub Washing Machine (DW-6550C)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-twin-tub-washing-machine-dw-6550c.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 6,
+    "product_id": 392,
+    "product_model": "Dawlance Twin Tub Washing Machine 6kg (DW-6580 CFL)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-twin-tub-washing-machine-6kg-dw-6580-cfl.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 7,
+    "product_id": 393,
+    "product_model": "Dawlance Semi Automatic Washing Machine 10kg (DW-7500C)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-semi-automatic-washing-machine-10kg-dw-7500c.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 8,
+    "product_id": 394,
+    "product_model": "Dawlance - Washing Machine Semi Auto Twin Tub Top Load 7.5KG - DW 8550 CB FL",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-washing-machine-semi-auto-twin-tub-top-load-7-5kg-dw-8550-cb-fl.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 9,
+    "product_id": 395,
+    "product_model": "Dawlance - Washing Machine Semi Auto Twin Tub Top Load 12KG - DW 10500",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-washing-machine-semi-auto-twin-tub-top-load-12kg-dw-10500.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 10,
+    "product_id": 396,
+    "product_model": "Dawlance - Washing Machine Automatic Top Load 8KG - DWT 260 C LVS+",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-washing-machine-automatic-top-load-8kg-dwt-260-c-lvs.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 11,
+    "product_id": 397,
+    "product_model": "Dawlance - Washing Machine Automatic Top Load 11KG - DWT 1165",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-washing-machine-automatic-top-load-11kg-dwt-1165.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 12,
+    "product_id": 399,
+    "product_model": "Dawlance Top Load Fully Automatic Washing Machine 11kg Gray (DWT-11671-FLT)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-top-load-fully-automatic-washing-machine-11kg-gray-dwt-11671-flt.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 13,
+    "product_id": 402,
+    "product_model": "Dawlance - Washing Machine Automatic Single Tub Top Load 17KG - DWT 1776 FLT C Glow",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-washing-machine-automatic-single-tub-top-load-17kg-dwt-1776-flt-c-glow.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 14,
+    "product_id": 403,
+    "product_model": "Dawlance Top Load Fully Automatic Washing Machine (AWM-DWT-1166-ADS)- 11 KG",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-top-load-fully-automatic-washing-machine-awm-dwt-1166-ads-11-kg.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 15,
+    "product_id": 404,
+    "product_model": "Dawlance Automatic Top Load Washing Machine 14kg Grey (DWT-1471-FLP)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-automatic-top-load-washing-machine-14kg-grey-dwt-1471-flp.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 16,
+    "product_id": 406,
+    "product_model": "Dawlance Top Load Fully Automatic Washing Machine 9KG (DWT-9060-EZ)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-top-load-fully-automatic-washing-machine-9kg-dwt-9060-ez.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 17,
+    "product_id": 407,
+    "product_model": "Dawlance Top Load Fully Automatic Washing Machine 8.5kg (DWT-9560)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-top-load-fully-automatic-washing-machine-8-5kg-dwt-9560.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 18,
+    "product_id": 408,
+    "product_model": "Dawlance Top Load Fully Automatic Washing Machine 10 KG (DWT-1006)",
+    "brand": "Dawlance",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/dawlance-dawlance-top-load-fully-automatic-washing-machine-10-kg-dwt-1006.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 19,
+    "product_id": 409,
+    "product_model": "Haier Top Load Automatic Dryer Machine 6KG (HWM 60-50)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-automatic-dryer-machine-6kg-hwm-60-50.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 20,
+    "product_id": 410,
+    "product_model": "Haier Semi Automatic Washing Machine 8 KG Grey (HWM 80-60)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-semi-automatic-washing-machine-8-kg-grey-hwm-80-60.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 21,
+    "product_id": 411,
+    "product_model": "Haier Top Load Semi Auto Washing Machine 8-kg (HWM 80-1217)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-semi-auto-washing-machine-8-kg-hwm-80-1217.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 22,
+    "product_id": 412,
+    "product_model": "Haier - Washing Machine Semi Auto Single Tub Top Load 12KG - HWM 120-35",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-washing-machine-semi-auto-single-tub-top-load-12kg-hwm-120-35.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 23,
+    "product_id": 413,
+    "product_model": "Haier - Washing Machine Semi Auto Single Tub Top Load 13KG - HWM 130-1217 GB",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-washing-machine-semi-auto-single-tub-top-load-13kg-hwm-130-1217-gb.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 24,
+    "product_id": 414,
+    "product_model": "Haier Top Load Semi Automatic Washing Machine 7.5 KG (HWM-75AS)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-semi-automatic-washing-machine-7-5-kg-hwm-75as.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 25,
+    "product_id": 415,
+    "product_model": "Haier Twin Tub Top Load Semi Automatic Washing Machine 8 KG (HWM-80-CS)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-twin-tub-top-load-semi-automatic-washing-machine-8-kg-hwm-80-cs.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 26,
+    "product_id": 416,
+    "product_model": "Haier Twin Tub Top Load Semi Automatic Washing Machine 10kg (HTW 100-196G)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-twin-tub-top-load-semi-automatic-washing-machine-10kg-htw-100-196g.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 27,
+    "product_id": 417,
+    "product_model": "Haier Washing Machine Semi Auto Twin Tub Top Load 10KG - HTW 100-196E",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-washing-machine-semi-auto-twin-tub-top-load-10kg-htw-100-196e.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 28,
+    "product_id": 418,
+    "product_model": "Haier Twin Tub Series Washing Machine White 10 Kg (HMW100-1217)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-twin-tub-series-washing-machine-white-10-kg-hmw100-1217.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 29,
+    "product_id": 419,
+    "product_model": "Haier - Washing Machine Semi Auto Twin Tub Top Load 8KG - HWM 80-186",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-washing-machine-semi-auto-twin-tub-top-load-8kg-hwm-80-186.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 30,
+    "product_id": 420,
+    "product_model": "Haier Top Load Fully Automatic Washing Machine 8.5kg (HWM-85-1269S6)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-fully-automatic-washing-machine-8-5kg-hwm-85-1269s6.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 31,
+    "product_id": 422,
+    "product_model": "Haier Fully Automatic Top load Washing Machine 9 Kg (HWM 90-826 E )",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-fully-automatic-top-load-washing-machine-9-kg-hwm-90-826-e.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 32,
+    "product_id": 423,
+    "product_model": "Haier Fully Automatic Top load Washing Machine 10 Kg (HWM 100-826)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-fully-automatic-top-load-washing-machine-10-kg-hwm-100-826.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 33,
+    "product_id": 424,
+    "product_model": "Haier Top Load 10.5 KG Fully Automatic Washing Machine (HWM-110-B688S8)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-10-5-kg-fully-automatic-washing-machine-hwm-110-b688s8.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 34,
+    "product_id": 425,
+    "product_model": "Haier Top Load Fully Automatic Washing Machine 12 KG (HWM-120-826 GT)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-fully-automatic-washing-machine-12-kg-hwm-120-826-gt.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 35,
+    "product_id": 426,
+    "product_model": "Haier Top Load Fully Automatic Washing Machine 13 KG (HWM130-688S8)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-fully-automatic-washing-machine-13-kg-hwm130-688s8.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 36,
+    "product_id": 427,
+    "product_model": "Haier Top Load Fully Automatic Washing Machine 15 KG (HWM130-688S8)",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-top-load-fully-automatic-washing-machine-15-kg-hwm130-688s8.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 37,
+    "product_id": 428,
+    "product_model": "Haier - Washing Machine Automatic Single Tub Top Load 10KG - HWM 100-316S6",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-washing-machine-automatic-single-tub-top-load-10kg-hwm-100-316s6.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 38,
+    "product_id": 429,
+    "product_model": "Haier - Washing Machine Automatic Single Tub Top Load 12KG - HWM 120-316S6",
+    "brand": "Haier",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/haier-washing-machine-automatic-single-tub-top-load-12kg-hwm-120-316s6.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 39,
+    "product_id": 430,
+    "product_model": "SAMSUNG 8KG WASHING MACHINE WA80CK4240BWRT DIT",
+    "brand": "Samsung",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/samsung-8kg-washing-machine-wa80ck4240bwrt-dit.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 40,
+    "product_id": 433,
+    "product_model": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 13 KG Dark Gray (WA13CK5441BYRT)",
+    "brand": "Samsung",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/samsung-ecobubble-top-load-fully-automatic-washing-machine-13-kg-dark-gray-wa13ck5441byrt.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 41,
+    "product_id": 434,
+    "product_model": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 15 KG Dark Gray (WA15CK5745BDRT)",
+    "brand": "Samsung",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/samsung-ecobubble-top-load-fully-automatic-washing-machine-15-kg-dark-gray-wa15ck5745bdrt.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 42,
+    "product_id": 435,
+    "product_model": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 17 KG Dark Gray (WA17CK6745BDRT)",
+    "brand": "Samsung",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/samsung-ecobubble-top-load-fully-automatic-washing-machine-17-kg-dark-gray-wa17ck6745bdrt.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 43,
+    "product_id": 436,
+    "product_model": "Samsung Top Load Fully Automatic Washing Machine 21Kg White (WA21CK6745BVRT)",
+    "brand": "Samsung",
+    "category": "Washing Machine",
+    "current_image_url": "/images/products/samsung-top-load-fully-automatic-washing-machine-21kg-white-wa21ck6745bvrt.jpg",
+    "reason_flagged": "Category Mismatch (Washing Machine has AC/Fridge/Dispenser image filename)"
+  },
+  {
+    "s_no": 44,
+    "product_id": 440,
+    "product_model": "PEL Water Dispenser PWD-425 Flat GD",
+    "brand": "PEL",
+    "category": "PEL WATER DISPENSER",
+    "current_image_url": "/images/product_dispenser.png",
+    "reason_flagged": "Duplicate image shared across 2 different models"
+  },
+  {
+    "s_no": 45,
+    "product_id": 444,
+    "product_model": "Orient Crystal 3  Water Dispenser",
+    "brand": "Orient",
+    "category": "Orient WATER DISPENSER",
+    "current_image_url": "/images/product_dispenser.png",
+    "reason_flagged": "Duplicate image shared across 2 different models"
+  },
+  {
+    "s_no": 46,
+    "product_id": 453,
+    "product_model": "Dawlance DW-7500 G Twin Tub",
+    "brand": "Dawlance",
+    "category": "Dawlance Washing Machine",
+    "current_image_url": "/images/cat_washer.png",
+    "reason_flagged": "Duplicate image shared across 6 different models"
+  },
+  {
+    "s_no": 47,
+    "product_id": 455,
+    "product_model": "Dawlance DW-9100 Advanco Single Tub Washer",
+    "brand": "Dawlance",
+    "category": "Dawlance Washing Machine",
+    "current_image_url": "/images/cat_washer.png",
+    "reason_flagged": "Duplicate image shared across 6 different models"
+  },
+  {
+    "s_no": 48,
+    "product_id": 456,
+    "product_model": "Dawlance DW 9100 Glass Lid Single Tub Washer",
+    "brand": "Dawlance",
+    "category": "Dawlance Washing Machine",
+    "current_image_url": "/images/cat_washer.png",
+    "reason_flagged": "Duplicate image shared across 6 different models"
+  },
+  {
+    "s_no": 49,
+    "product_id": 462,
+    "product_model": "Dawlance DW-1167 FLP",
+    "brand": "Dawlance",
+    "category": "Dawlance Washing Machine",
+    "current_image_url": "/images/cat_washer.png",
+    "reason_flagged": "Duplicate image shared across 6 different models"
+  },
+  {
+    "s_no": 50,
+    "product_id": 465,
+    "product_model": "Dawlance DW-1166 ADS",
+    "brand": "Dawlance",
+    "category": "Dawlance Washing Machine",
+    "current_image_url": "/images/cat_washer.png",
+    "reason_flagged": "Duplicate image shared across 6 different models"
+  },
+  {
+    "s_no": 51,
+    "product_id": 467,
+    "product_model": "Dawlance DW-1471 FLP",
+    "brand": "Dawlance",
+    "category": "Dawlance Washing Machine",
+    "current_image_url": "/images/cat_washer.png",
+    "reason_flagged": "Duplicate image shared across 6 different models"
+  }
+]

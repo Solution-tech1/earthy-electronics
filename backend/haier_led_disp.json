@@ -1,0 +1,126 @@
+{
+  "leds": [
+    {
+      "sr": "1",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+      "mrp": 109900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "2",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+      "mrp": 119900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "3",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+      "mrp": 189900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "4",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+      "mrp": 269900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "5",
+      "model": "Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, Full HD Resolution with HDR",
+      "mrp": 55900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "6",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR",
+      "mrp": 89900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "7",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 119900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "8",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 137900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "9",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 199900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "10",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 299900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "11",
+      "model": "Effective from",
+      "mrp": 2026,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "12",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR",
+      "mrp": 89900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "13",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 119900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "14",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 137900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "15",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 199900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "16",
+      "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+      "mrp": 299900,
+      "category": "LED TVs"
+    },
+    {
+      "sr": "17",
+      "model": "Effective from",
+      "mrp": 2026,
+      "category": "LED TVs"
+    }
+  ],
+  "dispensers": [
+    {
+      "sr": "1",
+      "model": "HDR-TC2C1GB-PK",
+      "mrp": 45000,
+      "category": "Water Dispensers"
+    },
+    {
+      "sr": "2",
+      "model": "HDR-TC2C1GS-PK",
+      "mrp": 45000,
+      "category": "Water Dispensers"
+    },
+    {
+      "sr": "3",
+      "model": "HDR-TC2C1GR-PK",
+      "mrp": 45000,
+      "category": "Water Dispensers"
+    }
+  ]
+}

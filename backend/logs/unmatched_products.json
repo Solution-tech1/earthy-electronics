@@ -1,0 +1,902 @@
+[
+  {
+    "brand": "Haier",
+    "original_model_name": "HR-66 B",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:44:26.427Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HR-136 B",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:44:36.469Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-186 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:44:46.477Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-216 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:44:55.593Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF 216 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:45:22.362Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-246 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:45:32.962Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF 246 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:45:43.831Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-276 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:45:54.837Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF 276 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:46:05.177Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:46:15.831Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:46:27.011Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-368 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:46:37.321Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-398 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:46:48.178Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-438 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:46:59.911Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 EPR/EPG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:47:09.710Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-246 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:47:21.430Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-276 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:47:32.656Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:47:43.631Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:47:54.530Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:48:05.635Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:48:16.628Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:48:28.006Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:48:39.888Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:48:48.090Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:48:56.020Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:49:03.705Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:49:29.644Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:49:37.517Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:49:47.075Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-368 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:49:58.470Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-398 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:06.499Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:14.075Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-438 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:21.693Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:30.028Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:37.672Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:47.541Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:50:56.528Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-368 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:51:05.448Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-398 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:51:14.380Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:51:23.723Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-438 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:51:48.477Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:51:57.734Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:52:07.138Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 TIFG1U1/TIFB1U1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:52:16.467Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 TIFG1U1/TIFB1U1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:52:25.508Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 TIFG1U1/TIFB1U1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:52:34.964Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-488 IFFB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:52:43.164Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-518 IFFB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:52:52.516Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-518 WIFFBGU1",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:53:00.466Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-622 IBS",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:53:09.837Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HR-66 B",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:53:44.458Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HR-136 B",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:53:51.988Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-186 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:54:08.739Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-216 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:54:23.905Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF 216 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:54:39.298Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-246 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:54:56.707Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF 246 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:55:14.303Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-276 EBS/EBD",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:55:31.243Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF 276 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:55:47.886Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:56:04.957Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:56:22.649Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-368 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:56:40.703Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-398 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:56:58.589Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-438 EPR/EPB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:57:15.771Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 EPR/EPG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:57:33.524Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-246 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:57:56.532Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-276 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:58:18.253Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:58:38.781Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:58:58.543Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:59:19.548Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T18:59:41.487Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IPRA/IPGA/IPPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:00:20.162Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:00:37.972Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:00:55.363Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:01:12.682Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:01:30.411Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IDGA/IDRGA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:01:48.161Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:01:57.102Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:05.902Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-368 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:14.790Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-398 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:23.728Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:32.191Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-438 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:41.022Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:49.518Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IAPA+/IARA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:02:58.076Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-316 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:03:15.251Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-346 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:03:32.533Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-368 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:03:49.237Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-398 IFGA/IFRA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:04:07.158Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:04:28.792Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-438 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:04:51.045Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:05:12.558Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 IFGA/IFRA/IFPA",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:05:36.389Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-418 TIFG1U1/TIFB1U1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:05:54.489Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-458 TIFG1U1/TIFB1U1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:06:28.059Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-538 TIFG1U1/TIFB1U1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:06:49.800Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-488 IFFB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:07:00.773Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-518 IFFB",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:07:11.917Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-518 WIFFBGU1",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:07:22.826Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-622 IBS",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:07:33.766Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-622 ICG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:04.347Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-622 IBG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:12.683Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-578 TSG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:20.094Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-578 TBG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:29.144Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-578 TBGU1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:38.334Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-578 TGGU1 (IOT)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:46.348Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HRF-678 TGG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:09:55.440Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "Solar Hybrid-III(OW)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:10:04.101Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "Solar Hybrid-IV(OW)-T3 Plus 24000 BTU",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:10:13.075Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "Solar Hybrid-1:HPK/AC/Solar Panel",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:10:22.054Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-10LFCM/013USDC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:10:56.323Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-14HFTEX/013/023WUSDC(OW)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:11:18.416Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-14HFTEX/013/023WUSDC(DG)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:11:40.444Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFAB/013/23WUSDC(W)-T3 Pro",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:12:02.420Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFAB/013/23WUSDC(Grey)-T3 Pro",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:12:41.888Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFS/013/23WDC(G)/(S)-Super T3",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:13:07.474Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFS/013/23WDC(W)-Super T3",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:13:29.124Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFN/013WDC(W)-T3",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:13:46.520Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFPA/013WUSDC(G-S-B,SG)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:14:18.830Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13HFCS/CA/CP013/33/23USDC(W)-SG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:14:54.432Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13RFP/023DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:15:16.298Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13LFCM/013/23DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:15:44.309Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13LF-SUPREME/023DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:15:55.455Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-13LF-PRIME/023DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:16:07.196Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-12CFCP/023L(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:16:30.759Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-20HJ/013/23WUSDC(G)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:16:58.199Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-20HJUV/013/23WUSDC(G)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:17:23.660Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-20HFTEX/013/23/33WUSDC(OW)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:17:54.014Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-20HFTEX/013/23/33WUSDC(DG)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:18:25.443Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFAB/013WUSDC(W)-T3 Pro",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:18:40.285Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFAB/013/23WUSDC(Grey)-T3 Pro",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:18:59.429Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFS/023WDC(S-G)-Super T3",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:19:15.694Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFS/023WDC(W)-Super T3",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:19:32.392Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFN/013WDC(W)-T3",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:19:48.814Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFPAA/013/23/43WUSDC(G,S,B)-SG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:20:14.877Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19HFCS/CA/CP/013/23WDC(W)-SG",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:21:04.671Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19RFP/013/23DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:21:27.111Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19LFCM/013/23USDC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:21:49.265Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19LF-SUPREME/023DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:21:58.524Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-19LF-PRIME/023DC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:22:07.250Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-18CFCP/023L(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:22:22.512Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HPU-24HJ/013WDC(G)-T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:22:37.171Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HPU-24HDZUV/013WDC(W) T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:22:53.100Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HPU-24HDZCA/013WDC(W) T3 Plus",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:23:10.720Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-24HFAB/013WUSDC(W)-T3 Pro",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:23:27.839Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-24HFAB/013WUSDC(Grey)-T3 Pro",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:23:58.719Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-24HFCD/013/23WDC(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:24:17.885Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "HSU-24CFCM/023L(W)",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:24:33.099Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "Date:",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:24:40.559Z"
+  },
+  {
+    "brand": "Haier",
+    "original_model_name": "Effective from June",
+    "reason": "NO_MATCH_FOUND_AFTER_NORMALIZATION",
+    "timestamp": "2026-07-28T19:24:48.752Z"
+  }
+]

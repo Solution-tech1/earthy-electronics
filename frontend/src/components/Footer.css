@@ -1,8 +1,9 @@
-/* Global Footer */
+/* Global Footer — Premium Light Theme */
 .site-footer {
-  background: var(--navy-dark);
-  color: #94a3b8;
+  background: #ffffff;
+  color: #475569;
   font-size: 13px;
+  border-top: 1px solid #e2e8f0;
 }
 
 .footer-top {
@@ -16,7 +17,7 @@
 }
 
 .footer-brand-name {
-  color: white;
+  color: #0f172a;
   font-size: 22px;
   font-weight: 800;
   display: flex;
@@ -28,7 +29,7 @@
 .footer-brand p {
   font-size: 13px;
   line-height: 1.7;
-  color: #94a3b8;
+  color: #64748b;
   margin-bottom: 16px;
 }
 
@@ -36,20 +37,20 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #94a3b8;
+  color: #64748b;
   font-size: 13px;
   margin-bottom: 8px;
 }
 
 .footer-col h4 {
-  color: white;
+  color: #0f172a;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 18px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 2px solid #10b981;
   display: inline-block;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .footer-col ul li a {
-  color: #94a3b8;
+  color: #64748b;
   font-size: 13px;
   transition: color 0.2s;
   display: flex;
@@ -69,14 +70,15 @@
   gap: 6px;
 }
 
-.footer-col ul li a:hover { color: var(--orange); }
+.footer-col ul li a:hover { color: #10b981; }
 
 .footer-bottom {
-  background: rgba(0,0,0,0.2);
+  background: #f8fafc;
   padding: 16px 0;
   text-align: center;
   font-size: 12px;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  color: #64748b;
+  border-top: 1px solid #e2e8f0;
 }
 
 @media (max-width: 1024px) {

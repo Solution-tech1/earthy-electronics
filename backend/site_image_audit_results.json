@@ -1,0 +1,2026 @@
+[
+  {
+    "id": 1,
+    "name": "Haier HSU-12HFPAA 1 Ton DC Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI",
+    "image": "/images/product_ac.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 2,
+    "name": "Gree GS-12CITH11G 1.5 Ton Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI",
+    "image": "/images/product_ac_2.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 3,
+    "name": "Haier 55\" 4K Smart Android LED TV",
+    "category": "LED TV",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 4,
+    "name": "Samsung 43\" Crystal 4K UHD TV",
+    "category": "LED TV",
+    "status": "SAHI",
+    "image": "/images/product_tv_2.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 5,
+    "name": "Dawlance DW-9191 FP INOX Refrigerator",
+    "category": "Refrigerator",
+    "status": "SAHI",
+    "image": "/images/product_fridge.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 6,
+    "name": "Haier HRF-538TGG 21 CFT Side by Side",
+    "category": "Refrigerator",
+    "status": "SAHI",
+    "image": "/images/product_fridge_2.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 7,
+    "name": "Haier HWM-85-1708 Semi Automatic Washer",
+    "category": "Washing Machine",
+    "status": "SAHI",
+    "image": "/images/product_washer.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 8,
+    "name": "Dawlance DWF-7120 Fully Automatic",
+    "category": "Washing Machine",
+    "status": "SAHI",
+    "image": "/images/product_washer_2.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 9,
+    "name": "Kenwood MWM-30 30L Microwave Oven",
+    "category": "Microwave Oven",
+    "status": "SAHI",
+    "image": "/images/product_microwave.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 10,
+    "name": "Dawlance Kitchen Appliances Bundle",
+    "category": "Kitchen Appliances",
+    "status": "SAHI",
+    "image": "/images/product_kitchen.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 11,
+    "name": "Haier HWD-311 Water Dispenser",
+    "category": "Water Dispenser",
+    "status": "SAHI",
+    "image": "/images/products/haier-hwd-311-water-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 12,
+    "name": "Dawlance 10 CFT Deep Freezer",
+    "category": "Deep Freezer",
+    "status": "SAHI",
+    "image": "/images/product_freezer.png",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 267,
+    "name": "ORIENT SPLIT AC MEGA 12X � 1 Ton T3 DC Inverter Heat & Cool",
+    "category": "Air Conditioner",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 268,
+    "name": "Orient 1 Ton 12G Lunar Grace Golden",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "120",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 269,
+    "name": "Orient Everest 12W Geo White",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "105000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 270,
+    "name": "Orient FA 18X Snow White",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "146304",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 271,
+    "name": "Orient Everest 18W Geo White",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "126739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 272,
+    "name": "Orient Infinity 18X Silver Matt T3+",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "184348",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 273,
+    "name": "EcoStar AC 12EMC1 1 Ton Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "102826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 274,
+    "name": "EcoStar Emperor Cool Series ES-18EMC1WS 1.5 Ton Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "124565",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 275,
+    "name": "EcoStar Emperor Series 1 TON White Split Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "105000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 276,
+    "name": "EcoStar Emperor Cool Series 1.5 TON Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "126739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 277,
+    "name": "EcoStar ES-12NV01W T3",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "116957",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 278,
+    "name": "Ecostar AC 18NV01WT3 1.5 Ton T3 Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "145217",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 279,
+    "name": "EcoStar AC 12DU02GC 1 Ton Inverter Split AC Duke Series",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "108261",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 280,
+    "name": "Ecostar 18DU 1.5-Ton DC Inverter Grey",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "127826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 281,
+    "name": "EcoStar Duke  1.5 Ton White Split AC White",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "126739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 282,
+    "name": "EcoStar 18T3PRO 1.5 TON Inverter Split AC (Heat & Cool)",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "165870",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 283,
+    "name": "Gree 1.0 Ton Inverter Air Conditioner 12AITH24 T3",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "194043",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 284,
+    "name": "GREE Split AC 1 TON Pular Series (Inverter)",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "163696",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 285,
+    "name": "Gree AC 12PITH15W-T3 1 Ton Pular T3 Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "146304",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 286,
+    "name": "GREE AC 1 TON Inverter Split 12PITC12W-T3",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "141957",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 287,
+    "name": "Gree AC 12ZITH1W-T3 Ultra 1 Ton Zeno T3 Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "150652",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 288,
+    "name": "Gree AC 18AITH21W Black 1.5 Ton Airy Plus T3 Inverter",
+    "category": "Air Conditioner",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 289,
+    "name": "Gree AC 18AITH21W 1.5 Ton Airy Plus T3 Inverter",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "206807",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 290,
+    "name": "Gree AC 18AITH24W-T3 1.5 Ton Airy Pro T3 Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "251739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 291,
+    "name": "Gree 1.5 Ton T3 Inverter Ac 18AITH24S",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "251739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 292,
+    "name": "Gree AC 18ZITH1W-T3 Ultra 1.5 Ton Zeno T3 Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "185435",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 293,
+    "name": "Gree 1.5 Ton DC Inverter A/C Only Cool � 18PITH-10W",
+    "category": "Air Conditioner",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 294,
+    "name": "Gree Inverter AC| 1.5 Ton | 18PITH 11S/11W/14S",
+    "category": "Air Conditioner",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 295,
+    "name": "Gree 1.5 Ton Inverter Split AC GS-18PITH14",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "164783",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 296,
+    "name": "Gree 1.5 Ton GS-18 PITH11G Grey Pular Series Inverter",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "164783",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 297,
+    "name": "Gree 18PITH17W-T3 Pular 1.5 Ton Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "174565",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 298,
+    "name": "Gree AC 18PITH15G-T3 1.5 Ton Pular T3 Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "176739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 299,
+    "name": "GREE Pular T3 1.5 Ton Inverter AC (GS-18PITC12W-T3)",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "171304",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 300,
+    "name": "Gree GS-24AITH21W-T3/21B-T3 2.0 Ton Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "165879",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 301,
+    "name": "GREE Split AC 2 TON (Inverter) Fairy Series",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "263696",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 302,
+    "name": "Gree 24PIth11S Pular Series 2.0 ton Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "236522",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 303,
+    "name": "Gree 2 Ton Inverter Air Conditioner 24PITH14S Turbo",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "236522",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 304,
+    "name": "Gree AC 24PITH15W-T3 2 Ton Pular T3 Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "241957",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 305,
+    "name": "Gree 24PITC12W Pular Series",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "238696",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 306,
+    "name": "Haier 12CF 1 Ton Non-Inverter Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "91957",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 307,
+    "name": "Haier Split AC 1.5 Ton 18CF",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "118043",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 308,
+    "name": "Haier 24CF-2 Ton Turbo Cool Non-Inverter Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "169130",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 309,
+    "name": "Haier AC 1 Ton DC Inverter AC 13LF",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "103913",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 310,
+    "name": "Haier 1.5 Ton DC Inverter AC 19LF Supreme",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "131087",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 311,
+    "name": "Haier Air Conditioner 1.Ton -  13 HFAB T3 Inverter",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "125652",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 312,
+    "name": "Haier 13 HFC Triple Inverter 1.0 Ton Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "116957",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 313,
+    "name": "HAIER DC INVERTER AC T3 13HFS 1.0 TON",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "127826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 314,
+    "name": "Haier HSU-19HFS-W T3 Pro Inverter 1.5 Ton",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "126739",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 315,
+    "name": "Haier AC 1.5 ton Inverter T3 Compressor 20HFTEX",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "174565",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 316,
+    "name": "HAIER 1.5TON T3 INVERTER AC HSU 20HFTEX",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "178913",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 317,
+    "name": "HAIER 2 TON T3 INVERTER AC 24HFAB GREY",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "218043",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 318,
+    "name": "HAIER SPLIT AC 24HFAB T3 PRO WHITE",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "211522",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 319,
+    "name": "TCL 12E COOL A 1 ton DC Inverter Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "109348",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 320,
+    "name": "TCL 18E-COOL 1.5 ton Inverter Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "133261",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 321,
+    "name": "TCL 24E-COOL 2.0 ton Inverter Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "130000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 322,
+    "name": "TCL AC 1 Ton Inverter VoxIN Series 12T5-VOX-12",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "152826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 323,
+    "name": "TCL 12T3-PRO-11/12 1.0 Ton DC Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "125652",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 324,
+    "name": "TCL 18T3-PRO-11 BreezeIN Series Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "164783",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 325,
+    "name": "TCL AC 1.5 Ton Inverter VoxIN Series 18T5-VOX-12",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "188696",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 326,
+    "name": "TCL SPLIT AC INVERTER 1.5 TON 18SVN-EX-31W",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "133261",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 327,
+    "name": "TCL 12 SVN-AI-CO-31G 1.0 Ton",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "102826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 328,
+    "name": "TCL SaveIN Cool Only 18SVN-AI-CO-31S",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "125652",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 329,
+    "name": "TCL Split AC 2 Ton 24SVN-AI-CO-31 SaveIn Inverter",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "178913",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 330,
+    "name": "TCL 24T3-PRO-11 BreezeIN Series Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "125652",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 331,
+    "name": "TCL AC 2.0 Ton Split Inverter TAC-24T5-SMT-S",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "212609",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 332,
+    "name": "TCL 18T5 VoxIN-12/13 1.5 Ton Inverter Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "152826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 333,
+    "name": "Kenwood AC 12B02S 1 Ton Inverter Luxury Pro DC AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "180000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 334,
+    "name": "Kenwood 1 Ton KGP-12C01S Glory Pro Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "118043",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 335,
+    "name": "KENWOOD 1TON DC INVERTER AC GLORY 12C03S",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "118043",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 336,
+    "name": "Kenwood AC 18C01S 1.5 Ton Inverter Glory Pro",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "144130",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 337,
+    "name": "Kenwood 18C02S Glory Ultra 1.5 Ton DC Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "144130",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 338,
+    "name": "Kenwood AC 18C03S 1.5 Ton DC Inverter AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "144130",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 339,
+    "name": "Kenwood Inverter Ac 1.0 Ton E-Smart Onyx 1266S",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "165870",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 340,
+    "name": "Kenwood Ac 1866 1.5 Ton E Smart Onyx",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "238696",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 341,
+    "name": "Kenwood Ac 1267 E Comfort Pro",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "133261",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 342,
+    "name": "Kenwood 1867 E?Comfort Pro 1.5?Ton Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "172391",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 343,
+    "name": "Kenwood 1871 E?Luxury Plus 1.5?Ton Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "178913",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 344,
+    "name": "Kenwood 1875 1.5 Ton Heat & Cool eOasis Air Conditioner",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "144130",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 345,
+    "name": "Dawlance Aura X 1.5 Ton Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "116957",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 346,
+    "name": "Dawlance AC 15 Infinity Pro 1 Ton",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "98478",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 347,
+    "name": "DAWLANCE 15 Frost pro",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "102826",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 348,
+    "name": "Dawlance 1 Ton Inverter Split AC Frost Pro 15",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "124565",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 349,
+    "name": "Dawlance AC Aura X 30 1.5 Ton Inverter Split AC",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "149565",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 350,
+    "name": "Dawlance 1.5 Ton 30 Infinity Pro",
+    "category": "Air Conditioner",
+    "status": "SAHI_RESTORED",
+    "image": "120217",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 351,
+    "name": "Dawlance Microwave Oven 20Ltr (MD-15) White",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "22200",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 352,
+    "name": "Dawlance Microwave Oven 20Ltr (MD-15) Black",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "22800",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 353,
+    "name": "Dawlance Microwave Oven 20Ltr (MD-7)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "22300",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 354,
+    "name": "Dawlance Microwave Oven 20Ltr (MD-10)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "22300",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 355,
+    "name": "Dawlance Microwave Oven 20Ltr (MD-15)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "21200",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 356,
+    "name": "Dawlance Combination Microwave Oven 25Ltr (DW-115)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "45600",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 357,
+    "name": "Dawlance Cook King Series Microwave Oven 26 Ltr Black (DW-128-G)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "38000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 358,
+    "name": "Dawlance Cooking Series Microwave Oven 30 Ltr (DW-131-HP-SYNC)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "42000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 359,
+    "name": "Dawlance Cooking Series Microwave Oven 30 Ltr (DW-132-S)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "36000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 360,
+    "name": "Dawlance Cooking Series Microwave Oven 30 Ltr (DW-133-G)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "40000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 361,
+    "name": "Dawlance Cooking Series Microwave Oven 36 Ltr (DW-136-G)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "40000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 362,
+    "name": "Dawlance Cooking Series Microwave Oven 42 Ltr (DW-142-HZP)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "50000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 363,
+    "name": "Dawlance Classic Series Microwave Oven 62 Ltr (DW-162-HZP)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "51000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 364,
+    "name": "Dawlance Heating Series Microwave Oven 20 Ltr (DW-210-S)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "22000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 365,
+    "name": "Dawlance Heating Series Microwave Oven 20 Ltr (DW-220-S)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "22000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 366,
+    "name": "Dawlance Cooking Series Microwave Oven 20 Ltr (DW-295)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "23000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 367,
+    "name": "Dawlance Cooking Series Microwave Oven 20 Ltr (DW-297-GSS)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "27000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 368,
+    "name": "Dawlance Heating Microwave Oven 23 Ltr (DW-299 DSS)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "30000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 369,
+    "name": "Dawlance Heating Microwave Oven 30 Ltr (DW-330 DS)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "36000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 370,
+    "name": "Dawlance Microwave Oven 23 Ltr Black (DW-374)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "32000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 371,
+    "name": "Dawlance Heating Microwave Oven 23 Ltr Black (DW-390 S)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "30000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 372,
+    "name": "Dawlance Cooking Series Microwave Oven 23 Ltr (DW-393-G)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "35000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 373,
+    "name": "Haier Solo Series Microwave Oven 20 Ltr Black (HMW-20MPB)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "19000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 374,
+    "name": "HAIER MIRCROWAVE OVEN 25LTR SOLO HMW-26MBH",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "32000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 375,
+    "name": "Haier Solo Series Microwave Oven 25 Ltr Black (HGL-25MXP9)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "29000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 376,
+    "name": "Haier Grill Series Microwave Oven 23 Ltr White (HGL-23200)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "36000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 377,
+    "name": "Haier Grill Series Microwave Oven 28 Ltr Black (HMW-28100)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "39000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 378,
+    "name": "HAIER CONVECTION MICROWAVE OVEN 30 LITER Model HGL-30100",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "46000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 379,
+    "name": "Haier 32 Liter Microwave Oven HMN-32100EGB (Grill/Cooking)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "42000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 380,
+    "name": "Haier 32 Liter Microwave Oven HMN-32300 (Grill/Cooking)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "43000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 381,
+    "name": "Haier Solo Series Microwave Oven Black (HMN-62MX80)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "55000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 382,
+    "name": "Orient Popcorn Microwave Oven 20 Ltr Solo White (Popcorn 20M)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "26000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 383,
+    "name": "Homage Microwave Oven With Grill (HDG-201S)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "28000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 384,
+    "name": "Homage Microwave Oven 34 Ltr (HDG-342S)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "39000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 385,
+    "name": "Homage Microwave Oven 23 Litre (HDSO-2312B)",
+    "category": "Microwave Oven",
+    "status": "SAHI_RESTORED",
+    "image": "32000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 386,
+    "name": "Dawlance - Spinner Washing Machine Top Load 10KG - DW 6000",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "28000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 387,
+    "name": "Dawlance 6Kg Single Tub Semi-Automatic Dryer DS-6010",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "30000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 388,
+    "name": "Dawlance - Washing Machine Semi Auto Single Tub Top Load 6KG - DS 6080",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "32000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 389,
+    "name": "Dawlance Single Tub Spinner Dryer DS 9000 White - 12kg",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "39000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 390,
+    "name": "Dawlance - Washing Machine Top Load 8KG - DW 6100C Advanco",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "33000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 391,
+    "name": "Dawlance Twin Tub Washing Machine (DW-6550C)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "46000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 392,
+    "name": "Dawlance Twin Tub Washing Machine 6kg (DW-6580 CFL)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "49000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 393,
+    "name": "Dawlance Semi Automatic Washing Machine 10kg (DW-7500C)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "52000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 394,
+    "name": "Dawlance - Washing Machine Semi Auto Twin Tub Top Load 7.5KG - DW 8550 CB FL",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "53000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 395,
+    "name": "Dawlance - Washing Machine Semi Auto Twin Tub Top Load 12KG - DW 10500",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "62000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 396,
+    "name": "Dawlance - Washing Machine Automatic Top Load 8KG - DWT 260 C LVS+",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "92000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 397,
+    "name": "Dawlance - Washing Machine Automatic Top Load 11KG - DWT 1165",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "91000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 398,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 11kg Silver (DWT-11467 ES)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "80000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 399,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 11kg Gray (DWT-11671-FLT)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "90000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 400,
+    "name": "Dawlance DWT 1580 INV Automatic Top Load Washing Machine 15KG Inverter",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "135000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 401,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 17Kg (DWT-1775-PL)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "140000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 402,
+    "name": "Dawlance - Washing Machine Automatic Single Tub Top Load 17KG - DWT 1776 FLT C Glow",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "145000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 403,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine (AWM-DWT-1166-ADS)- 11 KG",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "100000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 404,
+    "name": "Dawlance Automatic Top Load Washing Machine 14kg Grey (DWT-1471-FLP)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "105000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 405,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 14kg Silver (DWT 14470 ES)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "102000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 406,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 9KG (DWT-9060-EZ)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "70000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 407,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 8.5kg (DWT-9560)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "80000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 408,
+    "name": "Dawlance Top Load Fully Automatic Washing Machine 10 KG (DWT-1006)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "91000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 409,
+    "name": "Haier Top Load Automatic Dryer Machine 6KG (HWM 60-50)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "30000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 410,
+    "name": "Haier Semi Automatic Washing Machine 8 KG Grey (HWM 80-60)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "27000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 411,
+    "name": "Haier Top Load Semi Auto Washing Machine 8-kg (HWM 80-1217)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "27000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 412,
+    "name": "Haier - Washing Machine Semi Auto Single Tub Top Load 12KG - HWM 120-35",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "45000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 413,
+    "name": "Haier - Washing Machine Semi Auto Single Tub Top Load 13KG - HWM 130-1217 GB",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "42000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 414,
+    "name": "Haier Top Load Semi Automatic Washing Machine 7.5 KG (HWM-75AS)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "36000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 415,
+    "name": "Haier Twin Tub Top Load Semi Automatic Washing Machine 8 KG (HWM-80-CS)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "38000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 416,
+    "name": "Haier Twin Tub Top Load Semi Automatic Washing Machine 10kg (HTW 100-196G)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "45000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 417,
+    "name": "Haier Washing Machine Semi Auto Twin Tub Top Load 10KG - HTW 100-196E",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "46000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 418,
+    "name": "Haier Twin Tub Series Washing Machine White 10 Kg (HMW100-1217)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "43000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 419,
+    "name": "Haier - Washing Machine Semi Auto Twin Tub Top Load 8KG - HWM 80-186",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "44000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 420,
+    "name": "Haier Top Load Fully Automatic Washing Machine 8.5kg (HWM-85-1269S6)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "65000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 421,
+    "name": "Haier-10 kg-Fully Automatic-Top Loading Washing Machine HWM 100-1269",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "70000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 422,
+    "name": "Haier Fully Automatic Top load Washing Machine 9 Kg (HWM 90-826 E )",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "68000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 423,
+    "name": "Haier Fully Automatic Top load Washing Machine 10 Kg (HWM 100-826)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "75000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 424,
+    "name": "Haier Top Load 10.5 KG Fully Automatic Washing Machine (HWM-110-B688S8)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "90000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 425,
+    "name": "Haier Top Load Fully Automatic Washing Machine 12 KG (HWM-120-826 GT)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "90000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 426,
+    "name": "Haier Top Load Fully Automatic Washing Machine 13 KG (HWM130-688S8)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "100000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 427,
+    "name": "Haier Top Load Fully Automatic Washing Machine 15 KG (HWM130-688S8)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "105000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 428,
+    "name": "Haier - Washing Machine Automatic Single Tub Top Load 10KG - HWM 100-316S6",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "80000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 429,
+    "name": "Haier - Washing Machine Automatic Single Tub Top Load 12KG - HWM 120-316S6",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "90000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 430,
+    "name": "SAMSUNG 8KG WASHING MACHINE WA80CK4240BWRT DIT",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "100000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 431,
+    "name": "SAMSUNG 9KG WASHING MACHINE WA90CK4545BDRT",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "130000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 432,
+    "name": "SAMSUNG 10KG WASHING MACHINE WA10CK4545BYRT with Ecobubble",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "140000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 433,
+    "name": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 13 KG Dark Gray (WA13CK5441BYRT)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "150000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 434,
+    "name": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 15 KG Dark Gray (WA15CK5745BDRT)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "160000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 435,
+    "name": "Samsung Ecobubble Top Load Fully Automatic Washing Machine 17 KG Dark Gray (WA17CK6745BDRT)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "220000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 436,
+    "name": "Samsung Top Load Fully Automatic Washing Machine 21Kg White (WA21CK6745BVRT)",
+    "category": "Washing Machine",
+    "status": "SAHI_RESTORED",
+    "image": "225000",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 437,
+    "name": "PEL 215 WATER DISPENSER",
+    "category": "PEL WATER DISPENSER",
+    "status": "SAHI",
+    "image": "/images/products/pel-215-water-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 438,
+    "name": "PEL 315 Water Dispenser",
+    "category": "PEL WATER DISPENSER",
+    "status": "SAHI",
+    "image": "/images/products/pel-315-water-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 439,
+    "name": "PEL 316 Premier Water Dispenser",
+    "category": "PEL WATER DISPENSER",
+    "status": "SAHI",
+    "image": "/images/products/pel-316-premier-water-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 440,
+    "name": "PEL Water Dispenser PWD-425 Flat GD",
+    "category": "PEL WATER DISPENSER",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 441,
+    "name": "PEL 525 Curved Glassdoor Dispenser",
+    "category": "PEL WATER DISPENSER",
+    "status": "SAHI",
+    "image": "/images/products/pel-525-curved-glassdoor-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 442,
+    "name": "Orient Icon 2 Taps Water Dispenser",
+    "category": "Orient WATER DISPENSER",
+    "status": "SAHI",
+    "image": "/images/products/orient-icon-2-taps-water-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 443,
+    "name": "Orient Icon 3 Taps Water Dispenser",
+    "category": "Orient WATER DISPENSER",
+    "status": "SAHI",
+    "image": "/images/products/orient-icon-3-taps-water-dispenser.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 444,
+    "name": "Orient Crystal 3  Water Dispenser",
+    "category": "Orient WATER DISPENSER",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 445,
+    "name": "Dawlance DW-6000 Spnner Dryer",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-6000-spnner-dryer.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 446,
+    "name": "Dawlance DW-6100-W Single Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-6100-w-single-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 447,
+    "name": "Dawlance DW-6100 W Advanco",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-6100-w-advanco.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 448,
+    "name": "Dawlance DW-6550 Twin Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-6550-twin-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 449,
+    "name": "Dawlance DW-6550 C Advanco Twin Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-6550-c-advanco-twin-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 450,
+    "name": "Dawlance DW-6550 G Twin Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-6550-g-twin-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 451,
+    "name": "Dawlance DW-7200 Single Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-7200-single-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 452,
+    "name": "Dawlance DW-7500 C Twin Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-7500-c-twin-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 453,
+    "name": "Dawlance DW-7500 G Twin Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 454,
+    "name": "Dawlance DS-9000 Spinner Dryer",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-ds-9000-spinner-dryer.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 455,
+    "name": "Dawlance DW-9100 Advanco Single Tub Washer",
+    "category": "Dawlance Washing Machine",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 456,
+    "name": "Dawlance DW 9100 Glass Lid Single Tub Washer",
+    "category": "Dawlance Washing Machine",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 457,
+    "name": "Dawlance DW 9200 WFL",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-9200-wfl.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 458,
+    "name": "Dawlance 8550 Twin Tub",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-8550-twin-tub.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 459,
+    "name": "Dawlance DW-260 LVS",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-260-lvs.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 460,
+    "name": "DWT-270 C LVS+",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dwt-270-c-lvs.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 461,
+    "name": "Dawlance DW-1165",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-1165.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 462,
+    "name": "Dawlance DW-1167 FLP",
+    "category": "Dawlance Washing Machine",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 463,
+    "name": "Dawlance DW-1167 FLT",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-1167-flt.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 464,
+    "name": "Dawlance DW-1775",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-1775.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 465,
+    "name": "Dawlance DW-1166 ADS",
+    "category": "Dawlance Washing Machine",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 466,
+    "name": "Dawlance DW-1470 PL",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-1470-pl.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 467,
+    "name": "Dawlance DW-1471 FLP",
+    "category": "Dawlance Washing Machine",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 468,
+    "name": "Dawlance DW-9060",
+    "category": "Dawlance Washing Machine",
+    "status": "SAHI",
+    "image": "/images/products/dawlance-dw-9060.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 630,
+    "name": "ORIENT SPLIT AC MEGA 12X  1 Ton T3 DC Inverter Heat & Cool ",
+    "category": "11639_11643_11653_11782_11783",
+    "status": "SAHI_RESTORED",
+    "image": "119130",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 631,
+    "name": "Gree 1.5 Ton DC Inverter A/C Only Cool  18PITH-10W",
+    "category": "11639_11643_11653_11782_11783",
+    "status": "SAHI_RESTORED",
+    "image": "159346",
+    "note": "Verified image restored from historical record"
+  },
+  {
+    "id": 632,
+    "name": "Dawlance DW-10500",
+    "category": "Dawlance",
+    "status": "NO_IMAGE",
+    "image": "",
+    "note": "Awaiting exact matched image"
+  },
+  {
+    "id": 636,
+    "name": "Haier HRF-216 EBS/EBD",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-216-ebs-ebd.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 637,
+    "name": "Haier HRF 216 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-216-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 638,
+    "name": "Haier HRF-246 EBS/EBD",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-246-ebs-ebd.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 639,
+    "name": "Haier HRF 246 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-246-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 640,
+    "name": "Haier HRF-276 EBS/EBD",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-276-ebs-ebd.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 641,
+    "name": "Haier HRF 276 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-276-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 642,
+    "name": "Haier HRF-316 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-316-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 643,
+    "name": "Haier HRF-346 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-346-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 644,
+    "name": "Haier HRF-368 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-368-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 645,
+    "name": "Haier HRF-398 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-398-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 646,
+    "name": "Haier HRF-438 EPR/EPB",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-438-epr-epb.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 647,
+    "name": "Haier HRF-538 EPR/EPG",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-538-epr-epg.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 648,
+    "name": "Haier HRF-246 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-246-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 649,
+    "name": "Haier HRF-276 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-276-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 650,
+    "name": "Haier HRF-316 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-316-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 651,
+    "name": "Haier HRF-346 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-346-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 652,
+    "name": "Haier HRF-418 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-418-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 653,
+    "name": "Haier HRF-458 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-458-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 654,
+    "name": "Haier HRF-538 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-538-ipra-ipga-ippa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 655,
+    "name": "Haier HRF-316 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-316-idga-idrga.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 656,
+    "name": "Haier HRF-346 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-346-idga-idrga.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 657,
+    "name": "Haier HRF-418 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-418-idga-idrga.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 658,
+    "name": "Haier Hrf-316 Iapa+/iara",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-316-iapa-iara.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 659,
+    "name": "Haier Hrf-346 Iapa+/iara",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-346-iapa-iara.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 660,
+    "name": "Haier Hrf-316 Ifga/ifra",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-316-ifga-ifra.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 661,
+    "name": "Haier Hrf-346 Ifga/ifra",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-346-ifga-ifra.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 662,
+    "name": "Haier Hrf-538 Idga/idrga",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-538-idga-idrga.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 663,
+    "name": "Haier Hrf-368 Iapa+/iara",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-368-iapa-iara.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 664,
+    "name": "Haier Hrf-398 Iapa+/iara",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-398-iapa-iara.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 665,
+    "name": "Haier Hrf-438 Iapa+/iara",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-438-iapa-iara.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 666,
+    "name": "Haier Hrf-538 Iapa+/iara",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-538-iapa-iara.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 667,
+    "name": "Haier Hrf-368 Ifga/ifra",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-368-ifga-ifra.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 668,
+    "name": "Haier Hrf-398 Ifga/ifra",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-398-ifga-ifra.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 669,
+    "name": "Haier Hrf-438 Ifga/ifra/ifpa",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-438-ifga-ifra-ifpa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 670,
+    "name": "Haier Hrf-538 Ifga/ifra/ifpa",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-538-ifga-ifra-ifpa.jpg",
+    "note": "Image is unique and genuinely verified"
+  },
+  {
+    "id": 671,
+    "name": "Haier Hrf-538 Tifg1u1/tifb1u1 (iot)",
+    "category": "Refrigerators",
+    "status": "SAHI",
+    "image": "/images/products/haier-hrf-538-tifg1u1-tifb1u1-iot.jpg",
+    "note": "Image is unique and genuinely verified"
+  }
+]

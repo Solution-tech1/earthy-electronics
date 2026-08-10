@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ShoppingCart, MessageCircle, ArrowRight, ChevronLeft, ChevronRight, Award, Truck, ShieldCheck, PhoneCall, Flame, Zap, Banknote, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import ProductModal from '../components/ProductModal';
 import './Home.css';
 
 export default function Home() {
@@ -11,8 +12,32 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [addedProductId, setAddedProductId] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  // Permanent Landing Animation: Luxury Curtain Split Reveal
+  const [curtainSplit, setCurtainSplit] = useState(false);
+
+  useEffect(() => {
+    // Trigger curtain split reveal 1.2s after landing
+    const timer = setTimeout(() => {
+      setCurtainSplit(true);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const checkAuth = () => {
+    const token = localStorage.getItem('token');
+    const user = localStorage.getItem('user');
+    if (!token || !user) {
+      alert("Please login first to place an order or add to cart.");
+      window.location.href = '/login';
+      return false;
+    }
+    return true;
+  };
 
   const handleAddToCart = (product) => {
+    if (!checkAuth()) return;
     addToCart(product);
     setAddedProductId(product.id);
     setTimeout(() => setAddedProductId(null), 1000);
@@ -31,10 +56,30 @@ export default function Home() {
   // Hero carousel
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroSlides = [
-    { image: '/images/product_ac.png',      label: 'DC Inverter ACs',       offer: 'Up to 15% OFF',  color: '#0f2557' },
-    { image: '/images/product_fridge_2.png', label: 'No-Frost Refrigerators', offer: 'Up to 10% OFF', color: '#0d5c2f' },
-    { image: '/images/product_tv.png',       label: '4K Smart LED TVs',      offer: 'Up to 12% OFF',  color: '#7c1c1c' },
-    { image: '/images/product_washer_2.png', label: 'Auto Washing Machines', offer: 'Free Delivery',   color: '#4a1f7a' },
+    {
+      bgImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop',
+      title: "Pakistan's #1 Home Appliances Store",
+      desc: 'Authorized dealer of Haier, Dawlance, Gree & Kenwood. Get the best home appliances with official warranty at the most competitive prices in Karachi.',
+      offer: 'Authorized Dealer'
+    },
+    {
+      bgImage: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2000&auto=format&fit=crop',
+      title: 'Stay Cool with DC Inverter ACs',
+      desc: 'Save up to 60% on electricity bills with our premium DC Inverter Air Conditioners. Available in 1 ton, 1.5 ton and 2 ton with free installation in Karachi.',
+      offer: 'Up to 15% OFF'
+    },
+    {
+      bgImage: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=2000&auto=format&fit=crop',
+      title: 'Smart 4K LED TVs',
+      desc: 'Upgrade your entertainment experience with our premium Smart Android LED TVs from top brands like Samsung, TCL and Haier.',
+      offer: 'Home Entertainment'
+    },
+    {
+      bgImage: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=2000&auto=format&fit=crop',
+      title: 'Smart Washing Machines & Fridges',
+      desc: 'Explore our huge range of fully automatic washing machines, no-frost refrigerators and deep freezers. Get free delivery on orders above Rs. 80,000.',
+      offer: 'Free Delivery'
+    },
   ];
 
   useEffect(() => {
@@ -45,156 +90,181 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const base = import.meta.env.VITE_API_BASE || 'https://bismillah-electronics-gold.vercel.app';
+    const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
     fetch(`${base}/api/items`)
       .then(r => r.json())
-      .then(data => { if (data.status === 'success') setProducts(data.data); setLoading(false); })
-      .catch(() => setLoading(false));
+      .then(data => {
+        if(data && Array.isArray(data.data)) {
+          const validProducts = data.data.filter(p => {
+            if (p.id === 759) return false;
+            if (p.image && p.image.includes('GS-18FITH1W.webp')) return false;
+            return true;
+          });
+          setProducts(validProducts);
+        }
+        setLoading(false);
+      })
+      .catch(err => { console.error(err); setLoading(false); });
   }, []);
 
   const categories = [
-    { img: '/images/cat_ac.png',        name: 'Air Conditioners', desc: 'DC Inverter & Non-Inverter', cat: 'Air Conditioner' },
-    { img: '/images/cat_tv.png',        name: 'LED TVs',           desc: 'Smart 4K & HD Displays',    cat: 'LED TV'          },
-    { img: '/images/cat_fridge.png',    name: 'Refrigerators',     desc: 'No-Frost & Direct Cool',    cat: 'Refrigerator'    },
-    { img: '/images/cat_washer.png',    name: 'Washing Machines',  desc: 'Front Load & Top Load',     cat: 'Washing Machine' },
-    { img: '/images/cat_kitchen.png',   name: 'Kitchen App.',      desc: 'Air Fryers & Blenders',     cat: 'Kitchen Appliances' },
-    { img: '/images/cat_microwave.png', name: 'Microwaves',        desc: 'Solo & Grill Ovens',        cat: 'Microwave Oven' },
-    { img: '/images/product_dispenser.png', name: 'Water Dispensers', desc: 'Hot & Cold Filters',    cat: 'Water Dispenser' },
-    { img: '/images/product_freezer.png',   name: 'Deep Freezers',    desc: 'Chest Freezers & Coolers', cat: 'Deep Freezer' },
+    { img: '/images/cat_ac.png',        icon: <Wind size={24} color="#0284c7" />,        bgColor: '#e0f2fe', name: 'Air Conditioners', desc: 'DC Inverter & Non-Inverter', cat: 'Air Conditioners' },
+    { img: '/images/cat_tv.png',        icon: <Tv size={24} color="#7c3aed" />,          bgColor: '#f3e8ff', name: 'LED TVs',           desc: 'Smart 4K & HD Displays',    cat: 'LED TVs'          },
+    { img: '/images/cat_fridge.png',    icon: <Refrigerator size={24} color="#0d9488" />,  bgColor: '#ccfbf1', name: 'Refrigerators',     desc: 'No-Frost & Direct Cool',    cat: 'Refrigerators'    },
+    { img: '/images/cat_washer.png',    icon: <Shirt size={24} color="#db2777" />,         bgColor: '#fce7f3', name: 'Washing Machines',  desc: 'Front Load & Top Load',     cat: 'Washing Machines' },
+    { img: '/images/cat_kitchen.png',   icon: <ChefHat size={24} color="#ea580c" />,       bgColor: '#ffedd5', name: 'Kitchen App.',      desc: 'Air Fryers & Blenders',     cat: 'Kitchen Appliances' },
+    { img: '/images/cat_microwave.png', icon: <Microwave size={24} color="#ca8a04" />,     bgColor: '#fef9c3', name: 'Microwaves',        desc: 'Solo & Grill Ovens',        cat: 'Microwave Ovens' },
+    { img: '/images/product_dispenser.png', icon: <Droplets size={24} color="#2563eb" />, bgColor: '#dbeafe', name: 'Water Dispensers', desc: 'Hot & Cold Filters',    cat: 'Water Dispensers' },
+    { img: 'https://superasiastore.com/cdn/shop/files/01_20ea7cfc-825a-43f4-a2ce-86b748d66b9d.jpg', icon: <Droplets size={24} color="#ef4444" />, bgColor: '#fee2e2', name: 'Geysers & Heaters', desc: 'Electric & Gas Water Heaters', cat: 'Geysers & Water Heaters' },
+    { img: '/images/product_freezer.png',   icon: <Snowflake size={24} color="#0891b2" />,  bgColor: '#cffafe', name: 'Deep Freezers',    desc: 'Chest Freezers & Coolers', cat: 'Deep Freezers' },
   ];
 
   const whyUs = [
-    { icon: '🏆', title: 'Authorized Dealer',  desc: 'Official dealer of Haier, Gree, Dawlance & Kenwood with 100% genuine products' },
-    { icon: '🚚', title: 'Free Delivery',       desc: 'Free doorstep delivery & installation on orders over Rs.80,000 in Karachi' },
-    { icon: '🛡️', title: 'Warranty Assured',   desc: 'Full manufacturer warranty on all products with dedicated after-sales support' },
-    { icon: '📞', title: '24/7 Support',        desc: 'Call or WhatsApp us anytime — our team is always ready to assist you' },
+    { icon: <Award size={32} color="#10b981"/>, title: 'Authorized Dealer',  desc: 'Official dealer of Haier, Gree, Dawlance & Kenwood with 100% genuine products' },
+    { icon: <Truck size={32} color="#0284c7"/>, title: 'Free Delivery',       desc: 'Free doorstep delivery & installation on orders over Rs.80,000 in Karachi' },
+    { icon: <ShieldCheck size={32} color="#16a34a"/>, title: 'Warranty Assured',   desc: 'Full manufacturer warranty on all products with dedicated after-sales support' },
+    { icon: <PhoneCall size={32} color="#7c3aed"/>, title: '24/7 Support',        desc: 'Call or WhatsApp us anytime — our team is always ready to assist you' },
   ];
 
   // Hot items by category
   const hotCategories = ['Air Conditioner', 'LED TV', 'Refrigerator', 'Microwave Oven'];
   const hotItems = hotCategories.map(cat => products.find(p => p.category === cat)).filter(Boolean);
 
+  const catFallback = (cat, name = '') => {
+    const text = ((cat || '') + ' ' + (name || '')).toLowerCase();
+    // 1. TVs & Displays (FIRST priority to prevent 'inverter' matching AC)
+    if (text.includes('tv') || text.includes('led') || text.includes('qled') || text.includes('oled') || text.includes('display')) {
+      return '/images/cat_tv.png';
+    }
+    // 2. Geysers & Water Heaters
+    if (text.includes('geyser') || text.includes('water heater') || text.includes('reh-') || text.includes('meh-') || text.includes('seh-') || text.includes('eh-')) {
+      return 'https://superasiastore.com/cdn/shop/files/01_20ea7cfc-825a-43f4-a2ce-86b748d66b9d.jpg';
+    }
+    // 3. Room Heaters
+    if (text.includes('room heater') || text.includes('quartz heater') || text.includes('gas heater') || text.includes('heater')) {
+      return '/images/product_heater.svg';
+    }
+    // 4. Air Conditioners
+    if (text.includes('air conditioner') || text.includes('split ac') || text.includes('floor standing') || text.includes('standing ac') || text.includes('tower ac')) {
+      return '/images/cat_ac.png';
+    }
+    // 5. Refrigerators
+    if (text.includes('fridge') || text.includes('refriger')) return '/images/cat_fridge.png';
+    // 6. Washing Machines
+    if (text.includes('washer') || text.includes('washing')) return '/images/cat_washer.png';
+    // 7. Microwaves
+    if (text.includes('microwave') || text.includes('oven')) return '/images/cat_microwave.png';
+    // 8. Dispensers & Freezers
+    if (text.includes('dispenser')) return '/images/product_dispenser.png';
+    if (text.includes('freezer')) return '/images/product_freezer.png';
+
+    if (text.includes('ac')) return '/images/cat_ac.png';
+    return '/images/cat_kitchen.png';
+  };
+
+  // Get diverse mix of categories for Featured Products section
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  useEffect(() => {
+    if (products && products.length > 0) {
+      const categoriesMap = {};
+      products.forEach(p => {
+        const cat = p.category || 'General';
+        if (!categoriesMap[cat]) categoriesMap[cat] = [];
+        categoriesMap[cat].push(p);
+      });
+
+      const categories = Object.keys(categoriesMap);
+      const selected = [];
+      let round = 0;
+
+      while (selected.length < 12 && round < 5) {
+        for (const cat of categories) {
+          const items = categoriesMap[cat];
+          if (items && items.length > 0) {
+            const randomIndex = Math.floor(Math.random() * items.length);
+            const [picked] = items.splice(randomIndex, 1);
+            selected.push(picked);
+            if (selected.length >= 12) break;
+          }
+        }
+        round++;
+      }
+
+      setFeaturedProducts(selected.sort(() => 0.5 - Math.random()));
+    }
+  }, [products]);
+
   return (
     <div>
-      {/* ─── Hero & Calculator Split Area ─── */}
-      <section className="hero-split-section">
-        <div className="hero-split-container">
-          
-          {/* Left: Compact Hero Carousel */}
-          <div className="hero-carousel-half">
-            {heroSlides.map((slide, idx) => (
-              <div
-                key={idx}
-                className={`hero-slide-compact${idx === currentSlide ? ' active' : ''}`}
-                style={{ '--hero-bg': slide.color }}
-              >
-                <div className="hero-slide-inner">
-                  <div className="hero-slide-text">
-                    <div className="hero-offer-pill">🔥 {slide.offer}</div>
-                    <h2>Bismillah Electronics</h2>
-                    <p>{slide.label} — Best Prices in Karachi</p>
-                    <div className="hero-slide-btns">
-                      <Link to="/products" className="btn btn-orange">Shop Now <ArrowRight size={15}/></Link>
-                      <a href="https://wa.me/923002347457" target="_blank" rel="noopener noreferrer" className="btn btn-white-outline">
-                        <MessageCircle size={15}/> WhatsApp
-                      </a>
-                    </div>
-                  </div>
-                  <div className="hero-slide-img">
-                    <img src={slide.image} alt={slide.label} />
-                  </div>
-                </div>
-              </div>
-            ))}
-            {/* Dots */}
-            <div className="hero-dots">
-              {heroSlides.map((_, i) => (
-                <button
-                  key={i}
-                  className={`hero-dot${i === currentSlide ? ' active' : ''}`}
-                  onClick={() => setCurrentSlide(i)}
-                />
-              ))}
-            </div>
-            {/* Arrows */}
-            <button className="hero-arrow left" onClick={() => setCurrentSlide(p => (p - 1 + heroSlides.length) % heroSlides.length)}>
-              <ChevronLeft size={22}/>
-            </button>
-            <button className="hero-arrow right" onClick={() => setCurrentSlide(p => (p + 1) % heroSlides.length)}>
-              <ChevronRight size={22}/>
-            </button>
+      {/* ── 🚀 Permanent Luxury Preloader Curtain Reveal ── */}
+      <div className={`curtain-overlay${curtainSplit ? ' curtain-split' : ''}`}>
+        <div className="curtain-panel curtain-top"></div>
+        <div className="curtain-panel curtain-bottom"></div>
+        <div className="curtain-center-logo">
+          <div className="curtain-logo-badge" style={{ background: '#ffffff', borderRadius: '24px', padding: '24px 44px', boxShadow: '0 20px 60px rgba(16, 185, 129, 0.45)' }}>
+            <img 
+              src="/images/earthyelectronics_official_banner_logo.png" 
+              alt="EarthyElectronics Official Logo" 
+              style={{ height: '95px', width: 'auto', display: 'block', margin: '0 auto' }} 
+            />
           </div>
-
-          {/* Right: Quick Inverter Savings Calculator */}
-          <div className="hero-calc-half">
-            <div className="hero-calc-card">
-              <div className="hero-calc-header">
-                <h3>⚡ AC Inverter Savings</h3>
-                <p>Calculate your monthly bill savings</p>
-              </div>
-              <div className="hero-calc-body">
-                <div className="hero-calc-field">
-                  <label>AC Size (Tonnage)</label>
-                  <div className="tonnage-buttons">
-                    {['1.0', '1.5', '2.0'].map(size => (
-                      <button
-                        key={size}
-                        type="button"
-                        className={`ton-btn${acSize === size ? ' active' : ''}`}
-                        onClick={() => setAcSize(size)}
-                      >
-                        {size} Ton
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="hero-calc-field">
-                  <div className="field-row">
-                    <label>Daily Usage: <strong>{dailyHours} hrs/day</strong></label>
-                  </div>
-                  <input
-                    type="range"
-                    min="2"
-                    max="16"
-                    value={dailyHours}
-                    onChange={e => setDailyHours(Number(e.target.value))}
-                    className="calc-slider"
-                  />
-                </div>
-
-                <div className="hero-calc-field">
-                  <div className="field-row">
-                    <label>Unit Rate: <strong>Rs. {unitRate}/kWh</strong></label>
-                  </div>
-                  <input
-                    type="range"
-                    min="30"
-                    max="80"
-                    value={unitRate}
-                    onChange={e => setUnitRate(Number(e.target.value))}
-                    className="calc-slider"
-                  />
-                </div>
-
-                <div className="hero-calc-result">
-                  <div className="result-label">Monthly Savings 💰</div>
-                  <div className="result-value">Rs. {saving.toLocaleString()}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
+      </div>
+
+      {/* ── Hero Carousel (Full Width) ── */}
+      <section className="hero-section">
+        {heroSlides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`hero-slide${idx === currentSlide ? ' active' : ''}`}
+            style={{ backgroundImage: `url(${slide.bgImage})` }}
+          >
+            <div className="hero-overlay"></div>
+            <div className="container hero-slide-inner">
+              <div className="hero-slide-text banner-text-mode" data-aos="fade-up" data-aos-duration="1000">
+                <div className="hero-offer-pill"><Flame size={14}/> {slide.offer}</div>
+                <h2>{slide.title}</h2>
+                <p>{slide.desc}</p>
+                <div className="hero-slide-btns">
+                  <Link to="/products" className="btn-mint-hero">Shop Now <ArrowRight size={16}/></Link>
+                  <a href="https://wa.me/923002347457" target="_blank" rel="noopener noreferrer" className="btn-white-hero">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                    WhatsApp Order
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* Dots */}
+        <div className="hero-dots">
+          {heroSlides.map((_, i) => (
+            <button
+              key={i}
+              className={`hero-dot${i === currentSlide ? ' active' : ''}`}
+              onClick={() => setCurrentSlide(i)}
+            />
+          ))}
+        </div>
+        {/* Arrows */}
+        <button className="hero-arrow left" onClick={() => setCurrentSlide(p => (p - 1 + heroSlides.length) % heroSlides.length)}>
+          <ChevronLeft size={24}/>
+        </button>
+        <button className="hero-arrow right" onClick={() => setCurrentSlide(p => (p + 1) % heroSlides.length)}>
+          <ChevronRight size={24}/>
+        </button>
       </section>
 
       {/* ── Hot Deals Section ── */}
       {hotItems.length > 0 && (
-        <section className="deals-section">
+        <section className="deals-section" data-aos="fade-up">
           <div className="container">
             <div className="deals-header">
               <div className="deals-header-left">
-                <span className="deals-fire">🔥</span>
+                <span className="deals-fire"><Flame size={28}/></span>
                 <div>
                   <h2>Hot Deals</h2>
                   <p>Limited time offers on top appliances</p>
@@ -208,17 +278,25 @@ export default function Home() {
               {hotItems.map((p, idx) => {
                 const price = p.discountPrice || p.price;
                 const pct = p.discountPrice ? Math.round((1 - p.discountPrice / p.price) * 100) : 0;
-                const colors = ['#0f2557', '#7c1c1c', '#0d5c2f', '#4a1f7a'];
+                const colors = ['#065f46', '#7c1c1c', '#0d5c2f', '#4a1f7a'];
                 return (
-                  <div key={p.id} className="deal-card" style={{ '--deal-accent': colors[idx % colors.length] }}>
-                    <div className="deal-card-visual">
+                  <div key={p.id} className="deal-card" style={{ '--deal-accent': colors[idx % colors.length] }} data-aos="fade-up" data-aos-delay={idx * 100}>
+                    <div className="deal-card-visual" onClick={() => setSelectedProduct(p)} style={{cursor: 'pointer'}}>
                       {pct > 0 && (
                         <div className="deal-discount-ribbon">
                           <span>{pct}%</span>
                           <small>OFF</small>
                         </div>
                       )}
-                      <img src={p.image} alt={p.name} />
+                      <img 
+                        src={p.image || ''} 
+                        alt={p.name} 
+                        style={{ mixBlendMode: 'multiply' }}
+                        onError={e => { 
+                          const card = e.target.closest('.deal-card');
+                          if (card) card.style.display = 'none'; 
+                        }}
+                      />
                     </div>
                     <div className="deal-card-body">
                       <span className="deal-brand-pill">{p.brand}</span>
@@ -230,18 +308,18 @@ export default function Home() {
                       <div className="deal-actions">
                         <button
                           className="deal-btn deal-btn-cart"
+                          style={{ flex: 1 }}
                           onClick={(e) => { e.stopPropagation(); handleAddToCart(p); }}
                         >
                           {addedProductId === p.id ? '✓ Added' : <><ShoppingCart size={14}/> Add to Cart</>}
                         </button>
-                        <a
-                          href={`https://wa.me/923002347457?text=I want to order: ${encodeURIComponent(p.name)} — Rs.${price.toLocaleString()}`}
-                          target="_blank" rel="noopener noreferrer"
+                        <button
                           className="deal-btn deal-btn-wa"
-                          onClick={(e) => e.stopPropagation()}
+                          style={{ flex: 1, background: '#10b981', borderColor: '#10b981', color: '#fff' }}
+                          onClick={(e) => { e.stopPropagation(); handleAddToCart(p); window.dispatchEvent(new CustomEvent('open-cart')); }}
                         >
-                          <MessageCircle size={14}/> Order
-                        </a>
+                          Order Now
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -253,7 +331,7 @@ export default function Home() {
       )}
 
       {/* ── Shop by Category ── */}
-      <section className="cats-section">
+      <section className="cats-section" data-aos="fade-up">
         <div className="container">
           <div className="section-title">
             <h2>Shop by Category</h2>
@@ -261,10 +339,13 @@ export default function Home() {
             <p>Browse our wide selection of home appliances from top brands</p>
           </div>
           <div className="cats-grid">
-            {categories.map(c => (
-              <Link key={c.cat} to={`/products?category=${encodeURIComponent(c.cat)}`} className="cat-card-full">
+            {categories.map((c, idx) => (
+              <Link key={c.cat} to={`/products?category=${encodeURIComponent(c.cat)}`} className="cat-card-full" data-aos="fade-up" data-aos-delay={idx * 100}>
                 <img src={c.img} alt={c.name} className="cat-bg-img" />
                 <div className="cat-overlay-content">
+                  <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '44px', height: '44px', borderRadius: '12px', background: c.bgColor || '#ffffff', boxShadow: '0 4px 14px rgba(0,0,0,0.18)', marginBottom: '8px' }}>
+                    {c.icon}
+                  </div>
                   <span className="cat-badge-mini">Explore</span>
                   <h3>{c.name}</h3>
                   <p>{c.desc}</p>
@@ -276,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* ── Featured Products ── */}
-      <section className="featured-section">
+      <section className="featured-section" data-aos="fade-up">
         <div className="container">
           <div className="section-title">
             <h2>Featured Products</h2>
@@ -286,38 +367,47 @@ export default function Home() {
           {loading ? (
             <p style={{ textAlign: 'center', color: '#64748b', padding: '40px 0' }}>Loading products...</p>
           ) : (
-            <div className="prod-grid">
-              {products.slice(0, 8).map(p => {
+              <div className="prod-grid">
+              {featuredProducts.map((p, idx) => {
                 const price = p.discountPrice || p.price;
                 const saved = p.discountPrice ? p.price - p.discountPrice : 0;
                 const pct   = p.discountPrice ? Math.round((1 - p.discountPrice / p.price) * 100) : 0;
                 return (
-                  <div key={p.id} className="prod-card">
-                    {pct > 0 && <span className="prod-sale-badge">{pct}% OFF</span>}
-                    <div className="prod-img-box" onClick={() => navigate('/products')}>
-                      <img src={p.image} alt={p.name} />
+                  <div key={p.id} className="prod-card" data-aos="fade-up" data-aos-delay={idx * 50}>
+                    <div className="prod-img-box" onClick={() => setSelectedProduct(p)} style={{cursor: 'pointer'}}>
+                      {pct > 0 && <span className="prod-sale-badge">{pct}% OFF</span>}
+                      <img
+                        src={p.image || ''}
+                        alt={p.name}
+                        onError={e => { 
+                          const card = e.target.closest('.prod-card');
+                          if (card) card.style.display = 'none'; 
+                        }}
+                        style={{ mixBlendMode: 'multiply' }}
+                      />
                     </div>
                     <div className="prod-info-box">
                       <div className="prod-brand-tag">{p.brand}</div>
-                      <div className="prod-name-text">{p.name}</div>
+                      <div className="prod-name-text" onClick={() => setSelectedProduct(p)} style={{cursor: 'pointer'}}>{p.name}</div>
                       <div className="prod-price-row">
                         <span className="prod-price-now">Rs. {price.toLocaleString()}</span>
                         {p.discountPrice && <span className="prod-price-was">Rs. {p.price.toLocaleString()}</span>}
                       </div>
-                      <div className="prod-action-row">
+                      <div className="prod-action-row" style={{ display: 'flex', gap: '8px' }}>
                         <button
                           className={`btn btn-sm ${addedProductId === p.id ? 'btn-green' : 'btn-navy'}`}
-                          onClick={() => handleAddToCart(p)}
+                          style={{ flex: 1, justifyContent: 'center' }}
+                          onClick={(e) => { e.stopPropagation(); handleAddToCart(p); }}
                         >
-                          {addedProductId === p.id ? '✓ Added' : <><ShoppingCart size={13}/> Add</>}
+                          {addedProductId === p.id ? '✓ Added' : <><ShoppingCart size={13}/> Add to Cart</>}
                         </button>
-                        <a
-                          href={`https://wa.me/923002347457?text=I want to order: ${encodeURIComponent(p.name)} — Rs.${price.toLocaleString()}`}
-                          target="_blank" rel="noopener noreferrer"
-                          className="btn btn-green btn-sm"
+                        <button
+                          className="btn btn-sm btn-orange"
+                          style={{ flex: 1, justifyContent: 'center' }}
+                          onClick={(e) => { e.stopPropagation(); handleAddToCart(p); window.dispatchEvent(new CustomEvent('open-cart')); }}
                         >
-                          <MessageCircle size={13}/> Order
-                        </a>
+                          Order Now
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -333,16 +423,16 @@ export default function Home() {
 
 
 
-      {/* ── Why BisElec ── */}
-      <section className="why-section">
+      {/* ── Why EarthyElectronics ── */}
+      <section className="why-section" data-aos="fade-up">
         <div className="container">
           <div className="section-title">
-            <h2>Why Choose Bismillah Electronics?</h2>
+            <h2>Why Choose EarthyElectronics?</h2>
             <div className="title-line"></div>
           </div>
           <div className="why-grid">
-            {whyUs.map(w => (
-              <div key={w.title} className="why-card">
+            {whyUs.map((w, idx) => (
+              <div key={w.title} className="why-card" data-aos="fade-up" data-aos-delay={idx * 100}>
                 <div className="why-icon">{w.icon}</div>
                 <h4>{w.title}</h4>
                 <p>{w.desc}</p>
@@ -351,6 +441,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Product Detail Modal */}
+      <ProductModal
+        product={selectedProduct}
+        onClose={() => setSelectedProduct(null)}
+      />
     </div>
   );
 }

@@ -1,47 +1,294 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ========================================================
+   OPTION 2: MINT TECH LIGHT THEME (Design System)
+   ======================================================== */
+:root {
+  --mint-primary: #10b981;
+  --mint-primary-hover: #059669;
+  --mint-light: #ecfdf5;
+  --mint-border: #a7f3d0;
+  
+  --mint-accent: #06b6d4;
+  --mint-accent-hover: #0891b2;
 
-body, html {
-  font-family: 'Poppins', sans-serif;
-  background: #f4f6f9;
-  color: #1a1a2e;
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  
+  --border-subtle: #e2e8f0;
+  --shadow-tech: 0 10px 25px -5px rgba(16, 185, 129, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 20px 35px -8px rgba(16, 185, 129, 0.2), 0 8px 16px -4px rgba(0, 0, 0, 0.05);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-app) !important;
+  color: var(--text-primary) !important;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   overflow-x: hidden;
   max-width: 100%;
 }
-a { text-decoration: none; color: inherit; }
-button { font-family: 'Poppins', sans-serif; cursor: pointer; }
-img { max-width: 100%; height: auto; display: block; }
-ul, ol { list-style: none; }
 
-.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+body.dark {
+  background-color: var(--bg-app) !important;
+  color: var(--text-primary) !important;
+}
 
-.section-title { text-align: center; margin-bottom: 40px; }
-.section-title h2 { font-size: 22px; font-weight: 800; color: #0f2557; text-transform: uppercase; letter-spacing: 1px; }
-.section-title p { color: #64748b; font-size: 13px; margin-top: 8px; }
-.section-title .title-line { width: 50px; height: 3px; background: #f97316; margin: 10px auto 0; border-radius: 2px; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-/* Buttons */
-.btn { display: inline-flex; align-items: center; gap: 6px; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 5px; border: 2px solid transparent; cursor: pointer; text-decoration: none; transition: all 0.2s; letter-spacing: 0.3px; }
-.btn-navy { background: #0f2557; color: #fff; border-color: #0f2557; }
-.btn-navy:hover { background: #081740; border-color: #081740; }
-.btn-orange { background: #f97316; color: #fff; border-color: #f97316; }
-.btn-orange:hover { background: #ea580c; border-color: #ea580c; }
-.btn-green { background: #16a34a; color: #fff; border-color: #16a34a; }
-.btn-green:hover { background: #15803d; border-color: #15803d; }
-.btn-outline { background: transparent; color: #0f2557; border-color: #0f2557; }
-.btn-outline:hover { background: #0f2557; color: #fff; }
-.btn-sm { padding: 7px 14px; font-size: 12px; }
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
 
-/* Click feedback animations */
-.btn:active, 
-.add-btn:active, 
-.wa-btn:active,
-.m-add:active,
-.m-wa:active {
-  transform: scale(0.95);
-  transition: transform 0.05s;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #065f46;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.section-title .title-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--mint-primary), var(--mint-accent));
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* Base Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-navy, .btn-emerald, .btn-primary {
+  background: var(--mint-primary);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+.btn-navy:hover, .btn-emerald:hover, .btn-primary:hover {
+  background: var(--mint-primary-hover);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.6);
+}
+.btn-navy:active, .btn-emerald:active, .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-orange, .btn-amber {
+  background: var(--mint-accent);
+  color: #ffffff !important;
+  border-color: var(--mint-accent);
+}
+.btn-orange:hover, .btn-amber:hover {
+  background: var(--mint-accent-hover);
+  border-color: var(--mint-accent-hover);
+  box-shadow: var(--shadow-tech);
+}
+
+.btn-outline {
+  background: #ffffff;
+  color: var(--mint-primary) !important;
+  border-color: var(--mint-border);
+}
+.btn-outline:hover {
+  background: var(--mint-light);
+  color: var(--mint-primary-hover) !important;
+  border-color: var(--mint-primary);
+}
+
+.btn-sm {
+  padding: 7px 14px;
+  font-size: 12px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Global Cards for Option 2 Mint Tech */
+.product-card, 
+.catalog-card, 
+.deal-card, 
+.why-card, 
+.hero-calc-card, 
+.filter-sidebar, 
+.cat-card, 
+.auth-card,
+.modal-container {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-tech) !important;
+  border-radius: 16px;
+  color: var(--text-primary) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover, .catalog-card:hover, .deal-card:hover, .cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* Panels & Drawers */
+.cart-slide-panel,
+.user-dropdown-menu,
+.dropdown-menu-inline,
+.menu-panel,
+.search-suggestions {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-hover) !important;
+  border-radius: 16px;
+}
+
+.cart-slide-head, .cart-total-bar {
+  background: var(--mint-light) !important;
+  border-color: var(--mint-border) !important;
+  color: #065f46 !important;
+}
+
+/* Input Fields */
+input, select, textarea {
+  font-family: inherit;
+  background-color: #ffffff !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 10px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--mint-primary) !important;
+  outline: none;
+}
+input::placeholder, textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Responsive Global Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .section-title h2 {
+    font-size: 22px;
+  }
+  .section-title p {
+    font-size: 13px;
+  }
+  .btn {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    padding: 8px 12px;
+  }
+}
+
+
+/* Product Detail Layout */
+.product-detail-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.product-detail-image-box {
+  flex: 1 1 400px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-detail-info {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-detail-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .product-detail-layout {
+    gap: 24px;
+  }
+  .product-detail-image-box {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+  .product-detail-info {
+    flex: 1 1 100%;
+  }
+  .product-detail-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .product-detail-actions button, .product-detail-actions a {
+    width: 100%;
+    font-size: 14px !important;
+    padding: 12px !important;
+  }
 }
 

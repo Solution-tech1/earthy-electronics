@@ -1,0 +1,1207 @@
+[
+  {
+    "category": "Refrigerators",
+    "model": "HR-66 B",
+    "mrp": 33500
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HR-136 B",
+    "mrp": 48900
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-186 EBS/EBD",
+    "mrp": 54000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-216 EBS/EBD",
+    "mrp": 65000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF 216 EPR/EPB",
+    "mrp": 69000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-246 EBS/EBD",
+    "mrp": 70000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF 246 EPR/EPB",
+    "mrp": 75000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-276 EBS/EBD",
+    "mrp": 75000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF 276 EPR/EPB",
+    "mrp": 80000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-316 EPR/EPB",
+    "mrp": 89000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-346 EPR/EPB",
+    "mrp": 93000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-368 EPR/EPB",
+    "mrp": 100000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-398 EPR/EPB",
+    "mrp": 105000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-438 EPR/EPB",
+    "mrp": 110400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-538 EPR/EPG",
+    "mrp": 116400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-246 IPRA/IPGA/IPPA",
+    "mrp": 79000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-276 IPRA/IPGA/IPPA",
+    "mrp": 84000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-316 IPRA/IPGA/IPPA",
+    "mrp": 93000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-346 IPRA/IPGA/IPPA",
+    "mrp": 97000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-418 IPRA/IPGA/IPPA",
+    "mrp": 108000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-458 IPRA/IPGA/IPPA",
+    "mrp": 113400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-538 IPRA/IPGA/IPPA",
+    "mrp": 123400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-316 IDGA/IDRGA",
+    "mrp": 97000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-346 IDGA/IDRGA",
+    "mrp": 101000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-418 IDGA/IDRGA",
+    "mrp": 113000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-458 IDGA/IDRGA",
+    "mrp": 118400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-538 IDGA/IDRGA",
+    "mrp": 127400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-316 IAPA+/IARA",
+    "mrp": 97000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-346 IAPA+/IARA",
+    "mrp": 101000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-368 IAPA+/IARA",
+    "mrp": 110000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-398 IAPA+/IARA",
+    "mrp": 112000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-418 IAPA+/IARA",
+    "mrp": 113000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-438 IAPA+/IARA",
+    "mrp": 117400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-458 IAPA+/IARA",
+    "mrp": 118400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-538 IAPA+/IARA",
+    "mrp": 127400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-316 IFGA/IFRA",
+    "mrp": 100000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-346 IFGA/IFRA",
+    "mrp": 104000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-368 IFGA/IFRA",
+    "mrp": 115000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-398 IFGA/IFRA",
+    "mrp": 116000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-418 IFGA/IFRA/IFPA",
+    "mrp": 117000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-438 IFGA/IFRA/IFPA",
+    "mrp": 121400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-458 IFGA/IFRA/IFPA",
+    "mrp": 122400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-538 IFGA/IFRA/IFPA",
+    "mrp": 131500
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-418 TIFG1U1/TIFB1U1 (IOT)",
+    "mrp": 122000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-458 TIFG1U1/TIFB1U1 (IOT)",
+    "mrp": 127400
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-538 TIFG1U1/TIFB1U1 (IOT)",
+    "mrp": 134500
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-488 IFFB",
+    "mrp": 230000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-518 IFFB",
+    "mrp": 238000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-518 WIFFBGU1",
+    "mrp": 244000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-622 IBS",
+    "mrp": 250000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-622 ICG",
+    "mrp": 262000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-622 IBG",
+    "mrp": 265000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-578 TSG",
+    "mrp": 216000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-578 TBG",
+    "mrp": 216000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-578 TBGU1 (IOT)",
+    "mrp": 232000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-578 TGGU1 (IOT)",
+    "mrp": 232000
+  },
+  {
+    "category": "Refrigerators",
+    "model": "HRF-678 TGG",
+    "mrp": 359000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Solar Hybrid-III(OW)-T3 Plus",
+    "mrp": 190000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Solar Hybrid-IV(OW)-T3 Plus 24000 BTU",
+    "mrp": 220000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Solar Hybrid-1:HPK/AC/Solar Panel",
+    "mrp": 20000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-10LFCM/013USDC(W)",
+    "mrp": 96000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-14HFTEX/013/023WUSDC(OW)-T3 Plus",
+    "mrp": 135500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-14HFTEX/013/023WUSDC(DG)-T3 Plus",
+    "mrp": 139500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFAB/013/23WUSDC(W)-T3 Pro",
+    "mrp": 124500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFAB/013/23WUSDC(Grey)-T3 Pro",
+    "mrp": 128500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFS/013/23WDC(G)/(S)-Super T3",
+    "mrp": 126500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFS/013/23WDC(W)-Super T3",
+    "mrp": 122500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFN/013WDC(W)-T3",
+    "mrp": 118500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFPA/013WUSDC(G-S-B,SG)",
+    "mrp": 118000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13HFCS/CA/CP013/33/23USDC(W)-SG",
+    "mrp": 112500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13RFP/023DC(W)",
+    "mrp": 110500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13LFCM/013/23DC(W)",
+    "mrp": 99500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13LF-SUPREME/023DC(W)",
+    "mrp": 99500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-13LF-PRIME/023DC(W)",
+    "mrp": 99500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-12CFCP/023L(W)",
+    "mrp": 90500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-20HJ/013/23WUSDC(G)-T3 Plus",
+    "mrp": 240000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-20HJUV/013/23WUSDC(G)-T3 Plus",
+    "mrp": 218000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-20HFTEX/013/23/33WUSDC(OW)-T3 Plus",
+    "mrp": 180000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-20HFTEX/013/23/33WUSDC(DG)-T3 Plus",
+    "mrp": 184000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFAB/013WUSDC(W)-T3 Pro",
+    "mrp": 161500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFAB/013/23WUSDC(Grey)-T3 Pro",
+    "mrp": 166500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFS/023WDC(S-G)-Super T3",
+    "mrp": 163500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFS/023WDC(W)-Super T3",
+    "mrp": 158500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFN/013WDC(W)-T3",
+    "mrp": 149500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFPAA/013/23/43WUSDC(G,S,B)-SG",
+    "mrp": 145000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19HFCS/CA/CP/013/23WDC(W)-SG",
+    "mrp": 133500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19RFP/013/23DC(W)",
+    "mrp": 131500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19LFCM/013/23USDC(W)",
+    "mrp": 127500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19LF-SUPREME/023DC(W)",
+    "mrp": 127500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-19LF-PRIME/023DC(W)",
+    "mrp": 127500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-18CFCP/023L(W)",
+    "mrp": 116500
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24HJ/013WDC(G)-T3 Plus",
+    "mrp": 331000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24HDZUV/013WDC(W) T3 Plus",
+    "mrp": 301000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24HDZCA/013WDC(W) T3 Plus",
+    "mrp": 291000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-24HFAB/013WUSDC(W)-T3 Pro",
+    "mrp": 207000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-24HFAB/013WUSDC(Grey)-T3 Pro",
+    "mrp": 213000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-24HFCD/013/23WDC(W)",
+    "mrp": 194000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HSU-24CFCM/023L(W)",
+    "mrp": 165000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Date:",
+    "mrp": 2026
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Effective from June",
+    "mrp": 2026
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24HE/012WSDC(X-IK)-T3 Plus (Wi-Fi & Self Cleaning)(with Kit and Installation) 2",
+    "mrp": 271000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24HE/013WSDC(X-IK)-T3 (Wi-Fi & Self Cleaning)(with Kit and Installation) 2",
+    "mrp": 271000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24HE/WSDC(X-IK) (Wi-Fi & Self Cleaning)(with Kit and Installation) 2",
+    "mrp": 271000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Cool Only HPU-48CE/DC 4",
+    "mrp": 510000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-48E/DC 4",
+    "mrp": 561000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-48HE/012DC(GE)-T3 4",
+    "mrp": 571000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Cool Only HPU-96CE/DC 8",
+    "mrp": 1214000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Heat & Cool HPU-96HE/DC 8",
+    "mrp": 1285000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HBU-18HE/DC 1.5",
+    "mrp": 300000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HBU-24HE/DC-QB-T3 2",
+    "mrp": 440000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Cool Only HBU-48CE/DC 4",
+    "mrp": 600000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Heat & Cool HBU-48E/DC 4",
+    "mrp": 650000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HCFU-24HE/DC 2",
+    "mrp": 357000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HCFU-48HE/DC 4",
+    "mrp": 561000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HDU-24HE/DC 2",
+    "mrp": 357000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HDU-48HE/DC 4",
+    "mrp": 561000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-24CE03/X-IK (with Kit and Installation) 2",
+    "mrp": 237000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HPU-48CE03/T 4",
+    "mrp": 415000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HBU-24CE03/KB 2",
+    "mrp": 306000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HBU-48CE03/KB 4",
+    "mrp": 459000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "HCFU-48CE03 4",
+    "mrp": 372000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Heat & Cool HCFU-48HE03 4",
+    "mrp": 435000
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Date:",
+    "mrp": 2026
+  },
+  {
+    "category": "Air Conditioners",
+    "model": "Effective from",
+    "mrp": 2026
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HD 60 - 50 (white/Gray)",
+    "mrp": 18500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWS80-60 : 03 (New)",
+    "mrp": 20500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM80-1217E",
+    "mrp": 22500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80-1217",
+    "mrp": 23000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120-35FF (Milky white/Gray)",
+    "mrp": 27000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM130-1217E",
+    "mrp": 27000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 130-1217 (Gray)",
+    "mrp": 28000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 130-1217 (White)",
+    "mrp": 27500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 75AS (White)",
+    "mrp": 29500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM80-CS",
+    "mrp": 30500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80AS (White)",
+    "mrp": 30100
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM100-CS",
+    "mrp": 32300
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 100AS (White)",
+    "mrp": 32300
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 100BS (White)",
+    "mrp": 34000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HTW100-1217S",
+    "mrp": 34500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HTW100-196E",
+    "mrp": 34000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HTW100-196G",
+    "mrp": 35000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM120-AS (Moonlight grey)",
+    "mrp": 49000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120AS",
+    "mrp": 49000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80-1269X",
+    "mrp": 56400
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80-1708Y",
+    "mrp": 60900
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM85-1269S6 : 03",
+    "mrp": 57000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 85-826E",
+    "mrp": 59900
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 85-826",
+    "mrp": 61900
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM90-826E",
+    "mrp": 60000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM100-826S6",
+    "mrp": 63000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 95-1678ES8",
+    "mrp": 82900
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM100-1269S6 (New)",
+    "mrp": 57000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM100-316S6",
+    "mrp": 68000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM100-316HS8 (New)",
+    "mrp": 69000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM100-1678E",
+    "mrp": 83900
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM110-688S8",
+    "mrp": 79000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM110-B688S8 (New)",
+    "mrp": 83000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120-826E",
+    "mrp": 80900
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120-826",
+    "mrp": 78000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM120-316S6",
+    "mrp": 82000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120-1678ES8",
+    "mrp": 90500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120-B1678",
+    "mrp": 100000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM130-688S8 (New)",
+    "mrp": 87000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM130-B699S8 : 03 (New)",
+    "mrp": 97000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 120-1978 (Double Drive)",
+    "mrp": 139300
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM150-826S6",
+    "mrp": 86000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM150-316S6",
+    "mrp": 90000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM150-688S8 (New)",
+    "mrp": 94000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 150-1678ES8",
+    "mrp": 96000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 150-B1678ES8",
+    "mrp": 111800
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM150-B699S8 : 03 (New)",
+    "mrp": 106000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 150-1978 (Double Drive)",
+    "mrp": 170000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM200-BD2178S8",
+    "mrp": 210000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW80-BP12929S6",
+    "mrp": 155000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW80-BP12929S3",
+    "mrp": 155000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW90-BP12357S8 (New)",
+    "mrp": 150000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW90-BP14959S8",
+    "mrp": 170000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW100-BP12357S8 (New)",
+    "mrp": 160000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW100-BP14929S6",
+    "mrp": 185000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW100-BP14929S3",
+    "mrp": 185000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW105-B14959S8U1",
+    "mrp": 210000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW105-BD14376PGUI",
+    "mrp": 215000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWD105-B14959S8U1",
+    "mrp": 240000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HD100-AR376PGUI",
+    "mrp": 235000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW120-BP12357S8 (New)",
+    "mrp": 175000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWD120-BP12357S8 (New)",
+    "mrp": 210000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM120-BP14929S6",
+    "mrp": 195000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HW-140-BD14697WU1 (New)",
+    "mrp": 600000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWD240-BD12LGNU1 (New)",
+    "mrp": 1000000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80 - 35 (white/Gray)",
+    "mrp": 20500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80 - 50 (white/Gray)",
+    "mrp": 21000
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80 - 60 ( white/Gray)",
+    "mrp": 21500
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HTW80-186:W",
+    "mrp": 38200
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HTW100-1169",
+    "mrp": 39800
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HTW110-186",
+    "mrp": 40600
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 80-1269Y",
+    "mrp": 56400
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM85-1708",
+    "mrp": 73100
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 90-1789:B",
+    "mrp": 73800
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM90-1708S5",
+    "mrp": 76800
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 90-826S5",
+    "mrp": 77800
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 150-1789",
+    "mrp": 96800
+  },
+  {
+    "category": "Washing Machines",
+    "model": "HWM 150-1708",
+    "mrp": 98000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-285",
+    "mrp": 78500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-405",
+    "mrp": 98000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-545",
+    "mrp": 125500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-385",
+    "mrp": 93000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-245 Inverter",
+    "mrp": 80000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-285 Inverter",
+    "mrp": 83000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-405 Inverter",
+    "mrp": 103500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-465 Inverter (New)",
+    "mrp": 107000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-545 Inverter",
+    "mrp": 133500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-230 Inverter",
+    "mrp": 65000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-320 Inverter",
+    "mrp": 75500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-385 Inverter",
+    "mrp": 98000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-535 Inverter (New)",
+    "mrp": 118500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-175 Inverter Grey (New)",
+    "mrp": 57000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-245 Inverter Grey",
+    "mrp": 80000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-285 Inverter Grey",
+    "mrp": 83000
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-345 Inverter Grey",
+    "mrp": 89500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-405 Inverter Grey",
+    "mrp": 103500
+  },
+  {
+    "category": "Deep Freezers",
+    "model": "HDF-385 Inverter Grey",
+    "mrp": 98000
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+    "mrp": 109900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+    "mrp": 119900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+    "mrp": 189900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR,",
+    "mrp": 269900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, Full HD Resolution with HDR",
+    "mrp": 55900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR",
+    "mrp": 89900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 119900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 137900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 199900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 299900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Effective from",
+    "mrp": 2026
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR",
+    "mrp": 89900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 119900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 137900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 199900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Google Chromecast, Google Play store, Youtube, Netflix, Wifi, Ethernet LAN, USB, 4K Resolution with HDR, Game mode.",
+    "mrp": 299900
+  },
+  {
+    "category": "LED TVs",
+    "model": "Effective from",
+    "mrp": 2026
+  },
+  {
+    "category": "Water Dispensers",
+    "model": "HDR-TC2C1GB-PK",
+    "mrp": 45000
+  },
+  {
+    "category": "Water Dispensers",
+    "model": "HDR-TC2C1GS-PK",
+    "mrp": 45000
+  },
+  {
+    "category": "Water Dispensers",
+    "model": "HDR-TC2C1GR-PK",
+    "mrp": 45000
+  }
+]

@@ -1,0 +1,419 @@
+{
+  "ready": [
+    {
+      "sno": 52,
+      "model": "Haier HW-90 BP 14959 S6",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hw-90-bp-14959-s6.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 55,
+      "model": "Haier HWM 100 CS",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-100-cs.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 57,
+      "model": "Haier HWM 120-1678 ES8",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-120-1678-es8.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 59,
+      "model": "Haier HWM 60-50",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-60-50.jpg",
+      "confidence": "VERIFIED_SAME_PRODUCT",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 61,
+      "model": "Haier HWM 80-1217",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-80-1217.jpg",
+      "confidence": "VERIFIED_SAME_PRODUCT",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 62,
+      "model": "Haier HWM 85-826 E",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-85-826-e.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 63,
+      "model": "Haier HWM 95-1678 ES8/JT",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-95-1678-es8-jt.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 64,
+      "model": "Haier HWM-120 AS MG",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-120-as-mg.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 67,
+      "model": "Haier HWM-49102 GD",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-49102-gd.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 68,
+      "model": "Haier HWM-49102 P",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-49102-p.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 69,
+      "model": "Haier HWM-49112 GD",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-49112-gd.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 70,
+      "model": "Haier HWM-49112 P",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-49112-p.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 72,
+      "model": "Haier HWM-75 AS",
+      "category": "Washing Machine",
+      "image": "/images/products/haier-hwm-75-as.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 74,
+      "model": "Haier HMW-20MX12 SOLO",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20mx12-solo.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 75,
+      "model": "Haier HMW-23200 GRILL",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-23200-grill.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 76,
+      "model": "Haier HGL 20 MXP7",
+      "category": "Microwave",
+      "image": "/images/products/haier-hgl-20-mxp7.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 77,
+      "model": "Haier HGL 20 MXP8",
+      "category": "Microwave",
+      "image": "/images/products/haier-hgl-20-mxp8.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 78,
+      "model": "Haier HMN 20 MXP5",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmn-20-mxp5.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 79,
+      "model": "Haier HMN 20 MXP6",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmn-20-mxp6.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 81,
+      "model": "Haier HMW-20 DGS GRILL",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-dgs-grill.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 82,
+      "model": "Haier HMW-20 DSS Digital",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-dss-digital.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 83,
+      "model": "Haier HMW-20 MBS",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-mbs.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 84,
+      "model": "Haier HMW-20 MHES",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-mhes.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 85,
+      "model": "Haier HMW-20 MWS",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-mws.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 86,
+      "model": "Haier HMW-20 MX11",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-mx11.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 87,
+      "model": "Haier HMW-20 MX12",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-20-mx12.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 88,
+      "model": "Haier HMW-30 AFR",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-30-afr.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 89,
+      "model": "Haier HMW-30 AFS",
+      "category": "Microwave",
+      "image": "/images/products/haier-hmw-30-afs.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 90,
+      "model": "WestPoint WestPoint 1186",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1186.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 91,
+      "model": "WestPoint WestPoint 1203",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1203.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 92,
+      "model": "WestPoint WestPoint 1253",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1253.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 93,
+      "model": "WestPoint WestPoint 1353",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1353.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 94,
+      "model": "WestPoint WestPoint 1833",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1833.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 95,
+      "model": "WestPoint WestPoint 1844",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1844.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 96,
+      "model": "WestPoint WestPoint 1846",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1846.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 97,
+      "model": "WestPoint WestPoint 1853",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1853.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 98,
+      "model": "WestPoint WestPoint 1860",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-1860.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 99,
+      "model": "WestPoint WestPoint 2025",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-2025.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    },
+    {
+      "sno": 100,
+      "model": "WestPoint WestPoint 2063",
+      "category": "Kitchen Appliance",
+      "image": "/images/products/westpoint-westpoint-2063.jpg",
+      "confidence": "LIKELY_SAME_SPECS_MATCH",
+      "status": "READY_TO_UPLOAD"
+    }
+  ],
+  "alreadyLive": [
+    {
+      "model": "Haier PEL Microwave Oven PMO-20 BH Classic Plus/On Installment",
+      "existingId": 215,
+      "reason": "Model Name already exists on site as DB ID #215"
+    },
+    {
+      "model": "Haier PEL PMO 30BG Glamour Microwave Oven 30 Ltr/On Istallments",
+      "existingId": 216,
+      "reason": "Model Name already exists on site as DB ID #216"
+    },
+    {
+      "model": "Haier PEL PMO 38BG Glamour Microwave Oven 38 Ltr/On Installments",
+      "existingId": 217,
+      "reason": "Model Name already exists on site as DB ID #217"
+    },
+    {
+      "model": "Haier PEL PMO-23 Desire Microwave Oven/On Installments",
+      "existingId": 218,
+      "reason": "Model Name already exists on site as DB ID #218"
+    },
+    {
+      "model": "Haier PEL PMO-23 SLM 23 Ltr Desire Microwave Oven/On Installments",
+      "existingId": 219,
+      "reason": "Model Name already exists on site as DB ID #219"
+    },
+    {
+      "model": "Haier PEL PMO-25 Convection Microwave Oven/On Installments",
+      "existingId": 220,
+      "reason": "Model Name already exists on site as DB ID #220"
+    },
+    {
+      "model": "Haier PEL PMO-26 Chef Digital Microwave Oven/On Installments",
+      "existingId": 221,
+      "reason": "Model Name already exists on site as DB ID #221"
+    },
+    {
+      "model": "Haier PEL PMO-26 Desire Microwave Oven/On Installments",
+      "existingId": 222,
+      "reason": "Model Name already exists on site as DB ID #222"
+    },
+    {
+      "model": "Haier Pel PMO-30 Desire Microwave Oven 30 Litres/On Installments",
+      "existingId": 223,
+      "reason": "Model Name already exists on site as DB ID #223"
+    },
+    {
+      "model": "Haier Philips Espresso EP2220 Fully automatic espresso machines/On Installments",
+      "existingId": 224,
+      "reason": "Model Name already exists on site as DB ID #224"
+    },
+    {
+      "model": "Haier TCL Elite TAC-24HEA 2 Ton-BE-On Installments",
+      "existingId": 225,
+      "reason": "Model Name already exists on site as DB ID #225"
+    },
+    {
+      "model": "Haier HWM 100 AS",
+      "existingId": 226,
+      "reason": "Model Name already exists on site as DB ID #226"
+    },
+    {
+      "model": "Haier HWM 100 BS",
+      "existingId": 227,
+      "reason": "Model Name already exists on site as DB ID #227"
+    },
+    {
+      "model": "Haier HWM 100-1678 E",
+      "existingId": 228,
+      "reason": "Model Name already exists on site as DB ID #228"
+    },
+    {
+      "model": "Haier HWM 120-1678 ES9",
+      "existingId": 229,
+      "reason": "Model Name already exists on site as DB ID #229"
+    },
+    {
+      "model": "Haier HWM 80 AS",
+      "existingId": 230,
+      "reason": "Model Name already exists on site as DB ID #230"
+    },
+    {
+      "model": "Haier HWM-120-35",
+      "existingId": 232,
+      "reason": "Model Name already exists on site as DB ID #232"
+    },
+    {
+      "model": "Haier HWM-49101Spinner",
+      "existingId": 234,
+      "reason": "Model Name already exists on site as DB ID #234"
+    },
+    {
+      "model": "Haier HWM-4991",
+      "existingId": 235,
+      "reason": "Model Name already exists on site as DB ID #235"
+    },
+    {
+      "model": "Haier HWM-80-1269 X",
+      "existingId": 236,
+      "reason": "Model Name already exists on site as DB ID #236"
+    }
+  ],
+  "duplicateImages": []
+}

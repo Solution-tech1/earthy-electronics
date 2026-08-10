@@ -3,9 +3,18 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
+  const getUserCartKey = () => {
+    try {
+      const user = JSON.parse(localStorage.getItem('user'));
+      return user && user.id ? `earthyElectronicsCart_${user.id}` : 'earthyElectronicsCart_guest';
+    } catch {
+      return 'earthyElectronicsCart_guest';
+    }
+  };
+
   const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('bisElecCart');
+      const saved = localStorage.getItem(getUserCartKey());
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -14,9 +23,30 @@ export function CartProvider({ children }) {
 
   const [toast, setToast] = useState({ show: false, message: '' });
 
+  // Update cart state when auth changes (e.g. login/logout)
+  useEffect(() => {
+    const handleStorageChange = () => {
+      try {
+        const saved = localStorage.getItem(getUserCartKey());
+        setCartItems(saved ? JSON.parse(saved) : []);
+      } catch {
+        setCartItems([]);
+      }
+    };
+    
+    window.addEventListener('storage', handleStorageChange);
+    // Custom event to trigger update on same tab
+    window.addEventListener('authChange', handleStorageChange);
+    
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('authChange', handleStorageChange);
+    };
+  }, []);
+
   // Persist cart items
   useEffect(() => {
-    localStorage.setItem('bisElecCart', JSON.stringify(cartItems));
+    localStorage.setItem(getUserCartKey(), JSON.stringify(cartItems));
   }, [cartItems]);
 
   // Handle toast timeout

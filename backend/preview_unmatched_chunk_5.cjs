@@ -1,0 +1,38 @@
+const fs = require('fs');
+const path = require('path');
+const csv = require('csv-parser');
+
+const unmatchedCsvPath = path.join(__dirname, 'product files', 'UNMATCHED_Products_List.csv');
+const rows = [];
+
+fs.createReadStream(unmatchedCsvPath)
+  .pipe(csv())
+  .on('data', (d) => rows.push(d))
+  .on('end', () => {
+    const catPriority = {
+      'AC': 1,
+      'Washing Machine': 2,
+      'Microwave': 3,
+      'LED': 4,
+      'Water Dispenser': 5,
+      'Kitchen Appliance': 6
+    };
+
+    rows.sort((a, b) => {
+      const pA = catPriority[a.Category] || 99;
+      const pB = catPriority[b.Category] || 99;
+      if (pA !== pB) return pA - pB;
+      return (a.Brand || '').localeCompare(b.Brand || '');
+    });
+
+    const chunk5 = rows.slice(200, 250);
+
+    console.log("=== UNMATCHED BATCH - CHUNK 5 (PRODUCTS 201 TO 250) PREVIEW ===");
+    console.log(`Total in Chunk 5: ${chunk5.length} products\n`);
+
+    chunk5.forEach((r, idx) => {
+      console.log(`${idx + 201}. [${r.Brand}] ${r.Model_Name} | Category: ${r.Category} | Rate: Rs. ${r.Rate || 'N/A'}`);
+    });
+
+    process.exit(0);
+  });

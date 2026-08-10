@@ -1,0 +1,572 @@
+[
+  {
+    "name": "CHUNK 1 — Refrigerator Unmatched Models (24 Models)",
+    "items": [
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HR-66 B",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HR-136 B",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-186 EBS/EBD",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-418 IPRA/IPGA/IPPA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-458 IPRA/IPGA/IPPA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-418 IDGA/IDRGA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-458 IDGA/IDRGA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-418 IAPA+/IARA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-458 IAPA+/IARA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-418 IFGA/IFRA/IFPA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-458 IFGA/IFRA/IFPA",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-418 TIFG1U1/TIFB1U1 (IOT)",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-458 TIFG1U1/TIFB1U1 (IOT)",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-488 IFFB",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-518 IFFB",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-518 WIFFBGU1",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-622 IBS",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-622 ICG",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-622 IBG",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-578 TSG",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-578 TBG",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-578 TBGU1 (IOT)",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-578 TGGU1 (IOT)",
+        "mrp": ""
+      },
+      {
+        "brand": "Haier",
+        "category": "Refrigerators",
+        "model": "HRF-678 TGG",
+        "mrp": ""
+      }
+    ],
+    "file": "Haier_Unmatched_Chunk1.csv"
+  },
+  {
+    "name": "CHUNK 2 — Air Conditioners Unmatched Part 1 (22 Models)",
+    "items": [
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-10LFCM/013USDC(W)",
+        "mrp": 81356
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-14HFTEX/013/023WUSDC(OW)-T3 Plus",
+        "mrp": 114831
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-14HFTEX/013/023WUSDC(DG)-T3 Plus",
+        "mrp": 118220
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFAB/013/23WUSDC(W)-T3 Pro",
+        "mrp": 105508
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFAB/013/23WUSDC(Grey)-T3 Pro",
+        "mrp": 108898
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFS/013/23WDC(G)/(S)-Super T3",
+        "mrp": 107203
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFS/013/23WDC(W)-Super T3",
+        "mrp": 103814
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFN/013WDC(W)-T3",
+        "mrp": 100424
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFPA/013WUSDC(G-S-B,SG)",
+        "mrp": 100000
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13HFCS/CA/CP013/33/23USDC(W)-SG",
+        "mrp": 95339
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13RFP/023DC(W)",
+        "mrp": 93644
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13LFCM/013/23DC(W)",
+        "mrp": 84322
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13LF-SUPREME/023DC(W)",
+        "mrp": 84322
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-13LF-PRIME/023DC(W)",
+        "mrp": 84322
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-12CFCP/023L(W)",
+        "mrp": 76695
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-20HJ/013/23WUSDC(G)-T3 Plus",
+        "mrp": 203390
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-20HJUV/013/23WUSDC(G)-T3 Plus",
+        "mrp": 184746
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-20HFTEX/013/23/33WUSDC(OW)-T3 Plus",
+        "mrp": 152542
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-20HFTEX/013/23/33WUSDC(DG)-T3 Plus",
+        "mrp": 155932
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFAB/013WUSDC(W)-T3 Pro",
+        "mrp": 136864
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFAB/013/23WUSDC(Grey)-T3 Pro",
+        "mrp": 141102
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFS/023WDC(S-G)-Super T3",
+        "mrp": 138559
+      }
+    ],
+    "file": "Haier_Unmatched_Chunk2.csv"
+  },
+  {
+    "name": "CHUNK 3 — Air Conditioners Unmatched Part 2 (21 Models)",
+    "items": [
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFS/023WDC(W)-Super T3",
+        "mrp": 134322
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFN/013WDC(W)-T3",
+        "mrp": 126695
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFPAA/013/23/43WUSDC(G,S,B)-SG",
+        "mrp": 122881
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19HFCS/CA/CP/013/23WDC(W)-SG",
+        "mrp": 113136
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19RFP/013/23DC(W)",
+        "mrp": 111441
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19LFCM/013/23USDC(W)",
+        "mrp": 108051
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19LF-SUPREME/023DC(W)",
+        "mrp": 108051
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-19LF-PRIME/023DC(W)",
+        "mrp": 108051
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-18CFCP/023L(W)",
+        "mrp": 98729
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-24HFAB/013WUSDC(W)-T3 Pro",
+        "mrp": 175424
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-24HFAB/013WUSDC(Grey)-T3 Pro",
+        "mrp": 180508
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-24HFCD/013/23WDC(W)",
+        "mrp": 164407
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HSU-24CFCM/023L(W)",
+        "mrp": 139831
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HBU-18HE/DC 1.5 254,237",
+        "mrp": 254237
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HBU-24HE/DC-QB-T3 2 372,881",
+        "mrp": 372881
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "Cool Only HBU-48CE/DC 4 508,475",
+        "mrp": 508475
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "Heat & Cool HBU-48E/DC 4 550,847",
+        "mrp": 550847
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HDU-24HE/DC 2 302,542",
+        "mrp": 302542
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HDU-48HE/DC 4 475,424",
+        "mrp": 475424
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HBU-24CE03/KB 2 259,322",
+        "mrp": 259322
+      },
+      {
+        "brand": "Haier",
+        "category": "Air Conditioners",
+        "model": "HBU-48CE03/KB 4 388,983",
+        "mrp": 388983
+      }
+    ],
+    "file": "Haier_Unmatched_Chunk3.csv"
+  },
+  {
+    "name": "CHUNK 4 — Washing Machines, Dispensers & Microwaves (24 Models)",
+    "items": [
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 60-50 Automatic Dryer",
+        "mrp": 38000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 80-60 Semi Automatic",
+        "mrp": 35000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 80-1217 Semi Auto",
+        "mrp": 39000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 120-35 Semi Auto Single Tub",
+        "mrp": 45000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 130-1217 GB Single Tub",
+        "mrp": 48000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM-75AS Semi Auto",
+        "mrp": 41000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM-80-CS Twin Tub",
+        "mrp": 44000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HTW 100-196G Twin Tub",
+        "mrp": 52000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HTW 100-196E Twin Tub",
+        "mrp": 53000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HMW100-1217 White",
+        "mrp": 49000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 80-186 Twin Tub",
+        "mrp": 46000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM-85-1269S6 Fully Auto",
+        "mrp": 68000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 100-1269 Fully Auto",
+        "mrp": 74000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 90-826 E Fully Auto",
+        "mrp": 71000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM 100-826 Fully Auto",
+        "mrp": 78000
+      },
+      {
+        "brand": "Haier",
+        "category": "Washing Machines",
+        "model": "HWM-110-B688S8 Fully Auto",
+        "mrp": 95000
+      },
+      {
+        "brand": "Haier",
+        "category": "Water Dispensers",
+        "model": "HWD-306 White Glass Door",
+        "mrp": 35000
+      },
+      {
+        "brand": "Haier",
+        "category": "Water Dispensers",
+        "model": "HWD-306 Red Glass Door",
+        "mrp": 35000
+      },
+      {
+        "brand": "Haier",
+        "category": "Water Dispensers",
+        "model": "HWD-308 Cabinet Dispenser",
+        "mrp": 38000
+      },
+      {
+        "brand": "Haier",
+        "category": "Microwave Ovens",
+        "model": "HMW-20MPB 20L Solo Black",
+        "mrp": 21000
+      },
+      {
+        "brand": "Haier",
+        "category": "Microwave Ovens",
+        "model": "HWM-26MBH 25L Solo",
+        "mrp": 32000
+      },
+      {
+        "brand": "Haier",
+        "category": "Microwave Ovens",
+        "model": "HGL-25MXP9 25L Solo Black",
+        "mrp": 29000
+      },
+      {
+        "brand": "Haier",
+        "category": "Microwave Ovens",
+        "model": "HGL-23200 23L Grill White",
+        "mrp": 36000
+      },
+      {
+        "brand": "Haier",
+        "category": "Microwave Ovens",
+        "model": "HGL-30100 30L Convection",
+        "mrp": 46000
+      }
+    ],
+    "file": "Haier_Unmatched_Chunk4.csv"
+  }
+]

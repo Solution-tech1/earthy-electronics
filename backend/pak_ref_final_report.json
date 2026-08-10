@@ -1,0 +1,458 @@
+[
+  {
+    "s_no": 1,
+    "model": "HR-66 B",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 66 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 2,
+    "model": "HR-136 B",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 136 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 3,
+    "model": "HRF-186 EBS/EBD",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 186 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 4,
+    "model": "HRF-216 EBS/EBD",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 216 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 5,
+    "model": "HRF 216 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 216 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 6,
+    "model": "HRF-246 EBS/EBD",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 246 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 7,
+    "model": "HRF 246 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 246 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 8,
+    "model": "HRF-276 EBS/EBD",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 276 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 9,
+    "model": "HRF 276 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 276 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 10,
+    "model": "HRF-316 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 316 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-316 IDB/IDR)"
+  },
+  {
+    "s_no": 11,
+    "model": "HRF-346 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 346 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-346 IDB/IDR)"
+  },
+  {
+    "s_no": 12,
+    "model": "HRF-368 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 368 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 13,
+    "model": "HRF-398 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 398 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 14,
+    "model": "HRF-438 EPR/EPB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 438 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 15,
+    "model": "HRF-538 EPR/EPG",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 538 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 16,
+    "model": "HRF-246 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 246 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 17,
+    "model": "HRF-276 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 276 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 18,
+    "model": "HRF-316 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 316 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-316 IDB/IDR)"
+  },
+  {
+    "s_no": 19,
+    "model": "HRF-346 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 346 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-346 IDB/IDR)"
+  },
+  {
+    "s_no": 20,
+    "model": "HRF-418 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 418 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 21,
+    "model": "HRF-458 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 458 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 22,
+    "model": "HRF-538 IPRA/IPGA/IPPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 538 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 23,
+    "model": "HRF-316 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 316 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-316 IDB/IDR)"
+  },
+  {
+    "s_no": 24,
+    "model": "HRF-346 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 346 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-346 IDB/IDR)"
+  },
+  {
+    "s_no": 25,
+    "model": "HRF-418 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 418 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 26,
+    "model": "HRF-458 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 458 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 27,
+    "model": "HRF-538 IDGA/IDRGA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 538 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 28,
+    "model": "HRF-316 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 316 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-316 IDB/IDR)"
+  },
+  {
+    "s_no": 29,
+    "model": "HRF-346 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 346 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-346 IDB/IDR)"
+  },
+  {
+    "s_no": 30,
+    "model": "HRF-368 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 368 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 31,
+    "model": "HRF-398 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 398 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 32,
+    "model": "HRF-418 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 418 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 33,
+    "model": "HRF-438 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 438 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 34,
+    "model": "HRF-458 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 458 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 35,
+    "model": "HRF-538 IAPA+/IARA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 538 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 36,
+    "model": "HRF-316 IFGA/IFRA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 316 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-316 IDB/IDR)"
+  },
+  {
+    "s_no": 37,
+    "model": "HRF-346 IFGA/IFRA",
+    "category": "Refrigerators",
+    "source_website": "https://pak-electronics.pk",
+    "image_status": "FOUND_AND_UPLOADED",
+    "match_notes": "Exact core number 346 matched on pak-electronics.pk (Haier Digital Inverter Refrigerator HRF-346 IDB/IDR)"
+  },
+  {
+    "s_no": 38,
+    "model": "HRF-368 IFGA/IFRA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 368 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 39,
+    "model": "HRF-398 IFGA/IFRA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 398 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 40,
+    "model": "HRF-418 IFGA/IFRA/IFPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 418 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 41,
+    "model": "HRF-438 IFGA/IFRA/IFPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 438 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 42,
+    "model": "HRF-458 IFGA/IFRA/IFPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 458 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 43,
+    "model": "HRF-538 IFGA/IFRA/IFPA",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 538 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 44,
+    "model": "HRF-418 TIFG1U1/TIFB1U1 (IOT)",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 418 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 45,
+    "model": "HRF-458 TIFG1U1/TIFB1U1 (IOT)",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 458 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 46,
+    "model": "HRF-538 TIFG1U1/TIFB1U1 (IOT)",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 538 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 47,
+    "model": "HRF-488 IFFB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 488 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 48,
+    "model": "HRF-518 IFFB",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 518 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 49,
+    "model": "HRF-518 WIFFBGU1",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 518 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 50,
+    "model": "HRF-622 IBS",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 622 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 51,
+    "model": "HRF-622 ICG",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 622 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 52,
+    "model": "HRF-622 IBG",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 622 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 53,
+    "model": "HRF-578 TSG",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 578 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 54,
+    "model": "HRF-578 TBG",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 578 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 55,
+    "model": "HRF-578 TBGU1 (IOT)",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 578 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 56,
+    "model": "HRF-578 TGGU1 (IOT)",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 578 not listed on pak-electronics.pk"
+  },
+  {
+    "s_no": 57,
+    "model": "HRF-678 TGG",
+    "category": "Refrigerators",
+    "source_website": "NONE",
+    "image_status": "NOT_FOUND",
+    "match_notes": "Core model number 678 not listed on pak-electronics.pk"
+  }
+]

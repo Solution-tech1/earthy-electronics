@@ -13,7 +13,7 @@
 .about-hero h1 {
   font-size: 32px;
   font-weight: 800;
-  color: #0f2557;
+  color: #065f46;
   margin-bottom: 12px;
 }
 
@@ -48,14 +48,14 @@
 
 .stat-card:hover {
   transform: translateY(-3px);
-  border-color: #0f2557;
+  border-color: #065f46;
   box-shadow: 0 8px 20px rgba(15, 37, 87, 0.08);
 }
 
 .stat-card h3 {
   font-size: 36px;
   font-weight: 800;
-  color: #0f2557;
+  color: #065f46;
   margin-bottom: 6px;
 }
 
@@ -99,13 +99,13 @@
   height: 44px;
   border-radius: 6px;
   background-color: rgba(15, 37, 87, 0.08);
-  color: #0f2557;
+  color: #065f46;
   font-size: 20px;
 }
 
 .value-card h3 {
   font-size: 16px;
-  color: #0f2557;
+  color: #065f46;
   font-weight: 700;
 }
 
@@ -128,7 +128,7 @@
 .section-header h2 {
   font-size: 24px;
   font-weight: 800;
-  color: #0f2557;
+  color: #065f46;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -165,12 +165,12 @@
 }
 
 .showroom-icon {
-  color: #0f2557;
+  color: #065f46;
 }
 
 .showroom-header h3 {
   font-size: 18px;
-  color: #0f2557;
+  color: #065f46;
   font-weight: 700;
 }
 
@@ -195,7 +195,7 @@
 }
 
 .detail-line svg {
-  color: #0f2557;
+  color: #065f46;
   flex-shrink: 0;
 }
 

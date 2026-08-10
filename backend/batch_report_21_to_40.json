@@ -1,0 +1,169 @@
+{
+  "startIdx": 21,
+  "endIdx": 40,
+  "reportLines": [
+    {
+      "num": 21,
+      "id": 431,
+      "name": "WestPoint 1846 Air Fryer 4.5L",
+      "preIssue": "File Disk Par Missing Thi",
+      "source": "Current Valid DB Image",
+      "status": "Image Nahi Mili"
+    },
+    {
+      "num": 22,
+      "id": 432,
+      "name": "Haier HWD-311 Water Dispenser",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 23,
+      "id": 433,
+      "name": "PEL 215 Pearl Water Dispenser",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 24,
+      "id": 434,
+      "name": "Philips Espresso EP2220 Fully Automatic Coffee Machine",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 25,
+      "id": 435,
+      "name": "ORIENT SPLIT AC MEGA 12X � 1 Ton T3 DC Inverter Heat & Cool",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 26,
+      "id": 436,
+      "name": "Orient 1 Ton 12G Lunar Grace Golden",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 27,
+      "id": 437,
+      "name": "Orient Everest 12W Geo White",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 28,
+      "id": 438,
+      "name": "Orient FA 18X Snow White",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 29,
+      "id": 439,
+      "name": "Orient Everest 18W Geo White",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 30,
+      "id": 440,
+      "name": "Orient Infinity 18X Silver Matt T3+",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 31,
+      "id": 441,
+      "name": "EcoStar AC 12EMC1 1 Ton Inverter Split AC",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 32,
+      "id": 442,
+      "name": "EcoStar Emperor Cool Series ES-18EMC1WS 1.5 Ton Split AC",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 33,
+      "id": 443,
+      "name": "EcoStar Emperor Series 1 TON White Split Air Conditioner",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 34,
+      "id": 444,
+      "name": "EcoStar Emperor Cool Series 1.5 TON Split AC",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 35,
+      "id": 445,
+      "name": "EcoStar ES-12NV01W T3",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 36,
+      "id": 446,
+      "name": "Ecostar AC 18NV01WT3 1.5 Ton T3 Inverter Split AC",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 37,
+      "id": 447,
+      "name": "EcoStar AC 12DU02GC 1 Ton Inverter Split AC Duke Series",
+      "preIssue": "Low Quality / Small Resolution",
+      "source": "Current Valid DB Image",
+      "status": "Image Purged (Khaali Set)"
+    },
+    {
+      "num": 38,
+      "id": 448,
+      "name": "Ecostar 18DU 1.5-Ton DC Inverter Grey",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 39,
+      "id": 449,
+      "name": "EcoStar Duke  1.5 Ton White Split AC White",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    },
+    {
+      "num": 40,
+      "id": 450,
+      "name": "EcoStar 18T3PRO 1.5 TON Inverter Split AC (Heat & Cool)",
+      "preIssue": "Koi Nahi",
+      "source": "Current Valid DB Image",
+      "status": "Change Nahi Hui"
+    }
+  ],
+  "updatedCount": 0,
+  "missingCount": 1,
+  "issueCount": 12
+}
