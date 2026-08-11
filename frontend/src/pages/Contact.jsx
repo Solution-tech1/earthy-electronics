@@ -47,7 +47,7 @@ function Contact() {
               <div className="channel-icon"><Mail size={20} /></div>
               <div className="channel-details">
                 <h4>Email Support</h4>
-                <a href="mailto:earthyelectronics@gmail.com">earthyelectronics@gmail.com</a>
+                <a href="mailto:earthyelectronics2026@gmail.com">earthyelectronics2026@gmail.com</a>
                 <span>We answer within 24 hours</span>
               </div>
             </div>
