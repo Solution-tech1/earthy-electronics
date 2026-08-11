@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ShoppingCart, MessageCircle, ArrowLeft } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useInventory } from '../context/InventoryContext';
 import './Products.css';
 
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
+  const { inventory } = useInventory();
   const [productGroup, setProductGroup] = useState(null);
   const [selectedVariant, setSelectedVariant] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -90,6 +92,9 @@ export default function ProductDetail() {
   if (!productGroup) return <div style={{ padding: '100px', textAlign: 'center' }}>Product not found.</div>;
 
   const price = selectedVariant.discountPrice || selectedVariant.price;
+  const invItem = inventory.find(i => String(i.id) === String(selectedVariant.id));
+  const stock = invItem ? invItem.stock : (selectedVariant.stock || 0);
+  const isOutOfStock = stock <= 0;
 
   return (
     <div className="container" style={{ padding: '40px 20px', minHeight: '80vh' }}>
@@ -201,40 +206,48 @@ export default function ProductDetail() {
           <p style={{ color: '#475569', lineHeight: '1.6', fontSize: '15px' }}>
             {selectedVariant.description || `Get the genuine ${selectedVariant.name} from Earthy Electronics. We guarantee the best price and authentic products directly from the manufacturer.`}
           </p>
+          
+          {isOutOfStock ? (
+            <div style={{ padding: '16px', background: '#fee2e2', color: '#b91c1c', borderRadius: '12px', textAlign: 'center', fontWeight: '700', fontSize: '18px', border: '1px solid #fecaca', marginBottom: '20px' }}>
+              CURRENTLY OUT OF STOCK
+            </div>
+          ) : (
+            <>
+              <div className="product-detail-actions">
+                <button 
+                  onClick={() => {
+                    if (checkAuth()) {
+                      addToCart(selectedVariant);
+                      window.dispatchEvent(new CustomEvent('open-cart'));
+                    }
+                  }}
+                  style={{ flex: 1, background: '#10b981', color: 'white', border: 'none', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: '700', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
+                >
+                   Order Now
+                </button>
+                <button 
+                  onClick={() => {
+                    if (checkAuth()) {
+                      addToCart(selectedVariant);
+                      alert('Added to cart!');
+                    }
+                  }}
+                  style={{ flex: 1, background: '#f1f5f9', color: '#0f172a', border: 'none', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: '700', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
+                >
+                  <ShoppingCart size={20}/> Add to Cart
+                </button>
+              </div>
 
-          <div className="product-detail-actions">
-            <button 
-              onClick={() => {
-                if (checkAuth()) {
-                  addToCart(selectedVariant);
-                  window.dispatchEvent(new CustomEvent('open-cart'));
-                }
-              }}
-              style={{ flex: 1, background: '#10b981', color: 'white', border: 'none', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: '700', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
-            >
-               Order Now
-            </button>
-            <button 
-              onClick={() => {
-                if (checkAuth()) {
-                  addToCart(selectedVariant);
-                  alert('Added to cart!');
-                }
-              }}
-              style={{ flex: 1, background: '#f1f5f9', color: '#0f172a', border: 'none', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: '700', cursor: 'pointer', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
-            >
-              <ShoppingCart size={20}/> Add to Cart
-            </button>
-          </div>
-
-          <a
-            href={`whatsapp://send?phone=923002347457&text=I want to order: ${encodeURIComponent(selectedVariant.name)} - Rs.${price.toLocaleString()}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ width: '100%', background: '#25D366', color: 'white', textDecoration: 'none', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: '700', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
-          >
-            <MessageCircle size={20}/> Order on WhatsApp
-          </a>
+              <a
+                href={`whatsapp://send?phone=923002347457&text=I want to order: ${encodeURIComponent(selectedVariant.name)} - Rs.${price.toLocaleString()}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ width: '100%', background: '#25D366', color: 'white', textDecoration: 'none', padding: '16px', borderRadius: '12px', fontSize: '16px', fontWeight: '700', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
+              >
+                <MessageCircle size={20}/> Order on WhatsApp
+              </a>
+            </>
+          )}
 
         </div>
       </div>

@@ -292,3 +292,32 @@ input::placeholder, textarea::placeholder {
   }
 }
 
+
+body.dark-mode { background-color: #0f172a; color: #f8fafc; }
+body.dark-mode .nav-links a { color: #cbd5e1; }
+body.dark-mode .header { background: rgba(15,23,42,0.9); }
+body.dark-mode .product-card h3 { color: #f8fafc; }
+body.dark-mode .product-card .price { color: #94a3b8; }
+body.dark-mode .auth-card { background: #1e293b; color: #f8fafc; }
+body.dark-mode .auth-title { color: #f8fafc; }
+body.dark-mode .auth-field label { color: #cbd5e1; }
+
+
+/* =========================================================================
+   DYNAMIC CMS THEME OVERRIDES (Wired to ThemeContext)
+   These rules ensure that the admin's 'Layout & UI Design' settings 
+   apply universally to all cards and buttons across the entire site.
+   ========================================================================= */
+
+/* Map Card Style variables to all site cards */
+.deal-card, .prod-card, .cat-card-full, .catalog-card, .why-card, .product-card {
+  background: var(--card-bg, #ffffff) !important;
+  border-radius: var(--card-radius, 16px) !important;
+  border: var(--card-border, 1px solid #e2e8f0) !important;
+  box-shadow: var(--card-shadow, 0 8px 32px rgba(0,0,0,0.03)) !important;
+}
+
+/* Map Button Design variables to all primary buttons */
+.btn-primary, .add-to-cart-btn, .catalog-btn, .deal-btn, .action-btn {
+  border-radius: var(--btn-radius, 8px) !important;
+}

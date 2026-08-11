@@ -2150,7 +2150,7 @@
       "id": 508,
       "name": "Haier Air Conditioner 1.Ton -  13 HFAB T3 Inverter",
       "brand": "Haier",
-      "category": "Refrigerators",
+      "category": "Air Conditioners",
       "price": 125652,
       "discountPrice": 118113,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQeVreCjXk_1EmqZv-og29v_NNX_ro3DxeBDy_KlM2yg&s=10",
@@ -2760,6 +2760,83 @@
       "stock_threshold": 5,
       "created_at": "2026-08-02T12:56:52.000Z",
       "group_id": null
+    },
+    {
+      "id": 1001,
+      "name": "Dawlance 91999 Avante Refrigerator",
+      "brand": "Dawlance",
+      "category": "Refrigerators",
+      "price": 120000,
+      "discountPrice": 110000,
+      "stock": 15,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/dawlance-refrigerator-91999-avante-plus-pakistan-priceoye-3n2y9.jpg"
+    },
+    {
+      "id": 1002,
+      "name": "Haier HRF-398 Refrigerator",
+      "brand": "Haier",
+      "category": "Refrigerators",
+      "price": 135000,
+      "discountPrice": 125000,
+      "stock": 8,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/haier-refrigerator-hrf-398-if-pakistan-priceoye-v2xqp.jpg"
+    },
+    {
+      "id": 1003,
+      "name": "PEL 21950 Glass Door Refrigerator",
+      "brand": "PEL",
+      "category": "Refrigerators",
+      "price": 95000,
+      "discountPrice": 90000,
+      "stock": 4,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/pel-refrigerator-glass-door-prgd-21950-pakistan-priceoye-g2g9y.jpg"
+    },
+    {
+      "id": 1004,
+      "name": "Samsung RT28 Double Door Fridge",
+      "brand": "Samsung",
+      "category": "Refrigerators",
+      "price": 210000,
+      "discountPrice": 199000,
+      "stock": 2,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/samsung-refrigerator-rt28t3722s8-pakistan-priceoye-b4m2o.jpg"
+    },
+    {
+      "id": 2001,
+      "name": "Dawlance DWT 255 Washing Machine",
+      "brand": "Dawlance",
+      "category": "Washing Machines",
+      "price": 45000,
+      "discountPrice": 42000,
+      "stock": 12,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/dawlance-top-load-washing-machine-dwt-255-pakistan-priceoye-6p7qz.jpg"
+    },
+    {
+      "id": 2002,
+      "name": "Haier HWM 120-826 Top Load",
+      "brand": "Haier",
+      "category": "Washing Machines",
+      "price": 55000,
+      "discountPrice": 52000,
+      "stock": 6,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/haier-top-load-washing-machine-hwm-120-826-pakistan-priceoye-9b2f6.jpg"
+    },
+    {
+      "id": 2003,
+      "name": "PEL PWM 900 Twin Tub",
+      "brand": "PEL",
+      "category": "Washing Machines",
+      "price": 25000,
+      "discountPrice": 24000,
+      "stock": 20,
+      "stock_threshold": 5,
+      "image": "https://images.priceoye.pk/pel-twin-tub-washing-machine-pwm-900-pakistan-priceoye-5c3a1.jpg"
     }
   ]
 }

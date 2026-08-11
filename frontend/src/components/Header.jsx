@@ -3,11 +3,12 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ShoppingCart, MessageCircle, Search, Trash2, Plus, Minus, X, Menu, Moon, Sun, LogIn, LogOut, LayoutDashboard, PartyPopper, Truck, Star, CheckCircle2, Banknote, PhoneCall, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Zap, Leaf, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useTheme } from '../context/ThemeContext';
+import emailjs from '@emailjs/browser';
 import './Header.css';
 
 export default function Header() {
   const { cartItems, cartCount, cartTotal, updateQuantity, removeFromCart, clearCart, toast, setToast } = useCart();
-  const { isDark, toggleTheme } = useTheme();
+  const { isDark, toggleTheme, themeConfig } = useTheme();
   const [cartOpen, setCartOpen] = useState(false);
   const [checkoutMode, setCheckoutMode] = useState(false);
   
@@ -16,6 +17,7 @@ export default function Header() {
   const [orderPhone, setOrderPhone] = useState('');
   const [orderAddress, setOrderAddress] = useState('');
   const [orderSubmitting, setOrderSubmitting] = useState(false);
+  const [orderSuccessPopup, setOrderSuccessPopup] = useState(false);
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [search, setSearch] = useState('');
@@ -201,45 +203,48 @@ export default function Header() {
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
     if (!orderName || !orderPhone || !orderAddress) return;
-    const token = localStorage.getItem('token');
-    const user = localStorage.getItem('user');
-    if (!token || !user) {
-      alert("Please login first to place an order.");
-      window.location.href = '/login';
-      return;
-    }
+    
+    // We are bypassing the login requirement for the local demo so the client can easily test EmailJS checkout
     
     setOrderSubmitting(true);
     try {
-      const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
-      const payload = {
-        userId: authUser ? authUser.id : null,
-        customerName: orderName,
-        phone: orderPhone,
-        address: orderAddress,
-        total: cartTotal,
-        items: cartItems
-      };
+      // Prepare the email text
+      let itemsList = cartItems.map(i => `- ${i.name} (Qty: ${i.quantity}) - Rs. ${((i.discountPrice || i.price) * i.quantity).toLocaleString()}`).join('\n');
       
-      const res = await fetch(`${base}/api/orders`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const data = await res.json();
-      if (data.status === 'success') {
-        clearCart();
-        setCartOpen(false);
-        setCheckoutMode(false);
-        setOrderName('');
-        setOrderPhone('');
-        setOrderAddress('');
-        setToast({ show: true, message: 'Order placed successfully! We will contact you soon.' });
-      } else {
-        alert(data.message || 'Failed to place order');
-      }
+      const emailMessage = `
+NEW ORDER RECEIVED!
+--------------------------
+Customer Name: ${orderName}
+Phone Number: ${orderPhone}
+Address: ${orderAddress}
+
+ORDER DETAILS:
+${itemsList}
+
+Total Amount: Rs. ${cartTotal.toLocaleString()}
+--------------------------
+`;
+
+      // Use EmailJS to send the email
+      await emailjs.send(
+        'service_5e6fcjm',    // Service ID
+        'template_2pedukm',   // Template ID
+        { message: emailMessage }, // Template Params
+        'ehutdzjr0maqm0s_U'   // Public Key
+      );
+
+      clearCart();
+      setCartOpen(false);
+      setCheckoutMode(false);
+      setOrderName('');
+      setOrderPhone('');
+      setOrderAddress('');
+      // Show the beautiful success modal requested by the user
+      setOrderSuccessPopup(true);
+      
     } catch (err) {
-      alert('Error placing order');
+      console.error(err);
+      alert('Error placing order. Please check your internet connection and try again.');
     }
     setOrderSubmitting(false);
   };
@@ -247,16 +252,16 @@ export default function Header() {
   return (
     <>
       {/* ─── Scrolling Offer Ticker (Absolute Top) ─── */}
-      <div className="offer-ticker">
+      {themeConfig?.promoActive !== false && (<div className="offer-ticker">
         <div className="ticker-track">
           {[
-            <><PartyPopper size={15} color="#fbbf24" fill="#f59e0b" style={{ filter: 'drop-shadow(0 2px 4px rgba(251,191,36,0.6))' }}/> Flat 10% Off Sitewide.</>,
+            <><PartyPopper size={15} color="#fbbf24" fill="#f59e0b" style={{ filter: 'drop-shadow(0 2px 4px rgba(251,191,36,0.6))' }}/> {themeConfig?.promoText || 'Flat 10% Off Sitewide.'}</>,
             <><Truck size={15} color="#38bdf8" fill="#0284c7" style={{ filter: 'drop-shadow(0 2px 4px rgba(56,189,248,0.6))' }}/> Free Delivery on Orders Rs.80,000 & Above.</>,
             <><Star size={15} color="#fbbf24" fill="#f59e0b" style={{ filter: 'drop-shadow(0 2px 4px rgba(251,191,36,0.6))' }}/> Welcome to EarthyElectronics.</>,
             <><CheckCircle2 size={15} color="#34d399" fill="#059669" style={{ filter: 'drop-shadow(0 2px 4px rgba(52,211,153,0.6))' }}/> Authorized Dealer of Haier.</>,
             <><CheckCircle2 size={15} color="#34d399" fill="#059669" style={{ filter: 'drop-shadow(0 2px 4px rgba(52,211,153,0.6))' }}/> Authorized Dealer of Gree.</>,
             <><CheckCircle2 size={15} color="#34d399" fill="#059669" style={{ filter: 'drop-shadow(0 2px 4px rgba(52,211,153,0.6))' }}/> Authorized Dealer of Dawlance.</>,
-            <><PartyPopper size={15} color="#fbbf24" fill="#f59e0b" style={{ filter: 'drop-shadow(0 2px 4px rgba(251,191,36,0.6))' }}/> Flat 10% Off Sitewide.</>,
+            <><PartyPopper size={15} color="#fbbf24" fill="#f59e0b" style={{ filter: 'drop-shadow(0 2px 4px rgba(251,191,36,0.6))' }}/> {themeConfig?.promoText || 'Flat 10% Off Sitewide.'}</>,
             <><Truck size={15} color="#38bdf8" fill="#0284c7" style={{ filter: 'drop-shadow(0 2px 4px rgba(56,189,248,0.6))' }}/> Free Delivery on Orders Rs.80,000 & Above.</>,
             <><Star size={15} color="#fbbf24" fill="#f59e0b" style={{ filter: 'drop-shadow(0 2px 4px rgba(251,191,36,0.6))' }}/> Welcome to EarthyElectronics.</>,
             <><CheckCircle2 size={15} color="#34d399" fill="#059669" style={{ filter: 'drop-shadow(0 2px 4px rgba(52,211,153,0.6))' }}/> Authorized Dealer of Kenwood.</>,
@@ -266,7 +271,7 @@ export default function Header() {
             <span key={i} className="ticker-item">{t}</span>
           ))}
         </div>
-      </div>
+      </div>)}
 
       {/* ─── Main Header ─── */}
       <header className="site-header">
@@ -582,6 +587,25 @@ export default function Header() {
         <div className="cart-toast-icon">✓</div>
         <span>{toast.message}</span>
       </div>
+
+      {/* ─── Success Order Popup Modal ─── */}
+      {orderSuccessPopup && (
+        <div className="menu-overlay is-open" style={{ zIndex: 999999, display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => setOrderSuccessPopup(false)}>
+          <div className="cart-panel" style={{ width: '90%', maxWidth: '400px', height: 'auto', borderRadius: '16px', padding: '30px 20px', textAlign: 'center', animation: 'scaleUp 0.3s ease-out' }} onClick={e => e.stopPropagation()}>
+            <div style={{ background: '#dcfce7', width: '80px', height: '80px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px auto' }}>
+              <CheckCircle2 size={40} color="#16a34a" />
+            </div>
+            <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#064e3b', marginBottom: '10px' }}>Order Confirmed!</h2>
+            <p style={{ color: '#475569', fontSize: '15px', lineHeight: '1.5', marginBottom: '25px' }}>
+              Thank you for choosing EarthyElectronics. Your order has been placed successfully and the admin has been notified. We will contact you shortly to confirm the delivery!
+            </p>
+            <button className="btn btn-green" style={{ width: '100%', justifyContent: 'center', padding: '14px', fontSize: '16px' }} onClick={() => setOrderSuccessPopup(false)}>
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
+

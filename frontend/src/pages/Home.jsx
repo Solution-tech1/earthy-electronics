@@ -55,39 +55,21 @@ export default function Home() {
 
   // Hero carousel
   const [currentSlide, setCurrentSlide] = useState(0);
-  const heroSlides = [
-    {
-      bgImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop',
-      title: "Pakistan's #1 Home Appliances Store",
-      desc: 'Authorized dealer of Haier, Dawlance, Gree & Kenwood. Get the best home appliances with official warranty at the most competitive prices in Karachi.',
-      offer: 'Authorized Dealer'
-    },
-    {
-      bgImage: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=2000&auto=format&fit=crop',
-      title: 'Stay Cool with DC Inverter ACs',
-      desc: 'Save up to 60% on electricity bills with our premium DC Inverter Air Conditioners. Available in 1 ton, 1.5 ton and 2 ton with free installation in Karachi.',
-      offer: 'Up to 15% OFF'
-    },
-    {
-      bgImage: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=2000&auto=format&fit=crop',
-      title: 'Smart 4K LED TVs',
-      desc: 'Upgrade your entertainment experience with our premium Smart Android LED TVs from top brands like Samsung, TCL and Haier.',
-      offer: 'Home Entertainment'
-    },
-    {
-      bgImage: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=2000&auto=format&fit=crop',
-      title: 'Smart Washing Machines & Fridges',
-      desc: 'Explore our huge range of fully automatic washing machines, no-frost refrigerators and deep freezers. Get free delivery on orders above Rs. 80,000.',
-      offer: 'Free Delivery'
-    },
-  ];
+  const heroSlides = themeConfig?.heroSlides || [];
+
+  // Backward compatibility with legacy CMS fields
+  if (heroSlides.length > 0) {
+    if (themeConfig?.heroHeading) heroSlides[0].title = themeConfig.heroHeading;
+    if (themeConfig?.heroSubtext) heroSlides[0].desc = themeConfig.heroSubtext;
+  }
 
   useEffect(() => {
+    if (heroSlides.length === 0) return;
     const interval = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % heroSlides.length);
     }, 3800);
     return () => clearInterval(interval);
-  }, []);
+  }, [heroSlides.length]);
 
   useEffect(() => {
     const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000';

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ShoppingCart, MessageCircle, X, Search, Star, Settings2, LayoutGrid, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Check, Scale, ChevronDown, ChevronUp } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useInventory } from '../context/InventoryContext';
 import './Products.css';
 
 
@@ -17,8 +18,8 @@ const ProductCardItem = ({ group, checkAuth, addToCart, handleSelectProduct, cat
   const saved = selectedVariant.discountPrice ? selectedVariant.price - selectedVariant.discountPrice : 0;
   
   return (
-    <div className="catalog-card" onClick={() => handleSelectProduct(group, selectedVariant)} style={{ cursor: 'pointer', position: 'relative' }} data-aos="fade-up" data-aos-delay={(idx % 20) * 50}>
-      {saved > 0 && <span className="catalog-badge">SAVE Rs.{saved.toLocaleString()}</span>}
+    <div className="catalog-card" onClick={() => !isOutOfStock && handleSelectProduct(group, selectedVariant)} style={{ cursor: isOutOfStock ? 'not-allowed' : 'pointer', position: 'relative', opacity: isOutOfStock ? 0.6 : 1 }} data-aos="fade-up" data-aos-delay={(idx % 20) * 50}>
+      {isOutOfStock ? <span className="catalog-badge" style={{background: "#ef4444"}}>OUT OF STOCK</span> : (saved > 0 && <span className="catalog-badge">SAVE Rs.{saved.toLocaleString()}</span>)}
       <div className="catalog-img-wrap">
         <img
           src={selectedVariant.image || group.variants.find(v=>v.image)?.image || ''}
@@ -639,3 +640,4 @@ export default function Products() {
     </div>
   );
 }
+

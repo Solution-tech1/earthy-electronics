@@ -22,9 +22,9 @@ export default function AdminLogin() {
     const submittedEmail = form.email.trim().toLowerCase();
     
     // Demo Bypass
-    if (submittedEmail === 'admin@earthyelectronics.pk' && form.password === 'abid2779') {
+    if (submittedEmail === 'earthyelectronics@gmail.com' && form.password === 'abid2779') {
       localStorage.setItem('token', 'mock-admin-token-12345');
-      localStorage.setItem('user', JSON.stringify({ id: 1, name: 'Admin', email: 'admin@earthyelectronics.pk', role: 'admin' }));
+      localStorage.setItem('user', JSON.stringify({ id: 1, name: 'Admin', email: 'earthyelectronics@gmail.com', role: 'admin' }));
       setTimeout(() => {
         setLoading(false);
         navigate('/admin');
@@ -33,7 +33,7 @@ export default function AdminLogin() {
     }
 
     // If it's the demo email but wrong password, fail early so it doesn't try the broken backend
-    if (submittedEmail === 'admin@earthyelectronics.pk') {
+    if (submittedEmail === 'earthyelectronics@gmail.com') {
       setLoading(false);
       return setError('Incorrect admin password. Please try again.');
     }
@@ -123,5 +123,6 @@ export default function AdminLogin() {
     </div>
   );
 }
+
 
 

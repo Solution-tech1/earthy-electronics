@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
@@ -51,6 +52,40 @@ function LocationTracker() {
 
 function App() {
   useEffect(() => {
+    const handleLowStock = (e) => {
+      const product = e.detail;
+      console.log('Sending Low Stock Alert for:', product.name);
+      
+      const serviceID = 'service_demo_123';
+      const templateID = 'template_low_stock';
+      const publicKey = 'demo_public_key';
+      
+      const templateParams = {
+        to_email: 'earthyelectronics@gmail.com',
+        product_name: product.name,
+        current_stock: product.stock,
+        product_id: product.id
+      };
+
+      try {
+        emailjs.send(serviceID, templateID, templateParams, publicKey)
+          .then(res => console.log('Email sent!', res.status))
+          .catch(err => console.error('Email failed (expected without real keys):', err));
+      } catch (e) {
+        console.error('EmailJS Error:', e);
+      }
+      
+      const user = JSON.parse(localStorage.getItem('user') || '{}');
+      if (user.role === 'admin') {
+        alert(`🚨 LOW STOCK ALERT: ${product.name} has only ${product.stock} items left! Email sent to admin.`);
+      }
+    };
+
+    window.addEventListener('lowStockAlert', handleLowStock);
+    return () => window.removeEventListener('lowStockAlert', handleLowStock);
+  }, []);
+
+  useEffect(() => {
     AOS.init({
       once: true,
       offset: 50,
@@ -63,15 +98,10 @@ function App() {
     <Router>
       <LocationTracker />
       <Routes>
-        {/* Admin: no header/footer */}
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
-
-        {/* Auth: no header/footer  */}
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-
-        {/* Public pages with Header & Footer */}
         <Route path="/*" element={
           <>
             <Header />
@@ -95,3 +125,4 @@ function App() {
 }
 
 export default App;
+

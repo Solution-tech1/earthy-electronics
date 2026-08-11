@@ -870,3 +870,32 @@ body.dark .modal-desc { color: #94a3b8; }
   }
 }
 
+
+/* --- QA Issue 3: Small Mobile Breakpoints --- */
+@media (max-width: 375px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .prod-card-body {
+    padding: 12px;
+  }
+  .prod-title {
+    font-size: 14px;
+    white-space: normal;
+  }
+}
+
+/* --- QA Issue 3: Large Desktop Breakpoints --- */
+@media (min-width: 1440px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+  .products-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

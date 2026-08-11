@@ -47,7 +47,7 @@ function Contact() {
               <div className="channel-icon"><Mail size={20} /></div>
               <div className="channel-details">
                 <h4>Email Support</h4>
-                <a href="mailto:support@earthyelectronics.pk">support@earthyelectronics.pk</a>
+                <a href="mailto:earthyelectronics@gmail.com">earthyelectronics@gmail.com</a>
                 <span>We answer within 24 hours</span>
               </div>
             </div>
@@ -182,13 +182,13 @@ function Contact() {
       <section className="mock-map-section section-padding">
         <div className="glass-panel text-center map-box">
           <MapPin size={32} className="map-icon" />
-          <h3>Visit Our Showrooms in Saddar & DHA Phase 6</h3>
+          <h3>Visit Our Showroom in Saddar</h3>
           <p>We are centrally located in Karachi's prime shopping areas with dedicated valet parking slots.</p>
           <div className="map-placeholder-media">
             {/* Simple styling to simulate a maps card */}
             <div className="map-point">
               <h4>📍 Saddar Main Branch</h4>
-              <p>Abdullah Haroon Rd, Saddar, Karachi City, Sindh</p>
+              <p>Shop #12, beauty house, Saddar near regal market, saddar karachi.</p>
             </div>
             <div className="map-point">
               <h4>📍 DHA Phase 6 Branch</h4>
@@ -202,3 +202,5 @@ function Contact() {
 }
 
 export default Contact;
+
+

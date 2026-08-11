@@ -16,7 +16,7 @@ export default function Footer() {
               </div>
               <p>Karachi's premier eco-friendly electronics retailer since 2010. Authorized dealer for Haier, Gree, Dawlance, and Kenwood with energy-efficient appliances, free delivery, and expert support.</p>
               <div className="footer-contact-item"><Phone size={14}/> 0300-2347457</div>
-              <div className="footer-contact-item"><MapPin size={14}/> Saddar & DHA Phase 6, Karachi</div>
+              <div className="footer-contact-item"><MapPin size={14}/> Shop #12, beauty house, Saddar near regal market, saddar karachi.</div>
             </div>
 
             {/* Quick Links */}
@@ -51,8 +51,8 @@ export default function Footer() {
                     <MessageCircle size={13}/> WhatsApp Order
                   </a>
                 </li>
-                <li><a href="#"><MapPin size={13}/> Saddar Branch</a></li>
-                <li><a href="#"><MapPin size={13}/> DHA Phase 6 Branch</a></li>
+                <li><a href="#"><MapPin size={13}/> Main Branch</a></li>
+                <li><a href="#"><MapPin size={13}/> Shop #12, beauty house</a></li>
               </ul>
             </div>
           </div>
@@ -66,3 +66,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

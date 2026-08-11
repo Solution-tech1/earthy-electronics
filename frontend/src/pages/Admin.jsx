@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import { useInventory } from '../context/InventoryContext';
+import { useCRM } from '../context/CRMContext';
 import {
   BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer
@@ -8,7 +10,7 @@ import {
 import {
   LayoutDashboard, Package, ShoppingCart, Users, TrendingUp,
   CreditCard, LogOut, Menu, X, Bell, Settings, Plus, Pencil,
-  Trash2, AlertTriangle, Star, Zap, Banknote, Ticket, Image as ImageIcon
+  Trash2, AlertTriangle, Star, Zap, Banknote, Ticket, Image as ImageIcon, MapPin, Clock
 } from 'lucide-react';
 import './Admin.css';
 
@@ -17,17 +19,30 @@ const PIE_COLORS = ['#10b981','#38bdf8','#34d399','#a855f7','#f43f5e','#facc15']
 
 export default function AdminDashboard() {
   const { themeConfig, updateTheme } = useTheme();
+  
+  const updateBanner = (index, field, value) => {
+    const newSlides = [...(themeConfig.heroSlides || [])];
+    newSlides[index] = { ...newSlides[index], [field]: value };
+    updateTheme("heroSlides", newSlides);
+  };
+
+  const { inventory, updateStock } = useInventory();
+  const { stats, barChart, pieChart, users: crmUsers, updateStats, updateBarChart, updatePieChart } = useCRM();
   const navigate = useNavigate();
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeView, setActiveView] = useState('dashboard');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [analytics, setAnalytics] = useState(null);
-  const [products, setProducts] = useState([]);
+  
+  // Use inventory from context instead of fetching from MySQL for the local demo
+  const products = inventory || [];
   const [users, setUsers] = useState([]);
   const [locations, setLocations] = useState([]);
   const [installments, setInstallments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [productForm, setProductForm] = useState(null);
+  const [formErrors, setFormErrors] = useState({});
 
   const user = JSON.parse(localStorage.getItem('user') || '{}');
   const token = localStorage.getItem('token');
@@ -123,9 +138,14 @@ export default function AdminDashboard() {
     { id: 'site-settings',icon: <Settings size={18} color="#94a3b8"/>,         label: 'Site Editor' },
   ];
 
-  const summary = analytics?.summary || {};
-  const brandData = analytics?.brandRevenue || [];
-  const catData = analytics?.categoryPerformance || [];
+    const summary = {
+      totalRevenue: stats.revenue,
+      totalOrders: stats.totalSales,
+      totalProducts: products.length,
+      customers: stats.activeUsers
+    };
+    const brandData = pieChart || [];
+    const catData = barChart || [];
 
   // Low stock alert products
   const lowStock = products.filter(p => (p.stock || 0) <= (p.stock_threshold || 5));
@@ -133,7 +153,7 @@ export default function AdminDashboard() {
   return (
     <div className={`admin-layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
 
-      {/* ── Sidebar ── */}
+      {/* ΓöÇΓöÇ Sidebar ΓöÇΓöÇ */}
       <aside className="admin-sidebar">
         <div className="admin-sidebar-head">
           <div className="admin-logo-icon"><Zap size={24} color="#fff"/></div>
@@ -167,7 +187,7 @@ export default function AdminDashboard() {
         </div>
       </aside>
 
-      {/* ── Main Content ── */}
+      {/* ΓöÇΓöÇ Main Content ΓöÇΓöÇ */}
       <div className="admin-main">
 
         {/* Top Bar */}
@@ -203,7 +223,7 @@ export default function AdminDashboard() {
           ) : (
 
             <>
-              {/* ── DASHBOARD VIEW ── */}
+              {/* 📊 DASHBOARD VIEW 📊 */}
               {activeView === 'dashboard' && (
                 <div>
                   {/* Summary Cards */}
@@ -211,28 +231,28 @@ export default function AdminDashboard() {
                     <div className="summary-card revenue">
                       <div className="summary-icon"><Banknote size={28} color="#16a34a"/></div>
                       <div>
-                        <div className="summary-value">Rs. {(summary.totalRevenue || 5688000).toLocaleString()}</div>
+                        <div className="summary-value">Rs. {(summary.totalRevenue !== undefined && summary.totalRevenue !== '' ? summary.totalRevenue : 5688000).toLocaleString()}</div>
                         <div className="summary-label">Total Revenue</div>
                       </div>
                     </div>
                     <div className="summary-card orders">
                       <div className="summary-icon"><Package size={28} color="#10b981"/></div>
                       <div>
-                        <div className="summary-value">{summary.totalOrders || 55}</div>
+                        <div className="summary-value">{summary.totalOrders !== undefined && summary.totalOrders !== '' ? summary.totalOrders : 55}</div>
                         <div className="summary-label">Total Orders</div>
                       </div>
                     </div>
                     <div className="summary-card products">
                       <div className="summary-icon"><ShoppingCart size={28} color="var(--primary-color)"/></div>
                       <div>
-                        <div className="summary-value">{summary.totalProducts || products.length}</div>
+                        <div className="summary-value">{summary.totalProducts !== undefined && summary.totalProducts !== '' ? summary.totalProducts : products.length}</div>
                         <div className="summary-label">Total Products</div>
                       </div>
                     </div>
                     <div className="summary-card customers">
                       <div className="summary-icon"><Users size={28} color="#8b5cf6"/></div>
                       <div>
-                        <div className="summary-value">{summary.totalCustomers || 34}</div>
+                        <div className="summary-value">{summary.customers !== undefined && summary.customers !== '' ? summary.customers : 34}</div>
                         <div className="summary-label">Customers</div>
                       </div>
                     </div>
@@ -257,12 +277,24 @@ export default function AdminDashboard() {
                             </tr>
                           </thead>
                           <tbody>
-                                                          {lowStock.slice(0, 5).map(p => (
+                            {lowStock.slice(0, 5).map(p => (
                                 <tr key={p.id}>
                                   <td>{p.name}</td>
                                   <td><span className="cat-badge">{p.category}</span></td>
                                   <td>{p.brand}</td>
-                                  <td><span style={{ color: '#dc2626', fontWeight: 'bold' }}>{p.stock}</span> left</td>
+                                    <td>
+                                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                        <button 
+                                          onClick={() => updateStock(p.id, p.stock - 1)}
+                                          style={{ width: '24px', height: '24px', borderRadius: '4px', background: '#fef2f2', color: '#ef4444', border: '1px solid #fca5a5', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                        >-</button>
+                                        <span style={{ color: '#dc2626', fontWeight: 'bold', minWidth: '20px', textAlign: 'center' }}>{p.stock}</span>
+                                        <button 
+                                          onClick={() => updateStock(p.id, p.stock + 1)}
+                                          style={{ width: '24px', height: '24px', borderRadius: '4px', background: '#f0fdf4', color: '#22c55e', border: '1px solid #86efac', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                        >+</button>
+                                      </div>
+                                    </td>
                                                                     <td><button className="action-btn btn-restock" onClick={() => alert('Restock request placed for ' + p.name)}>Restock</button></td>
                                 </tr>
                             ))}
@@ -277,29 +309,22 @@ export default function AdminDashboard() {
                   <div className="admin-charts-row">
                     {/* Brand Revenue Donut */}
                     <div className="admin-chart-card">
-                      <h3>Brand Revenue Contribution</h3>
+                      <h3>Sales by Category</h3>
                       <ResponsiveContainer width="100%" height={260}>
                         <PieChart>
                           <Pie
-                            data={brandData.length ? brandData : [
-                              { brand: 'Haier', revenue: 1250000 },
-                              { brand: 'Dawlance', revenue: 980000 },
-                              { brand: 'Gree', revenue: 780000 },
-                              { brand: 'Kenwood', revenue: 620000 },
-                              { brand: 'Samsung', revenue: 550000 },
-                              { brand: 'TCL', revenue: 420000 },
-                            ]}
-                            dataKey="revenue"
-                            nameKey="brand"
+                            data={brandData.length ? brandData : []}
+                            dataKey="value"
+                            nameKey="name"
                             cx="50%"
                             cy="50%"
                             outerRadius={90}
                             innerRadius={45}
                             paddingAngle={3}
-                            label={({ brand, percent }) => `${brand} ${(percent * 100).toFixed(0)}%`}
+                            label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                             labelLine={false}
                           >
-                            {(brandData.length ? brandData : Array(6).fill(0)).map((_, i) => (
+                            {(brandData.length ? brandData : []).map((_, i) => (
                               <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
                             ))}
                           </Pie>
@@ -310,24 +335,17 @@ export default function AdminDashboard() {
 
                     {/* Category Performance Bar */}
                     <div className="admin-chart-card">
-                      <h3>Category Performance</h3>
+                      <h3>Monthly Revenue</h3>
                       <ResponsiveContainer width="100%" height={260}>
                         <BarChart
-                          data={catData.length ? catData : [
-                            { category: 'AC', sales: 18 },
-                            { category: 'Fridge', sales: 12 },
-                            { category: 'LED TV', sales: 10 },
-                            { category: 'Washer', sales: 8 },
-                            { category: 'Freezer', sales: 4 },
-                            { category: 'Microwave', sales: 3 },
-                          ]}
+                          data={catData.length ? catData : []}
                           margin={{ top: 10, right: 10, bottom: 0, left: -10 }}
                         >
                           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0"/>
-                          <XAxis dataKey="category" tick={{ fontSize: 11 }}/>
-                          <YAxis tick={{ fontSize: 11 }}/>
+                          <XAxis dataKey="name" tick={{ fontSize: 11 }}/>
+                          <YAxis tickFormatter={v => `${(v/1000).toFixed(0)}K`} tick={{ fontSize: 11 }}/>
                           <Tooltip/>
-                          <Bar dataKey="sales" fill="#10b981" radius={[4,4,0,0]}/>
+                          <Bar dataKey="revenue" fill="#10b981" radius={[4,4,0,0]}/>
                         </BarChart>
                       </ResponsiveContainer>
                     </div>
@@ -335,7 +353,7 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── INVENTORY / PRODUCTS VIEW ── */}
+              {/* 📦 INVENTORY / PRODUCTS VIEW 📦 */}
               {activeView === 'products' && (
                 <div>
                   <div className="admin-panel-header" style={{ marginBottom: 24, background: 'transparent', border: 'none', padding: 0 }}>
@@ -351,19 +369,24 @@ export default function AdminDashboard() {
                       <div className="admin-modal">
                         <div className="admin-modal-head">
                           <h3>{productForm.id ? 'Edit Product' : 'Add New Product'}</h3>
-                          <button className="btn-close" onClick={() => setProductForm(null)}><X size={20}/></button>
+                          <button className="btn-close" onClick={() => { setProductForm(null); setFormErrors({}); }}><X size={20}/></button>
                         </div>
                         <div className="admin-modal-body" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
                           {['name','brand','category','price','discountPrice','image'].map(field => (
                             <div key={field} className="form-group">
-                              <label>{field.charAt(0).toUpperCase() + field.slice(1)}</label>
+                              <label>{field.charAt(0).toUpperCase() + field.slice(1)} {['name','price'].includes(field) && '*'}</label>
                               <input
                                 className="form-input"
                                 type={field.includes('price') ? 'number' : 'text'}
                                 value={productForm[field] || ''}
-                                onChange={e => setProductForm(p => ({ ...p, [field]: e.target.value }))}
+                                onChange={e => {
+                                  setProductForm(p => ({ ...p, [field]: e.target.value }));
+                                  setFormErrors(err => ({ ...err, [field]: null }));
+                                }}
                                 placeholder={field}
+                                style={{ borderColor: formErrors[field] ? '#ef4444' : '' }}
                               />
+                              {formErrors[field] && <span style={{ color: '#ef4444', fontSize: '11px', marginTop: '4px', display: 'block' }}>{formErrors[field]}</span>}
                             </div>
                           ))}
                           <div className="form-group" style={{ gridColumn: '1/-1' }}>
@@ -376,70 +399,93 @@ export default function AdminDashboard() {
                             />
                           </div>
                           <div className="form-group">
-                            <label>Stock Qty</label>
-                            <input className="form-input" type="number" value={productForm.stock || 0} onChange={e => setProductForm(p => ({ ...p, stock: e.target.value }))}/>
+                            <label>Stock Qty *</label>
+                            <input className="form-input" type="number" value={productForm.stock !== undefined ? productForm.stock : ''} 
+                              onChange={e => {
+                                setProductForm(p => ({ ...p, stock: e.target.value }));
+                                setFormErrors(err => ({ ...err, stock: null }));
+                              }}
+                              style={{ borderColor: formErrors.stock ? '#ef4444' : '' }}
+                            />
+                            {formErrors.stock && <span style={{ color: '#ef4444', fontSize: '11px', marginTop: '4px', display: 'block' }}>{formErrors.stock}</span>}
                           </div>
                           <div className="form-group">
-                            <label>Stock Alert Threshold</label>
-                            <input className="form-input" type="number" value={productForm.stock_threshold || 5} onChange={e => setProductForm(p => ({ ...p, stock_threshold: e.target.value }))}/>
+                            <label>Stock Alert Threshold *</label>
+                            <input className="form-input" type="number" value={productForm.stock_threshold !== undefined ? productForm.stock_threshold : ''} 
+                              onChange={e => {
+                                setProductForm(p => ({ ...p, stock_threshold: e.target.value }));
+                                setFormErrors(err => ({ ...err, stock_threshold: null }));
+                              }}
+                              style={{ borderColor: formErrors.stock_threshold ? '#ef4444' : '' }}
+                            />
+                            {formErrors.stock_threshold && <span style={{ color: '#ef4444', fontSize: '11px', marginTop: '4px', display: 'block' }}>{formErrors.stock_threshold}</span>}
                           </div>
                         </div>
                         <div className="admin-modal-footer">
-                          <button className="btn-cancel" onClick={() => setProductForm(null)}>Cancel</button>
-                          <button className="btn-save" onClick={async () => {
-                            const method = productForm.id ? 'PUT' : 'POST';
-                            const url = productForm.id ? `${API}/api/admin/products/${productForm.id}` : `${API}/api/admin/products`;
-                            const res = await authFetch(url, { method, body: JSON.stringify(productForm) });
-                            const data = await res.json();
-                            if (data.status === 'success') {
-                              const freshRes = await fetch(`${API}/api/items`);
-                              const fresh = await freshRes.json();
-                              if (fresh.status === 'success') setProducts(fresh.data);
-                              setProductForm(null);
-                            }
-                          }}>Save Product</button>
+                          <button className="btn-cancel" onClick={() => { setProductForm(null); setFormErrors({}); }}>Cancel</button>
+                          <button className="btn-save" onClick={async (e) => {
+                              e.preventDefault();
+                              const errors = {};
+                              
+                              if (!productForm.name || !String(productForm.name).trim()) errors.name = 'Name is required';
+                              if (!productForm.price || Number(productForm.price) <= 0) errors.price = 'Price must be a positive number';
+                              
+                              const stockVal = Number(productForm.stock);
+                              if (productForm.stock === undefined || productForm.stock === '' || stockVal < 0 || !Number.isInteger(stockVal)) {
+                                errors.stock = 'Stock must be a non-negative integer';
+                              }
+                              
+                              const thresholdVal = Number(productForm.stock_threshold);
+                              if (productForm.stock_threshold === undefined || productForm.stock_threshold === '' || thresholdVal < 0 || !Number.isInteger(thresholdVal)) {
+                                errors.stock_threshold = 'Threshold must be a non-negative integer';
+                              }
+
+                              if (Object.keys(errors).length > 0) {
+                                setFormErrors(errors);
+                                return;
+                              }
+                              setFormErrors({});
+
+                              try {
+                                if (productForm.id) {
+                                  // Use context for frontend demo
+                                  updateStock(productForm.id, Number(productForm.stock || 0));
+                                  alert("Product stock updated successfully!");
+                                }
+                                setProductForm(null);
+                              } catch (e) {
+                                console.error(e);
+                                alert("Failed to update product.");
+                              }
+                            }}>Save Product</button>
                         </div>
                       </div>
                     </div>
                   )}
 
-                  {/* Low Stock Alert Box */}
-                  {products.filter(p => (p.stock || 0) <= (p.stock_threshold || 5)).length > 0 && (
-                    <div className="admin-alert-panel" style={{ flexDirection: 'column', alignItems: 'flex-start', borderRadius: '12px', marginBottom: '24px', gap: '16px', background: '#fff0f0', padding: 20, border: '1px solid #fecaca' }}>
-                      <h3 style={{ color: '#dc2626', display: 'flex', alignItems: 'center', gap: '8px', margin: 0, fontWeight: 700 }}>
-                        <AlertTriangle size={18}/> Critical Low Stock Alerts
-                      </h3>
-                      <div className="admin-table-container" style={{ width: '100%' }}>
-                        <table className="admin-table">
-                          <thead>
-                            <tr>
-                              <th>Product</th>
-                              <th>Category</th>
-                              <th>Stock</th>
-                              <th>Actions</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {products.filter(p => (p.stock || 0) <= (p.stock_threshold || 5))
-                                     .sort((a,b) => a.stock - b.stock)
-                                     .map(p => (
-                              <tr key={`alert-${p.id}`}>
-                                <td style={{ color: '#1e293b', fontWeight: 600 }}>{p.name}</td>
-                                <td><span className="status-badge pending">{p.category}</span></td>
-                                <td><strong style={{ color: '#dc2626' }}>{p.stock} Left</strong></td>
-                                <td>
-                                  <button className="btn-icon edit" onClick={() => setProductForm(p)}><Pencil size={16}/></button>
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  )}
+                  {/* Category Filter Tabs */}
+                  <div style={{ display: 'flex', gap: '10px', overflowX: 'auto', paddingBottom: '15px', marginBottom: '15px' }}>
+                    <button 
+                      onClick={() => setSelectedCategory('All')} 
+                      style={{ padding: '8px 16px', borderRadius: '20px', border: 'none', background: selectedCategory === 'All' ? 'var(--primary-color)' : '#f1f5f9', color: selectedCategory === 'All' ? 'white' : '#334155', cursor: 'pointer', fontWeight: 500, whiteSpace: 'nowrap' }}
+                    >
+                      All Products
+                    </button>
+                    {[...new Set(products.map(p => p.category))].sort().map(cat => (
+                      <button 
+                        key={`filter-${cat}`}
+                        onClick={() => setSelectedCategory(cat)} 
+                        style={{ padding: '8px 16px', borderRadius: '20px', border: 'none', background: selectedCategory === cat ? 'var(--primary-color)' : '#f1f5f9', color: selectedCategory === cat ? 'white' : '#334155', cursor: 'pointer', fontWeight: 500, whiteSpace: 'nowrap' }}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
 
                   {/* Products grouped by category */}
-                  {[...new Set(products.map(p => p.category))].sort().map(cat => (
+                  {[...new Set(products.map(p => p.category))].sort()
+                    .filter(cat => selectedCategory === 'All' || cat === selectedCategory)
+                    .map(cat => (
                     <div key={cat} className="admin-panel" style={{ marginBottom: '24px' }}>
                       <div className="admin-panel-header">
                         <h3>{cat} <span style={{ fontSize: 13, color: '#64748b', fontWeight: 500 }}>({products.filter(p=>p.category===cat).length} products)</span></h3>
@@ -478,11 +524,23 @@ export default function AdminDashboard() {
                                   <div style={{ color: '#059669', fontWeight: 600 }}>Rs. {(p.discountPrice || p.price)?.toLocaleString()}</div>
                                   {p.discountPrice && <div style={{ color: '#94a3b8', fontSize: 11, textDecoration: 'line-through' }}>Rs. {p.price?.toLocaleString()}</div>}
                                 </td>
-                                <td>
-                                  <span className={`status-badge ${p.stock > (p.stock_threshold||5) ? 'active' : 'blocked'}`}>
-                                    {p.stock} left
-                                  </span>
-                                </td>
+                                  <td>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                      <button 
+                                        onClick={() => updateStock(p.id, p.stock - 1)}
+                                        style={{ width: '28px', height: '28px', borderRadius: '6px', background: '#fef2f2', color: '#ef4444', border: '1px solid #fca5a5', cursor: 'pointer', fontWeight: 'bold' }}
+                                      >-</button>
+                                      
+                                      <span className={`status-badge ${p.stock > (p.stock_threshold||5) ? 'active' : 'blocked'}`}>
+                                        {p.stock} left
+                                      </span>
+                                      
+                                      <button 
+                                        onClick={() => updateStock(p.id, p.stock + 1)}
+                                        style={{ width: '28px', height: '28px', borderRadius: '6px', background: '#f0fdf4', color: '#22c55e', border: '1px solid #86efac', cursor: 'pointer', fontWeight: 'bold' }}
+                                      >+</button>
+                                    </div>
+                                  </td>
                                 <td>
                                   <div className="action-btns">
                                     <button className="btn-icon edit" onClick={() => setProductForm(p)}><Pencil size={16}/></button>
@@ -499,28 +557,21 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── ANALYTICS VIEW ── */}
+              {/* 📈 ANALYTICS VIEW 📈 */}
               {activeView === 'analytics' && (
                 <div>
                   <div className="admin-view-header"><h3>Sales Analytics</h3></div>
                   <div className="admin-charts-col">
                     <div className="admin-chart-card wide">
-                      <h3>Brand-Wise Revenue (PKR)</h3>
+                      <h3>Category Sales Distribution</h3>
                       <ResponsiveContainer width="100%" height={300}>
-                        <BarChart data={brandData.length ? brandData : [
-                          { brand: 'Haier', revenue: 1250000 },
-                          { brand: 'Dawlance', revenue: 980000 },
-                          { brand: 'Gree', revenue: 780000 },
-                          { brand: 'Kenwood', revenue: 620000 },
-                          { brand: 'Samsung', revenue: 550000 },
-                          { brand: 'TCL', revenue: 420000 },
-                        ]} margin={{ top: 10, right: 20, bottom: 0, left: 20 }}>
+                        <BarChart data={brandData.length ? brandData : []} margin={{ top: 10, right: 20, bottom: 0, left: 20 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.05)"/>
-                          <XAxis dataKey="brand" tick={{ fontSize: 12, fill: '#64748b' }}/>
+                          <XAxis dataKey="name" tick={{ fontSize: 12, fill: '#64748b' }}/>
                           <YAxis tickFormatter={v => `${(v/1000).toFixed(0)}K`} tick={{ fontSize: 11, fill: '#64748b' }}/>
                           <Tooltip formatter={v => `Rs. ${v.toLocaleString()}`}/>
-                          <Bar dataKey="revenue" radius={[6,6,0,0]}>
-                            {(brandData.length ? brandData : Array(6).fill(0)).map((_, i) => (
+                          <Bar dataKey="value" radius={[6,6,0,0]}>
+                            {(brandData.length ? brandData : []).map((_, i) => (
                               <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]}/>
                             ))}
                           </Bar>
@@ -529,24 +580,14 @@ export default function AdminDashboard() {
                     </div>
 
                     <div className="admin-chart-card wide">
-                      <h3>Category Sales Heatmap</h3>
+                      <h3>Monthly Revenue Trend</h3>
                       <ResponsiveContainer width="100%" height={280}>
-                        <BarChart data={catData.length ? catData : [
-                          { category: 'Air Conditioner', sales: 18, revenue: 2430000 },
-                          { category: 'Refrigerator', sales: 12, revenue: 1320000 },
-                          { category: 'LED TV', sales: 10, revenue: 980000 },
-                          { category: 'Washing Machine', sales: 8, revenue: 560000 },
-                          { category: 'Deep Freezer', sales: 4, revenue: 320000 },
-                          { category: 'Microwave Oven', sales: 3, revenue: 78000 },
-                        ]} margin={{ top: 10, right: 20, bottom: 0, left: 20 }}>
+                        <BarChart data={catData.length ? catData : []} margin={{ top: 10, right: 20, bottom: 0, left: 20 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.05)"/>
-                          <XAxis dataKey="category" tick={{ fontSize: 10, fill: '#64748b' }}/>
-                          <YAxis yAxisId="left" tick={{ fontSize: 11, fill: '#64748b' }}/>
-                          <YAxis yAxisId="right" orientation="right" tickFormatter={v => `${(v/1000).toFixed(0)}K`} tick={{ fontSize: 11, fill: '#64748b' }}/>
+                          <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748b' }}/>
+                          <YAxis yAxisId="left" tickFormatter={v => `${(v/1000).toFixed(0)}K`} tick={{ fontSize: 11, fill: '#64748b' }}/>
                           <Tooltip/>
-                          <Legend/>
-                          <Bar yAxisId="left" dataKey="sales" fill="#38bdf8" name="Units Sold" radius={[4,4,0,0]}/>
-                          <Bar yAxisId="right" dataKey="revenue" fill="#10b981" name="Revenue (PKR)" radius={[4,4,0,0]}/>
+                          <Bar yAxisId="left" dataKey="revenue" fill="#10b981" name="Revenue (PKR)" radius={[4,4,0,0]}/>
                         </BarChart>
                       </ResponsiveContainer>
                     </div>
@@ -554,75 +595,64 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── CUSTOMERS VIEW ── */}
+              {/* 👥 CUSTOMERS VIEW 👥 */}
               {activeView === 'users' && (
                 <div>
-                  <div className="admin-view-header"><h3>Customer Accounts ({users.length})</h3></div>
-                  {users.length === 0 ? (
-                    <div className="admin-empty">No customers yet. Requires MySQL database to show data.</div>
+                  <div className="admin-view-header"><h3>Customer Accounts ({crmUsers.length})</h3></div>
+                  {crmUsers.length === 0 ? (
+                    <div className="admin-empty">No customers found.</div>
                   ) : (
                     <div className="admin-panel">
-                      <table className="admin-table">
-                        <thead>
-                          <tr>
-                            <th>ID</th>
-                            <th>Name/Email</th>
-                            <th>Role</th>
-                            <th>Status</th>
-                            <th>Live Location</th>
-                            <th>Joined</th>
-                            <th>Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {users.map(u => {
-                            const loc = locations.find(l => String(l.user_id) === String(u.id));
-                            // defaults to 1 if undefined for older data
-                            const isActive = u.is_active === undefined ? 1 : u.is_active; 
-                            return (
-                              <tr key={u.id} className={isActive === 0 ? 'user-blocked-row' : ''}>
+                        <table className="admin-table">
+                          <thead>
+                            <tr>
+                              <th>ID</th>
+                              <th>Name/Email</th>
+                              <th>Status</th>
+                              <th>Live Location</th>
+                              <th>Session Time</th>
+                              <th>Total Orders</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {crmUsers.map(u => {
+                              const isActive = u.status === 'Active';
+                              return (
+                              <tr key={u.id} className={!isActive ? 'user-blocked-row' : ''}>
                                 <td>{u.id}</td>
                                 <td>
                                   <div className="user-name">{u.name}</div>
                                   <div className="user-email">{u.email}</div>
                                 </td>
-                                <td><span className={`role-badge ${u.role}`}>{u.role}</span></td>
                                 <td>
                                   <span className={`status-badge ${isActive ? 'active' : 'blocked'}`}>
-                                    {isActive ? 'Active' : 'Blocked'}
+                                    {u.status}
                                   </span>
                                 </td>
                                 <td>
-                                  {loc ? (
-                                    <a href={`https://www.google.com/maps?q=${loc.lat},${loc.lng}`} target="_blank" rel="noopener noreferrer" className="location-link">
-                                      📍 View Map
-                                    </a>
-                                  ) : 'Not tracking'}
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: '#475569' }}>
+                                    <MapPin size={14} color="#3b82f6"/>
+                                    {u.location}
+                                  </div>
                                 </td>
-                                <td>{new Date(u.created_at).toLocaleDateString()}</td>
                                 <td>
-                                  {u.role !== 'admin' && (
-                                    <button 
-                                      className={`btn-sm ${isActive ? 'btn-red' : 'btn-green'}`}
-                                      onClick={() => handleToggleUserStatus(u.id, isActive, u.role)}
-                                      title={isActive ? 'Block & Logout User' : 'Unblock User'}
-                                    >
-                                      {isActive ? 'Block' : 'Unblock'}
-                                    </button>
-                                  )}
+                                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13px', color: isActive ? '#10b981' : '#64748b' }}>
+                                    <Clock size={14}/>
+                                    {u.sessionTime} mins
+                                  </div>
                                 </td>
+                                <td>{u.orders}</td>
                               </tr>
                             );
                           })}
                         </tbody>
                       </table>
                     </div>
-                    
                   )}
                 </div>
               )}
 
-              {/* ── INSTALLMENTS VIEW ── */}
+              {/* 💳 INSTALLMENTS VIEW 💳 */}
               {activeView === 'installments' && (
                 <div>
                   <div className="admin-view-header">
@@ -658,7 +688,7 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── ORDERS VIEW ── */}
+              {/* 🛒 ORDERS VIEW 🛒 */}
               {activeView === 'orders' && (
                 <div>
                   <div className="admin-view-header"><h3>Orders Management</h3></div>
@@ -670,7 +700,7 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── COUPONS VIEW (NEW) ── */}
+              {/* 🎟️ COUPONS VIEW (NEW) 🎟️ */}
               {activeView === 'coupons' && (
                 <div>
                   <div className="admin-view-header">
@@ -692,7 +722,7 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── REVIEWS VIEW (NEW) ── */}
+              {/* ⭐ REVIEWS VIEW (NEW) ⭐ */}
               {activeView === 'reviews' && (
                 <div>
                   <div className="admin-view-header"><h3>Product Reviews Moderation</h3></div>
@@ -728,42 +758,49 @@ export default function AdminDashboard() {
                 </div>
               )}
 
-              {/* ── BANNERS VIEW (NEW) ── */}
+              {/* 🖼️ BANNERS VIEW (NEW) 🖼️ */}
               {activeView === 'banners' && (
                 <div>
                   <div className="admin-view-header">
                     <h3>Homepage Banners & Carousels</h3>
-                    <button className="action-btn add"><Plus size={16}/> Upload Banner</button>
+                    <button className="action-btn save" onClick={() => alert("Banner changes saved successfully! The live site has been updated.")} style={{ background: 'var(--primary-color)', color: 'white', padding: '10px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>Save Changes</button>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                    <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
-                      <img src="/images/hero1.jpg" alt="Banner 1" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span style={{ fontWeight: 'bold' }}>Main Slider 1</span>
-                        <div style={{display: 'flex', gap: 5}}>
-                          <button className="action-btn edit">Change</button>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '20px' }}>
+                    {(themeConfig?.heroSlides || []).map((slide, index) => (
+                      <div key={index} style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px', background: 'white' }}>
+                        <img src={slide.bgImage} alt={`Banner ${index + 1}`} style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '15px' }}/>
+                        
+                        <div className="form-group" style={{ marginBottom: '10px' }}>
+                          <label style={{fontSize: '12px', color: '#64748b'}}>Image URL</label>
+                          <input type="text" className="form-input" value={slide.bgImage} onChange={(e) => updateBanner(index, 'bgImage', e.target.value)} style={{width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: '10px' }}>
+                          <label style={{fontSize: '12px', color: '#64748b'}}>Heading</label>
+                          <input type="text" className="form-input" value={slide.title} onChange={(e) => updateBanner(index, 'title', e.target.value)} style={{width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: '10px' }}>
+                          <label style={{fontSize: '12px', color: '#64748b'}}>Subtext Description</label>
+                          <input type="text" className="form-input" value={slide.desc} onChange={(e) => updateBanner(index, 'desc', e.target.value)} style={{width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: '0' }}>
+                          <label style={{fontSize: '12px', color: '#64748b'}}>Offer Tag (e.g. Free Delivery)</label>
+                          <input type="text" className="form-input" value={slide.offer} onChange={(e) => updateBanner(index, 'offer', e.target.value)} style={{width: '100%', padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}/>
                         </div>
                       </div>
-                    </div>
-                    <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
-                      <img src="/images/hero2.jpg" alt="Banner 2" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span style={{ fontWeight: 'bold' }}>Main Slider 2</span>
-                        <div style={{display: 'flex', gap: 5}}>
-                          <button className="action-btn edit">Change</button>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               )}
 
-              {/* ── SITE SETTINGS / CMS VIEW (NEW) ── */}
+              {/* ⚙️ SITE SETTINGS / CMS VIEW (NEW) ⚙️ */}
               {activeView === 'site-settings' && (
                 <div>
                   <div className="admin-view-header">
                     <h3>Live Site Editor & CMS</h3>
-                    <button className="action-btn save" style={{ background: 'var(--primary-color)', color: 'white', padding: '10px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>Save Changes</button>
+                    <button className="action-btn save" onClick={() => alert("Settings saved successfully! The live site has been updated.")} style={{ background: 'var(--primary-color)', color: 'white', padding: '10px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>Save Changes</button>
                   </div>
                   
                                     <div className="admin-settings-layout">
@@ -841,6 +878,142 @@ export default function AdminDashboard() {
                         </div>
                       </div>
 
+                      {/* NEW: CMS Fields (Hero & Promo) */}
+                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Content Management</h4>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Hero Heading</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Legacy field. Changes the main large text on the first slide of the homepage if you are not using the new Banners Editor.</span>
+                          <input type="text" className="form-input" value={themeConfig?.heroHeading || ""} onChange={(e) => updateTheme("heroHeading", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Hero Subtext</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Legacy field. Changes the small descriptive text under the Hero Heading.</span>
+                          <textarea className="form-input" value={themeConfig?.heroSubtext || ""} onChange={(e) => updateTheme("heroSubtext", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}></textarea>
+                        </div>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                          <input type="checkbox" checked={themeConfig?.promoActive !== false} onChange={(e) => updateTheme("promoActive", e.target.checked)} style={{width: '18px', height: '18px'}}/>
+                          <div>
+                            <label style={{marginBottom: 0}}>Enable Top Promotion Bar</label>
+                            <span style={{display: 'block', fontSize: '11px', color: '#64748b'}}>Toggles the yellow scrolling announcement bar at the very top of the website.</span>
+                          </div>
+                        </div>
+                        
+                        <div className="form-group">
+                          <label>Promotion Bar Text</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>The actual text shown in the scrolling yellow promotion bar.</span>
+                          <input type="text" className="form-input" value={themeConfig?.promoText || ""} onChange={(e) => updateTheme("promoText", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+                      </div>
+
+                      {/* NEW: CRM Manual Dashboard Stats Override */}
+                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Manual Dashboard Stats Override</h4>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Total Revenue (Rs)</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Revenue' box on the main Dashboard.</span>
+                          <input type="number" className="form-input" value={stats?.revenue || ""} onChange={(e) => updateStats("revenue", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Total Orders</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Orders' box on the main Dashboard. Leave blank to auto-calculate.</span>
+                          <input type="number" className="form-input" value={stats?.totalSales || ""} onChange={(e) => updateStats("totalSales", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Total Products</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Products' box on the main Dashboard.</span>
+                          <input type="number" className="form-input" value={stats?.products || ""} onChange={(e) => updateStats("products", e.target.value)} placeholder="Leave blank to use actual inventory count" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Total Customers</label>
+                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Customers' box on the main Dashboard.</span>
+                          <input type="number" className="form-input" value={stats?.activeUsers || ""} onChange={(e) => updateStats("activeUsers", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                        </div>
+                        
+                        <div style={{fontSize: '12px', color: '#64748b', marginTop: '15px'}}>
+                          Note: Live sales will increment these values automatically. Use these fields to manually adjust them for display purposes.
+                        </div>
+                      </div>
+
+                      {/* NEW: Visual Chart Editors */}
+                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)', marginTop: '20px' }}>
+                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Visual Chart Editor</h4>
+                        
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
+                          {/* Bar Chart Editor */}
+                          <div>
+                            <h5 style={{marginBottom: '5px', color: '#334155'}}>Monthly Revenue (Bar Chart)</h5>
+                            <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '15px'}}>These values directly draw the 'Monthly Revenue' bar chart on the main Dashboard.</span>
+                            <div style={{height: '200px', marginBottom: '20px'}}>
+                              <ResponsiveContainer width="100%" height="100%">
+                                <BarChart data={barChart}>
+                                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0"/>
+                                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dy={10}/>
+                                  <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dx={-10}/>
+                                  <Tooltip cursor={{fill: '#f1f5f9'}} contentStyle={{borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+                                  <Bar dataKey="revenue" fill="var(--primary-color)" radius={[4, 4, 0, 0]} />
+                                </BarChart>
+                              </ResponsiveContainer>
+                            </div>
+                            <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+                              {barChart.map((item, idx) => (
+                                <div key={idx} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                                  <span style={{width: '40px', fontSize: '14px', fontWeight: '500', color: '#475569'}}>{item.name}</span>
+                                  <input type="number" className="form-input" value={item.revenue} 
+                                    onChange={(e) => {
+                                      const newChart = [...barChart];
+                                      newChart[idx].revenue = Number(e.target.value);
+                                      updateBarChart(newChart);
+                                    }} 
+                                    style={{flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Pie Chart Editor */}
+                          <div>
+                            <h5 style={{marginBottom: '5px', color: '#334155'}}>Sales by Category (Pie Chart)</h5>
+                            <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '15px'}}>These values directly draw the 'Category Distribution' pie chart on the Analytics Tab.</span>
+                            <div style={{height: '200px', marginBottom: '20px'}}>
+                              <ResponsiveContainer width="100%" height="100%">
+                                <PieChart>
+                                  <Pie data={pieChart} innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value" stroke="none">
+                                    {pieChart.map((entry, index) => (
+                                      <Cell key={`cell-${index}`} fill={['#065f46', '#fb923c', '#3b82f6', '#8b5cf6'][index % 4]} />
+                                    ))}
+                                  </Pie>
+                                  <Tooltip contentStyle={{borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+                                </PieChart>
+                              </ResponsiveContainer>
+                            </div>
+                            <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+                              {pieChart.map((item, idx) => (
+                                <div key={idx} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                                  <span style={{width: '120px', fontSize: '14px', fontWeight: '500', color: '#475569'}}>{item.name}</span>
+                                  <input type="number" className="form-input" value={item.value} 
+                                    onChange={(e) => {
+                                      const newChart = [...pieChart];
+                                      newChart[idx].value = Number(e.target.value);
+                                      updatePieChart(newChart);
+                                    }} 
+                                    style={{flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -852,6 +1025,7 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
 
 
 

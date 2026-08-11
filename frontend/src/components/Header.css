@@ -1169,3 +1169,37 @@
     max-height: 40px !important;
   }
 }
+
+/* --- QA Issue 3: Small Mobile Breakpoints --- */
+@media (max-width: 375px) {
+  .header-main-row {
+    padding: 5px 8px !important;
+    gap: 6px !important;
+  }
+  .hdr-logo-img {
+    height: 32px !important;
+    max-height: 32px !important;
+  }
+  .hdr-search-wrap {
+    min-width: 100px !important;
+  }
+  .hdr-search input {
+    font-size: 11px;
+    padding: 6px 12px 6px 30px;
+  }
+  .hdr-search button {
+    left: 8px;
+  }
+}
+
+/* --- QA Issue 3: Large Desktop Breakpoints --- */
+@media (min-width: 1440px) {
+  .header-main-row {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+  .site-header {
+    display: flex;
+    justify-content: center;
+  }
+}

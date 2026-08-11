@@ -90,7 +90,7 @@ function About() {
                 <MapPin className="showroom-icon" />
                 <h3>Saddar Main Branch</h3>
               </div>
-              <p className="showroom-address">Abdullah Haroon Road, Saddar, Karachi</p>
+              <p className="showroom-address">Shop #12, beauty house, Saddar near regal market, saddar karachi.</p>
               <div className="showroom-details">
                 <div className="detail-line">
                   <Clock size={16} />
@@ -128,3 +128,4 @@ function About() {
 }
 
 export default About;
+
