@@ -1,5 +1,6 @@
 import emailjs from '@emailjs/browser';
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -16,6 +17,18 @@ import CustomerDashboard from './pages/CustomerDashboard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
+
+// Security: Robust frontend route protection to prevent unauthorized component rendering
+const ProtectedRoute = ({ children, requiredRole }) => {
+  const token = localStorage.getItem('token');
+  const user = JSON.parse(localStorage.getItem('user') || 'null');
+  
+  if (!token || !user || (requiredRole && user.role !== requiredRole)) {
+    return <Navigate to={requiredRole === 'admin' ? '/admin-login' : '/signin'} replace />;
+  }
+  
+  return children;
+};
 
 function LocationTracker() {
   useEffect(() => {
@@ -61,7 +74,7 @@ function App() {
       const publicKey = 'demo_public_key';
       
       const templateParams = {
-        to_email: 'earthyelectronics@gmail.com',
+        to_email: 'earthyelectronics2026@gmail.com',
         product_name: product.name,
         current_stock: product.stock,
         product_id: product.id
@@ -98,7 +111,11 @@ function App() {
     <Router>
       <LocationTracker />
       <Routes>
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={
+          <ProtectedRoute requiredRole="admin">
+            <Admin />
+          </ProtectedRoute>
+        } />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
@@ -112,7 +129,11 @@ function App() {
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/about"   element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/dashboard" element={<CustomerDashboard />} />
+                <Route path="/dashboard" element={
+                  <ProtectedRoute requiredRole="customer">
+                    <CustomerDashboard />
+                  </ProtectedRoute>
+                } />
               </Routes>
             </main>
             <Footer />
