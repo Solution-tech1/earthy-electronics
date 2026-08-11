@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart, MessageCircle, ArrowRight, ChevronLeft, ChevronRight, Award, Truck, ShieldCheck, PhoneCall, Flame, Zap, Banknote, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Sparkles } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { useTheme } from '../context/ThemeContext';
 import ProductModal from '../components/ProductModal';
 import './Home.css';
 
 export default function Home() {
   const { addToCart } = useCart();
+  const { themeConfig } = useTheme();
   const navigate = useNavigate();
 
   const [products, setProducts] = useState([]);
