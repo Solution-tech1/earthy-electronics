@@ -255,14 +255,14 @@ export default function AdminDashboard() {
                             </tr>
                           </thead>
                           <tbody>
-                            {lowStock.slice(0, 5).map(p => (
-                              <tr key={p.id}>
-                                <td>{p.name}</td>
-                                <td><span className="cat-badge">{p.category}</span></td>
-                                <td>{p.brand}</td>
-                                <td><span style={{ color: '#dc2626', fontWeight: 'bold' }}>{p.stock}</span> left</td>
-                                <td><button className="action-btn edit">Restock</button></td>
-                              </tr>
+                                                          {lowStock.slice(0, 5).map(p => (
+                                <tr key={p.id}>
+                                  <td>{p.name}</td>
+                                  <td><span className="cat-badge">{p.category}</span></td>
+                                  <td>{p.brand}</td>
+                                  <td><span style={{ color: '#dc2626', fontWeight: 'bold' }}>{p.stock}</span> left</td>
+                                                                    <td><button className="action-btn btn-restock" onClick={() => alert('Restock request placed for ' + p.name)}>Restock</button></td>
+                                </tr>
                             ))}
                           </tbody>
                         </table>
@@ -816,3 +816,5 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
+
