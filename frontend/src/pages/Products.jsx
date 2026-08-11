@@ -16,6 +16,10 @@ const ProductCardItem = ({ group, checkAuth, addToCart, handleSelectProduct, cat
 
   const price = selectedVariant.discountPrice || selectedVariant.price;
   const saved = selectedVariant.discountPrice ? selectedVariant.price - selectedVariant.discountPrice : 0;
+  const { inventory } = useInventory();
+  const invItem = inventory.find(i => String(i.id) === String(selectedVariant.id));
+  const stock = invItem ? invItem.stock : (selectedVariant.stock || 0);
+  const isOutOfStock = stock <= 0;
   
   return (
     <div className="catalog-card" onClick={() => !isOutOfStock && handleSelectProduct(group, selectedVariant)} style={{ cursor: isOutOfStock ? 'not-allowed' : 'pointer', position: 'relative', opacity: isOutOfStock ? 0.6 : 1 }} data-aos="fade-up" data-aos-delay={(idx % 20) * 50}>
@@ -482,10 +486,6 @@ export default function Products() {
               </div>
             )}
             <div className="products-toolbar">
-              <span className="toolbar-count">
-                Showing <strong>{filtered.length}</strong> of {allProducts.length} products
-                {selectedCategory !== 'All' && <> in <strong>{selectedCategory}</strong></>}
-              </span>
               <div className="custom-sort-container">
                 <button className="custom-sort-btn" onClick={() => setIsSortOpen(!isSortOpen)}>
                   {sortBy === 'default' && 'Sort: Featured'}
