@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import {
   BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer
@@ -15,6 +16,7 @@ const API = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 const PIE_COLORS = ['#10b981','#38bdf8','#34d399','#a855f7','#f43f5e','#facc15'];
 
 export default function AdminDashboard() {
+  const { themeConfig, updateTheme } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -850,6 +852,9 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
+
+
 
 
 
