@@ -764,8 +764,8 @@ export default function AdminDashboard() {
                     <button className="action-btn save" style={{ background: '#065f46', color: 'white', padding: '10px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>Save Changes</button>
                   </div>
                   
-                  <div className="admin-settings-layout">
-                    <div className="settings-panels-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+                                    <div className="admin-settings-layout">
+                    <div className="settings-panels-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
                       
                       <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
                         <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Global Settings</h4>
@@ -787,7 +787,7 @@ export default function AdminDashboard() {
                       </div>
 
                       <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Theme & Branding</h4>
+                        <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Theme Colors</h4>
                         
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Primary Brand Color</label>
@@ -805,6 +805,40 @@ export default function AdminDashboard() {
                           </div>
                         </div>
                       </div>
+
+                      {/* NEW PANEL FOR UI/UX STYLING */}
+                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
+                        <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Layout & UI Design</h4>
+                        
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Product Card Style</label>
+                          <select className="form-input" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
+                            <option>Premium Glassmorphism</option>
+                            <option>Modern Rounded Corners</option>
+                            <option>Minimalist Flat</option>
+                            <option>Sharp Edges (Classic)</option>
+                          </select>
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Button Design</label>
+                          <select className="form-input" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
+                            <option>Pill Shaped (Soft)</option>
+                            <option>Slightly Rounded (Default)</option>
+                            <option>Square Edges</option>
+                          </select>
+                        </div>
+
+                        <div className="form-group" style={{ marginBottom: '16px' }}>
+                          <label>Typography / Font</label>
+                          <select className="form-input" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
+                            <option>Outfit (Modern UI)</option>
+                            <option>Inter (Clean Tech)</option>
+                            <option>Playfair (Elegant)</option>
+                          </select>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
@@ -816,5 +850,6 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
 
 
