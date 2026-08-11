@@ -119,11 +119,6 @@ export default function AdminLogin() {
           </button>
         </form>
 
-        <div className="auth-demo-hint" style={{ marginTop: '24px', background: '#f1f5f9', borderColor: '#e2e8f0', color: '#64748b', fontSize: '13px' }}>
-          <strong>Demo Credentials:</strong><br/>
-          Email: admin@earthyelectronics.pk<br/>
-          Pass: admin123
-        </div>
       </div>
     </div>
   );
