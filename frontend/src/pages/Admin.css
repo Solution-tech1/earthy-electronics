@@ -224,17 +224,17 @@
   border-radius: 16px;
   padding: 24px;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Changed from center to flex-start to prevent text crushing */
   gap: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03); /* Slightly stronger shadow for premium feel */
 }
 .summary-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; height: 3px;
+  top: 0; left: 0; right: 0; height: 4px; /* Slightly thicker */
   background: transparent;
 }
 .summary-card.revenue::before { background: #34d399; }
@@ -244,16 +244,17 @@
 
 .summary-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
 }
 
 .summary-icon {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* CRITICAL FIX: prevents icon from shrinking when text wraps */
   background: rgba(0,0,0,0.02);
   border: 1px solid rgba(0,0,0,0.05);
 }
@@ -262,8 +263,14 @@
 .summary-card.products .summary-icon { color: #0ea5e9; background: rgba(14, 165, 233, 0.1); }
 .summary-card.customers .summary-icon { color: #a855f7; background: rgba(168, 85, 247, 0.1); }
 
-.summary-value { font-size: 28px; font-weight: 800; color: #065f46; margin-bottom: 4px; letter-spacing: -0.5px; }
-.summary-label { font-size: 13px; color: #64748b; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.summary-value { font-size: 26px; font-weight: 800; color: #065f46; margin-bottom: 6px; letter-spacing: -0.5px; line-height: 1.1; word-break: break-word; }
+.summary-label { font-size: 13px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* ── CHARTS ROW ── */
 .admin-charts-row {
