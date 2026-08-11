@@ -17,6 +17,15 @@ export default function AdminLogin() {
     e.preventDefault();
     setError('');
     setLoading(true);
+    
+    // Demo Bypass
+    if (form.email === 'admin@earthyelectronics.pk' && form.password === 'admin123') {
+      localStorage.setItem('token', 'mock-admin-token-12345');
+      localStorage.setItem('user', JSON.stringify({ id: 1, name: 'Admin', email: 'admin@earthyelectronics.pk', role: 'admin' }));
+      navigate('/admin');
+      return;
+    }
+
     try {
       const res = await fetch(`${API}/api/auth/login`, {
         method: 'POST',

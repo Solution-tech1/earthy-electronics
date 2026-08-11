@@ -7,7 +7,7 @@ import {
 import {
   LayoutDashboard, Package, ShoppingCart, Users, TrendingUp,
   CreditCard, LogOut, Menu, X, Bell, Settings, Plus, Pencil,
-  Trash2, AlertTriangle, Star, Zap, Banknote
+  Trash2, AlertTriangle, Star, Zap, Banknote, Ticket, Image as ImageIcon
 } from 'lucide-react';
 import './Admin.css';
 
@@ -42,24 +42,37 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     if (!token) return;
-    // Locations fetched separately since it returns early
-    fetch(`${API}/api/admin/locations`, { headers: { Authorization: `Bearer ${token}` } })
-      .then(r => r.json())
-      .then(data => { if (data.status === 'success') setLocations(data.data); })
-      .catch(() => {});
+    
+    // Demo bypass for locations
+    setLocations([{ id: 1, name: 'Karachi Central' }, { id: 2, name: 'Lahore Branch' }]);
 
-    Promise.all([
-      authFetch(`${API}/api/admin/analytics`).then(r => r.json()),
-      fetch(`${API}/api/items`).then(r => r.json()),
-      authFetch(`${API}/api/admin/users`).then(r => r.json()),
-      authFetch(`${API}/api/admin/installments`).then(r => r.json()),
-    ]).then(([a, p, u, i]) => {
-      if (a.status === 'success') setAnalytics(a);
+    // Fetch products statically
+    fetch('/data/products.json').then(r => r.json()).then(p => {
       if (p.status === 'success') setProducts(p.data);
-      if (u.status === 'success') setUsers(u.data);
-      if (i.status === 'success') setInstallments(i.data);
-    }).catch(console.error).finally(() => setLoading(false));
-  }, []);
+      setLoading(false);
+    }).catch(() => setLoading(false));
+
+    // Hardcode dummy analytics for demo
+    setAnalytics({
+      summary: { totalRevenue: 5688000, totalOrders: 55, totalProducts: 184, totalCustomers: 34 },
+      brandRevenue: [
+        { brand: 'Haier', revenue: 1250000 },
+        { brand: 'Dawlance', revenue: 980000 },
+        { brand: 'Gree', revenue: 780000 },
+        { brand: 'Kenwood', revenue: 620000 },
+        { brand: 'Samsung', revenue: 550000 }
+      ],
+      categoryPerformance: [
+        { category: 'Air Conditioners', count: 45 },
+        { category: 'Refrigerators', count: 32 },
+        { category: 'LED TVs', count: 28 },
+        { category: 'Washing Machines', count: 35 }
+      ]
+    });
+    setUsers([{ id: 1, name: 'Ali Raza', email: 'ali@example.com', role: 'customer', is_active: 1 }]);
+    setInstallments([{ id: 1, product_name: 'Haier 1.5 Ton AC', status: 'pending', months: 12 }]);
+    
+  }, [token]);
 
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -102,6 +115,9 @@ export default function AdminDashboard() {
     { id: 'installments', icon: <CreditCard size={18} color="#a78bfa"/>,       label: 'Installments' },
     { id: 'analytics',    icon: <TrendingUp size={18} color="#22d3ee"/>,       label: 'Analytics' },
     { id: 'users',        icon: <Users size={18} color="#fb923c"/>,            label: 'Customers' },
+    { id: 'coupons',      icon: <Ticket size={18} color="#f43f5e"/>,           label: 'Promo Codes' },
+    { id: 'reviews',      icon: <Star size={18} color="#facc15"/>,             label: 'Reviews' },
+    { id: 'banners',      icon: <ImageIcon size={18} color="#c084fc"/>,        label: 'Banners' },
   ];
 
   const summary = analytics?.summary || {};
@@ -221,10 +237,36 @@ export default function AdminDashboard() {
 
                   {/* Low Stock Alert */}
                   {lowStock.length > 0 && (
-                    <div className="admin-alert-panel">
-                      <AlertTriangle size={16} className="alert-icon"/>
-                      <strong>Low Stock Alert:</strong>
-                      <span>{lowStock.map(p => p.name?.split(' ').slice(0,3).join(' ')).join(', ')} — please restock soon.</span>
+                    <div className="admin-alert-panel" style={{ display: 'block' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
+                        <AlertTriangle size={18} className="alert-icon" style={{ marginRight: '8px' }}/>
+                        <strong style={{ fontSize: '16px' }}>Low Stock Alert ({lowStock.length} items need restock)</strong>
+                      </div>
+                      <div className="table-responsive">
+                        <table className="admin-table">
+                          <thead>
+                            <tr>
+                              <th>Product Name</th>
+                              <th>Category</th>
+                              <th>Brand</th>
+                              <th>Current Stock</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {lowStock.slice(0, 5).map(p => (
+                              <tr key={p.id}>
+                                <td>{p.name}</td>
+                                <td><span className="cat-badge">{p.category}</span></td>
+                                <td>{p.brand}</td>
+                                <td><span style={{ color: '#dc2626', fontWeight: 'bold' }}>{p.stock}</span> left</td>
+                                <td><button className="action-btn edit">Restock</button></td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                        {lowStock.length > 5 && <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '13px', color: '#64748b' }}>+ {lowStock.length - 5} more items</div>}
+                      </div>
                     </div>
                   )}
 
@@ -617,10 +659,98 @@ export default function AdminDashboard() {
               {activeView === 'orders' && (
                 <div>
                   <div className="admin-view-header"><h3>Orders Management</h3></div>
-                  <div className="admin-empty">
-                    <ShoppingCart size={40} style={{opacity:0.3, margin:'0 auto 16px'}}/>
-                    <p>Orders will appear here when customers place orders via the system.</p>
-                    <p>Currently, orders are placed via WhatsApp. Connect MySQL DB for full order management.</p>
+                  <div className="admin-empty-state">
+                    <ShoppingCart size={48} color="#94a3b8"/>
+                    <h3>No new orders yet</h3>
+                    <p>When customers place orders, they will appear here for processing.</p>
+                  </div>
+                </div>
+              )}
+
+              {/* ── COUPONS VIEW (NEW) ── */}
+              {activeView === 'coupons' && (
+                <div>
+                  <div className="admin-view-header">
+                    <h3>Promo Codes & Coupons</h3>
+                    <button className="action-btn add"><Plus size={16}/> Create Coupon</button>
+                  </div>
+                  <div className="table-responsive">
+                    <table className="admin-table">
+                      <thead>
+                        <tr><th>Code</th><th>Discount</th><th>Status</th><th>Usage</th><th>Action</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><strong>RAMZAN50</strong></td><td>Rs. 5,000 Off</td><td><span className="cat-badge" style={{background: '#dcfce7', color: '#16a34a'}}>Active</span></td><td>12 / 100</td><td><button className="action-btn edit">Edit</button></td></tr>
+                        <tr><td><strong>FREESHIP</strong></td><td>Free Shipping</td><td><span className="cat-badge" style={{background: '#dcfce7', color: '#16a34a'}}>Active</span></td><td>45 / ∞</td><td><button className="action-btn edit">Edit</button></td></tr>
+                        <tr><td><strong>EID2025</strong></td><td>10% Off</td><td><span className="cat-badge" style={{background: '#f1f5f9', color: '#64748b'}}>Expired</span></td><td>150 / 150</td><td><button className="action-btn delete">Delete</button></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {/* ── REVIEWS VIEW (NEW) ── */}
+              {activeView === 'reviews' && (
+                <div>
+                  <div className="admin-view-header"><h3>Product Reviews Moderation</h3></div>
+                  <div className="table-responsive">
+                    <table className="admin-table">
+                      <thead>
+                        <tr><th>Customer</th><th>Product</th><th>Rating</th><th>Review</th><th>Action</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Ali Raza</td><td>Haier 1.5 Ton AC</td><td><div style={{color: '#facc15'}}>★★★★★</div></td>
+                          <td style={{maxWidth: 250}}>Excellent cooling, very satisfied!</td>
+                          <td>
+                            <div style={{display: 'flex', gap: 5}}>
+                              <button className="action-btn edit" style={{background: '#10b981', color: 'white'}}>Approve</button>
+                              <button className="action-btn delete">Reject</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kamran</td><td>Dawlance Refrigerator</td><td><div style={{color: '#facc15'}}>★★★★☆</div></td>
+                          <td style={{maxWidth: 250}}>Good product but delivery was late.</td>
+                          <td>
+                            <div style={{display: 'flex', gap: 5}}>
+                              <button className="action-btn edit" style={{background: '#10b981', color: 'white'}}>Approve</button>
+                              <button className="action-btn delete">Reject</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {/* ── BANNERS VIEW (NEW) ── */}
+              {activeView === 'banners' && (
+                <div>
+                  <div className="admin-view-header">
+                    <h3>Homepage Banners & Carousels</h3>
+                    <button className="action-btn add"><Plus size={16}/> Upload Banner</button>
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
+                      <img src="/images/hero1.jpg" alt="Banner 1" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 'bold' }}>Main Slider 1</span>
+                        <div style={{display: 'flex', gap: 5}}>
+                          <button className="action-btn edit">Change</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
+                      <img src="/images/hero2.jpg" alt="Banner 2" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 'bold' }}>Main Slider 2</span>
+                        <div style={{display: 'flex', gap: 5}}>
+                          <button className="action-btn edit">Change</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
