@@ -118,6 +118,7 @@ export default function AdminDashboard() {
     { id: 'coupons',      icon: <Ticket size={18} color="#f43f5e"/>,           label: 'Promo Codes' },
     { id: 'reviews',      icon: <Star size={18} color="#facc15"/>,             label: 'Reviews' },
     { id: 'banners',      icon: <ImageIcon size={18} color="#c084fc"/>,        label: 'Banners' },
+    { id: 'site-settings',icon: <Settings size={18} color="#94a3b8"/>,         label: 'Site Editor' },
   ];
 
   const summary = analytics?.summary || {};
