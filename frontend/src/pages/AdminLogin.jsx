@@ -22,7 +22,7 @@ export default function AdminLogin() {
     const submittedEmail = form.email.trim().toLowerCase();
     
     // Demo Bypass
-    if (submittedEmail === 'admin@earthyelectronics.pk' && form.password === 'admin123') {
+    if (submittedEmail === 'admin@earthyelectronics.pk' && form.password === 'abid2779') {
       localStorage.setItem('token', 'mock-admin-token-12345');
       localStorage.setItem('user', JSON.stringify({ id: 1, name: 'Admin', email: 'admin@earthyelectronics.pk', role: 'admin' }));
       setTimeout(() => {
@@ -65,10 +65,10 @@ export default function AdminLogin() {
   return (
     <div className="auth-page admin-login-page" style={{ background: '#f4f6f9' }}>
       <div className="auth-card" style={{ borderTop: '4px solid #065f46', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
-        <div className="auth-logo" style={{ background: 'linear-gradient(135deg, #065f46 0%, #10b981 100%)', boxShadow: '0 8px 16px rgba(16, 185, 129, 0.25)' }}>
+        <div className="auth-logo" style={{ background: 'var(--primary-color)', boxShadow: '0 8px 16px rgba(16, 185, 129, 0.25)' }}>
           <LockKeyhole size={36} color="#fff" />
         </div>
-        <h1 className="auth-title" style={{ color: '#065f46' }}>Admin Portal</h1>
+        <h1 className="auth-title" style={{ color: 'var(--primary-color)' }}>Admin Portal</h1>
         <p className="auth-subtitle">EarthyElectronics Workspace</p>
 
         {error && <div className="auth-error" style={{ background: '#fff0f0', color: '#dc2626', borderColor: '#fecaca', display: 'flex', gap: '8px', alignItems: 'center' }}>
@@ -77,11 +77,11 @@ export default function AdminLogin() {
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="auth-field">
-            <label style={{ color: '#065f46', fontWeight: '600' }}>Admin Email</label>
+            <label style={{ color: 'var(--primary-color)', fontWeight: '600' }}>Admin Email</label>
             <input
               type="email"
               name="email"
-              placeholder="admin@earthyelectronics.pk"
+              placeholder=""
               value={form.email}
               onChange={handleChange}
               required
@@ -91,7 +91,7 @@ export default function AdminLogin() {
           </div>
           
           <div className="auth-field">
-            <label style={{ color: '#065f46', fontWeight: '600' }}>Security Key</label>
+            <label style={{ color: 'var(--primary-color)', fontWeight: '600' }}>Security Key</label>
             <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
               <input
                 type={showPassword ? "text" : "password"}
@@ -114,7 +114,7 @@ export default function AdminLogin() {
             </div>
           </div>
           
-          <button type="submit" className="auth-btn" style={{ background: 'linear-gradient(135deg, #065f46 0%, #10b981 100%)', marginTop: '10px' }} disabled={loading}>
+          <button type="submit" className="auth-btn" style={{ background: 'var(--primary-color)', marginTop: '10px' }} disabled={loading}>
             {loading ? 'Authenticating...' : 'Secure Login →'}
           </button>
         </form>
@@ -123,3 +123,5 @@ export default function AdminLogin() {
     </div>
   );
 }
+
+

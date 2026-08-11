@@ -747,6 +747,201 @@ export default function AdminDashboard() {
                     </div>
                     <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
                       <img src="/images/hero2.jpg" alt="Banner 2" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
+)}
+
+              {/* ── CUSTOMERS VIEW ── */}
+              {activeView === 'users' && (
+                <div>
+                  <div className="admin-view-header"><h3>Customer Accounts ({users.length})</h3></div>
+                  {users.length === 0 ? (
+                    <div className="admin-empty">No customers yet. Requires MySQL database to show data.</div>
+                  ) : (
+                    <div className="admin-panel">
+                      <table className="admin-table">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Name/Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Live Location</th>
+                            <th>Joined</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {users.map(u => {
+                            const loc = locations.find(l => String(l.user_id) === String(u.id));
+                            // defaults to 1 if undefined for older data
+                            const isActive = u.is_active === undefined ? 1 : u.is_active; 
+                            return (
+                              <tr key={u.id} className={isActive === 0 ? 'user-blocked-row' : ''}>
+                                <td>{u.id}</td>
+                                <td>
+                                  <div className="user-name">{u.name}</div>
+                                  <div className="user-email">{u.email}</div>
+                                </td>
+                                <td><span className={`role-badge ${u.role}`}>{u.role}</span></td>
+                                <td>
+                                  <span className={`status-badge ${isActive ? 'active' : 'blocked'}`}>
+                                    {isActive ? 'Active' : 'Blocked'}
+                                  </span>
+                                </td>
+                                <td>
+                                  {loc ? (
+                                    <a href={`https://www.google.com/maps?q=${loc.lat},${loc.lng}`} target="_blank" rel="noopener noreferrer" className="location-link">
+                                      📍 View Map
+                                    </a>
+                                  ) : 'Not tracking'}
+                                </td>
+                                <td>{new Date(u.created_at).toLocaleDateString()}</td>
+                                <td>
+                                  {u.role !== 'admin' && (
+                                    <button 
+                                      className={`btn-sm ${isActive ? 'btn-red' : 'btn-green'}`}
+                                      onClick={() => handleToggleUserStatus(u.id, isActive, u.role)}
+                                      title={isActive ? 'Block & Logout User' : 'Unblock User'}
+                                    >
+                                      {isActive ? 'Block' : 'Unblock'}
+                                    </button>
+                                  )}
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                  )}
+                </div>
+              )}
+
+              {/* ── INSTALLMENTS VIEW ── */}
+              {activeView === 'installments' && (
+                <div>
+                  <div className="admin-view-header">
+                    <h3>Installment Ledger</h3>
+                    <button className="admin-add-btn"><Plus size={16}/> New Plan</button>
+                  </div>
+                  {installments.length === 0 ? (
+                    <div className="admin-empty">
+                      <CreditCard size={40} style={{opacity:0.3, margin:'0 auto 16px'}}/>
+                      <p>No installment plans yet. Connect MySQL DB to manage EMI plans.</p>
+                    </div>
+                  ) : (
+                    <div className="admin-table-wrap">
+                      <table className="admin-table">
+                        <thead>
+                          <tr><th>Customer</th><th>Product</th><th>Total</th><th>Monthly</th><th>Progress</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                          {installments.map(il => (
+                            <tr key={il.id}>
+                              <td>{il.customer_name || 'N/A'}</td>
+                              <td>{il.product_name || il.product_id}</td>
+                              <td>Rs. {il.total_amount?.toLocaleString()}</td>
+                              <td>Rs. {il.monthly_amount?.toLocaleString()}</td>
+                              <td>{il.paid_months}/{il.total_months} months</td>
+                              <td><span className={`status-badge ${il.status}`}>{il.status}</span></td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* ── ORDERS VIEW ── */}
+              {activeView === 'orders' && (
+                <div>
+                  <div className="admin-view-header"><h3>Orders Management</h3></div>
+                  <div className="admin-empty-state">
+                    <ShoppingCart size={48} color="#94a3b8"/>
+                    <h3>No new orders yet</h3>
+                    <p>When customers place orders, they will appear here for processing.</p>
+                  </div>
+                </div>
+              )}
+
+              {/* ── COUPONS VIEW (NEW) ── */}
+              {activeView === 'coupons' && (
+                <div>
+                  <div className="admin-view-header">
+                    <h3>Promo Codes & Coupons</h3>
+                    <button className="action-btn add"><Plus size={16}/> Create Coupon</button>
+                  </div>
+                  <div className="table-responsive">
+                    <table className="admin-table">
+                      <thead>
+                        <tr><th>Code</th><th>Discount</th><th>Status</th><th>Usage</th><th>Action</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td><strong>RAMZAN50</strong></td><td>Rs. 5,000 Off</td><td><span className="cat-badge" style={{background: '#dcfce7', color: '#16a34a'}}>Active</span></td><td>12 / 100</td><td><button className="action-btn edit">Edit</button></td></tr>
+                        <tr><td><strong>FREESHIP</strong></td><td>Free Shipping</td><td><span className="cat-badge" style={{background: '#dcfce7', color: '#16a34a'}}>Active</span></td><td>45 / ∞</td><td><button className="action-btn edit">Edit</button></td></tr>
+                        <tr><td><strong>EID2025</strong></td><td>10% Off</td><td><span className="cat-badge" style={{background: '#f1f5f9', color: '#64748b'}}>Expired</span></td><td>150 / 150</td><td><button className="action-btn delete">Delete</button></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {/* ── REVIEWS VIEW (NEW) ── */}
+              {activeView === 'reviews' && (
+                <div>
+                  <div className="admin-view-header"><h3>Product Reviews Moderation</h3></div>
+                  <div className="table-responsive">
+                    <table className="admin-table">
+                      <thead>
+                        <tr><th>Customer</th><th>Product</th><th>Rating</th><th>Review</th><th>Action</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Ali Raza</td><td>Haier 1.5 Ton AC</td><td><div style={{color: '#facc15'}}>★★★★★</div></td>
+                          <td style={{maxWidth: 250}}>Excellent cooling, very satisfied!</td>
+                          <td>
+                            <div style={{display: 'flex', gap: 5}}>
+                              <button className="action-btn edit" style={{background: '#10b981', color: 'white'}}>Approve</button>
+                              <button className="action-btn delete">Reject</button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Kamran</td><td>Dawlance Refrigerator</td><td><div style={{color: '#facc15'}}>★★★★☆</div></td>
+                          <td style={{maxWidth: 250}}>Good product but delivery was late.</td>
+                          <td>
+                            <div style={{display: 'flex', gap: 5}}>
+                              <button className="action-btn edit" style={{background: '#10b981', color: 'white'}}>Approve</button>
+                              <button className="action-btn delete">Reject</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {/* ── BANNERS VIEW (NEW) ── */}
+              {activeView === 'banners' && (
+                <div>
+                  <div className="admin-view-header">
+                    <h3>Homepage Banners & Carousels</h3>
+                    <button className="action-btn add"><Plus size={16}/> Upload Banner</button>
+                  </div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
+                      <img src="/images/hero1.jpg" alt="Banner 1" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontWeight: 'bold' }}>Main Slider 1</span>
+                        <div style={{display: 'flex', gap: 5}}>
+                          <button className="action-btn edit">Change</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px' }}>
+                      <img src="/images/hero2.jpg" alt="Banner 2" style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '10px' }}/>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <span style={{ fontWeight: 'bold' }}>Main Slider 2</span>
                         <div style={{display: 'flex', gap: 5}}>
@@ -763,58 +958,58 @@ export default function AdminDashboard() {
                 <div>
                   <div className="admin-view-header">
                     <h3>Live Site Editor & CMS</h3>
-                    <button className="action-btn save" style={{ background: '#065f46', color: 'white', padding: '10px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>Save Changes</button>
+                    <button className="action-btn save" style={{ background: 'var(--primary-color)', color: 'white', padding: '10px 20px', borderRadius: 'var(--btn-radius)', border: 'none', cursor: 'pointer' }}>Save Changes</button>
                   </div>
                   
-                                    <div className="admin-settings-layout">
+                  <div className="admin-settings-layout">
                     <div className="settings-panels-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
                       
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Global Settings</h4>
+                      <div className="admin-panel" style={{ padding: '24px', background: 'var(--card-bg)', borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)', border: 'var(--card-border)' }}>
+                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Global Settings</h4>
                         
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Store Name</label>
-                          <input type="text" className="form-input" defaultValue="EarthyElectronics" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                          <input type="text" className="form-input" value={themeConfig?.storeName || ''} onChange={(e) => updateTheme('storeName', e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
                         </div>
                         
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Contact Phone</label>
-                          <input type="text" className="form-input" defaultValue="+92 300 1234567" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
+                          <input type="text" className="form-input" value={themeConfig?.contactPhone || ''} onChange={(e) => updateTheme('contactPhone', e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
                         </div>
                         
                         <div className="form-group">
                           <label>Footer About Text</label>
-                          <textarea className="form-input" style={{ minHeight: '80px', width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0' }} defaultValue="Pakistan's premium destination for top-quality home appliances and electronics."></textarea>
+                          <textarea className="form-input" style={{ minHeight: '80px', width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0' }} value={themeConfig?.footerAbout || ''} onChange={(e) => updateTheme('footerAbout', e.target.value)}></textarea>
                         </div>
                       </div>
 
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Theme Colors</h4>
+                      <div className="admin-panel" style={{ padding: '24px', background: 'var(--card-bg)', borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)', border: 'var(--card-border)' }}>
+                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Theme Colors</h4>
                         
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Primary Brand Color</label>
                           <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '5px' }}>
-                            <input type="color" defaultValue="#065f46" style={{ width: '40px', height: '40px', padding: '0', border: 'none', borderRadius: '8px', cursor: 'pointer' }} />
-                            <code style={{background: '#f1f5f9', padding: '5px 10px', borderRadius: '5px'}}>#065f46 (Earthy Green)</code>
+                            <input type="color" value={themeConfig?.primaryColor || '#065f46'} onChange={(e) => updateTheme('primaryColor', e.target.value)} style={{ width: '40px', height: '40px', padding: '0', border: 'none', borderRadius: '8px', cursor: 'pointer' }} />
+                            <code style={{background: '#f1f5f9', padding: '5px 10px', borderRadius: '5px'}}>{themeConfig?.primaryColor || '#065f46'} (Primary)</code>
                           </div>
                         </div>
 
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Secondary Accent Color</label>
                           <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '5px' }}>
-                            <input type="color" defaultValue="#fb923c" style={{ width: '40px', height: '40px', padding: '0', border: 'none', borderRadius: '8px', cursor: 'pointer' }} />
-                            <code style={{background: '#f1f5f9', padding: '5px 10px', borderRadius: '5px'}}>#fb923c (Vibrant Orange)</code>
+                            <input type="color" value={themeConfig?.secondaryColor || '#fb923c'} onChange={(e) => updateTheme('secondaryColor', e.target.value)} style={{ width: '40px', height: '40px', padding: '0', border: 'none', borderRadius: '8px', cursor: 'pointer' }} />
+                            <code style={{background: '#f1f5f9', padding: '5px 10px', borderRadius: '5px'}}>{themeConfig?.secondaryColor || '#fb923c'} (Accent)</code>
                           </div>
                         </div>
                       </div>
 
                       {/* NEW PANEL FOR UI/UX STYLING */}
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: '#065f46', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Layout & UI Design</h4>
+                      <div className="admin-panel" style={{ padding: '24px', background: 'var(--card-bg)', borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)', border: 'var(--card-border)' }}>
+                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Layout & UI Design</h4>
                         
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Product Card Style</label>
-                          <select className="form-input" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
+                          <select className="form-input" value={themeConfig?.cardStyle || 'Premium Glassmorphism'} onChange={(e) => updateTheme('cardStyle', e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
                             <option>Premium Glassmorphism</option>
                             <option>Modern Rounded Corners</option>
                             <option>Minimalist Flat</option>
@@ -824,7 +1019,7 @@ export default function AdminDashboard() {
 
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Button Design</label>
-                          <select className="form-input" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
+                          <select className="form-input" value={themeConfig?.buttonDesign || 'Slightly Rounded (Default)'} onChange={(e) => updateTheme('buttonDesign', e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
                             <option>Pill Shaped (Soft)</option>
                             <option>Slightly Rounded (Default)</option>
                             <option>Square Edges</option>
@@ -833,7 +1028,7 @@ export default function AdminDashboard() {
 
                         <div className="form-group" style={{ marginBottom: '16px' }}>
                           <label>Typography / Font</label>
-                          <select className="form-input" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
+                          <select className="form-input" value={themeConfig?.typography || 'Outfit (Modern UI)'} onChange={(e) => updateTheme('typography', e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
                             <option>Outfit (Modern UI)</option>
                             <option>Inter (Clean Tech)</option>
                             <option>Playfair (Elegant)</option>
@@ -847,14 +1042,9 @@ export default function AdminDashboard() {
               )}
             </>
           )}
-        </main>
-      </div>
-    </div>
-  );
+
+</main>
+</div>
+</div>
+);
 }
-
-
-
-
-
-
