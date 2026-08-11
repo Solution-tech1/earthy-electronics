@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ShieldAlert, Key } from 'lucide-react';
+import { LockKeyhole, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import './Auth.css';
 
 const API = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
@@ -10,6 +10,7 @@ export default function AdminLogin() {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -18,12 +19,23 @@ export default function AdminLogin() {
     setError('');
     setLoading(true);
     
+    const submittedEmail = form.email.trim().toLowerCase();
+    
     // Demo Bypass
-    if (form.email === 'admin@earthyelectronics.pk' && form.password === 'admin123') {
+    if (submittedEmail === 'admin@earthyelectronics.pk' && form.password === 'admin123') {
       localStorage.setItem('token', 'mock-admin-token-12345');
       localStorage.setItem('user', JSON.stringify({ id: 1, name: 'Admin', email: 'admin@earthyelectronics.pk', role: 'admin' }));
-      navigate('/admin');
+      setTimeout(() => {
+        setLoading(false);
+        navigate('/admin');
+      }, 500);
       return;
+    }
+
+    // If it's the demo email but wrong password, fail early so it doesn't try the broken backend
+    if (submittedEmail === 'admin@earthyelectronics.pk') {
+      setLoading(false);
+      return setError('Incorrect admin password. Please try again.');
     }
 
     try {
@@ -44,26 +56,28 @@ export default function AdminLogin() {
         setError(data.message || 'Login failed');
       }
     } catch {
-      setError('Network error. Please try again.');
+      setError('Network error or invalid credentials. Ensure backend is running.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="auth-page admin-login-page">
-      <div className="auth-card">
-        <div className="auth-logo" style={{ background: '#dc2626' }}>
-          <ShieldAlert size={36} color="#fff" />
+    <div className="auth-page admin-login-page" style={{ background: '#f4f6f9' }}>
+      <div className="auth-card" style={{ borderTop: '4px solid #065f46', boxShadow: '0 20px 40px rgba(0,0,0,0.08)' }}>
+        <div className="auth-logo" style={{ background: 'linear-gradient(135deg, #065f46 0%, #10b981 100%)', boxShadow: '0 8px 16px rgba(16, 185, 129, 0.25)' }}>
+          <LockKeyhole size={36} color="#fff" />
         </div>
-        <h1 className="auth-title">Admin Portal</h1>
-        <p className="auth-subtitle">Restricted Access</p>
+        <h1 className="auth-title" style={{ color: '#065f46' }}>Admin Portal</h1>
+        <p className="auth-subtitle">EarthyElectronics Workspace</p>
 
-        {error && <div className="auth-error"><ShieldAlert size={16} className="inline-icon"/> {error}</div>}
+        {error && <div className="auth-error" style={{ background: '#fff0f0', color: '#dc2626', borderColor: '#fecaca', display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <AlertCircle size={18} className="inline-icon" /> {error}
+        </div>}
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="auth-field">
-            <label>Admin Email</label>
+            <label style={{ color: '#065f46', fontWeight: '600' }}>Admin Email</label>
             <input
               type="email"
               name="email"
@@ -72,27 +86,43 @@ export default function AdminLogin() {
               onChange={handleChange}
               required
               autoComplete="email"
+              style={{ border: '1px solid #cbd5e1' }}
             />
           </div>
+          
           <div className="auth-field">
-            <label>Security Key</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="••••••••"
-              value={form.password}
-              onChange={handleChange}
-              required
-              autoComplete="current-password"
-            />
+            <label style={{ color: '#065f46', fontWeight: '600' }}>Security Key</label>
+            <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="••••••••"
+                value={form.password}
+                onChange={handleChange}
+                required
+                autoComplete="current-password"
+                style={{ width: '100%', paddingRight: '40px', border: '1px solid #cbd5e1' }}
+              />
+              <button 
+                type="button" 
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ position: 'absolute', right: '12px', background: 'none', border: 'none', color: '#64748b', cursor: 'pointer', padding: 0, display: 'flex' }}
+                title={showPassword ? "Hide Password" : "Show Password"}
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
           </div>
-          <button type="submit" className="auth-btn" style={{ background: '#dc2626' }} disabled={loading}>
+          
+          <button type="submit" className="auth-btn" style={{ background: 'linear-gradient(135deg, #065f46 0%, #10b981 100%)', marginTop: '10px' }} disabled={loading}>
             {loading ? 'Authenticating...' : 'Secure Login →'}
           </button>
         </form>
 
-        <div className="auth-demo-hint" style={{ marginTop: '24px', background: '#fee2e2', borderColor: '#fca5a5', color: '#b91c1c' }}>
-          <span></span>
+        <div className="auth-demo-hint" style={{ marginTop: '24px', background: '#f1f5f9', borderColor: '#e2e8f0', color: '#64748b', fontSize: '13px' }}>
+          <strong>Demo Credentials:</strong><br/>
+          Email: admin@earthyelectronics.pk<br/>
+          Pass: admin123
         </div>
       </div>
     </div>
