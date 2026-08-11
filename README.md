@@ -1,27 +1,27 @@
-# Bismillah Electronics — BisElec 🛒⚡
+# EarthyElectronics 🌍
 
-A full-stack electronics e-commerce store built with **React + Vite** (frontend) and **Express + Node.js** (backend).
+A premium full-stack electronics e-commerce store built with **React + Vite** (frontend) and **Express + Node.js** (backend).
 
-## 🏪 Features
+## ✨ Features
 - 🛍️ Product catalog with 8 categories (Air Conditioners, LED TVs, Refrigerators, Washing Machines, Kitchen Appliances, Microwave Ovens, Water Dispensers, Deep Freezers)
-- 🔍 Live search across all products
-- 🛒 Cart with quantity management and WhatsApp checkout
+- 🔍 Live search across all products with auto-suggestions
+- 🛒 Cart with quantity management and direct WhatsApp checkout
 - 🔔 Toast notifications on add-to-cart
-- ❄️ Inverter AC calculator tool
+- ⚡ Inverter AC calculator tool
 - 📱 Fully responsive design (mobile + desktop)
-- 🎨 Modern UI with glassmorphism, hero carousel, hover animations
+- 💎 Premium Earthy Tech UI with glassmorphism, dynamic animations, and variant grouping
 
-## 📁 Project Structure
+## 📂 Project Structure
 ```
-bismillah-electronics/
-├── frontend/          ← React + Vite app
+earthyelectronics/
+├── frontend/          👉 React + Vite app
 │   ├── src/
 │   ├── public/
 │   └── package.json
-├── backend/           ← Express REST API
+├── backend/           👉 Express REST API (SQLite/MariaDB)
 │   ├── server.js
 │   └── package.json
-├── vercel.json        ← Vercel deployment config
+├── vercel.json        👉 Vercel deployment config
 └── README.md
 ```
 
@@ -38,12 +38,14 @@ npm start        # runs on http://localhost:5000
 ```bash
 cd frontend
 npm install
-npm run dev      # runs on http://localhost:5173
+npm run dev      # runs on http://localhost:3000
 ```
 
 ## 🌐 Deployment
 - **Frontend**: Deployed via Vercel (static build from `frontend/dist`)
 - **Backend**: Deployed via Vercel Serverless Functions
+- **Live URL**: [https://earthyelectronics.vercel.app](https://earthyelectronics.vercel.app)
+- **GitHub**: [https://github.com/raoraza12/earthyelectronics](https://github.com/raoraza12/earthyelectronics)
 
 ## 📞 Contact
-Bismillah Electronics — Saddar & DHA, Karachi
+EarthyElectronics — Karachi, Pakistan
