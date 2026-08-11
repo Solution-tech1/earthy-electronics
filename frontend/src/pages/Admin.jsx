@@ -94,6 +94,7 @@ export default function AdminDashboard() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    window.dispatchEvent(new Event('authChange'));
     navigate('/');
   };
 
@@ -170,7 +171,14 @@ export default function AdminDashboard() {
             <button
               key={item.id}
               className={`admin-nav-item${activeView === item.id ? ' active' : ''}`}
-              onClick={() => setActiveView(item.id)}
+              onClick={() => {
+                setActiveView(item.id);
+                if (window.innerWidth <= 768) {
+                  setSidebarOpen(false);
+                } else {
+                  setSidebarOpen(true);
+                }
+              }}
               title={!sidebarOpen ? item.label : ''}
             >
               {item.icon}
@@ -765,7 +773,7 @@ export default function AdminDashboard() {
                     <h3>Homepage Banners & Carousels</h3>
                     <button className="action-btn save" onClick={() => alert("Banner changes saved successfully! The live site has been updated.")} style={{ background: 'var(--primary-color)', color: 'white', padding: '10px 20px', borderRadius: '8px', border: 'none', cursor: 'pointer' }}>Save Changes</button>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '20px' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
                     {(themeConfig?.heroSlides || []).map((slide, index) => (
                       <div key={index} style={{ border: '1px solid #e2e8f0', borderRadius: '12px', padding: '15px', background: 'white' }}>
                         <img src={slide.bgImage} alt={`Banner ${index + 1}`} style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '8px', marginBottom: '15px' }}/>
@@ -804,7 +812,7 @@ export default function AdminDashboard() {
                   </div>
                   
                                     <div className="admin-settings-layout">
-                    <div className="settings-panels-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+                    <div className="settings-panels-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
                       
                       <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
                         <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Global Settings</h4>
