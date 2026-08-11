@@ -67,35 +67,31 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      const userStr = localStorage.getItem('user');
-      let userId = null;
-      if (userStr) {
-        try { userId = JSON.parse(userStr)?.id || null; } catch {}
-      }
+      // Simulate network delay for realism
+      await new Promise(resolve => setTimeout(resolve, 800));
       
-      const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
-      const response = await fetch(`${base}/api/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: userMessage,
-          userId: userId,
-          history: messages.slice(1)
-        })
-      });
-
-      const data = await response.json();
-      if (data.status === 'success') {
-        setMessages([...newMessages, { role: 'model', content: data.response }]);
-      } else {
-        if (data.message && data.message.includes('429')) {
-          setMessages([...newMessages, { role: 'model', content: "Mera server thora busy hai (Too Many Requests). Barae meherbani kuch seconds baad try karein!" }]);
-        } else {
-          setMessages([...newMessages, { role: 'model', content: `Error: ${data.message}` }]);
-        }
+      const lowerInput = userMessage.toLowerCase();
+      let botResponse = "I'm here to help! Could you specify what you're looking for? (e.g. ACs, TVs, Refrigerators, Delivery, or Warranty)";
+      
+      if (lowerInput.includes('ac') || lowerInput.includes('air conditioner') || lowerInput.includes('inverter')) {
+        botResponse = "We have top-tier DC Inverter ACs from Haier, Dawlance, and Gree! You can check our Air Conditioners category for up to 30% savings on electricity.";
+      } else if (lowerInput.includes('tv') || lowerInput.includes('led')) {
+        botResponse = "Looking for a TV? We stock 4K Smart LEDs from TCL, Haier, and Samsung with crystal clear displays and Android TV features.";
+      } else if (lowerInput.includes('fridge') || lowerInput.includes('refrigerator')) {
+        botResponse = "Our Refrigerators from Dawlance and Haier come with No-Frost technology and up to 12 years of compressor warranty.";
+      } else if (lowerInput.includes('delivery') || lowerInput.includes('shipping')) {
+        botResponse = "Good news! We offer FREE doorstep delivery and installation on orders above Rs.80,000 in Karachi.";
+      } else if (lowerInput.includes('warranty') || lowerInput.includes('guarantee')) {
+        botResponse = "All our products come with official brand warranties. We are an authorized dealer for major brands.";
+      } else if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('rs')) {
+        botResponse = "Our prices are highly competitive! Use the 'Compare' feature on the Products page to find the best deal for your budget.";
+      } else if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('salam')) {
+        botResponse = "Walaikum Assalam! How can I assist you in upgrading your home appliances today?";
       }
+
+      setMessages([...newMessages, { role: 'model', content: botResponse }]);
     } catch (error) {
-      setMessages([...newMessages, { role: 'model', content: "Sorry, I couldn't connect to the server right now." }]);
+      setMessages([...newMessages, { role: 'model', content: "Sorry, I couldn't process that right now." }]);
     } finally {
       setIsLoading(false);
     }

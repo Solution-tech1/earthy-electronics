@@ -1387,3 +1387,5 @@ body.dark .calc-section         { background: #060b18; }
   0% { opacity: 0; transform: perspective(1000px) rotateY(25deg) translateY(30px); }
   100% { opacity: 1; transform: perspective(1000px) rotateY(0deg) translateY(0); }
 }
+@ m e d i a   ( m a x - w i d t h :   3 7 5 p x )   {   . p r o d - g r i d ,   . c a t s - g r i d   {   g r i d - t e m p l a t e - c o l u m n s :   1 f r   ! i m p o r t a n t ;   }   }  
+ 

@@ -705,8 +705,4 @@ textarea.form-input { min-height: 100px; resize: vertical; }
   .admin-modal { width: 98%; border-radius: 12px; }
   .admin-modal-body { grid-template-columns: 1fr !important; }
   .form-row { grid-template-columns: 1fr !important; }
-  .admin-table th:nth-child(n+4),
-  .admin-table td:nth-child(n+4) { display: none; }
 }
-
-
