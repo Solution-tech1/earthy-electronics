@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, X, Search, Star, Settings2, LayoutGrid, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Check, Scale } from 'lucide-react';
+import { ShoppingCart, MessageCircle, X, Search, Star, Settings2, LayoutGrid, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Check, Scale, ChevronDown, ChevronUp } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import './Products.css';
 
@@ -119,6 +119,7 @@ export default function Products() {
   const [sortBy, setSortBy] = useState('default');
   const [searchQuery, setSearchQuery] = useState('');
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isSortOpen, setIsSortOpen] = useState(false);
 
   // Compare Tool State
   const [compareList, setCompareList] = useState([]);
@@ -484,12 +485,31 @@ export default function Products() {
                 Showing <strong>{filtered.length}</strong> of {allProducts.length} products
                 {selectedCategory !== 'All' && <> in <strong>{selectedCategory}</strong></>}
               </span>
-              <select className="sort-dropdown" value={sortBy} onChange={e => setSortBy(e.target.value)}>
-                <option value="default">Sort: Featured</option>
-                <option value="price-asc">Price: Low to High</option>
-                <option value="price-desc">Price: High to Low</option>
-                <option value="name">Name A-Z</option>
-              </select>
+              <div className="custom-sort-container">
+                <button className="custom-sort-btn" onClick={() => setIsSortOpen(!isSortOpen)}>
+                  {sortBy === 'default' && 'Sort: Featured'}
+                  {sortBy === 'price-asc' && 'Price: Low to High'}
+                  {sortBy === 'price-desc' && 'Price: High to Low'}
+                  {sortBy === 'name' && 'Name A-Z'}
+                  {isSortOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+                {isSortOpen && (
+                  <div className="custom-sort-menu">
+                    <div className={`sort-option ${sortBy === 'default' ? 'active' : ''}`} onClick={() => { setSortBy('default'); setIsSortOpen(false); }}>
+                      Sort: Featured
+                    </div>
+                    <div className={`sort-option ${sortBy === 'price-asc' ? 'active' : ''}`} onClick={() => { setSortBy('price-asc'); setIsSortOpen(false); }}>
+                      Price: Low to High
+                    </div>
+                    <div className={`sort-option ${sortBy === 'price-desc' ? 'active' : ''}`} onClick={() => { setSortBy('price-desc'); setIsSortOpen(false); }}>
+                      Price: High to Low
+                    </div>
+                    <div className={`sort-option ${sortBy === 'name' ? 'active' : ''}`} onClick={() => { setSortBy('name'); setIsSortOpen(false); }}>
+                      Name A-Z
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Grid */}
