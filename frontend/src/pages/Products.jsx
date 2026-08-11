@@ -201,7 +201,7 @@ export default function Products() {
 
   useEffect(() => {
     const base = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
-    fetch(`${base}/api/items`)
+    fetch(`/data/products.json`)
       .then(res => res.json())
       .then(data => {
         if (data && Array.isArray(data.data)) {
