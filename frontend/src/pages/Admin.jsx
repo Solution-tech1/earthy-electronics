@@ -152,10 +152,10 @@ export default function AdminDashboard() {
   const lowStock = products.filter(p => (p.stock || 0) <= (p.stock_threshold || 5));
 
   return (
-    <div className={`admin-layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
+    <div className={`admin-layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`} style={window.innerWidth <= 768 ? { display: 'block' } : {}}>
 
-      {/* ΓöÇΓöÇ Sidebar ΓöÇΓöÇ */}
-      <aside className="admin-sidebar">
+      {/* --- Sidebar --- */}
+      <aside className="admin-sidebar" style={window.innerWidth <= 768 ? { display: 'none' } : {}}>
         <div className="admin-sidebar-head">
           <div className="admin-logo-icon"><Zap size={24} color="#fff"/></div>
           {sidebarOpen && (
@@ -195,8 +195,8 @@ export default function AdminDashboard() {
         </div>
       </aside>
 
-      {/* ΓöÇΓöÇ Main Content ΓöÇΓöÇ */}
-      <div className="admin-main">
+      {/* --- Main Content --- */}
+      <div className="admin-main" style={window.innerWidth <= 768 ? { paddingBottom: '70px', overflowX: 'hidden' } : {}}>
 
         {/* Top Bar */}
         <header className="admin-topbar">
@@ -273,7 +273,7 @@ export default function AdminDashboard() {
                         <AlertTriangle size={18} className="alert-icon" style={{ marginRight: '8px' }}/>
                         <strong style={{ fontSize: '16px' }}>Low Stock Alert ({lowStock.length} items need restock)</strong>
                       </div>
-                      <div className="table-responsive">
+                      <div className="table-responsive" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
                         <table className="admin-table">
                           <thead>
                             <tr>
@@ -374,12 +374,12 @@ export default function AdminDashboard() {
                   {/* Add/Edit Product Modal */}
                   {productForm !== null && (
                     <div className="admin-modal-overlay">
-                      <div className="admin-modal">
+                      <div className="admin-modal" style={{ width: '95%', maxWidth: '500px', maxHeight: '90vh', overflowY: 'auto' }}>
                         <div className="admin-modal-head">
                           <h3>{productForm.id ? 'Edit Product' : 'Add New Product'}</h3>
                           <button className="btn-close" onClick={() => { setProductForm(null); setFormErrors({}); }}><X size={20}/></button>
                         </div>
-                        <div className="admin-modal-body" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+                        <div className="admin-modal-body" style={{ display: 'grid', gridTemplateColumns: window.innerWidth <= 640 ? '1fr' : 'repeat(2, 1fr)', gap: '15px' }}>
                           {['name','brand','category','price','discountPrice','image'].map(field => (
                             <div key={field} className="form-group">
                               <label>{field.charAt(0).toUpperCase() + field.slice(1)} {['name','price'].includes(field) && '*'}</label>
@@ -498,7 +498,7 @@ export default function AdminDashboard() {
                       <div className="admin-panel-header">
                         <h3>{cat} <span style={{ fontSize: 13, color: '#64748b', fontWeight: 500 }}>({products.filter(p=>p.category===cat).length} products)</span></h3>
                       </div>
-                      <div className="admin-table-container">
+                      <div className="admin-table-container" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
                         <table className="admin-table">
                           <thead>
                             <tr>
@@ -610,7 +610,7 @@ export default function AdminDashboard() {
                   {crmUsers.length === 0 ? (
                     <div className="admin-empty">No customers found.</div>
                   ) : (
-                    <div className="admin-panel">
+                    <div className="admin-panel" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
                         <table className="admin-table">
                           <thead>
                             <tr>
@@ -673,7 +673,7 @@ export default function AdminDashboard() {
                       <p>No installment plans yet. Connect MySQL DB to manage EMI plans.</p>
                     </div>
                   ) : (
-                    <div className="admin-table-wrap">
+                    <div className="admin-table-wrap" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
                       <table className="admin-table">
                         <thead>
                           <tr><th>Customer</th><th>Product</th><th>Total</th><th>Monthly</th><th>Progress</th><th>Status</th></tr>
@@ -715,7 +715,7 @@ export default function AdminDashboard() {
                     <h3>Promo Codes & Coupons</h3>
                     <button className="action-btn add"><Plus size={16}/> Create Coupon</button>
                   </div>
-                  <div className="table-responsive">
+                  <div className="table-responsive" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
                     <table className="admin-table">
                       <thead>
                         <tr><th>Code</th><th>Discount</th><th>Status</th><th>Usage</th><th>Action</th></tr>
@@ -734,7 +734,7 @@ export default function AdminDashboard() {
               {activeView === 'reviews' && (
                 <div>
                   <div className="admin-view-header"><h3>Product Reviews Moderation</h3></div>
-                  <div className="table-responsive">
+                  <div className="table-responsive" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', width: '100%' }}>
                     <table className="admin-table">
                       <thead>
                         <tr><th>Customer</th><th>Product</th><th>Rating</th><th>Review</th><th>Action</th></tr>
@@ -833,58 +833,7 @@ export default function AdminDashboard() {
                         </div>
                       </div>
 
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Theme Colors</h4>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Primary Brand Color</label>
-                          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '5px' }}>
-                            <input type="color" value={themeConfig?.primaryColor || "#065f46"} onChange={(e) => updateTheme("primaryColor", e.target.value)} style={{ width: '40px', height: '40px', padding: '0', border: 'none', borderRadius: '8px', cursor: 'pointer' }} />
-                            <code style={{background: '#f1f5f9', padding: '5px 10px', borderRadius: '5px'}}>#065f46 (Earthy Green)</code>
-                          </div>
-                        </div>
 
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Secondary Accent Color</label>
-                          <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '5px' }}>
-                            <input type="color" value={themeConfig?.secondaryColor || "#fb923c"} onChange={(e) => updateTheme("secondaryColor", e.target.value)} style={{ width: '40px', height: '40px', padding: '0', border: 'none', borderRadius: '8px', cursor: 'pointer' }} />
-                            <code style={{background: '#f1f5f9', padding: '5px 10px', borderRadius: '5px'}}>#fb923c (Vibrant Orange)</code>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* NEW PANEL FOR UI/UX STYLING */}
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Layout & UI Design</h4>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Product Card Style</label>
-                          <select className="form-input" value={themeConfig?.cardStyle || "Premium Glassmorphism"} onChange={(e) => updateTheme("cardStyle", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
-                            <option>Premium Glassmorphism</option>
-                            <option>Modern Rounded Corners</option>
-                            <option>Minimalist Flat</option>
-                            <option>Sharp Edges (Classic)</option>
-                          </select>
-                        </div>
-
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Button Design</label>
-                          <select className="form-input" value={themeConfig?.buttonDesign || "Slightly Rounded (Default)"} onChange={(e) => updateTheme("buttonDesign", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
-                            <option>Pill Shaped (Soft)</option>
-                            <option>Slightly Rounded (Default)</option>
-                            <option>Square Edges</option>
-                          </select>
-                        </div>
-
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Typography / Font</label>
-                          <select className="form-input" value={themeConfig?.typography || "Outfit (Modern UI)"} onChange={(e) => updateTheme("typography", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0', cursor: 'pointer'}}>
-                            <option>Outfit (Modern UI)</option>
-                            <option>Inter (Clean Tech)</option>
-                            <option>Playfair (Elegant)</option>
-                          </select>
-                        </div>
-                      </div>
 
                       {/* NEW: CMS Fields (Hero & Promo) */}
                       <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
@@ -1030,6 +979,36 @@ export default function AdminDashboard() {
           )}
         </main>
       </div>
+
+      {/* Mobile Bottom Navigation */}
+      {window.innerWidth <= 768 && (
+        <div style={{
+          position: 'fixed', bottom: 0, left: 0, right: 0, 
+          background: '#fff', borderTop: '1px solid #e2e8f0', 
+          display: 'flex', overflowX: 'auto', zIndex: 1000, 
+          padding: '10px 5px', boxShadow: '0 -4px 12px rgba(0,0,0,0.05)'
+        }}>
+          {navItems.map(item => (
+            <button
+              key={item.id}
+              onClick={() => setActiveView(item.id)}
+              style={{
+                flex: '0 0 auto', minWidth: '70px', display: 'flex', flexDirection: 'column', 
+                alignItems: 'center', gap: '4px', background: 'none', border: 'none', 
+                color: activeView === item.id ? '#10b981' : '#64748b', fontSize: '10px', 
+                fontWeight: activeView === item.id ? '700' : '500', cursor: 'pointer'
+              }}
+            >
+              {item.icon}
+              <span style={{ whiteSpace: 'nowrap' }}>{item.label}</span>
+            </button>
+          ))}
+          <button onClick={handleLogout} style={{ flex: '0 0 auto', minWidth: '70px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', background: 'none', border: 'none', color: '#ef4444', fontSize: '10px', fontWeight: '500', cursor: 'pointer' }}>
+            <LogOut size={18}/>
+            <span>Logout</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }

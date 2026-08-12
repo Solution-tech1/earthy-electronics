@@ -275,7 +275,7 @@ Total Amount: Rs. ${cartTotal.toLocaleString()}
 
       {/* ─── Main Header ─── */}
       <header className="site-header">
-        <div className="header-main-row">
+        <div className="header-main-row" style={window.innerWidth <= 640 ? { flexWrap: 'wrap' } : {}}>
           {/* Mobile hamburger menu toggle */}
           <button className="hdr-mobile-menu-btn" onClick={() => setMobileMenuOpen(true)}>
             <Menu size={24} />
@@ -314,9 +314,9 @@ Total Amount: Rs. ${cartTotal.toLocaleString()}
           </nav>
 
           {/* Search & Actions Group (Right) */}
-          <div className="hdr-right-group">
+          <div className="hdr-right-group" style={window.innerWidth <= 640 ? { flexWrap: 'wrap', width: '100%', justifyContent: 'flex-end' } : {}}>
             {/* Search with Autocomplete */}
-            <div className="hdr-search-wrap" ref={searchRef}>
+            <div className="hdr-search-wrap" ref={searchRef} style={window.innerWidth <= 640 ? { order: 3, flexBasis: '100%', width: '100%', minWidth: '100%', marginTop: '10px' } : {}}>
               <form className="hdr-search" onSubmit={handleSearch}>
                 <input
                   type="text"
