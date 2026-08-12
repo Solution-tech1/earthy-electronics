@@ -185,12 +185,12 @@ export default function Home() {
       <div className={`curtain-overlay${curtainSplit ? ' curtain-split' : ''}`}>
         <div className="curtain-panel curtain-top"></div>
         <div className="curtain-panel curtain-bottom"></div>
-        <div className="curtain-center-logo">
-          <div className="curtain-logo-badge" style={{ background: '#ffffff', borderRadius: '24px', padding: '24px 44px', boxShadow: '0 20px 60px rgba(16, 185, 129, 0.45)' }}>
+        <div className="curtain-center-logo" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <div className="curtain-logo-badge" style={{ background: '#ffffff', borderRadius: '24px', padding: '5%', width: '90%', maxWidth: '400px', boxSizing: 'border-box', boxShadow: '0 20px 60px rgba(16, 185, 129, 0.45)' }}>
             <img 
               src="/images/earthyelectronics_official_banner_logo.png" 
               alt="EarthyElectronics Official Logo" 
-              style={{ height: '95px', width: 'auto', display: 'block', margin: '0 auto' }} 
+              style={{ width: '100%', height: 'auto', display: 'block', margin: '0 auto' }} 
             />
           </div>
         </div>
@@ -206,10 +206,10 @@ export default function Home() {
           >
             <div className="hero-overlay"></div>
             <div className="container hero-slide-inner">
-              <div className="hero-slide-text banner-text-mode" data-aos="fade-up" data-aos-duration="1000">
+              <div className="hero-slide-text banner-text-mode" data-aos="fade-up" data-aos-duration="1000" style={{ width: '100%', boxSizing: 'border-box', padding: 'clamp(15px, 4vw, 40px)' }}>
                 <div className="hero-offer-pill"><Flame size={14}/> {slide.offer}</div>
-                <h2>{slide.title}</h2>
-                <p>{slide.desc}</p>
+                <h2 style={{ fontSize: 'clamp(22px, 6vw, 44px)', lineHeight: '1.2' }}>{slide.title}</h2>
+                <p style={{ fontSize: 'clamp(13px, 3.5vw, 15px)', marginBottom: 'clamp(15px, 4vw, 24px)' }}>{slide.desc}</p>
                 <div className="hero-slide-btns">
                   <Link to="/products" className="btn-mint-hero">Shop Now <ArrowRight size={16}/></Link>
                   <a href="https://wa.me/923002347457" target="_blank" rel="noopener noreferrer" className="btn-white-hero">
@@ -233,13 +233,17 @@ export default function Home() {
             />
           ))}
         </div>
-        {/* Arrows */}
-        <button className="hero-arrow left" onClick={() => setCurrentSlide(p => (p - 1 + heroSlides.length) % heroSlides.length)}>
-          <ChevronLeft size={24}/>
-        </button>
-        <button className="hero-arrow right" onClick={() => setCurrentSlide(p => (p + 1) % heroSlides.length)}>
-          <ChevronRight size={24}/>
-        </button>
+        {/* Arrows - Only shown on Desktop */}
+        {window.innerWidth > 768 && (
+          <>
+            <button className="hero-arrow left" onClick={() => setCurrentSlide(p => (p - 1 + heroSlides.length) % heroSlides.length)}>
+              <ChevronLeft size={24}/>
+            </button>
+            <button className="hero-arrow right" onClick={() => setCurrentSlide(p => (p + 1) % heroSlides.length)}>
+              <ChevronRight size={24}/>
+            </button>
+          </>
+        )}
       </section>
 
       {/* ── Hot Deals Section ── */}
