@@ -168,7 +168,7 @@ ul, ol {
 .why-card, 
 .hero-calc-card, 
 .filter-sidebar, 
-.summary-card, 
+
 .auth-card,
 .cart-panel {
   background-color: var(--card-bg, #ffffff) !important;
