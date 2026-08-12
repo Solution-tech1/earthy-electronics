@@ -839,17 +839,7 @@ export default function AdminDashboard() {
                       <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
                         <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Content Management</h4>
                         
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Hero Heading</label>
-                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Legacy field. Changes the main large text on the first slide of the homepage if you are not using the new Banners Editor.</span>
-                          <input type="text" className="form-input" value={themeConfig?.heroHeading || ""} onChange={(e) => updateTheme("heroHeading", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
-                        </div>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Hero Subtext</label>
-                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Legacy field. Changes the small descriptive text under the Hero Heading.</span>
-                          <textarea className="form-input" value={themeConfig?.heroSubtext || ""} onChange={(e) => updateTheme("heroSubtext", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}></textarea>
-                        </div>
+
                         
                         <div className="form-group" style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                           <input type="checkbox" checked={themeConfig?.promoActive !== false} onChange={(e) => updateTheme("promoActive", e.target.checked)} style={{width: '18px', height: '18px'}}/>
@@ -863,111 +853,6 @@ export default function AdminDashboard() {
                           <label>Promotion Bar Text</label>
                           <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>The actual text shown in the scrolling yellow promotion bar.</span>
                           <input type="text" className="form-input" value={themeConfig?.promoText || ""} onChange={(e) => updateTheme("promoText", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
-                        </div>
-                      </div>
-
-                      {/* NEW: CRM Manual Dashboard Stats Override */}
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Manual Dashboard Stats Override</h4>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Total Revenue (Rs)</label>
-                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Revenue' box on the main Dashboard.</span>
-                          <input type="number" className="form-input" value={stats?.revenue || ""} onChange={(e) => updateStats("revenue", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
-                        </div>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Total Orders</label>
-                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Orders' box on the main Dashboard. Leave blank to auto-calculate.</span>
-                          <input type="number" className="form-input" value={stats?.totalSales || ""} onChange={(e) => updateStats("totalSales", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
-                        </div>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Total Products</label>
-                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Products' box on the main Dashboard.</span>
-                          <input type="number" className="form-input" value={stats?.products || ""} onChange={(e) => updateStats("products", e.target.value)} placeholder="Leave blank to use actual inventory count" style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
-                        </div>
-                        
-                        <div className="form-group" style={{ marginBottom: '16px' }}>
-                          <label>Total Customers</label>
-                          <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '8px'}}>Overrides the 'Customers' box on the main Dashboard.</span>
-                          <input type="number" className="form-input" value={stats?.activeUsers || ""} onChange={(e) => updateStats("activeUsers", e.target.value)} style={{width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #e2e8f0'}}/>
-                        </div>
-                        
-                        <div style={{fontSize: '12px', color: '#64748b', marginTop: '15px'}}>
-                          Note: Live sales will increment these values automatically. Use these fields to manually adjust them for display purposes.
-                        </div>
-                      </div>
-
-                      {/* NEW: Visual Chart Editors */}
-                      <div className="admin-panel" style={{ padding: '24px', background: 'white', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)', border: '1px solid rgba(0,0,0,0.05)', marginTop: '20px' }}>
-                        <h4 style={{ color: 'var(--primary-color)', borderBottom: '2px solid #e2e8f0', paddingBottom: '10px', marginBottom: '20px' }}>Visual Chart Editor</h4>
-                        
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
-                          {/* Bar Chart Editor */}
-                          <div>
-                            <h5 style={{marginBottom: '5px', color: '#334155'}}>Monthly Revenue (Bar Chart)</h5>
-                            <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '15px'}}>These values directly draw the 'Monthly Revenue' bar chart on the main Dashboard.</span>
-                            <div style={{height: '200px', marginBottom: '20px'}}>
-                              <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={barChart}>
-                                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0"/>
-                                  <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dy={10}/>
-                                  <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b', fontSize: 12}} dx={-10}/>
-                                  <Tooltip cursor={{fill: '#f1f5f9'}} contentStyle={{borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
-                                  <Bar dataKey="revenue" fill="var(--primary-color)" radius={[4, 4, 0, 0]} />
-                                </BarChart>
-                              </ResponsiveContainer>
-                            </div>
-                            <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
-                              {barChart.map((item, idx) => (
-                                <div key={idx} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                                  <span style={{width: '40px', fontSize: '14px', fontWeight: '500', color: '#475569'}}>{item.name}</span>
-                                  <input type="number" className="form-input" value={item.revenue} 
-                                    onChange={(e) => {
-                                      const newChart = [...barChart];
-                                      newChart[idx].revenue = Number(e.target.value);
-                                      updateBarChart(newChart);
-                                    }} 
-                                    style={{flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}
-                                  />
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          {/* Pie Chart Editor */}
-                          <div>
-                            <h5 style={{marginBottom: '5px', color: '#334155'}}>Sales by Category (Pie Chart)</h5>
-                            <span style={{display: 'block', fontSize: '11px', color: '#64748b', marginBottom: '15px'}}>These values directly draw the 'Category Distribution' pie chart on the Analytics Tab.</span>
-                            <div style={{height: '200px', marginBottom: '20px'}}>
-                              <ResponsiveContainer width="100%" height="100%">
-                                <PieChart>
-                                  <Pie data={pieChart} innerRadius={60} outerRadius={80} paddingAngle={5} dataKey="value" stroke="none">
-                                    {pieChart.map((entry, index) => (
-                                      <Cell key={`cell-${index}`} fill={['#065f46', '#fb923c', '#3b82f6', '#8b5cf6'][index % 4]} />
-                                    ))}
-                                  </Pie>
-                                  <Tooltip contentStyle={{borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
-                                </PieChart>
-                              </ResponsiveContainer>
-                            </div>
-                            <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
-                              {pieChart.map((item, idx) => (
-                                <div key={idx} style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                                  <span style={{width: '120px', fontSize: '14px', fontWeight: '500', color: '#475569'}}>{item.name}</span>
-                                  <input type="number" className="form-input" value={item.value} 
-                                    onChange={(e) => {
-                                      const newChart = [...pieChart];
-                                      newChart[idx].value = Number(e.target.value);
-                                      updatePieChart(newChart);
-                                    }} 
-                                    style={{flex: 1, padding: '8px', borderRadius: '6px', border: '1px solid #e2e8f0'}}
-                                  />
-                                </div>
-                              ))}
-                            </div>
-                          </div>
                         </div>
                       </div>
 
