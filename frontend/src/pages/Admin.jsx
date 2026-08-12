@@ -152,10 +152,10 @@ export default function AdminDashboard() {
   const lowStock = products.filter(p => (p.stock || 0) <= (p.stock_threshold || 5));
 
   return (
-    <div className={`admin-layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`} style={window.innerWidth <= 768 ? { display: 'block' } : {}}>
+    <div className={`admin-layout ${sidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
 
       {/* --- Sidebar --- */}
-      <aside className="admin-sidebar" style={window.innerWidth <= 768 ? { display: 'none' } : {}}>
+      <aside className="admin-sidebar">
         <div className="admin-sidebar-head">
           <div className="admin-logo-icon"><Zap size={24} color="#fff"/></div>
           {sidebarOpen && (
@@ -196,7 +196,7 @@ export default function AdminDashboard() {
       </aside>
 
       {/* --- Main Content --- */}
-      <div className="admin-main" style={window.innerWidth <= 768 ? { paddingBottom: '70px', overflowX: 'hidden' } : {}}>
+      <div className="admin-main">
 
         {/* Top Bar */}
         <header className="admin-topbar">
