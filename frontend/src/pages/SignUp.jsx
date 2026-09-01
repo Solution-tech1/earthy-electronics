@@ -26,40 +26,23 @@ export default function SignUp() {
     }
       setLoading(true);
       try {
-        // Simulate network delay
-        await new Promise(res => setTimeout(res, 800));
-
-        // Create a mock user
-        const newUser = {
-          id: Date.now(),
-          name: form.name,
-          email: form.email,
-          role: 'user'
-        };
-
-        // Fetch existing mock users or create array
-        const existingUsers = JSON.parse(localStorage.getItem('mockUsers') || '[]');
+        const res = await fetch(`${API}/api/auth/register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: form.name, email: form.email, password: form.password }),
+        });
+        const data = await res.json();
         
-        // Check if email already exists
-        if (existingUsers.some(u => u.email === form.email)) {
-          setLoading(false);
-          return setError('Email is already registered. Please sign in.');
+        if (data.status === 'success') {
+          localStorage.setItem('token', data.token);
+          localStorage.setItem('user', JSON.stringify(data.user));
+          window.dispatchEvent(new Event('authChange'));
+          navigate('/');
+        } else {
+          setError(data.message || 'Registration failed. Please try again.');
         }
-
-        // Save to mock database
-        existingUsers.push({ ...newUser, password: form.password });
-        localStorage.setItem('mockUsers', JSON.stringify(existingUsers));
-
-        // Log the user in
-        const secureToken = btoa(Date.now().toString() + 'user-secure-token');
-        localStorage.setItem('token', secureToken);
-        localStorage.setItem('user', JSON.stringify(newUser));
-        
-        // Trigger global auth event
-        window.dispatchEvent(new Event('authChange'));
-        navigate('/');
       } catch (err) {
-        setError('Registration failed. Please try again.');
+        setError('Network error. Ensure backend is running.');
       } finally {
         setLoading(false);
       }

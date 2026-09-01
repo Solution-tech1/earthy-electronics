@@ -1,6 +1,6 @@
 import emailjs from '@emailjs/browser';
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Home from './pages/Home';
@@ -13,6 +13,7 @@ import SignUp from './pages/SignUp';
 import AdminLogin from './pages/AdminLogin';
 import Admin from './pages/Admin';
 import CustomerDashboard from './pages/CustomerDashboard';
+import NotFound from './pages/NotFound';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
@@ -59,6 +60,45 @@ function LocationTracker() {
       if (watchId) navigator.geolocation.clearWatch(watchId);
     };
   }, []);
+  return null;
+}
+
+function AnalyticsTracker() {
+  const location = useLocation();
+  const [sessionId] = useState(() => {
+    let sid = sessionStorage.getItem('analytics_session_id');
+    if (!sid) {
+      sid = 'sess_' + Math.random().toString(36).substring(2, 15);
+      sessionStorage.setItem('analytics_session_id', sid);
+    }
+    return sid;
+  });
+  const API = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
+
+  // Track Page Views
+  useEffect(() => {
+    fetch(`${API}/api/track/view`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ page_url: location.pathname, session_id: sessionId })
+    }).catch(console.error);
+  }, [location.pathname, sessionId, API]);
+
+  // Track Session Time
+  useEffect(() => {
+    const startTime = Date.now();
+    const ping = setInterval(() => {
+      const durationSeconds = Math.floor((Date.now() - startTime) / 1000);
+      fetch(`${API}/api/track/ping`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session_id: sessionId, duration_seconds: durationSeconds })
+      }).catch(console.error);
+    }, 15000); // Ping every 15 seconds
+
+    return () => clearInterval(ping);
+  }, [sessionId, API]);
+
   return null;
 }
 
@@ -109,6 +149,7 @@ function App() {
   return (
     <Router>
       <LocationTracker />
+      <AnalyticsTracker />
       <Routes>
         <Route path="/admin" element={
           <ProtectedRoute requiredRole="admin">
@@ -133,6 +174,7 @@ function App() {
                     <CustomerDashboard />
                   </ProtectedRoute>
                 } />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
             <Footer />

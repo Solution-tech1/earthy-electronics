@@ -871,21 +871,39 @@ body.dark .modal-desc { color: #94a3b8; }
 }
 
 
-/* --- QA Issue 3: Small Mobile Breakpoints --- */
-@media (max-width: 375px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .prod-card-body {
-    padding: 12px;
-  }
-  .prod-title {
-    font-size: 14px;
-    white-space: normal;
+/* --- Responsive Grid Layouts --- */
+@media (max-width: 1024px) {
+  .catalog-grid, .products-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+@media (max-width: 768px) {
+  .catalog-grid, .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .catalog-actions, .prod-action-row {
+    flex-direction: column;
+  }
+  .catalog-actions .btn, .prod-action-row .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-grid, .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .prod-card-body, .catalog-info {
+    padding: 16px;
+  }
+  .prod-title, .catalog-title {
+    font-size: 16px;
+    white-space: normal;
+  }
+}
 /* --- QA Issue 3: Large Desktop Breakpoints --- */
 @media (min-width: 1440px) {
   .products-grid {

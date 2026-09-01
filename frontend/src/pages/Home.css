@@ -1405,8 +1405,42 @@ body.dark .calc-section         { background: #060b18; }
   0% { opacity: 0; transform: perspective(1000px) rotateY(25deg) translateY(30px); }
   100% { opacity: 1; transform: perspective(1000px) rotateY(0deg) translateY(0); }
 }
-@media (max-width: 375px) { 
-  .prod-grid, .cats-grid { 
-    grid-template-columns: 1fr !important; 
-  } 
+@media (max-width: 1024px) {
+  .prod-grid, .cats-grid, .hot-grid, .deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .prod-grid, .cats-grid, .hot-grid, .deals-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .deals-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .hero-slide-img {
+    display: none; /* Hide huge image on small screens for better text readability */
+  }
+  .hero-slide-text {
+    text-align: center;
+  }
+  .banner-text-mode {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) { 
+  .prod-grid, .cats-grid, .hot-grid, .deals-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .hero-slide-text h2 {
+    font-size: 28px;
+  }
+  .stats-strip-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
 }

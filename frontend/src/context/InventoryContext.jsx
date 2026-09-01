@@ -6,41 +6,42 @@ export function InventoryProvider({ children }) {
   const [inventory, setInventory] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const loadInventory = async () => {
+    try {
+      const res = await fetch('http://localhost:5000/api/products');
+      const resData = await res.json();
+      const itemsArray = Array.isArray(resData) ? resData : resData.data || [];
+      setInventory(itemsArray);
+    } catch (error) {
+      console.error("Failed to load products for inventory", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const loadInventory = async () => {
-      const saved = localStorage.getItem('demoInventory_v2');
-      if (saved) {
-        setInventory(JSON.parse(saved));
-        setLoading(false);
-      } else {
-        try {
-          const res = await fetch('/data/products.json');
-          const resData = await res.json();
-          const itemsArray = Array.isArray(resData) ? resData : resData.data || [];
-          // Seed inventory with a default stock if not present, e.g., random between 3 and 15
-          // or use actual stock if available.
-          const seededData = itemsArray.map(p => ({
-            ...p,
-            stock: p.stock !== undefined ? p.stock : Math.floor(Math.random() * 12) + 3
-          }));
-          setInventory(seededData);
-          localStorage.setItem('demoInventory_v2', JSON.stringify(seededData));
-        } catch (error) {
-          console.error("Failed to load products for inventory", error);
-        } finally {
-          setLoading(false);
-        }
-      }
-    };
     loadInventory();
   }, []);
 
-  const updateStock = (productId, newStock) => {
-    const updated = inventory.map(p => 
-      p.id === productId ? { ...p, stock: newStock } : p
-    );
-    setInventory(updated);
-    localStorage.setItem('demoInventory_v2', JSON.stringify(updated));
+  const updateStock = async (productId, newStock) => {
+    try {
+      const token = localStorage.getItem('token');
+      await fetch(`http://localhost:5000/api/admin/products/${productId}/stock`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token && { Authorization: `Bearer ${token}` })
+        },
+        body: JSON.stringify({ stock: newStock })
+      });
+      loadInventory(); // refresh
+      
+      if (newStock <= 5) {
+         alert(`LOW STOCK WARNING: Product ID ${productId} is now at ${newStock} items.`);
+      }
+    } catch (err) {
+      console.error("Failed to update stock", err);
+    }
   };
 
   const deductStock = (productId, amount) => {

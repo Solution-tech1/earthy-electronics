@@ -29,41 +29,30 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-      setLoading(true);
-      try {
-        await new Promise(res => setTimeout(res, 800)); // Simulate delay
-        
-        // Fetch existing mock users
-        const existingUsers = JSON.parse(localStorage.getItem('mockUsers') || '[]');
-        
-        // Check credentials
-        const validUser = existingUsers.find(u => u.email === form.email && u.password === form.password);
-
-        if (validUser) {
-          // Block admin from using normal login
-          if (validUser.role === 'admin') {
-            setLoading(false);
-            return setError('Access denied. Please use the Admin portal.');
-          }
-
-          // Generate token and save session
-          const secureToken = btoa(Date.now().toString() + 'user-secure-token');
-          localStorage.setItem('token', secureToken);
-          
-          // Don't save password in session
-          const sessionUser = { id: validUser.id, name: validUser.name, email: validUser.email, role: validUser.role };
-          localStorage.setItem('user', JSON.stringify(sessionUser));
-          
-          window.dispatchEvent(new Event('authChange'));
-          navigate('/');
-        } else {
-          setError('Invalid email or password.');
+    setLoading(true);
+    try {
+      const res = await fetch(`${API}/api/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.status === 'success') {
+        if (data.user.role === 'admin') {
+          return setError('Access denied. Please use the Admin portal.');
         }
-      } catch (err) {
-        setError('Login failed. Please try again.');
-      } finally {
-        setLoading(false);
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+        window.dispatchEvent(new Event('authChange'));
+        navigate('/');
+      } else {
+        setError(data.message || 'Invalid email or password.');
       }
+    } catch (err) {
+      setError('Login failed. Ensure backend is running.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

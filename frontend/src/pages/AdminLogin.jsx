@@ -21,32 +21,6 @@ export default function AdminLogin() {
     
     const submittedEmail = form.email.trim().toLowerCase();
     
-    // Obfuscated credential check for enhanced frontend security
-    // btoa('earthyelectronics2026@gmail.com') -> 'ZWFydGh5ZWxlY3Ryb25pY3MyMDI2QGdtYWlsLmNvbQ=='
-    // btoa('abid2779') -> 'YWJpZDI3Nzk='
-    
-    const validE = atob('ZWFydGh5ZWxlY3Ryb25pY3MyMDI2QGdtYWlsLmNvbQ==');
-    const validP = atob('YWJpZDI3Nzk=');
-
-    // Demo Bypass
-    if (submittedEmail === validE && form.password === validP) {
-      // Secure token format
-      const secureToken = btoa(Date.now().toString() + 'admin-secure-token');
-      localStorage.setItem('token', secureToken);
-      localStorage.setItem('user', JSON.stringify({ id: 1, name: 'Admin', email: validE, role: 'admin' }));
-      setTimeout(() => {
-        setLoading(false);
-        navigate('/admin');
-      }, 500);
-      return;
-    }
-
-    // If it's the demo email but wrong password, fail early
-    if (submittedEmail === validE) {
-      setLoading(false);
-      return setError('Incorrect admin password. Please try again.');
-    }
-
     try {
       const res = await fetch(`${API}/api/auth/login`, {
         method: 'POST',

@@ -29,3 +29,10 @@ backend/mariadb_ext/
 backend/mariadb_restored/
 node_modules/
 dist/
+
+# Security & Databases
+*.db
+*.sqlite
+database.sqlite
+earthyelec.db
+*.env*

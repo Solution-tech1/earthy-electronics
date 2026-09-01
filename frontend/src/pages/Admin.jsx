@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { useInventory } from '../context/InventoryContext';
 import { useCRM } from '../context/CRMContext';
+import AdminChatbot from '../components/AdminChatbot';
 import {
   BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer
@@ -32,6 +33,9 @@ export default function AdminDashboard() {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeView, setActiveView] = useState('dashboard');
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [productForm, setProductForm] = useState(null);
+  const [formErrors, setFormErrors] = useState({});
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [analytics, setAnalytics] = useState(null);
   
@@ -41,8 +45,6 @@ export default function AdminDashboard() {
   const [locations, setLocations] = useState([]);
   const [installments, setInstallments] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [productForm, setProductForm] = useState(null);
-  const [formErrors, setFormErrors] = useState({});
 
   const user = JSON.parse(localStorage.getItem('user') || '{}');
   const token = localStorage.getItem('token');
@@ -63,30 +65,26 @@ export default function AdminDashboard() {
     // Demo bypass for locations
     setLocations([{ id: 1, name: 'Karachi Central' }, { id: 2, name: 'Lahore Branch' }]);
 
-    // Fetch products statically
-    fetch('/data/products.json').then(r => r.json()).then(p => {
-      if (p.status === 'success') setProducts(p.data);
-      setLoading(false);
-    }).catch(() => setLoading(false));
+    setLoading(false);
 
-    // Hardcode dummy analytics for demo
-    setAnalytics({
-      summary: { totalRevenue: 5688000, totalOrders: 55, totalProducts: 184, totalCustomers: 34 },
-      brandRevenue: [
-        { brand: 'Haier', revenue: 1250000 },
-        { brand: 'Dawlance', revenue: 980000 },
-        { brand: 'Gree', revenue: 780000 },
-        { brand: 'Kenwood', revenue: 620000 },
-        { brand: 'Samsung', revenue: 550000 }
-      ],
-      categoryPerformance: [
-        { category: 'Air Conditioners', count: 45 },
-        { category: 'Refrigerators', count: 32 },
-        { category: 'LED TVs', count: 28 },
-        { category: 'Washing Machines', count: 35 }
-      ]
-    });
-    setUsers([{ id: 1, name: 'Ali Raza', email: 'ali@example.com', role: 'customer', is_active: 1 }]);
+    authFetch(`${API}/api/admin/analytics`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'success') {
+          setAnalytics(data);
+        }
+      })
+      .catch(console.error);
+
+    authFetch(`${API}/api/admin/users`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'success') {
+          setUsers(data.data);
+        }
+      })
+      .catch(console.error);
+
     setInstallments([{ id: 1, product_name: 'Haier 1.5 Ton AC', status: 'pending', months: 12 }]);
     
   }, [token]);
@@ -139,14 +137,16 @@ export default function AdminDashboard() {
     { id: 'site-settings',icon: <Settings size={18} color="#94a3b8"/>,         label: 'Site Editor' },
   ];
 
-    const summary = {
-      totalRevenue: stats.revenue,
-      totalOrders: stats.totalSales,
+    const summary = analytics?.summary || {
+      totalRevenue: 0,
+      totalOrders: 0,
       totalProducts: products.length,
-      customers: stats.activeUsers
+      customers: users.length,
+      totalViews: 0,
+      avgSessionSeconds: 0
     };
-    const brandData = pieChart || [];
-    const catData = barChart || [];
+    const brandData = analytics?.brandRevenue || [];
+    const catData = analytics?.categoryPerformance || [];
 
   // Low stock alert products
   const lowStock = products.filter(p => (p.stock || 0) <= (p.stock_threshold || 5));
@@ -187,12 +187,7 @@ export default function AdminDashboard() {
           ))}
         </nav>
 
-        <div className="admin-sidebar-footer">
-          <button className="admin-nav-item logout-btn" onClick={handleLogout}>
-            <LogOut size={18}/>
-            {sidebarOpen && <span>Logout</span>}
-          </button>
-        </div>
+
       </aside>
 
       {/* --- Main Content --- */}
@@ -214,9 +209,17 @@ export default function AdminDashboard() {
                 <AlertTriangle size={16}/> {lowStock.length}
               </div>
             )}
-            <div className="admin-user-chip">
+            <div className="admin-user-chip" onClick={() => setShowProfileMenu(!showProfileMenu)} style={{ cursor: 'pointer', position: 'relative' }}>
               <div className="admin-user-avatar">{user.name?.[0] || 'A'}</div>
               {user.name || 'Admin'}
+              {showProfileMenu && (
+                <div style={{ position: 'absolute', top: '120%', right: 0, background: '#fff', border: '1px solid #e2e8f0', borderRadius: '8px', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)', minWidth: '160px', zIndex: 1000, overflow: 'hidden' }}>
+                  <div style={{ padding: '10px 16px', borderBottom: '1px solid #f1f5f9', background: '#f8fafc', color: '#64748b', fontSize: '12px', fontWeight: 600 }}>Signed in as<br/><strong style={{ color: '#0f172a' }}>{user.email || 'admin@earthy.pk'}</strong></div>
+                  <button onClick={(e) => { e.stopPropagation(); navigate('/'); }} style={{ width: '100%', padding: '12px 16px', textDecoration: 'none', color: '#334155', display: 'flex', alignItems: 'center', gap: '8px', border: 'none', background: 'none', cursor: 'pointer', fontSize: '13px', borderBottom: '1px solid #f1f5f9' }}><ShoppingCart size={16}/> Go to Store</button>
+                  <button onClick={(e) => { e.stopPropagation(); setActiveView('dashboard'); setShowProfileMenu(false); }} style={{ width: '100%', padding: '12px 16px', textDecoration: 'none', color: '#334155', display: 'flex', alignItems: 'center', gap: '8px', border: 'none', background: 'none', cursor: 'pointer', fontSize: '13px', borderBottom: '1px solid #f1f5f9' }}><LayoutDashboard size={16}/> Dashboard</button>
+                  <button onClick={(e) => { e.stopPropagation(); handleLogout(); }} style={{ width: '100%', padding: '12px 16px', textDecoration: 'none', color: '#ef4444', display: 'flex', alignItems: 'center', gap: '8px', border: 'none', background: 'none', cursor: 'pointer', fontSize: '13px', fontWeight: 600 }}><LogOut size={16}/> Logout</button>
+                </div>
+              )}
             </div>
           </div>
         </header>
@@ -239,29 +242,43 @@ export default function AdminDashboard() {
                     <div className="summary-card revenue">
                       <div className="summary-icon"><Banknote size={28} color="#16a34a"/></div>
                       <div>
-                        <div className="summary-value">Rs. {(summary.totalRevenue !== undefined && summary.totalRevenue !== '' ? summary.totalRevenue : 5688000).toLocaleString()}</div>
+                        <div className="summary-value">Rs. {(summary.totalRevenue || 0).toLocaleString()}</div>
                         <div className="summary-label">Total Revenue</div>
                       </div>
                     </div>
                     <div className="summary-card orders">
                       <div className="summary-icon"><Package size={28} color="#10b981"/></div>
                       <div>
-                        <div className="summary-value">{summary.totalOrders !== undefined && summary.totalOrders !== '' ? summary.totalOrders : 55}</div>
+                        <div className="summary-value">{summary.totalOrders || 0}</div>
                         <div className="summary-label">Total Orders</div>
                       </div>
                     </div>
                     <div className="summary-card products">
                       <div className="summary-icon"><ShoppingCart size={28} color="var(--primary-color)"/></div>
                       <div>
-                        <div className="summary-value">{summary.totalProducts !== undefined && summary.totalProducts !== '' ? summary.totalProducts : products.length}</div>
+                        <div className="summary-value">{summary.totalProducts || 0}</div>
                         <div className="summary-label">Total Products</div>
                       </div>
                     </div>
                     <div className="summary-card customers">
                       <div className="summary-icon"><Users size={28} color="#8b5cf6"/></div>
                       <div>
-                        <div className="summary-value">{summary.customers !== undefined && summary.customers !== '' ? summary.customers : 34}</div>
+                        <div className="summary-value">{summary.customers || 0}</div>
                         <div className="summary-label">Customers</div>
+                      </div>
+                    </div>
+                    <div className="summary-card" style={{ background: '#f0fdfa' }}>
+                      <div className="summary-icon"><TrendingUp size={28} color="#0d9488"/></div>
+                      <div>
+                        <div className="summary-value">{summary.totalViews || 0}</div>
+                        <div className="summary-label">Site Views</div>
+                      </div>
+                    </div>
+                    <div className="summary-card" style={{ background: '#fdf4ff' }}>
+                      <div className="summary-icon"><Clock size={28} color="#c026d3"/></div>
+                      <div>
+                        <div className="summary-value">{summary.avgSessionSeconds || 0}s</div>
+                        <div className="summary-label">Avg Session Time</div>
                       </div>
                     </div>
                   </div>
@@ -296,7 +313,21 @@ export default function AdminDashboard() {
                                           onClick={() => updateStock(p.id, p.stock - 1)}
                                           style={{ width: '24px', height: '24px', borderRadius: '4px', background: '#fef2f2', color: '#ef4444', border: '1px solid #fca5a5', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                         >-</button>
-                                        <span style={{ color: '#dc2626', fontWeight: 'bold', minWidth: '20px', textAlign: 'center' }}>{p.stock}</span>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          defaultValue={p.stock}
+                                          onBlur={(e) => {
+                                            const val = parseInt(e.target.value);
+                                            if (!isNaN(val) && val >= 0 && val !== p.stock) {
+                                              updateStock(p.id, val);
+                                            }
+                                          }}
+                                          onKeyDown={(e) => {
+                                            if (e.key === 'Enter') e.target.blur();
+                                          }}
+                                          style={{ width: '40px', textAlign: 'center', border: '1px solid #fca5a5', borderRadius: '4px', padding: '2px', color: '#dc2626', fontWeight: 'bold' }}
+                                        />
                                         <button 
                                           onClick={() => updateStock(p.id, p.stock + 1)}
                                           style={{ width: '24px', height: '24px', borderRadius: '4px', background: '#f0fdf4', color: '#22c55e', border: '1px solid #86efac', cursor: 'pointer', fontWeight: 'bold', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
@@ -539,9 +570,21 @@ export default function AdminDashboard() {
                                         style={{ width: '28px', height: '28px', borderRadius: '6px', background: '#fef2f2', color: '#ef4444', border: '1px solid #fca5a5', cursor: 'pointer', fontWeight: 'bold' }}
                                       >-</button>
                                       
-                                      <span className={`status-badge ${p.stock > (p.stock_threshold||5) ? 'active' : 'blocked'}`}>
-                                        {p.stock} left
-                                      </span>
+                                      <input
+                                        type="number"
+                                        min="0"
+                                        defaultValue={p.stock}
+                                        onBlur={(e) => {
+                                          const val = parseInt(e.target.value);
+                                          if (!isNaN(val) && val >= 0 && val !== p.stock) {
+                                            updateStock(p.id, val);
+                                          }
+                                        }}
+                                        onKeyDown={(e) => {
+                                          if (e.key === 'Enter') e.target.blur();
+                                        }}
+                                        style={{ width: '50px', textAlign: 'center', border: `1px solid ${p.stock > (p.stock_threshold||5) ? '#86efac' : '#fca5a5'}`, borderRadius: '4px', padding: '2px', fontWeight: 'bold' }}
+                                      />
                                       
                                       <button 
                                         onClick={() => updateStock(p.id, p.stock + 1)}
@@ -888,12 +931,11 @@ export default function AdminDashboard() {
               <span style={{ whiteSpace: 'nowrap' }}>{item.label}</span>
             </button>
           ))}
-          <button onClick={handleLogout} style={{ flex: '0 0 auto', minWidth: '70px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', background: 'none', border: 'none', color: '#ef4444', fontSize: '10px', fontWeight: '500', cursor: 'pointer' }}>
-            <LogOut size={18}/>
-            <span>Logout</span>
-          </button>
+
         </div>
       )}
+      
+      <AdminChatbot />
     </div>
   );
 }

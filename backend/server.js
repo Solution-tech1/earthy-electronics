@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const mysql = require('mysql2/promise');
+const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const fs = require('fs');
 const helmet = require('helmet');
@@ -14,7 +14,11 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const JWT_SECRET = process.env.JWT_SECRET || 'EarthyElectronics@2026#JWT$Secret!XkP9mN';
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+  console.error('FATAL ERROR: JWT_SECRET is not defined in environment variables.');
+  process.exit(1);
+}
 
 // ─── Security Middleware ───────────────────────────────────────
 // HTTP security headers
@@ -53,39 +57,39 @@ const authLimiter = rateLimit({
 
 
 // ─── MySQL Database Setup ─────────────────────────────────────
+let rawDb;
 let db;
 let isConnected = false;
 
 async function initDBConnection() {
-  try {
-    db = await mysql.createPool({
-      host: process.env.DB_HOST || 'localhost',
-      user: process.env.DB_USER || 'root',
-      password: process.env.DB_PASSWORD || '',
-      database: process.env.DB_NAME || 'earthy_elec',
-      port: process.env.DB_PORT || 3306,
-      waitForConnections: true,
-      connectionLimit: 10,
-      queueLimit: 0
+  return new Promise((resolve) => {
+    rawDb = new sqlite3.Database(path.join(__dirname, 'earthyelec.db'), async (err) => {
+      if (err) {
+        console.error('[DB] Failed to connect to SQLite:', err.message);
+      } else {
+        console.log('[DB] Connected to SQLite database');
+        isConnected = true;
+        const queryAsync = (sql, params = []) => {
+          return new Promise((res, rej) => {
+            if (sql.trim().toUpperCase().startsWith('SELECT') || sql.trim().toUpperCase().startsWith('PRAGMA')) {
+              rawDb.all(sql, params, (e, rows) => {
+                if (e) rej(e);
+                else res([rows]);
+              });
+            } else {
+              rawDb.run(sql, params, function (e) {
+                if (e) rej(e);
+                else res([{ insertId: this.lastID, affectedRows: this.changes }]);
+              });
+            }
+          });
+        };
+        db = { query: queryAsync, execute: queryAsync };
+        await initDB();
+        resolve();
+      }
     });
-    isConnected = true;
-    console.log('[DB] Connected to MySQL database');
-    await initDB();
-  } catch (err) {
-    if (err.code === 'ER_BAD_DB_ERROR') {
-      console.log('[DB] Database does not exist, creating it...');
-      const tempDb = await mysql.createConnection({
-        host: process.env.DB_HOST || 'localhost',
-        user: process.env.DB_USER || 'root',
-        password: process.env.DB_PASSWORD || '',
-        port: process.env.DB_PORT || 3306,
-      });
-      await tempDb.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME || 'earthyelectronics'}`);
-      await tempDb.end();
-      return initDBConnection(); // Retry connection with DB
-    }
-    console.error('[DB] Failed to connect to MySQL:', err.message);
-  }
+  });
 }
 initDBConnection();
 
@@ -110,7 +114,7 @@ async function initDB() {
   try {
     // Users table
     await db.query(`CREATE TABLE IF NOT EXISTS users (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       name VARCHAR(255) NOT NULL,
       email VARCHAR(255) UNIQUE NOT NULL,
       password VARCHAR(255) NOT NULL,
@@ -121,7 +125,7 @@ async function initDB() {
 
     // Chat History table
     await db.query(`CREATE TABLE IF NOT EXISTS chat_history (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       user_id INT NOT NULL,
       role VARCHAR(10) NOT NULL,
       content TEXT NOT NULL,
@@ -131,7 +135,7 @@ async function initDB() {
 
     // Products table
     await db.query(`CREATE TABLE IF NOT EXISTS products (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       name VARCHAR(255) NOT NULL,
       brand VARCHAR(100),
       category VARCHAR(100),
@@ -147,7 +151,7 @@ async function initDB() {
 
     // Orders table
     await db.query(`CREATE TABLE IF NOT EXISTS orders (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       user_id INT,
       customer_name VARCHAR(255),
       total DOUBLE NOT NULL,
@@ -160,7 +164,7 @@ async function initDB() {
 
     // Order items
     await db.query(`CREATE TABLE IF NOT EXISTS order_items (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       order_id INT NOT NULL,
       product_id INT,
       quantity INT NOT NULL,
@@ -170,7 +174,7 @@ async function initDB() {
 
     // Wishlist
     await db.query(`CREATE TABLE IF NOT EXISTS wishlist (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       user_id INT NOT NULL,
       product_id INT NOT NULL,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -181,7 +185,7 @@ async function initDB() {
 
     // Reviews
     await db.query(`CREATE TABLE IF NOT EXISTS reviews (
-      id INT AUTO_INCREMENT PRIMARY KEY,
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       product_id INT NOT NULL,
       user_id INT,
       reviewer_name VARCHAR(255),
@@ -196,8 +200,23 @@ async function initDB() {
       user_id INT PRIMARY KEY,
       latitude DOUBLE NOT NULL,
       longitude DOUBLE NOT NULL,
-      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )`);
+
+    // Analytics: Site Views
+    await db.query(`CREATE TABLE IF NOT EXISTS site_views (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      page_url VARCHAR(255),
+      session_id VARCHAR(100),
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )`);
+
+    // Analytics: User Sessions
+    await db.query(`CREATE TABLE IF NOT EXISTS user_sessions (
+      session_id VARCHAR(100) PRIMARY KEY,
+      duration_seconds INT DEFAULT 0,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )`);
 
     // Seed default admin
@@ -284,9 +303,13 @@ const getProductByIdHandler = async (req, res) => {
 app.get('/api/items', getProductsHandler);
 app.get('/api/products', getProductsHandler);
 app.get('/api/items/:id', getProductByIdHandler);
-app.get('/api/products/:id', getProductByIdHandler);
+app.use(express.static(path.join(__dirname, 'public')));
 
-// ─── Auth Routes ───────────────────────────────────────────────
+// Use AI Agent
+const aiAgent = require('./ai_agent')(dbGet, dbAll, dbRun, JWT_SECRET);
+app.use('/api/admin/ai', aiAgent);
+
+// ─── Authentication ───────────────────────────────────────────────
 app.post('/api/auth/register', async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password)
@@ -348,6 +371,16 @@ app.put('/api/admin/products/:id', authMiddleware, adminMiddleware, async (req, 
   }
 });
 
+app.patch('/api/admin/products/:id/stock', authMiddleware, adminMiddleware, async (req, res) => {
+  const { stock } = req.body;
+  try {
+    await dbRun('UPDATE products SET stock=? WHERE id=?', [stock, req.params.id]);
+    res.json({ status: 'success', message: 'Product stock updated' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
 app.delete('/api/admin/products/:id', authMiddleware, adminMiddleware, async (req, res) => {
   try {
     await dbRun('DELETE FROM products WHERE id = ?', [req.params.id]);
@@ -400,10 +433,12 @@ app.delete('/api/admin/users/:id', authMiddleware, adminMiddleware, async (req, 
 // ─── Admin: Analytics ─────────────────────────────────────────
 app.get('/api/admin/analytics', authMiddleware, adminMiddleware, async (req, res) => {
   try {
-    const totalRevenue = await dbGet('SELECT COALESCE(SUM(total), 5688000) as val FROM orders');
+    const totalRevenue = await dbGet('SELECT COALESCE(SUM(total), 0) as val FROM orders');
     const totalOrders  = await dbGet('SELECT COUNT(*) as val FROM orders');
     const totalProducts = await dbGet('SELECT COUNT(*) as val FROM products');
     const totalCustomers = await dbGet('SELECT COUNT(*) as val FROM users WHERE role = "customer"');
+    const totalViews = await dbGet('SELECT COUNT(*) as val FROM site_views');
+    const avgSession = await dbGet('SELECT COALESCE(AVG(duration_seconds), 0) as val FROM user_sessions');
 
     const brandRevenue = await dbAll(`
       SELECT p.brand, COALESCE(SUM(o.total), 0) as revenue, COUNT(o.id) as orders
@@ -417,35 +452,44 @@ app.get('/api/admin/analytics', authMiddleware, adminMiddleware, async (req, res
       GROUP BY p.category ORDER BY sales DESC
     `);
 
-    // Fallback with mock data if no orders yet
-    const mockBrand = [
-      { brand: 'Haier', revenue: 1250000, orders: 9 },
-      { brand: 'Dawlance', revenue: 980000, orders: 8 },
-      { brand: 'Gree', revenue: 780000, orders: 5 },
-      { brand: 'Kenwood', revenue: 620000, orders: 6 },
-      { brand: 'Samsung', revenue: 550000, orders: 3 },
-      { brand: 'TCL', revenue: 420000, orders: 5 },
-    ];
-    const mockCat = [
-      { category: 'Air Conditioner', sales: 18, revenue: 2430000 },
-      { category: 'Refrigerator', sales: 12, revenue: 1320000 },
-      { category: 'LED TV', sales: 10, revenue: 980000 },
-      { category: 'Washing Machine', sales: 8, revenue: 560000 },
-      { category: 'Deep Freezer', sales: 4, revenue: 320000 },
-      { category: 'Microwave Oven', sales: 3, revenue: 78000 },
-    ];
-
     res.json({
       status: 'success',
       summary: {
-        totalRevenue: totalRevenue.val || 5688000,
-        totalOrders: totalOrders.val || 55,
-        totalProducts: totalProducts.val,
-        totalCustomers: totalCustomers.val,
+        totalRevenue: totalRevenue.val || 0,
+        totalOrders: totalOrders.val || 0,
+        totalProducts: totalProducts.val || 0,
+        totalCustomers: totalCustomers.val || 0,
+        totalViews: totalViews.val || 0,
+        avgSessionSeconds: Math.floor(avgSession.val || 0)
       },
-      brandRevenue: brandRevenue.some(b => b.revenue > 0) ? brandRevenue : mockBrand,
-      categoryPerformance: categoryPerformance.some(c => c.sales > 0) ? categoryPerformance : mockCat,
+      brandRevenue: brandRevenue,
+      categoryPerformance: categoryPerformance,
     });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+// ─── Analytics Tracking ───────────────────────────────────────
+app.post('/api/track/view', async (req, res) => {
+  const { page_url, session_id } = req.body;
+  try {
+    await dbRun('INSERT INTO site_views (page_url, session_id) VALUES (?, ?)', [page_url, session_id]);
+    res.json({ status: 'success' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
+});
+
+app.post('/api/track/ping', async (req, res) => {
+  const { session_id, duration_seconds } = req.body;
+  try {
+    await dbRun(`
+      INSERT INTO user_sessions (session_id, duration_seconds) 
+      VALUES (?, ?) 
+      ON CONFLICT(session_id) DO UPDATE SET duration_seconds = excluded.duration_seconds
+    `, [session_id, duration_seconds]);
+    res.json({ status: 'success' });
   } catch (err) {
     res.status(500).json({ status: 'error', message: err.message });
   }

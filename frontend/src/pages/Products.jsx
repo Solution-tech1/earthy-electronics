@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ShoppingCart, MessageCircle, X, Search, Star, Settings2, LayoutGrid, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Check, Scale, ChevronDown, ChevronUp } from 'lucide-react';
+import { ShoppingCart, MessageCircle, X, Search, Star, Settings2, LayoutGrid, Wind, Tv, Refrigerator, Shirt, ChefHat, Microwave, Droplets, Snowflake, Check, Scale, ChevronDown, ChevronUp, PackageOpen } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useInventory } from '../context/InventoryContext';
 import './Products.css';
@@ -519,11 +519,14 @@ export default function Products() {
             ) : (
               <div className="catalog-grid">
                 {filtered.length === 0 ? (
-                  <div className="no-products">
-                    <h3>Coming Soon!</h3>
-                    <p>We are currently updating our premium inventory for this category/brand. Please check back later or try changing your filters.</p>
-                    <button className="btn btn-outline" style={{ marginTop: 16 }} onClick={clearFilters}>
-                      Clear All Filters
+                  <div className="no-products" style={{ textAlign: 'center', padding: '60px 20px', background: '#f8fafc', borderRadius: '16px', border: '2px dashed #e2e8f0', width: '100%', gridColumn: '1 / -1' }}>
+                    <div style={{ width: '80px', height: '80px', background: '#ecfdf5', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: '#10b981' }}>
+                      <PackageOpen size={40} />
+                    </div>
+                    <h3 style={{ fontSize: '24px', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>Category Coming Soon!</h3>
+                    <p style={{ color: '#64748b', fontSize: '15px', maxWidth: '400px', margin: '0 auto 24px', lineHeight: 1.6 }}>We are currently updating our premium inventory for this category or brand. Please check back later or try changing your filters.</p>
+                    <button className="btn btn-navy" onClick={clearFilters} style={{ padding: '12px 24px', fontSize: '14px', borderRadius: '8px', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                      <Search size={16} /> Clear All Filters
                     </button>
                   </div>
                 ) : (

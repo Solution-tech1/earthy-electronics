@@ -472,10 +472,11 @@ Total Amount: Rs. ${cartTotal.toLocaleString()}
           {/* Items / Checkout Form */}
           <div className="cart-panel-body">
             {cartItems.length === 0 ? (
-              <div className="cart-empty-msg">
-                <ShoppingCart size={52} strokeWidth={1} />
-                <p>Your cart is empty</p>
-                <p style={{ fontSize: 12, color: '#94a3b8' }}>Add products to get started!</p>
+              <div className="cart-empty-msg" style={{ textAlign: 'center', padding: '60px 20px', color: '#64748b' }}>
+                <ShoppingCart size={64} strokeWidth={1.5} color="#cbd5e1" style={{ margin: '0 auto 16px' }} />
+                <p style={{ fontSize: '18px', fontWeight: 'bold', color: '#1e293b', marginBottom: '8px' }}>Your cart is empty</p>
+                <p style={{ fontSize: '14px', marginBottom: '24px' }}>Looks like you haven't added anything yet.</p>
+                <button className="btn btn-navy" onClick={() => setCartOpen(false)} style={{ padding: '10px 24px', borderRadius: '8px' }}>Start Shopping</button>
               </div>
             ) : checkoutMode ? (
               <form className="checkout-form" onSubmit={handlePlaceOrder} style={{ padding: '10px' }}>
